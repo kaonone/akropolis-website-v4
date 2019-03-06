@@ -1,0 +1,30 @@
+@import '~shared/styles/mixins';
+
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &__header {
+    justify-content: center;
+    background: #333;
+    color: #eaeaea;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 77vh;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    text-align: right;
+  }
+}

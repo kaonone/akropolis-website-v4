@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, StaticRouter } from 'react-router-dom';
 import 'normalize.css';
+import 'shared/styles/fonts/index.scss';
 
 import { hot } from 'react-hot-loader/root';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';

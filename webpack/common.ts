@@ -20,7 +20,7 @@ import getEnvParams from '../src/core/getEnvParams';
 
 export type BuildType = 'dev' | 'prod' | 'server';
 
-const { chunkHash, withAnalyze, chunkName, withHot, isWatchMode, forGHPages } = getEnvParams();
+const { chunkHash, withAnalyze, chunkName, withHot, isWatchMode, forGHPages, withoutTypeChecking } = getEnvParams();
 
 const threadLoader: webpack.Loader[] = (() => {
   if (process.env.THREADED === 'true') {
@@ -64,12 +64,16 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   }),
   new FaviconsWebpackPlugin(path.resolve(__dirname, '..', 'src', 'assets', 'favicon.png')),
 ]
-  .concat(type !== 'server' ? (
+  .concat(isWatchMode && !withoutTypeChecking ? (
     new ForkTsCheckerWebpackPlugin({
       checkSyntacticErrors: true,
       async: false,
-      tsconfig: path.resolve('./tsconfig.json'),
-      tslint: path.resolve('./tslint.json'),
+      tsconfig: path.resolve(__dirname, '..', 'tsconfig.json'),
+      tslint: path.resolve(__dirname, '..', 'tslint.json'),
+      reportFiles: [
+        '**',
+        '!**/*.json',
+      ],
     })) : [])
   .concat(withAnalyze ? (
     new BundleAnalyzerPlugin()

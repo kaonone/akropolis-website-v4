@@ -57,18 +57,39 @@ const themePalettesMap = {
   darkBlue: darkBlueThemePalette,
 };
 
+const unit = 8;
+
 const baseThemeStyles = {
   colors,
   sizes: {
     control: {
       borderRadius: 4,
     },
+    maxContentWidth: 1400,
   },
   spacing: {
-    unit: 8,
+    unit,
+    horizontalPagePaddings: {
+      xs: {
+        small: unit,
+        medium: unit * 2,
+        large: unit * 3,
+      },
+      md: {
+        small: unit * 1.5,
+        medium: unit * 4,
+        large: unit * 10.5,
+      },
+      lg: {
+        small: unit * 1.5,
+        medium: unit * 8.5,
+        large: unit * 12,
+      },
+    },
   },
   typography: {
-    primaryFont: ['OpenSans', 'Arial', 'sans-serif'].join(','),
+    primaryFont: ['BrandonGrotesque', 'Arial', 'sans-serif'].join(','),
+    secondaryFont: ['OpenSans', 'Arial', 'sans-serif'].join(','),
   },
   zIndex: {
     tooltip: 1500,
@@ -86,6 +107,15 @@ export const getTheme = (): Theme => {
 
   return {
     ...(createMuiTheme({
+      breakpoints: {
+        values: {
+          xs: 0,
+          sm: 375,
+          md: 768,
+          lg: 1024,
+          xl: 1920,
+        },
+      },
       palette: {
         primary: {
           main: extraTheme.palette.primary.main,

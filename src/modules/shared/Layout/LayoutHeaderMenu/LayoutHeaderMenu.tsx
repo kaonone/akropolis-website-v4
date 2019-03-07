@@ -7,6 +7,7 @@ import { MenuIcon } from 'shared/view/elements';
 import { ClickAwayListener } from 'shared/view/components';
 
 import './LayoutHeaderMenu.scss';
+import routes from 'modules/routes';
 
 type AnchorName = 'products';
 
@@ -21,20 +22,37 @@ interface IState {
   isMenuOpen: boolean;
 }
 
-interface IProps {
-  menuItems: IMenuItem[];
-}
+const menuItems: IMenuItem[] = [
+  {
+    path: '/',
+    title: 'Products',
+    scrollTo: 'products',
+  },
+  {
+    path: 'https://wiki.akropolis.io',
+    title: 'Wiki',
+    isExternal: true,
+  },
+  {
+    path: routes.company.getRoutePath(),
+    title: 'Company',
+  },
+  {
+    path: 'https://medium.com/akropolis',
+    title: 'Blog',
+    isExternal: true,
+  },
+];
 
 const b = block('layout-header-menu');
 
-class LayoutHeaderMenu extends React.PureComponent<IProps, IState> {
+class LayoutHeaderMenu extends React.PureComponent<{}, IState> {
   public state: IState = {
     isMenuOpen: false,
   };
 
   public render() {
     const { isMenuOpen } = this.state;
-    const { menuItems } = this.props;
     return (
       <div className={b()}>
         <div

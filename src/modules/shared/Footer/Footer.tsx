@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import { LogoWithNameIcon } from 'shared/view/elements/Icons';
 import { StylesProps, provideStyles } from './Footer.style';
+import FooterNavigation from './FooterNavigation/FooterNavigation';
 
 interface IProps {
   className?: string;
@@ -19,8 +20,17 @@ function Footer(props: IProps & StylesProps) {
             Akropolis is a lightweight, universal protocol layer capable of being deployed on a variety of blockchains.
           </p>
         </div>
-        <div className={cn(classes.column, classes.right)}>Right</div>
+        <div className={cn(classes.column, classes.right)}>
+          <FooterNavigation />
+        </div>
       </div>
+      <small className={classes.address}>
+        {[
+          'Akropolis Decentralised Ltd.',
+          'Suite 23 Portland House, Glacis Road, Gibraltar, GX11 1AA',
+          'COMPANY NUMBER: 116430',
+        ].join(' | ')}
+      </small>
     </footer>
   );
 }

@@ -47,10 +47,6 @@ const styles = (theme: Theme) => ({
         marginRight: theme.extra.spacing.horizontalPagePaddings.lg.large,
       },
     },
-
-    '&$right': {
-      flexWrap: 'wrap',
-    },
   }),
 
   left: {},
@@ -69,7 +65,6 @@ const styles = (theme: Theme) => ({
   description: rule({
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 12,
-    fontWeight: 600,
     lineHeight: 2,
     textAlign: 'center',
     color: '#d6d6d6',
@@ -82,6 +77,16 @@ const styles = (theme: Theme) => ({
       fontSize: 14,
       lineHeight: 1.71,
     },
+  }),
+
+  address: rule({
+    display: 'block',
+    padding: `${theme.spacing.unit * 3}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
+    backgroundColor: '#000',
+    fontFamily: theme.extra.typography.secondaryFont,
+    fontSize: 12,
+    textAlign: 'center',
+    color: '#9b9b9b',
   }),
 });
 

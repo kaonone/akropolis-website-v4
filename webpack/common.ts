@@ -133,7 +133,7 @@ export const getCommonRules: (type: BuildType) => webpack.Rule[] = (type) => [
         }),
   },
   {
-    test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+    test: /\.(pdf|ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
     use: 'file-loader?name=fonts/[hash].[ext]',
   },
   {

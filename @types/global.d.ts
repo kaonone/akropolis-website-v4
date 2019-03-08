@@ -46,3 +46,8 @@ declare module 'doiuse';
 declare module 'favicons-webpack-plugin';
 declare module 'circular-dependency-plugin';
 declare module 'filemanager-webpack-plugin';
+
+declare module '*.pdf' {
+  const URL: string;
+  export default URL;
+}

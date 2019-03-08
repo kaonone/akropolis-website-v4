@@ -8,15 +8,7 @@ import { ClickAwayListener } from 'shared/view/components';
 
 import './LayoutHeaderMenu.scss';
 import routes from 'modules/routes';
-
-type AnchorName = 'products';
-
-interface IMenuItem {
-  path: string;
-  title: string;
-  isExternal?: boolean;
-  scrollTo?: AnchorName;
-}
+import { IMenuItem } from 'shared/types/common';
 
 interface IState {
   isMenuOpen: boolean;

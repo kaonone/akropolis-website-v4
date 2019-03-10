@@ -5,15 +5,19 @@ import { LaunchIcon, Link } from 'shared/view/elements';
 
 interface IProps {
   title: string;
+  titleIcon?: React.ReactNode;
   description: string;
   moreLink?: string;
 }
 
 function Preview(props: IProps & StylesProps) {
-  const { classes, title, description, moreLink } = props;
+  const { classes, title, description, moreLink, titleIcon } = props;
   return (
     <article className={classes.root}>
-      <h3 className={classes.title}>{title}</h3>
+      <h3 className={classes.title}>
+        {titleIcon && <span className={classes.titleIcon}>{titleIcon}</span>}
+        {title}
+      </h3>
       <p className={classes.description}>{description}</p>
       {moreLink && (
         <Link href={moreLink} target="_blank" rel="noopener noreferrer" className={classes.moreLink}>

@@ -1,73 +1,79 @@
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
+import youCanBg from './imgs/Sketch-Blue.png';
+
 const styles = (theme: Theme) => ({
   root: rule({
     //
   }),
 
   block: rule({
-    marginTop: theme.spacing.unit * 4,
+    maxWidth: theme.extra.sizes.maxContentWidth,
+    margin: `0 auto`,
+    paddingTop: theme.spacing.unit * 4,
 
     '&:last-child': {
-      marginBottom: theme.spacing.unit * 4,
+      paddingBottom: theme.spacing.unit * 4,
     },
 
     [theme.breakpoints.up('lg')]: {
-      marginTop: theme.spacing.unit * 6,
+      paddingTop: theme.spacing.unit * 6,
 
       '&:last-child': {
-        marginBottom: theme.spacing.unit * 6,
+        paddingBottom: theme.spacing.unit * 6,
       },
     },
 
     '&$products': {
-      marginLeft: theme.extra.spacing.horizontalPagePaddings.xs.small,
-      marginRight: theme.extra.spacing.horizontalPagePaddings.xs.small,
+      paddingLeft: theme.extra.spacing.horizontalPagePaddings.xs.small,
+      paddingRight: theme.extra.spacing.horizontalPagePaddings.xs.small,
 
       [theme.breakpoints.up('md')]: {
-        marginLeft: theme.extra.spacing.horizontalPagePaddings.md.small,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.md.small,
+        paddingLeft: theme.extra.spacing.horizontalPagePaddings.md.small,
+        paddingRight: theme.extra.spacing.horizontalPagePaddings.md.small,
       },
     },
 
     '&$youCan': {
-      marginLeft: theme.extra.spacing.horizontalPagePaddings.xs.large,
-      marginRight: theme.extra.spacing.horizontalPagePaddings.xs.large,
+      background: `url(${youCanBg}) no-repeat center ${theme.spacing.unit * 10}px/cover`,
+      paddingLeft: theme.extra.spacing.horizontalPagePaddings.xs.large,
+      paddingRight: theme.extra.spacing.horizontalPagePaddings.xs.large,
 
       [theme.breakpoints.up('md')]: {
-        marginLeft: theme.extra.spacing.horizontalPagePaddings.md.small,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.md.small,
+        paddingLeft: theme.extra.spacing.horizontalPagePaddings.md.small,
+        paddingRight: theme.extra.spacing.horizontalPagePaddings.md.small,
       },
 
       [theme.breakpoints.up('lg')]: {
-        marginLeft: theme.extra.spacing.horizontalPagePaddings.lg.medium,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.lg.medium,
+        backgroundPositionY: theme.spacing.unit * 12,
+        paddingLeft: theme.extra.spacing.horizontalPagePaddings.lg.medium,
+        paddingRight: theme.extra.spacing.horizontalPagePaddings.lg.medium,
       },
     },
 
     '&$partners': {
-      marginLeft: theme.extra.spacing.horizontalPagePaddings.xs.small,
-      marginRight: theme.extra.spacing.horizontalPagePaddings.xs.small,
+      paddingLeft: theme.extra.spacing.horizontalPagePaddings.xs.small,
+      paddingRight: theme.extra.spacing.horizontalPagePaddings.xs.small,
 
       [theme.breakpoints.up('md')]: {
-        marginLeft: theme.extra.spacing.horizontalPagePaddings.md.small,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.md.small,
+        paddingLeft: theme.extra.spacing.horizontalPagePaddings.md.small,
+        paddingRight: theme.extra.spacing.horizontalPagePaddings.md.small,
       },
     },
 
     '&$news': {
-      marginLeft: theme.extra.spacing.horizontalPagePaddings.xs.small,
-      marginRight: theme.extra.spacing.horizontalPagePaddings.xs.small,
+      paddingLeft: theme.extra.spacing.horizontalPagePaddings.xs.small,
+      paddingRight: theme.extra.spacing.horizontalPagePaddings.xs.small,
 
       [theme.breakpoints.up('md')]: {
-        marginLeft: theme.extra.spacing.horizontalPagePaddings.md.large,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.md.large,
+        paddingLeft: theme.extra.spacing.horizontalPagePaddings.md.large,
+        paddingRight: theme.extra.spacing.horizontalPagePaddings.md.large,
       },
 
       [theme.breakpoints.up('lg')]: {
-        marginLeft: theme.extra.spacing.horizontalPagePaddings.lg.large,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.lg.large,
+        paddingLeft: theme.extra.spacing.horizontalPagePaddings.lg.large,
+        paddingRight: theme.extra.spacing.horizontalPagePaddings.lg.large,
       },
     },
   }),

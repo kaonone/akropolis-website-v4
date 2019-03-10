@@ -21,6 +21,27 @@ export default {
           link: 'mock_url', // TODO ds: add link
         },
       },
+      whatYouCanBuild: {
+        title: 'What you can build',
+        items: {
+          ownSavings: {
+            title: 'Your own savings circle or a mutual',
+            description: 'Сreate and manage community to jointly resolve financial issues, reach savings targets quicker and more reliably, support each other with non-bank credit - all without the need for a central counterparty.',
+          },
+          novelInstruments: {
+            title: 'Novel financial instruments',
+            description: 'Implement cashflow-based financial products. Create cheaper, faster, transparent financing options with less hidden risk.',
+          },
+          alternativeIdentity: {
+            title: 'Alternative Identity and Credit scoring',
+            description: 'Create a financial system where one is missing. Open up non-predatory funding sources for people with no credit score or credit history.',
+          },
+          bank: {
+            title: 'An (un)bank',
+            description: 'Create savings and lending infrastructure for Finance 3.0 without borders and unnecessary fees. Integrate OpenFinance solutions, build on top, and innovate to create better Finance 3.0',
+          },
+        },
+      },
     },
   },
   demo: {},

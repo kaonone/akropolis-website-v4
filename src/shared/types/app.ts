@@ -5,6 +5,7 @@ import { SagaIterator } from 'redux-saga';
 import { GenerateClassName } from 'jss';
 
 import Api from 'services/api/Api';
+import * as adaptabilityService from 'services/adaptability';
 import { JSS } from 'shared/styles';
 
 export abstract class IModule {
@@ -49,6 +50,7 @@ export interface IFeatureEntry<
 // tslint:disable-next-line:no-empty-interface
 export interface IAppReduxState {
   // services
+  adaptability: adaptabilityService.namespace.IReduxState;
   // features
 }
 

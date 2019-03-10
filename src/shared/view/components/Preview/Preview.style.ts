@@ -9,6 +9,8 @@ const styles = (theme: Theme) => ({
   }),
 
   title: rule({
+    display: 'flex',
+    alignItems: 'center',
     margin: 0,
     marginBottom: theme.spacing.unit * 2,
     fontFamily: theme.extra.typography.primaryFont,
@@ -20,6 +22,16 @@ const styles = (theme: Theme) => ({
     [theme.breakpoints.up('lg')]: {
       marginBottom: theme.spacing.unit * 3,
       fontSize: 26,
+    },
+  }),
+
+  titleIcon: rule({
+    display: 'flex',
+    fontSize: 56,
+    marginRight: theme.spacing.unit * 2,
+
+    [theme.breakpoints.up('lg')]: {
+      marginRight: theme.spacing.unit * 3,
     },
   }),
 

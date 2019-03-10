@@ -1,18 +1,20 @@
 import 'reflect-metadata';
 import 'babel-polyfill';
-import { App } from 'core/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import configureApp from 'core/configureApp';
 
-import getEnvParams from './core/getEnvParams';
+import { App } from 'core/App';
+import configureApp from 'core/configureApp';
+import getEnvParams from 'core/getEnvParams';
+import { actions as adaptabilityActions } from 'services/adaptability';
+import { IAppData } from 'shared/types/app';
 
 const { appVersion } = getEnvParams();
 
 const appData = configureApp();
 
 /* Start application */
-render(<App {...appData} />);
+render(<App {...appData} />, appData);
 
 /* Hot Module Replacement API */
 if ((module as any).hot && process.env.NODE_ENV !== 'production') {
@@ -20,11 +22,11 @@ if ((module as any).hot && process.env.NODE_ENV !== 'production') {
     const nextConfigureApp: typeof configureApp = require('./core/configureApp').default;
     const NextApp: typeof App = require('./core/App').App;
     const nextAppData = nextConfigureApp(appData);
-    render(<NextApp {...nextAppData} jssDeps={appData.jssDeps} />);
+    render(<NextApp {...nextAppData} jssDeps={appData.jssDeps} />, nextAppData);
   });
 }
 
-function render(component: React.ReactElement<any>) {
+function render(component: React.ReactElement<any>, { store }: IAppData) {
   ReactDOM.hydrate(
     component,
     document.getElementById('root'),
@@ -34,6 +36,7 @@ function render(component: React.ReactElement<any>) {
       if (ssStyles && ssStyles.parentNode) {
         ssStyles.parentNode.removeChild(ssStyles);
       }
+      store.dispatch(adaptabilityActions.hydrated());
     },
   );
 }

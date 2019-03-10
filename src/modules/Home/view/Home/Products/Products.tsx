@@ -1,22 +1,21 @@
 import * as React from 'react';
-
-import { StylesProps, provideStyles } from './Products.style';
 import { GetProps } from '_helpers';
+
+import { Grid } from 'shared/view/elements';
 import Product from './Product/Product';
 
 const products: Array<GetProps<typeof Product>['type']> = ['0x-hackathon', 'chama-network'];
 
-function Products(props: StylesProps) {
-  const { classes } = props;
+function Products() {
   return (
-    <div className={classes.root}>
+    <Grid container spacing={16}>
       {products.map(item => (
-        <div key={item} className={classes.product}>
+        <Grid item container xs={12} md={6} key={item}>
           <Product type={item} />
-        </div>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 }
 
-export default provideStyles(Products);
+export default Products;

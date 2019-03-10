@@ -11,7 +11,7 @@ const styles = (theme: Theme) => {
       flexDirection: 'column',
       padding: `${theme.spacing.unit * 13}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
       position: 'relative',
-      background: `url(${bgUrl}) no-repeat center 0/cover`,
+      background: `url(${bgUrl}) no-repeat center bottom/cover`,
       color: theme.extra.colors.rhino,
 
       [theme.breakpoints.up('md')]: {
@@ -25,7 +25,8 @@ const styles = (theme: Theme) => {
 
     title: rule({
       width: '100%',
-      margin: `0 0 ${theme.spacing.unit * 9}px`,
+      maxWidth: theme.extra.sizes.maxContentWidth,
+      margin: `0 auto ${theme.spacing.unit * 9}px`,
       fontFamily: theme.extra.typography.primaryFont,
       fontSize: 26,
       fontWeight: 'bold',
@@ -49,7 +50,8 @@ const styles = (theme: Theme) => {
 
     subtitle: rule({
       width: '100%',
-      margin: `0 0 auto`,
+      maxWidth: theme.extra.sizes.maxContentWidth,
+      margin: `0 auto auto`,
       fontFamily: theme.extra.typography.primaryFont,
       fontSize: 14,
       lineHeight: 1.29,

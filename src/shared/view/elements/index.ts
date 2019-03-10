@@ -17,3 +17,4 @@ export { default as Preloader } from './Preloader/Preloader';
 export { default as FormLabel } from './FormLabel/FormLabel';
 export { default as Drawer } from './Drawer/Drawer';
 export { default as Link } from '@material-ui/core/Link';
+export { default as Grid } from '@material-ui/core/Grid';

@@ -3,6 +3,7 @@ import { TYPES, container } from './configureIoc';
 import configureStore, { createReducer } from './configureStore';
 
 import * as allModules from 'modules';
+import * as adaptabilityService from 'services/adaptability';
 import { configureJss } from 'core/configureJss';
 import { ReducersMap } from 'shared/types/redux';
 import { IAppData, IModule, RootSaga, IAppReduxState, IReduxEntry } from 'shared/types/app';
@@ -15,7 +16,7 @@ function configureApp(data?: IAppData): IAppData {
     return { ...data, modules };
   }
 
-  const sharedReduxEntries: IReduxEntry[] = [];
+  const sharedReduxEntries: IReduxEntry[] = [adaptabilityService.reduxEntry];
 
   const connectedSagas: RootSaga[] = [];
   const connectedReducers: ReducersMap<Partial<IAppReduxState>> = {};

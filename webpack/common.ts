@@ -133,7 +133,7 @@ export const getCommonRules: (type: BuildType) => webpack.Rule[] = (type) => [
         }),
   },
   {
-    test: /\.(jpg|pdf)$/,
+    test: /\.(png|jpg|pdf)$/,
     use: 'file-loader?name=assets/[hash].[ext]',
   },
   {
@@ -141,7 +141,7 @@ export const getCommonRules: (type: BuildType) => webpack.Rule[] = (type) => [
     use: 'file-loader?name=fonts/[hash].[ext]',
   },
   {
-    test: /\.(png|svg)/,
+    test: /\.(svg)/,
     loader: 'url-loader',
     options: {
       name: 'images/[name].[ext]',

@@ -1,6 +1,7 @@
 
 declare module 'react-jss/lib/injectSheet' {
   import React from 'react';
+  import * as JSS from 'jss';
   import CSS from 'csstype';
   import { WithTheme, Theme } from 'theming';
   import { ConsistentWith, Overwrite } from '_helpers';
@@ -47,11 +48,19 @@ declare module 'react-jss/lib/injectSheet' {
     innerRef?: React.Ref<any> | React.RefObject<any>;
   }
 
-  export default function withStyles<ClassKey extends string>(
+  export interface WithStylesOptions<ClassKey extends string = string>
+    extends JSS.CreateStyleSheetOptions<ClassKey> {
+    flip?: boolean;
+    withTheme?: boolean;
+    name?: string;
+  }
+
+  export default function withStyles<ClassKey extends string, Options extends WithStylesOptions<ClassKey> = {}>(
     style: StyleRulesCallback<ClassKey> | StyleRules<ClassKey>,
+    options?: Options,
   ): {
-    <P extends ConsistentWith<P, StyledComponentProps<ClassKey>>>(
-      component?: React.ComponentType<P & WithStyles<ClassKey>>,
-    ): React.ComponentType<Overwrite<P, StyledComponentProps<ClassKey>>>;
-  };
+      <P extends ConsistentWith<P, StyledComponentProps<ClassKey>>>(
+        component?: React.ComponentType<P & WithStyles<ClassKey>>,
+      ): React.ComponentType<Overwrite<P, StyledComponentProps<ClassKey>>>;
+    };
 }

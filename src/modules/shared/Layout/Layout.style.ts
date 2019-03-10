@@ -14,6 +14,7 @@ const styles = (theme: Theme) => ({
       position: 'absolute',
       top: 0,
       width: '100%',
+      zIndex: 1,
     }),
   }),
 

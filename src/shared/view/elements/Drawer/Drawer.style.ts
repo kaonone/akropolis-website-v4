@@ -4,6 +4,7 @@ import { rule } from 'shared/helpers/style';
 const styles = ({ extra: theme }: Theme) => ({
   root: rule({
     width: '26.875rem',
+    maxWidth: '100vw',
     backgroundColor: theme.colors.blackCurrant,
   }),
 });

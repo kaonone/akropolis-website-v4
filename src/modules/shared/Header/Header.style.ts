@@ -7,6 +7,7 @@ const styles = (theme: Theme) => ({
     margin: '0 auto',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
     color: '#2D3D66',
     maxWidth: theme.extra.sizes.maxContentWidth,
 
@@ -20,7 +21,6 @@ const styles = (theme: Theme) => ({
   }),
 
   logo: rule({
-    marginRight: 'auto',
     fontSize: 36,
 
     [theme.breakpoints.up('lg')]: {

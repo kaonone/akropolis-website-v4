@@ -17,7 +17,8 @@ const polyglot: Polyglot = new Polyglot({
   phrases: phrasesByLocale[DEFAULT_LANGUAGE],
 });
 
-export const I18nContext = React.createContext<ITranslateProps>({
+export const I18nContext = React.createContext<ITranslateProps<typeof tKeys>>({
+  tKeys,
   t: polyglot.t.bind(polyglot) as ITranslateFunction,
   locale: DEFAULT_LANGUAGE,
   changeLanguage: () => null,

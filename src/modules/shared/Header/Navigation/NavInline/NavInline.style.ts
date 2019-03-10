@@ -3,15 +3,11 @@ import { rule } from 'shared/helpers/style';
 
 const styles = (theme: Theme) => ({
   root: rule({
-    display: 'flex',
+    display: 'none',
     transformOrigin: 'right',
-    transform: 'scale(0)',
-    opacity: 0,
-    transition: 'transform .4s ease, opacity .4s ease',
 
     [theme.breakpoints.up('lg')]: {
-      opacity: 1,
-      transform: 'scale(1)',
+      display: 'flex',
     },
   }),
 

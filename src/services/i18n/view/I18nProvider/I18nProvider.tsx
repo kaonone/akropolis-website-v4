@@ -5,7 +5,7 @@ import Polyglot from 'node-polyglot';
 import { withProps } from 'shared/helpers/react';
 
 import { ITranslateFunction, Lang, ITranslateKey } from '../../namespace';
-import { DEFAULT_LANGUAGE, I18nContext } from '../../constants';
+import { DEFAULT_LANGUAGE, I18nContext, tKeys } from '../../constants';
 import { phrasesByLocale as phrases } from '../../locales';
 
 interface IOwnProps {
@@ -46,7 +46,7 @@ class I18nProvider extends React.Component<IProps, IState> {
     const { children } = this.props;
     const { locale, translator, changeLanguage } = this.state;
     return (
-      <I18nContext.Provider value={{ t: translator, locale, changeLanguage }}>
+      <I18nContext.Provider value={{ tKeys, t: translator, locale, changeLanguage }}>
         {children}
       </I18nContext.Provider>
     );

@@ -3,17 +3,15 @@ import { rule } from 'shared/helpers/style';
 
 const styles = (theme: Theme) => ({
   button: rule({
-    position: 'relative',
-    zIndex: theme.zIndex.modal + 1,
-    transform: 'scale(1)',
-    transition: 'transform .4s easy, color .4s easy',
-
-    [theme.breakpoints.up('lg')]: {
-      transform: 'scale(0)',
+    '&$open': {
+      [theme.breakpoints.up('lg')]: {
+        display: 'none',
+      },
     },
 
-    '&$opened': {
+    '&$close': {
       color: '#fff',
+      marginLeft: 'auto',
     },
   }),
 
@@ -21,11 +19,15 @@ const styles = (theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: `${theme.spacing.unit * 7.5}px ${theme.spacing.unit * 6}px ${theme.spacing.unit * 2}px`,
+    padding: theme.extra.spacing.horizontalPagePaddings.xs.medium,
     color: '#fff',
 
     [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing.unit * 9,
+      padding: `${theme.spacing.unit * 3}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
+    },
+
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: `${theme.spacing.unit * 4}px`,
     },
   }),
 
@@ -46,7 +48,8 @@ const styles = (theme: Theme) => ({
     },
   }),
 
-  opened: {},
+  open: {},
+  close: {},
 });
 
 export const provideStyles = withStyles(styles);

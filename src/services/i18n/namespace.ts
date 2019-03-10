@@ -11,7 +11,8 @@ export type ITranslateKey = string | IPhraseWithOptions;
 
 export type Lang = 'en' | 'ru';
 
-export interface ITranslateProps {
+export interface ITranslateProps<Keys> {
+  tKeys: Keys;
   locale: Lang;
   t: ITranslateFunction;
   changeLanguage(lang: Lang): void;

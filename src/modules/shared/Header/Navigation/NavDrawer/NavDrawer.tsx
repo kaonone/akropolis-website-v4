@@ -17,11 +17,11 @@ function NavDrawer(props: StylesProps) {
     <>
       <IconButton
         color="inherit"
-        aria-label="Open drawer"
+        aria-label="Open mobile navigation"
         onClick={handleDrawerToggle}
-        className={cn(classes.button, { [classes.opened]: opened })}
+        className={cn(classes.button, { [classes.open]: true })}
       >
-        {opened ? <ClearIcon /> : <MenuIcon />}
+        <MenuIcon />
       </IconButton>
       <Drawer
         variant="temporary"
@@ -33,6 +33,14 @@ function NavDrawer(props: StylesProps) {
         }}
       >
         <div className={classes.root}>
+          <IconButton
+            color="inherit"
+            aria-label="Close mobile navigation"
+            onClick={handleDrawerToggle}
+            className={cn(classes.button, { [classes.close]: true })}
+          >
+            <ClearIcon />
+          </IconButton>
           {menuItems.map(item => (
             <NavMenuItem key={item.title} className={classes.link} {...item} />
           ))}

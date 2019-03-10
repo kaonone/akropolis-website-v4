@@ -4,6 +4,7 @@ import { Theme } from './jss';
 // Find color name http://chir.ag/projects/name-that-color
 // https://github.com/insomnious0x01/ntc-js
 const colors = {
+  rhino: '#283e64',
   purpleHeart: '#6931b6',
   heliotrope: '#c17bff',
   mediumPurple: '#8c4be6',

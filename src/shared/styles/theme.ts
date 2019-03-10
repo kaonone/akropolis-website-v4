@@ -4,34 +4,33 @@ import { Theme } from './jss';
 // Find color name http://chir.ag/projects/name-that-color
 // https://github.com/insomnious0x01/ntc-js
 const colors = {
+  purpleHeart: '#6931b6',
+  heliotrope: '#c17bff',
+  mediumPurple: '#8c4be6',
+  electricViolet: '#9013FE',
+  monza: '#d0021b',
   royalBlue: '#5c73e3',
-  dodgerBlue: '#2376F5',
-  governorBay: '#3631B6',
-  anakiwa: '#7BDEFF',
-  redRibbon: '#E90C14',
-  biscay: '#202B72',
-  downriver: '#0F195B',
-  sail: '#BBDEFB',
-  corn: '#F7BA08',
-  gallery: '#ECEAEA',
   silver: '#c9c9c9',
-  codGray: '#1e1e1e',
+  blackCurrant: '#2E2639',
   white: '#fff',
   black: '#000',
 };
 
 const palette = {
   primary: {
-    main: colors.dodgerBlue,
-    light: colors.anakiwa,
-    dark: colors.governorBay,
+    main: colors.purpleHeart,
+    light: colors.heliotrope,
+    dark: colors.mediumPurple,
     contrastText: colors.white,
   },
+  secondary: {
+    main: colors.electricViolet,
+    light: colors.electricViolet,
+    dark: colors.electricViolet,
+    contrastText: colors.electricViolet,
+  },
   error: {
-    main: colors.redRibbon,
-    light: colors.corn,
-    dark: colors.redRibbon,
-    contrastText: colors.redRibbon,
+    main: colors.monza,
   },
   link: {
     hover: colors.royalBlue,
@@ -93,17 +92,7 @@ export const getTheme = (): Theme => {
           xl: 1920,
         },
       },
-      palette: {
-        primary: {
-          main: extraTheme.palette.primary.main,
-          light: extraTheme.palette.primary.light,
-          dark: extraTheme.palette.primary.dark,
-          contrastText: extraTheme.palette.primary.contrastText,
-        },
-        error: {
-          main: extraTheme.palette.error.main,
-        },
-      },
+      palette,
       typography: {
         useNextVariants: true, // https://material-ui.com/style/typography/#migration-to-typography-v2
         fontFamily: extraTheme.typography.primaryFont,

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
 import routes from 'modules/routes';
 import privacyPolicyURL from 'assets/Akropolis_Privacy_Policy.pdf';
@@ -7,6 +6,7 @@ import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
 import { IMenuItem } from 'shared/types/common';
 
 import { StylesProps, provideStyles } from './FooterNavigation.style';
+import { NavMenuItem } from 'shared/view/components';
 
 const menuItems: IMenuItem[] = [
   {
@@ -46,21 +46,17 @@ function FooterNavigation(props: StylesProps) {
   return (
     <div className={classes.root}>
       <div className={classes.column}>
-        {menuItems.slice(0, halfLength).map(item => <LinkItem key={item.title} classes={classes} {...item} />)}
+        {menuItems.slice(0, halfLength).map(item => (
+          <NavMenuItem key={item.title} className={classes.link} {...item} />
+        ))}
       </div>
       <div className={classes.column}>
-        {menuItems.slice(halfLength).map(item => <LinkItem key={item.title} classes={classes} {...item} />)}
+        {menuItems.slice(halfLength).map(item => (
+          <NavMenuItem key={item.title} className={classes.link} {...item} />
+        ))}
       </div>
     </div>
   );
-}
-
-function LinkItem(props: IMenuItem & { classes: StylesProps['classes'] }) {
-  return props.isExternal ? (
-    <a className={props.classes.link} href={props.path} target="_blank" rel="noopener noreferrer">
-      {props.title}
-    </a>
-  ) : <Link className={props.classes.link} to={props.path}>{props.title}</Link>;
 }
 
 export default provideStyles(FooterNavigation);

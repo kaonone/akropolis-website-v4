@@ -7,34 +7,12 @@ import { MenuIcon } from 'shared/view/elements';
 import { ClickAwayListener } from 'shared/view/components';
 
 import './LayoutHeaderMenu.scss';
-import routes from 'modules/routes';
 import { IMenuItem } from 'shared/types/common';
+import { menuItems } from '../Navigation/constants';
 
 interface IState {
   isMenuOpen: boolean;
 }
-
-const menuItems: IMenuItem[] = [
-  {
-    path: '/',
-    title: 'Products',
-    scrollTo: 'products',
-  },
-  {
-    path: 'https://wiki.akropolis.io',
-    title: 'Wiki',
-    isExternal: true,
-  },
-  {
-    path: routes.company.getRoutePath(),
-    title: 'Company',
-  },
-  {
-    path: 'https://medium.com/akropolis',
-    title: 'Blog',
-    isExternal: true,
-  },
-];
 
 const b = block('layout-header-menu');
 

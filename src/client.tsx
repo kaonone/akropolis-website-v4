@@ -3,7 +3,6 @@ import 'babel-polyfill';
 import { App } from 'core/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import bootstrapper from 'react-async-bootstrapper';
 import configureApp from 'core/configureApp';
 
 import getEnvParams from './core/getEnvParams';
@@ -12,16 +11,8 @@ const { appVersion } = getEnvParams();
 
 const appData = configureApp();
 
-async function main() {
-  const appForBootstrap = <App {...appData} disableStylesGeneration />;
-  await bootstrapper(appForBootstrap);
-  const app = <App {...appData} />;
-
-  render(app);
-}
-
 /* Start application */
-main();
+render(<App {...appData} />);
 
 /* Hot Module Replacement API */
 if ((module as any).hot && process.env.NODE_ENV !== 'production') {

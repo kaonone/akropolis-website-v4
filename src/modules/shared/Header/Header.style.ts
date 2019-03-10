@@ -8,7 +8,7 @@ const styles = (theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    color: '#2D3D66',
+    color: theme.extra.colors.rhino,
     maxWidth: theme.extra.sizes.maxContentWidth,
 
     [theme.breakpoints.up('md')]: {

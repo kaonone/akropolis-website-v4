@@ -8,8 +8,8 @@ function Intro(props: StylesProps) {
   const { t, tKeys } = useTranslate();
   return (
     <div className={classes.root}>
-      <p className={classes.title}>{t(tKeys.modules.home.intro.title.getKey())}</p>
-      <p className={classes.subtitle}>{t(tKeys.modules.home.intro.subtitle.getKey())}</p>
+      <p className={classes.title}>{t(tKeys.sections.intro.title.getKey())}</p>
+      <p className={classes.subtitle}>{t(tKeys.sections.intro.subtitle.getKey())}</p>
     </div>
   );
 }

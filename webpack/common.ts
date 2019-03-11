@@ -9,6 +9,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import threadLoaderLib from 'thread-loader';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import FileManagerWebpackPlugin from 'filemanager-webpack-plugin';
+import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 import postcssReporter from 'postcss-reporter';
 import postcssSCSS from 'postcss-scss';
@@ -223,8 +224,10 @@ export const commonConfig: webpack.Configuration = {
     chunkFilename: `js/[${chunkName}]-[${chunkHash}].bundle.js`,
   },
   resolve: {
-    modules: ['node_modules', 'src'],
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    plugins: [
+      new TsConfigPathsPlugin(),
+    ],
   },
   optimization: {
     runtimeChunk: 'single',

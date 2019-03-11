@@ -13,6 +13,7 @@ import { StylesProps, provideStyles } from './Home.style';
 import Intro from './Intro/Intro';
 import Products from './Products/Products';
 import WhatYouCanBuild from './WhatYouCanBuild/WhatYouCanBuild';
+import Partners from './Partners/Partners';
 
 function Home(props: RouteComponentProps & StylesProps) {
   const { classes } = props;
@@ -29,8 +30,13 @@ function Home(props: RouteComponentProps & StylesProps) {
         <Products />
       </div>
       <div className={cn(classes.block, classes.youCan)}>
-        <Section title={t(tKeys.modules.home.whatYouCanBuild.title.getKey())}>
+        <Section title={t(tKeys.sections.whatYouCanBuild.title.getKey())}>
           <WhatYouCanBuild />
+        </Section>
+      </div>
+      <div className={cn(classes.block, classes.partners)}>
+        <Section title={t(tKeys.sections.partners.title.getKey())}>
+          <Partners />
         </Section>
       </div>
       <Layout.Footer>

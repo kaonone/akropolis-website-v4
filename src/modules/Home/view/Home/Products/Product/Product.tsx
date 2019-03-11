@@ -8,7 +8,7 @@ import { StylesProps, provideStyles } from './Product.style';
 import { AfricaIcon, SecondPlaceIcon } from './icons';
 import logo0xImg from './imgs/0x_logo.png';
 
-type ProductType = keyof typeof tKeys.modules.home.products;
+type ProductType = keyof typeof tKeys.sections.products;
 
 interface IProps {
   type: ProductType;
@@ -34,9 +34,9 @@ function Product(props: IProps & StylesProps) {
       <div className={cn(classes.header, { [classes[type]]: true })}>{headerByType[type]()}</div>
       <div className={classes.preview}>
         <Preview
-          title={t(tKeys.modules.home.products[type].title.getKey())}
-          description={t(tKeys.modules.home.products[type].description.getKey())}
-          moreLink={t(tKeys.modules.home.products[type].link.getKey())}
+          title={t(tKeys.sections.products[type].title.getKey())}
+          description={t(tKeys.sections.products[type].description.getKey())}
+          moreLink={t(tKeys.sections.products[type].link.getKey())}
         />
       </div>
     </div>

@@ -11,7 +11,7 @@ import { StylesProps, provideStyles } from './WhatYouCanBuild.style';
 function WhatYouCanBuild({ classes }: StylesProps) {
   const { t, tKeys } = useTranslate();
 
-  type ItemType = keyof typeof tKeys.modules.home.whatYouCanBuild.items;
+  type ItemType = keyof typeof tKeys.sections.whatYouCanBuild.items;
   const items: ItemType[] = ['ownSavings', 'novelInstruments', 'alternativeIdentity', 'bank'];
   const icons: Record<ItemType, JSX.Element> = {
     alternativeIdentity: <AlternativeIdentityIcon className={classes.icon} />,
@@ -23,9 +23,9 @@ function WhatYouCanBuild({ classes }: StylesProps) {
   const previews = items.map(item => (
     <Preview
       key={item}
-      title={t(tKeys.modules.home.whatYouCanBuild.items[item].title.getKey())}
+      title={t(tKeys.sections.whatYouCanBuild.items[item].title.getKey())}
       titleIcon={icons[item]}
-      description={t(tKeys.modules.home.whatYouCanBuild.items[item].description.getKey())}
+      description={t(tKeys.sections.whatYouCanBuild.items[item].description.getKey())}
     />
   ));
 

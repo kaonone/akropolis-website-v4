@@ -1,21 +1,30 @@
 # Akropolis website v4
 
-## NPM scripts
-### To start localy
-- ```npm run dev``` for development environment in watch mode
-- ```npm run prod``` for production environment in watch mode
+## How do I work?
 
-### To build localy (see build folder)
-- ```npm run build:dev``` for development environment without watch mode
-- ```npm run build:prod``` for production environment without watch mode
+### Preparation
+- You need to globally install `Node.js` and `npm`
+- Run `npm install` for install dependencies
 
-### To start bundle analyzer
-- ```npm run analyze:dev``` for development environment
-- ```npm run analyze:prod``` for production environment
+### For start locally
+- Run `npm run dev`
+- Go to [http://localhost:8080]()
 
-### To start isomorphic server
-- ```npm run server:dev``` for development environment in watch mode
-- ```npm run server:prod``` for production environment without watch mode
+### For deploy changes in the wiki to web (only for contributors)
+- Run `npm run deploy`
 
-### To start yeoman generator create-feature
-- ```npm run yeoman```
+## Where can i change or add the data?
+
+### Partners
+Edit the file `data/partners/index.ts`. It contains an array of partner data.
+
+Item structure:
+- `url` - partner link
+- `alt` - description for accessibility, for example, screen-reader
+- `icon1x` - default logo
+- `icon2x` - logo for retina display
+
+Logos should be placed in the folder `data/partners/imgs`.
+
+### Other
+Some texts can be edited in the file `src/services/i18n/locales/en.ts`.

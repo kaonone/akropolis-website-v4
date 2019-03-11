@@ -7,7 +7,7 @@
     "check-types": "node_modules/.bin/tsc -p . --noEmit -w",
     "dev": "npm run watch:dev",
     "prod": "npm run watch:prod",
-    "deploy:gh-pages": "npm run build:gh-pages && gh-pages -d build",
+    "deploy": "npm run build:gh-pages && gh-pages -d build",
     "fast": "better-npm-run watch:dev:fast",
     "watch:dev": "better-npm-run watch:dev",
     "watch:prod": "better-npm-run watch:prod",

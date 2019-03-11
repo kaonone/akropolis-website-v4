@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useTranslate } from 'services/i18n';
 import { Adaptive } from 'services/adaptability';
 import { Preview } from 'shared/view/components';
-import { Grid } from 'shared/view/elements';
+import { Grid, Carousel } from 'shared/view/elements';
 
 import { AlternativeIdentityIcon, BankIcon, NovelInstrumentsIcon, OwnSavingsIcon } from './icons';
 import { StylesProps, provideStyles } from './WhatYouCanBuild.style';
@@ -20,20 +20,27 @@ function WhatYouCanBuild({ classes }: StylesProps) {
     ownSavings: <OwnSavingsIcon className={classes.icon} />,
   };
 
+  const previews = items.map(item => (
+    <Preview
+      key={item}
+      title={t(tKeys.modules.home.whatYouCanBuild.items[item].title.getKey())}
+      titleIcon={icons[item]}
+      description={t(tKeys.modules.home.whatYouCanBuild.items[item].description.getKey())}
+    />
+  ));
+
   return (
     <>
       <Adaptive to="md">
-        Slider view
+        <Carousel>
+          {previews}
+        </Carousel>
       </Adaptive>
       <Adaptive from="md">
         <Grid container spacing={24}>
-          {items.map(item => (
-            <Grid key={item} item xs={12} md={6} >
-              <Preview
-                title={t(tKeys.modules.home.whatYouCanBuild.items[item].title.getKey())}
-                titleIcon={icons[item]}
-                description={t(tKeys.modules.home.whatYouCanBuild.items[item].description.getKey())}
-              />
+          {previews.map((preview, index) => (
+            <Grid key={index} item xs={12} md={6} >
+              {preview}
             </Grid>
           ))}
         </Grid>

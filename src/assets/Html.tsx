@@ -46,6 +46,7 @@ export default class Html extends React.PureComponent<IHtmlProps> {
 
           {assets.favicons.map((el, index) => <link key={index} {...el.attribs} />)}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>Akropolis</title>
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {assets.styles.map((filePath, index) => (

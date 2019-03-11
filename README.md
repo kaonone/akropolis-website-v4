@@ -26,5 +26,14 @@ Item structure:
 
 Logos should be placed in the folder `data/partners/imgs`.
 
+### News
+Edit the file `data/news/index.ts`. It contains an array of news data.
+
+Item structure:
+- `summary` - short news description
+- `sourceIcon` - source of news to which the `url` leads. Allowed values of `sourceIcon`: 'default', 'medium', 'twitter'.
+- `url` - link to the full news
+- `date` - publication date of the news. Allowed date format: MM.DD.HHHH (month.day.year).
+
 ### Other
 Some texts can be edited in the file `src/services/i18n/locales/en.ts`.

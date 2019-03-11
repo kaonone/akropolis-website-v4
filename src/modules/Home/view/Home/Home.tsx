@@ -14,6 +14,7 @@ import Intro from './Intro/Intro';
 import Products from './Products/Products';
 import WhatYouCanBuild from './WhatYouCanBuild/WhatYouCanBuild';
 import Partners from './Partners/Partners';
+import News from './News/News';
 
 function Home(props: RouteComponentProps & StylesProps) {
   const { classes } = props;
@@ -37,6 +38,11 @@ function Home(props: RouteComponentProps & StylesProps) {
       <div className={cn(classes.block, classes.partners)}>
         <Section title={t(tKeys.sections.partners.title.getKey())}>
           <Partners />
+        </Section>
+      </div>
+      <div className={cn(classes.block, classes.news)}>
+        <Section title={t(tKeys.sections.news.title.getKey())}>
+          <News />
         </Section>
       </div>
       <Layout.Footer>

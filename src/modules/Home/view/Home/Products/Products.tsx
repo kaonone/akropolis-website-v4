@@ -4,7 +4,7 @@ import { GetProps } from '_helpers';
 import { Grid } from 'shared/view/elements';
 import Product from './Product/Product';
 
-const products: Array<GetProps<typeof Product>['type']> = ['0x-hackathon', 'chama-network'];
+const products: Array<GetProps<typeof Product>['type']> = ['hackathon0x', 'chamaNetwork'];
 
 function Products() {
   return (

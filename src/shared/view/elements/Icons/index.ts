@@ -6,3 +6,4 @@ export { default as ChromeReaderMode } from '@material-ui/icons/ChromeReaderMode
 export { default as LogoWithNameIcon } from './LogoWithNameIcon';
 export { default as MediumIcon } from './MediumIcon';
 export { default as TwitterIcon } from './TwitterIcon';
+export { default as ChevronRightIcon } from './ChevronRightIcon';

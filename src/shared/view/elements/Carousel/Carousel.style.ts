@@ -2,20 +2,51 @@ import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
 const styles = (theme: Theme) => ({
-  root: rule({}),
+  root: rule({
+    position: 'relative',
+  }),
 
-  pagination: rule({
+  arrowPagination: rule({
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    padding: theme.spacing.unit * 1.5,
+    display: 'flex',
+    alignItems: 'center',
+    justifyItems: 'center',
+    cursor: 'pointer',
+
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing.unit * 3,
+    },
+
+    '&$left': {
+      right: '100%',
+      transform: 'scale(-1)',
+    },
+
+    '&$right': {
+      left: '100%',
+    },
+  }),
+
+  arrowIcon: rule({
+    fontSize: 48,
+    color: '#e8e8e8',
+  }),
+
+  dotsPagination: rule({
     display: 'flex',
     justifyContent: 'center',
     marginTop: theme.spacing.unit * 2,
   }),
 
-  pagItemWrapper: rule({
+  dotWrapper: rule({
     padding: theme.spacing.unit * 0.75,
     cursor: 'pointer',
   }),
 
-  pagItem: rule({
+  dot: rule({
     width: theme.spacing.unit,
     height: theme.spacing.unit,
     borderRadius: '50%',
@@ -27,6 +58,8 @@ const styles = (theme: Theme) => ({
   }),
 
   active: {},
+  left: {},
+  right: {},
 });
 
 export const provideStyles = withStyles(styles, { withTheme: true });

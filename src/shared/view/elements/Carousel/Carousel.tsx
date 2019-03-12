@@ -2,17 +2,19 @@ import * as React from 'react';
 import cn from 'classnames';
 import SwipeableViews, { SwipeableViewsProps } from 'react-swipeable-views';
 
+import { ChevronRightIcon } from '../Icons';
 import { StylesProps, provideStyles } from './Carousel.style';
 import { Omit } from '_helpers';
 
 interface IProps {
+  pagination: 'dots' | 'arrows';
   children: React.ReactElement[];
 }
 
 type AdditionalProps = Omit<SwipeableViewsProps, 'onChangeIndex' | 'index' | 'ref'>;
 
 function Carousel(props: AdditionalProps & IProps & StylesProps) {
-  const { classes, children, theme, ...rest } = props;
+  const { classes, children, theme, pagination, ...rest } = props;
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   // it's need for viewing slide shadows
@@ -41,13 +43,31 @@ function Carousel(props: AdditionalProps & IProps & StylesProps) {
       >
         {children}
       </SwipeableViews>
-      <div className={classes.pagination}>
-        {children.map((_, i) => (
-          <div key={i} className={classes.pagItemWrapper} onClick={setCurrentSlide.bind(null, i)}>
-            <div className={cn(classes.pagItem, { [classes.active]: i === currentSlide })} />
+      {pagination === 'dots' && (
+        <div className={classes.dotsPagination}>
+          {children.map((_, i) => (
+            <div key={i} className={classes.dotWrapper} onClick={setCurrentSlide.bind(null, i)}>
+              <div className={cn(classes.dot, { [classes.active]: i === currentSlide })} />
+            </div>
+          ))}
+        </div>
+      )}
+      {pagination === 'arrows' && (
+        <>
+          <div
+            className={cn(classes.arrowPagination, classes.left)}
+            onClick={setCurrentSlide.bind(null, (currentSlide - 1 + children.length) % children.length)}
+          >
+            <ChevronRightIcon className={classes.arrowIcon} />
           </div>
-        ))}
-      </div>
+          <div
+            className={cn(classes.arrowPagination, classes.right)}
+            onClick={setCurrentSlide.bind(null, (currentSlide + 1 + children.length) % children.length)}
+          >
+            <ChevronRightIcon className={classes.arrowIcon} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

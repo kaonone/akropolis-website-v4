@@ -13,12 +13,12 @@ function News() {
   return (
     <>
       <Adaptive to="md">
-        <Carousel animateHeight>
+        <Carousel animateHeight pagination="dots">
           {renderGroupedNews(groupedByTwo, 12)}
         </Carousel>
       </Adaptive>
       <Adaptive from="md">
-        <Carousel animateHeight>
+        <Carousel animateHeight pagination="arrows">
           {renderGroupedNews(groupedByFour, 6)}
         </Carousel>
       </Adaptive>

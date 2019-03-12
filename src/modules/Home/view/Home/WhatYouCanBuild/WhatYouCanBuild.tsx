@@ -32,7 +32,7 @@ function WhatYouCanBuild({ classes }: StylesProps) {
   return (
     <>
       <Adaptive to="md">
-        <Carousel>
+        <Carousel pagination="dots">
           {previews}
         </Carousel>
       </Adaptive>

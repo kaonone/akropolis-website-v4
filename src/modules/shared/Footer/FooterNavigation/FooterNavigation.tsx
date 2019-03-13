@@ -10,19 +10,20 @@ import { NavMenuItem } from 'shared/view/components';
 
 const menuItems: IMenuItem[] = [
   {
-    path: '#', // TODO ds: add url
+    path: 'https://www.cashflowrelay.com/',
     title: 'Cashflow Relay',
     isExternal: true,
   },
   {
-    path: '#', // TODO ds: add url
+    path: '/',
     title: 'Chama Network',
-    isExternal: true,
+    scrollTo: 'products',
   },
   {
-    path: 'https://wiki.akropolis.io',
-    title: 'Wiki',
+    path: '',
+    title: 'Wiki (Coming soon)',
     isExternal: true,
+    disabled: true,
   },
   {
     path: routes.company.getRoutePath(),

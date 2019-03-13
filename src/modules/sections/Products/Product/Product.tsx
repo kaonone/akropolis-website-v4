@@ -29,6 +29,8 @@ function Product(props: IProps & StylesProps) {
     chamaNetwork: () => <AfricaIcon className={classes.icon} />,
   };
 
+  const link = t(tKeys.sections.products[type].link.getKey());
+
   return (
     <div className={classes.root}>
       <div className={cn(classes.header, { [classes[type]]: true })}>{headerByType[type]()}</div>
@@ -36,7 +38,8 @@ function Product(props: IProps & StylesProps) {
         <Preview
           title={t(tKeys.sections.products[type].title.getKey())}
           description={t(tKeys.sections.products[type].description.getKey())}
-          moreLink={t(tKeys.sections.products[type].link.getKey())}
+          moreLink={link}
+          isComingSoon={!link}
         />
       </div>
     </div>

@@ -72,6 +72,7 @@ const styles = (theme: Theme) => ({
     color: '#d6d6d6',
 
     [theme.breakpoints.up('md')]: {
+      alignSelf: 'flex-start',
       textAlign: 'left',
     },
 

@@ -53,19 +53,19 @@ const styles = (theme: Theme) => {
       maxWidth: theme.extra.sizes.maxContentWidth,
       margin: `0 auto auto`,
       fontFamily: theme.extra.typography.primaryFont,
-      fontSize: 14,
+      fontSize: 16,
       lineHeight: 1.29,
       letterSpacing: 0.1,
       textAlign: 'center',
 
       [theme.breakpoints.up('md')]: {
-        fontSize: 18,
+        fontSize: 24,
         lineHeight: 1.56,
         letterSpacing: 0.1,
       },
 
-      [theme.breakpoints.up('md')]: {
-        fontSize: 22,
+      [theme.breakpoints.up('lg')]: {
+        fontSize: 30,
       },
     }),
   };

@@ -10,12 +10,12 @@ export default {
       hackathon0x: {
         title: 'Cashflow Relay',
         description: 'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing.',
-        link: 'mock_url', // TODO ds: add link
+        link: 'https://www.cashflowrelay.com/',
       },
       chamaNetwork: {
         title: 'Chama network',
         description: 'Сreate a savings group with those who you know personally and trust.',
-        link: 'mock_url', // TODO ds: add link
+        link: '',
       },
     },
     whatYouCanBuild: {
@@ -34,7 +34,7 @@ export default {
           description: 'Create a financial system where one is missing. Open up non-predatory funding sources for people with no credit score or credit history.',
         },
         bank: {
-          title: 'An (un)bank',
+          title: 'An (un) bank',
           description: 'Create savings and lending infrastructure for Finance 3.0 without borders and unnecessary fees. Integrate OpenFinance solutions, build on top, and innovate to create better Finance 3.0',
         },
       },

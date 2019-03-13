@@ -19,7 +19,7 @@ export default [
     icon2x: require('./imgs/Melonport@2x.png'),
   },
   {
-    url: 'http://aragon.org',
+    url: 'https://aragon.org',
     partnerName: 'Aragon',
     icon1x: require('./imgs/Aragon@1x.png'),
     icon2x: require('./imgs/Aragon@2x.png'),
@@ -37,7 +37,7 @@ export default [
     icon2x: require('./imgs/Set@2x.png'),
   },
   {
-    url: 'http://cindicator.com',
+    url: 'https://cindicator.com',
     partnerName: 'Cindicator',
     icon1x: require('./imgs/Cindicator@1x.png'),
     icon2x: require('./imgs/Cindicator@2x.png'),

@@ -5,4 +5,5 @@ export interface IMenuItem {
   title: string;
   isExternal?: boolean;
   scrollTo?: AnchorName;
+  disabled?: boolean;
 }

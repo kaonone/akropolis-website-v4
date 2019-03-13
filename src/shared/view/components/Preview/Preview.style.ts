@@ -47,25 +47,29 @@ const styles = (theme: Theme) => ({
     },
   }),
 
+  footer: rule({
+    marginTop: 'auto',
+    paddingTop: theme.spacing.unit * 2,
+    alignSelf: 'flex-start',
+    fontFamily: theme.extra.typography.secondaryFont,
+    fontSize: 16,
+    lineHeight: 1.8,
+
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: theme.spacing.unit * 3,
+      fontSize: 18,
+    },
+  }),
+
   moreLink: rule({
     display: 'flex',
     alignItems: 'center',
     padding: 0,
-    paddingTop: theme.spacing.unit * 2,
-    alignSelf: 'flex-start',
-    marginTop: 'auto',
-    fontFamily: theme.extra.typography.secondaryFont,
-    fontSize: 16,
     color: 'inherit',
     transition: 'color .4s ease',
 
     '&:hover': {
       color: theme.extra.palette.link.hover,
-    },
-
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: theme.spacing.unit * 3,
-      fontSize: 18,
     },
   }),
 

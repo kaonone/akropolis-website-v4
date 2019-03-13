@@ -98,7 +98,7 @@ export default [
     links: [
       'https://www.linkedin.com/in/victor-lunichkin',
     ],
-    fullName: 'Viktor Lunichkin',
+    fullName: 'Victor Lunichkin',
     position: 'Project Manager',
     photo1x: require('./imgs/lunichkin@1x.png'),
     photo2x: require('./imgs/lunichkin@2x.png'),

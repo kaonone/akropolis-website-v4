@@ -20,7 +20,7 @@ function Footer(props: IProps & StylesProps) {
             <LogoWithNameIcon fontSize="inherit" />
           </Link>
           <p className={classes.description}>
-            Akropolis is a lightweight, universal protocol layer capable of being deployed on a variety of blockchains.
+            Unlocking the potential of informal economy with Open Finance
           </p>
         </div>
         <div className={cn(classes.column, classes.right)}>

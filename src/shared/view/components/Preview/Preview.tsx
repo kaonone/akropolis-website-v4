@@ -8,10 +8,11 @@ interface IProps {
   titleIcon?: React.ReactNode;
   description: string;
   moreLink?: string;
+  isComingSoon?: boolean;
 }
 
 function Preview(props: IProps & StylesProps) {
-  const { classes, title, description, moreLink, titleIcon } = props;
+  const { classes, title, description, moreLink, titleIcon, isComingSoon } = props;
   return (
     <article className={classes.root}>
       <h3 className={classes.title}>
@@ -19,11 +20,18 @@ function Preview(props: IProps & StylesProps) {
         {title}
       </h3>
       <p className={classes.description}>{description}</p>
-      {moreLink && (
-        <Link href={moreLink} target="_blank" rel="noopener noreferrer" className={classes.moreLink}>
-          Learn more
-          <LaunchIcon className={classes.moreLinkIcon} />
-        </Link>
+      {(moreLink || isComingSoon) && (
+        <footer className={classes.footer}>
+          {moreLink && (
+            <Link href={moreLink} target="_blank" rel="noopener noreferrer" className={classes.moreLink}>
+              Learn more
+              <LaunchIcon className={classes.moreLinkIcon} />
+            </Link>
+          )}
+          {isComingSoon && (
+            <span>Coming soon</span>
+          )}
+        </footer>
       )}
     </article>
   );

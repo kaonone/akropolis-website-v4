@@ -19,6 +19,7 @@ const styles = (theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
+    flexGrow: 1,
     padding: theme.extra.spacing.horizontalPagePaddings.xs.medium,
     color: '#fff',
 
@@ -46,6 +47,11 @@ const styles = (theme: Theme) => ({
     '&:hover': {
       color: theme.extra.palette.link.hover,
     },
+  }),
+
+  socials: rule({
+    marginTop: 'auto',
+    color: theme.extra.colors.amethystSmoke,
   }),
 
   open: {},

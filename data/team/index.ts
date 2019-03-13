@@ -103,7 +103,6 @@ export default [
     photo1x: require('./imgs/lunichkin@1x.png'),
     photo2x: require('./imgs/lunichkin@2x.png'),
     tags: [
-      'Project Manager & Team Assist, PAC GROUP',
       'Project Manager, Svandis',
     ],
   },

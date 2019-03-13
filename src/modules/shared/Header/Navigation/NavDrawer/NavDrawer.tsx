@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { NavMenuItem } from 'shared/view/components';
+import { NavMenuItem, AkropolisSocialLinks } from 'shared/view/components';
 import { Drawer, IconButton } from 'shared/view/elements';
 import { MenuIcon, ClearIcon } from 'shared/view/elements/Icons';
 
@@ -44,6 +44,7 @@ function NavDrawer(props: StylesProps) {
           {menuItems.map(item => (
             <NavMenuItem key={item.title} className={classes.link} {...item} />
           ))}
+          <div className={classes.socials}><AkropolisSocialLinks /></div>
         </div>
       </Drawer>
     </>

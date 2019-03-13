@@ -50,6 +50,20 @@ const styles = (theme: Theme) => ({
 
   footer: rule({}),
 
+  socials: rule({
+    position: 'fixed',
+    display: 'none',
+    marginRight: theme.spacing.unit * 2,
+    top: '50%',
+    right: 0,
+    transform: 'translateY(-50%)',
+    color: theme.extra.colors.amethystSmoke,
+
+    [theme.breakpoints.up('lg')]: {
+      display: 'block',
+    },
+  }),
+
   isAbsolute: {},
 });
 

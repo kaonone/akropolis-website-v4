@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
+import { AkropolisSocialLinks } from 'shared/view/components';
 import { StylesProps, provideStyles } from './Layout.style';
 
 interface IOwnProps {
@@ -29,6 +30,7 @@ function Layout(props: IProps) {
       {introContent && <div className={classes.intro}>{introContent}</div>}
       <div className={classes.content}>{allowedChildren}</div>
       {footerContent && <div className={classes.footer}>{footerContent}</div>}
+      <div className={classes.socials}><AkropolisSocialLinks direction="column" /></div>
     </div>
   );
 }

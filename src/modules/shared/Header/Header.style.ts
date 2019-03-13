@@ -21,7 +21,9 @@ const styles = (theme: Theme) => ({
   }),
 
   logo: rule({
+    display: 'flex',
     fontSize: 36,
+    color: 'inherit',
 
     [theme.breakpoints.up('lg')]: {
       fontSize: 48,

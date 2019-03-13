@@ -6,13 +6,14 @@ interface IProps {
   type: string;
   alt: string;
   title: string;
+  className?: string;
   fullWidth?: boolean;
 }
 
 function Picture(props: IProps) {
-  const { x1, x2, type, alt, title, fullWidth } = props;
+  const { x1, x2, type, alt, title, fullWidth, className } = props;
   return (
-    <picture>
+    <picture className={className}>
       <source srcSet={`${x1} 1x, ${x2} 2x`} type={type} />
       <img src={x1} alt={alt} title={title} width={fullWidth ? '100%' : undefined} />
     </picture>

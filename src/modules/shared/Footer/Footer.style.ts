@@ -53,8 +53,10 @@ const styles = (theme: Theme) => ({
   right: {},
 
   logo: rule({
+    display: 'flex',
     marginBottom: theme.spacing.unit * 3.5,
     fontSize: 40,
+    color: 'inherit',
 
     [theme.breakpoints.up('md')]: {
       alignSelf: 'flex-start',

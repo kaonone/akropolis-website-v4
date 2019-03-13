@@ -5,7 +5,7 @@ import Layout from 'modules/shared/Layout/Layout';
 import Header from 'modules/shared/Header/Header';
 import Footer from 'modules/shared/Footer/Footer';
 
-import { Partners, Team } from 'modules/sections';
+import { Partners, Team, ProfMemberships } from 'modules/sections';
 import { StylesProps, provideStyles } from './Company.style';
 
 function Company(_props: RouteComponentProps & StylesProps) {
@@ -16,6 +16,7 @@ function Company(_props: RouteComponentProps & StylesProps) {
       </Layout.Header>
       <Team />
       <Partners />
+      <ProfMemberships />
       <Layout.Footer>
         <Footer />
       </Layout.Footer>

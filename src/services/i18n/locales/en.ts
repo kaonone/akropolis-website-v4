@@ -49,6 +49,9 @@ export default {
       title: 'The team',
       subtitle: 'The passionate, dedicated Akropolis team is changing global finance forever. Get to know them.',
     },
+    profMemberships: {
+      title: 'Professional memberships',
+    },
   },
   shared: {
     date: {

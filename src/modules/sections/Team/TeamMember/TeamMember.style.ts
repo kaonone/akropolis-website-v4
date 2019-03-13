@@ -1,0 +1,70 @@
+import { withStyles, Theme, WithStyles } from 'shared/styles';
+import { rule } from 'shared/helpers/style';
+
+const styles = (theme: Theme) => ({
+  root: rule({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }),
+
+  title: rule({
+    margin: `${theme.spacing.unit * 2.5}px 0 ${theme.spacing.unit * 1.5}px`,
+    display: 'flex',
+    alignItems: 'center',
+    fontFamily: theme.extra.typography.primaryFont,
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: theme.extra.colors.rhino,
+
+    [theme.breakpoints.up('lg')]: {
+      marginTop: theme.spacing.unit * 2,
+      fontSize: 24,
+    },
+  }),
+
+  name: rule({
+    marginRight: theme.spacing.unit * 0.5,
+    whiteSpace: 'nowrap',
+  }),
+
+  socialLink: rule({
+    fontSize: 16,
+    padding: theme.spacing.unit * 0.5,
+    color: 'inherit',
+
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 24,
+    },
+  }),
+
+  position: rule({
+    margin: 0,
+    marginBottom: theme.spacing.unit * 1.5,
+    fontFamily: theme.extra.typography.secondaryFont,
+    fontSize: 14,
+    color: theme.extra.colors.cornflowerBlue,
+    whiteSpace: 'nowrap',
+
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 16,
+    },
+  }),
+
+  tags: rule({
+    margin: 0,
+    fontFamily: theme.extra.typography.secondaryFont,
+    fontSize: 13,
+    lineHeight: 1.85,
+    color: theme.extra.colors.rhino,
+    textAlign: 'center',
+
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 14,
+    },
+  }),
+});
+
+export const provideStyles = withStyles(styles);
+
+export type StylesProps = WithStyles<typeof styles>;

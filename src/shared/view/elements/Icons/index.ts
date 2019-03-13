@@ -7,3 +7,5 @@ export { default as LogoWithNameIcon } from './LogoWithNameIcon';
 export { default as MediumIcon } from './MediumIcon';
 export { default as TwitterIcon } from './TwitterIcon';
 export { default as ChevronRightIcon } from './ChevronRightIcon';
+export { default as GithubIcon } from './GithubIcon';
+export { default as LinkedinIcon } from './LinkedinIcon';

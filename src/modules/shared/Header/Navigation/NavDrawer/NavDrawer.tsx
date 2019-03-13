@@ -42,7 +42,7 @@ function NavDrawer(props: StylesProps) {
             <ClearIcon />
           </IconButton>
           {menuItems.map(item => (
-            <NavMenuItem key={item.title} className={classes.link} {...item} />
+            <NavMenuItem key={item.title} className={classes.link} onClick={handleDrawerToggle} {...item} />
           ))}
           <div className={classes.socials}><AkropolisSocialLinks /></div>
         </div>

@@ -5,7 +5,7 @@ import bgUrl from './intro_bg.jpg';
 const styles = (theme: Theme) => {
   return {
     root: rule({
-      minHeight: '100vh',
+      minHeight: `calc(100vh + ${theme.extra.spacing.layoutContentSkew.xsHeight}px)`,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'column',
@@ -19,6 +19,7 @@ const styles = (theme: Theme) => {
       },
 
       [theme.breakpoints.up('lg')]: {
+        minHeight: `calc(100vh + ${theme.extra.spacing.layoutContentSkew.lgHeight}px)`,
         padding: `${theme.spacing.unit * 17.5}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
       },
     }),
@@ -53,19 +54,19 @@ const styles = (theme: Theme) => {
       maxWidth: theme.extra.sizes.maxContentWidth,
       margin: `0 auto auto`,
       fontFamily: theme.extra.typography.primaryFont,
-      fontSize: 16,
+      fontSize: 20,
       lineHeight: 1.29,
       letterSpacing: 0.1,
       textAlign: 'center',
 
       [theme.breakpoints.up('md')]: {
-        fontSize: 24,
+        fontSize: 27,
         lineHeight: 1.56,
         letterSpacing: 0.1,
       },
 
       [theme.breakpoints.up('lg')]: {
-        fontSize: 30,
+        fontSize: 36,
       },
     }),
   };

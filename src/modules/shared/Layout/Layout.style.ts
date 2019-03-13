@@ -28,12 +28,12 @@ const styles = (theme: Theme) => ({
     '&:before, &:after': {
       content: '""',
       width: '100%',
-      height: theme.spacing.unit * 3,
+      height: theme.extra.spacing.layoutContentSkew.xsHeight,
       position: 'absolute',
       zIndex: 1,
 
       [theme.breakpoints.up('lg')]: {
-        height: theme.spacing.unit * 4,
+        height: theme.extra.spacing.layoutContentSkew.lgHeight,
       },
     },
 

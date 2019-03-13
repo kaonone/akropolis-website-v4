@@ -53,6 +53,10 @@ const baseThemeStyles = {
   },
   spacing: {
     unit,
+    layoutContentSkew: {
+      xsHeight: unit * 3,
+      lgHeight: unit * 4,
+    },
     horizontalPagePaddings: {
       xs: {
         small: unit,

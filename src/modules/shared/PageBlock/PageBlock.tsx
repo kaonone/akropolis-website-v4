@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import { StylesProps, provideStyles } from './PageBlock.style';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
+import { AnchorName } from 'shared/types/common';
 
 type PaddingBreakpoint = 'xsVPadding' | 'smVPadding' | 'mdVPadding' | 'lgVPadding' | 'xlVPadding';
 
@@ -22,15 +23,16 @@ type BPProps = {
 interface IProps {
   className?: string;
   children: React.ReactNode;
+  anchorName?: AnchorName;
 }
 
 function PageBlock(props: BPProps & IProps & StylesProps) {
-  const { classes, className, children } = props;
+  const { classes, className, children, anchorName } = props;
   const hPaddingClasses = points
     .filter(item => Boolean(props[item]))
     .map(item => classes[`hPadding-${paddingPointToBreakpoint[item]}-${props[item]}`]);
   return (
-    <div className={cn(classes.root, ...hPaddingClasses, className)}>
+    <div id={anchorName} className={cn(classes.root, ...hPaddingClasses, className)}>
       {children}
     </div>
   );

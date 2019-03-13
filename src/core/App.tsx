@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, StaticRouter } from 'react-router-dom';
+import { createBrowserHistory, Location } from 'history';
+import { StaticRouter, Router } from 'react-router-dom';
+import animateScroll from 'react-scroll/modules/mixins/animate-scroll';
 import 'normalize.css';
 import 'shared/styles/fonts/index.scss';
 
@@ -9,9 +11,25 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { I18nProvider } from 'services/i18n';
 import { IAppData, IModule, IJssDependencies } from 'shared/types/app';
 import { BaseStyles, JssProvider, SheetsRegistry } from 'shared/styles';
+import { getTheme } from 'shared/styles/theme';
 
 import createRoutes from './routes';
-import { getTheme } from 'shared/styles/theme';
+
+const browserHistory = createBrowserHistory();
+
+browserHistory.listen(handleScrollToAnchor);
+
+function handleScrollToAnchor(location: Location<any>) {
+  setTimeout(() => {
+    if (location.hash) { // scroll to anchor
+      const element = document.getElementById(location.hash.slice(1));
+      const offset = element && element.getBoundingClientRect().top;
+      offset && animateScroll.scrollMore(offset);
+    } else {
+      animateScroll.scrollToTop();
+    }
+  }, 0);
+}
 
 interface IAppProps {
   jssDeps: IJssDependencies;
@@ -19,11 +37,15 @@ interface IAppProps {
 }
 
 function ClientApp({ modules, store, jssDeps, disableStylesGeneration }: IAppData & IAppProps) {
+  useEffect(() => {
+    handleScrollToAnchor(browserHistory.location);
+  }, []);
+
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <Router history={browserHistory}>
         {renderSharedPart(modules, jssDeps, disableStylesGeneration)}
-      </BrowserRouter>
+      </Router>
     </Provider>
   );
 }

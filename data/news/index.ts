@@ -1,17 +1,17 @@
 // tslint:disable
 export default [
   {
-    summary: 'Akropolis joins Full Node meetup to discuss practical lessons for DAO governance and product-market fit',
+    summary: 'Akropolis joins Full Node panel on DAO governance and product-market fit',
     url: 'https://twitter.com/akropolisio/status/1105494593238380549',
     date: '03.12.2019',
   },
   {
-    summary: 'Akropolis’ Cashflow Relay takes the second place in the 0x + CoinList Hackathon',
+    summary: 'Akropolis’ Cashflow Relay wins second place in the 0x + CoinList Hackathon',
     url: 'https://medium.com/coinlist/announcing-the-winners-of-the-0x-coinlist-hackathon-c4bc8ff4f79d',
     date: '02.15.2019',
   },
   {
-    summary: 'Akropolis implements CashflowRelay on the top of C2FC, a new cashflow financing financial primitive, 0x and MakerDAO',
+    summary: 'Akropolis ships CashflowRelay, built with with 0x and MakerDao and integrates its new financial primitive, Commitments to Future Cashflow',
     url: 'https://twitter.com/akropolisio/status/1095342444252725248',
     date: '02.12.2019',
   },

@@ -61,6 +61,7 @@ const styles = (theme: Theme) => ({
   }),
 
   icon: rule({
+    width: 'unset',
     marginRight: theme.spacing.unit * 1.5,
     fontSize: 20,
 

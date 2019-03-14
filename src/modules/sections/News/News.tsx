@@ -46,7 +46,7 @@ function renderGroupedNews(groupedNews: ReturnType<typeof getNewsGroups>, itemGr
 
 function getNewsGroups(groupLength: number) {
   const newsLength = news.length;
-  const pagesLength = Math.floor(newsLength / groupLength);
+  const pagesLength = Math.ceil(newsLength / groupLength);
 
   return Array
     .from({ length: pagesLength })

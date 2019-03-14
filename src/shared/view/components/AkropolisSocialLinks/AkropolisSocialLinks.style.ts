@@ -16,6 +16,10 @@ const styles = (_theme: Theme) => ({
 
   link: rule({
     color: 'inherit',
+
+    '& path': {
+      fill: 'currentColor',
+    },
   }),
 
   row: {},

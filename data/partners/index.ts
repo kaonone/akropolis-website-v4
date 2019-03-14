@@ -31,10 +31,10 @@ export default [
     icon2x: require('./imgs/Wyre@2x.png'),
   },
   {
-    url: 'https://setprotocol.com',
-    partnerName: 'Set protocol',
-    icon1x: require('./imgs/Set@1x.png'),
-    icon2x: require('./imgs/Set@2x.png'),
+    url: 'https://www.asure.network',
+    partnerName: 'Asure Network',
+    icon1x: require('./imgs/Asure@1x.png'),
+    icon2x: require('./imgs/Asure@2x.png'),
   },
   {
     url: 'https://cindicator.com',

@@ -9,12 +9,12 @@ export default {
     products: {
       hackathon0x: {
         title: 'Cashflow Relay',
-        description: 'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing.',
+        description: 'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing',
         link: 'https://www.cashflowrelay.com/',
       },
       chamaNetwork: {
         title: 'Chama network',
-        description: 'Сreate a savings group with those who you know personally and trust.',
+        description: 'Сreate a savings group with those who you know personally and trust',
         link: '',
       },
     },

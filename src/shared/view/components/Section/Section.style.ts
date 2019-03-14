@@ -10,7 +10,7 @@ const styles = (theme: Theme) => ({
 
   title: rule({
     maxWidth: theme.extra.sizes.maxContentWidth,
-    margin: `0 auto ${theme.spacing.unit * 3.5}px`,
+    margin: `0 auto ${theme.spacing.unit * 4.5}px`,
     fontFamily: theme.extra.typography.primaryFont,
     fontSize: 24,
     fontWeight: 'bold',
@@ -20,7 +20,7 @@ const styles = (theme: Theme) => ({
     textTransform: 'uppercase',
 
     [theme.breakpoints.up('lg')]: {
-      marginBottom: theme.spacing.unit * 5,
+      marginBottom: theme.spacing.unit * 7,
       fontSize: 44,
       lineHeight: 1.09,
     },

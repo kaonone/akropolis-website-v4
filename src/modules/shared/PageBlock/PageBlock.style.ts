@@ -9,17 +9,17 @@ const styles = (theme: Theme) => ({
   root: rule({
     maxWidth: theme.extra.sizes.maxContentWidth,
     margin: `0 auto`,
-    paddingTop: theme.spacing.unit * 4,
+    paddingTop: theme.spacing.unit * 6,
 
     '&:last-child': {
-      paddingBottom: theme.spacing.unit * 4,
+      paddingBottom: theme.spacing.unit * 6,
     },
 
     [theme.breakpoints.up('lg')]: {
-      paddingTop: theme.spacing.unit * 6,
+      paddingTop: theme.spacing.unit * 8,
 
       '&:last-child': {
-        paddingBottom: theme.spacing.unit * 6,
+        paddingBottom: theme.spacing.unit * 8,
       },
     },
   }),

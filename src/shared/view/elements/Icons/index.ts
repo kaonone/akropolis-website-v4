@@ -10,3 +10,4 @@ export { default as ChevronRightIcon } from './ChevronRightIcon';
 export { default as GithubIcon } from './GithubIcon';
 export { default as LinkedinIcon } from './LinkedinIcon';
 export { default as TelegramIcon } from './TelegramIcon';
+export { default as getSocialIconByLink } from './getSocialIconByLink';

@@ -28,6 +28,7 @@ const styles = (theme: Theme) => {
       width: '100%',
       maxWidth: theme.extra.sizes.maxContentWidth,
       margin: `0 auto ${theme.spacing.unit * 9}px`,
+      paddingTop: '9vh',
       fontFamily: theme.extra.typography.primaryFont,
       fontSize: 26,
       fontWeight: 'bold',

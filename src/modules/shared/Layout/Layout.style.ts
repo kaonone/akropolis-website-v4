@@ -30,7 +30,6 @@ const styles = (theme: Theme) => ({
       width: '100%',
       height: theme.extra.spacing.layoutContentSkew.xsHeight,
       position: 'absolute',
-      zIndex: 1,
 
       [theme.breakpoints.up('lg')]: {
         height: theme.extra.spacing.layoutContentSkew.lgHeight,

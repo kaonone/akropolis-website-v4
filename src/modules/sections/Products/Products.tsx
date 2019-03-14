@@ -9,7 +9,7 @@ const products: Array<GetProps<typeof Product>['type']> = ['hackathon0x', 'chama
 
 function Products() {
   return (
-    <PageBlock xsVPadding={1} mdVPadding={2} anchorName="products">
+    <PageBlock xsVPadding={1} mdVPadding={2} lgVPadding={12} anchorName="products">
       <Grid container spacing={16}>
         {products.map(item => (
           <Grid item container xs={12} md={6} key={item}>

@@ -23,6 +23,10 @@ const styles = (theme: Theme) => ({
     whiteSpace: 'nowrap',
     transition: 'color .4s ease',
 
+    '&:last-child': {
+      marginRight: 0,
+    },
+
     '&:hover': {
       color: theme.extra.palette.link.hover,
     },

@@ -3,7 +3,7 @@ export default {
   modules: {},
   sections: {
     intro: {
-      title: 'Unlocking the potential of informal economy with Open Finance',
+      title: 'Unlocking the potential of informal economy with DeFI',
       subtitle: 'We build products that help people save, grow and scale',
     },
     products: {

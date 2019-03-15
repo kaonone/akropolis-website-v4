@@ -64,6 +64,16 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
     cwd: process.cwd(),
   }),
   new FaviconsWebpackPlugin(path.resolve(__dirname, '..', 'src', 'assets', 'favicon.png')),
+  new FileManagerWebpackPlugin({
+    onEnd: {
+      copy: [
+        {
+          source: `src/assets/copyToRoot/**`,
+          destination: `build`,
+        },
+      ],
+    },
+  }),
 ]
   .concat(isWatchMode && !withoutTypeChecking ? (
     new ForkTsCheckerWebpackPlugin({

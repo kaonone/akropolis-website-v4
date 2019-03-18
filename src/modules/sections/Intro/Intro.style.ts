@@ -2,6 +2,10 @@ import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 import bgUrl from './intro_bg.jpg';
 
+const xsHeaderHeight = 80;
+const mdHeaderHeight = 96;
+const lgHeaderHeight = 112;
+
 const styles = (theme: Theme) => {
   return {
     root: rule({
@@ -9,26 +13,33 @@ const styles = (theme: Theme) => {
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'column',
-      padding: `${theme.spacing.unit * 13}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
+      // tslint:disable-next-line:max-line-length
+      padding: `${xsHeaderHeight}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px calc(27vh + ${xsHeaderHeight}px)`,
       position: 'relative',
       background: `url(${bgUrl}) no-repeat center bottom/cover`,
       color: theme.extra.colors.rhino,
 
+      [theme.breakpoints.up('sm')]: {
+        paddingLeft: theme.spacing.unit * 2.5,
+        paddingRight: theme.spacing.unit * 2.5,
+      },
+
       [theme.breakpoints.up('md')]: {
-        padding: `${theme.spacing.unit * 15}px ${theme.extra.spacing.horizontalPagePaddings.md.large}px`,
+        // tslint:disable-next-line:max-line-length
+        padding: `${mdHeaderHeight}px ${theme.extra.spacing.horizontalPagePaddings.md.large}px calc(27vh + ${mdHeaderHeight}px)`,
       },
 
       [theme.breakpoints.up('lg')]: {
         minHeight: `calc(100vh + ${theme.extra.spacing.layoutContentSkew.lgHeight}px)`,
-        padding: `${theme.spacing.unit * 17.5}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
+        padding: `${lgHeaderHeight}px ${theme.spacing.unit * 10}px calc(27vh + ${lgHeaderHeight}px)`,
       },
     }),
 
     title: rule({
       width: '100%',
       maxWidth: theme.extra.sizes.maxContentWidth,
-      margin: `0 auto ${theme.spacing.unit * 9}px`,
-      paddingTop: '9vh',
+      margin: `auto`,
+      paddingBottom: theme.spacing.unit,
       fontFamily: theme.extra.typography.primaryFont,
       fontSize: 26,
       fontWeight: 'bold',

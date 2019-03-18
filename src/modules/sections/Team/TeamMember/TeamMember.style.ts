@@ -1,5 +1,6 @@
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
+import { hexToRGBA } from 'shared/styles/helpers';
 
 const styles = (theme: Theme) => ({
   root: rule({
@@ -52,6 +53,36 @@ const styles = (theme: Theme) => ({
   }),
 
   tags: rule({
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    margin: 0,
+    marginBottom: theme.spacing.unit * 0.25,
+    fontFamily: theme.extra.typography.secondaryFont,
+    fontSize: 14,
+    webkitFontSmoothing: 'antialiased',
+    fontSmoothing: 'antialiased',
+
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 16,
+    },
+  }),
+
+  tag: rule({
+    display: 'flex',
+    alignItems: 'center',
+    flexShrink: 1,
+    minWidth: 0,
+    margin: '0px 6px 6px 0px',
+    paddingRight: 6,
+    paddingLeft: 6,
+    borderRadius: 3,
+    lineHeight: '120%',
+    textAlign: 'center',
+    background: hexToRGBA(theme.extra.colors.mediumPurple, 0.25),
+  }),
+
+  background: rule({
     margin: 0,
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 13,

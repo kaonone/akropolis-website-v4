@@ -3,6 +3,25 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'EDCON 2019',
+    link: 'https://www.edcon.io',
+    location: 'Sydney',
+    description: 'EDCON 2019 (Community Ethereum Development Conference) is a non-profit global conference which will happen in Sydney, Australia on 8-14 April 2019. The purpose of the conference is to improve communication among various Ethereum communities and to promote Ethereum ecosystem development on a global scale. EDCON is organized as a conference series, once a year in different countries.',
+    startDate: '04.08.2019',
+    finishDate: '04.14.2019',
+    image1x: require('./imgs/Sydney@660w.png'),
+    image2x: require('./imgs/Sydney@1320w.png'),
+  },
+  {
+    eventName: 'Ethereum Meetup March - DAOs edition',
+    link: 'https://www.meetup.com/Berlin-Ethereum-Meetup/events/259557778/',
+    location: 'Berlin',
+    description: '',
+    startDate: '03.14.2019',
+    image1x: require('./imgs/Berlin3@660w.png'),
+    image2x: require('./imgs/Berlin3@1320w.png'),
+  },
+  {
     eventName: 'ETH Paris',
     link: 'https://ethparis.com/',
     location: 'Paris',

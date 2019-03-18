@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Dotdotdot from 'react-dotdotdot';
 
 import { useTranslatedDate } from 'services/i18n';
 import { Picture } from 'shared/view/elements';
@@ -27,7 +28,7 @@ function EventCard(props: IProps & StylesProps) {
       />
       <div className={classes.curtain} />
       <div className={classes.content}>
-        <div className={classes.title}>{eventName}</div>
+        <div className={classes.title}><Dotdotdot key={eventName} clamp={3}>{eventName}</Dotdotdot></div>
         <div className={classes.location}>{location}</div>
         <div className={classes.date}>{date}</div>
       </div>

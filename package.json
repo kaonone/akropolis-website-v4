@@ -277,6 +277,7 @@
     "ramda": "^0.25.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-dotdotdot": "^1.2.3",
     "react-final-form": "^4.0.2",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",

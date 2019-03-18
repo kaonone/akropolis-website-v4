@@ -45,6 +45,9 @@ const styles = (theme: Theme) => ({
   }),
 
   content: rule({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     position: 'relative',
     zIndex: 1,
     height: '100%',

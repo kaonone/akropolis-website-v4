@@ -40,23 +40,10 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/peter-robertson-0780bba/',
-    ],
-    fullName: 'Peter Robertson',
-    position: 'Pensions & Insurance',
-    photo1x: require('./imgs/peter.png'),
-    photo2x: require('./imgs/peter@2x.png'),
-    tags: [
-      'Principal, Asset Management Vanguard',
-      'Kings College London',
-    ],
-  },
-  {
-    links: [
       'https://www.linkedin.com/in/ian-grigg-0379/',
     ],
     fullName: 'Ian Grigg',
-    position: 'Blockchain, R&D',
+    position: 'Blockchain R&D',
     photo1x: require('./imgs/ian.png'),
     photo2x: require('./imgs/ian@2x.png'),
     tags: [
@@ -74,6 +61,19 @@ export default [
     photo2x: require('./imgs/bokky@2x.png'),
     tags: [
       'Smart Contract Developer and Auditor',
+    ],
+  },
+  {
+    links: [
+      'https://www.linkedin.com/in/peter-robertson-0780bba/',
+    ],
+    fullName: 'Peter Robertson',
+    position: 'Pensions & Insurance',
+    photo1x: require('./imgs/peter.png'),
+    photo2x: require('./imgs/peter@2x.png'),
+    tags: [
+      'Principal, Asset Management Vanguard',
+      'Kings College London',
     ],
   },
   {

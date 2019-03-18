@@ -2,6 +2,7 @@ import * as React from 'react';
 import Dotdotdot from 'react-dotdotdot';
 
 import { useTranslatedDate } from 'services/i18n';
+import { Adaptive } from 'services/adaptability';
 import { Picture } from 'shared/view/elements';
 import { IEvent } from 'shared/types/models';
 
@@ -28,7 +29,10 @@ function EventCard(props: IProps & StylesProps) {
       />
       <div className={classes.curtain} />
       <div className={classes.content}>
-        <div className={classes.title}><Dotdotdot key={eventName} clamp={3}>{eventName}</Dotdotdot></div>
+        <div className={classes.title}>
+          <Adaptive to="sm"><Dotdotdot key={eventName} clamp={2}>{eventName}</Dotdotdot></Adaptive>
+          <Adaptive from="sm"><Dotdotdot key={eventName} clamp={3}>{eventName}</Dotdotdot></Adaptive>
+        </div>
         <div className={classes.location}>{location}</div>
         <div className={classes.date}>{date}</div>
       </div>

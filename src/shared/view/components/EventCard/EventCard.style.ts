@@ -50,7 +50,6 @@ const styles = (theme: Theme) => ({
     fontWeight: 'bold',
     textTransform: 'uppercase',
     marginBottom: 'auto',
-    overflow: 'hidden',
 
     [theme.breakpoints.up('lg')]: {
       fontSize: 26,

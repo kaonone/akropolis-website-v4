@@ -4,7 +4,7 @@ export default [
     links: [
       'https://www.linkedin.com/in/anastasia-andrianova-79198b4',
     ],
-    fullName: 'Anastasia Andria',
+    fullName: 'Ana Andria',
     position: 'Strategy & Product',
     photo1x: require('./imgs/andrianova@1x.png'),
     photo2x: require('./imgs/andrianova@2x.png'),

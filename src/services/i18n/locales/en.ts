@@ -3,7 +3,7 @@ export default {
   modules: {},
   sections: {
     intro: {
-      title: 'Unlocking the potential of informal economy with DeFI',
+      title: 'Unlocking the potential of informal economy with DeFi',
       subtitle: 'We build products that help people save, grow and scale',
     },
     products: {
@@ -35,7 +35,7 @@ export default {
         },
         bank: {
           title: 'An (un) bank',
-          description: 'Create savings and lending infrastructure for Finance 3.0 without borders and unnecessary fees. Integrate OpenFinance solutions, build on top, and innovate to create better Finance 3.0',
+          description: 'Create savings and lending infrastructure for Finance 3.0 without borders and unnecessary fees. Integrate DeFi/OpenFinance solutions, build on top, and innovate to create better Finance 3.0',
         },
       },
     },

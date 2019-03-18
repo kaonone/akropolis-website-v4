@@ -1,4 +1,4 @@
-export type AnchorName = 'products';
+export type AnchorName = 'products' | 'events';
 
 export interface IMenuItem {
   path: string;

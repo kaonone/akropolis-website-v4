@@ -17,6 +17,10 @@ export const menuItems: IMenuItem[] = [
     title: 'Company',
   },
   {
+    path: routes.events.getRoutePath(),
+    title: 'Events',
+  },
+  {
     path: 'https://medium.com/akropolis',
     title: 'Blog',
     isExternal: true,

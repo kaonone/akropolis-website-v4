@@ -30,6 +30,10 @@ const menuItems: IMenuItem[] = [
     title: 'Company',
   },
   {
+    path: routes.events.getRoutePath(),
+    title: 'Events',
+  },
+  {
     path: privacyPolicyURL,
     title: 'Privacy Policy',
     isExternal: true,

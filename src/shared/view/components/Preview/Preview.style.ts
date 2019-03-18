@@ -12,7 +12,6 @@ const styles = (theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     margin: 0,
-    marginBottom: theme.spacing.unit * 2,
     fontFamily: theme.extra.typography.primaryFont,
     fontSize: 20,
     fontWeight: 'bold',
@@ -20,9 +19,16 @@ const styles = (theme: Theme) => ({
     textTransform: 'uppercase',
 
     [theme.breakpoints.up('lg')]: {
-      marginBottom: theme.spacing.unit * 3,
       fontSize: 26,
     },
+  }),
+
+  subtitle: rule({
+    fontFamily: theme.extra.typography.secondaryFont,
+    fontSize: 16,
+    lineHeight: 1.75,
+    letterSpacing: 'normal',
+    color: '#9b9b9b',
   }),
 
   titleIcon: rule({
@@ -37,11 +43,13 @@ const styles = (theme: Theme) => ({
 
   description: rule({
     margin: 0,
+    marginTop: theme.spacing.unit * 2,
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 16,
     lineHeight: 1.63,
 
     [theme.breakpoints.up('lg')]: {
+      marginTop: theme.spacing.unit * 3,
       fontSize: 18,
       lineHeight: 1.56,
     },

@@ -10,7 +10,7 @@
 - Run `npm run dev`
 - Go to [http://localhost:8080]()
 
-### For deploy changes in the wiki to web (only for contributors)
+### For deploy changes to web (only for contributors)
 - Run `npm run deploy`
 
 ## Where can i change or add the data?

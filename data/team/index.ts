@@ -54,7 +54,9 @@ export default [
     ],
   },
   {
-    links: [],
+    links: [
+      'https://github.com/bokkypoobah'
+    ],
     fullName: 'Bokky Poobah',
     position: 'Blockchain Security',
     photo1x: require('./imgs/bokky.png'),
@@ -74,6 +76,18 @@ export default [
     tags: [
       'Principal, Asset Management Vanguard',
       'Kings College London',
+    ],
+  },
+  {
+    links: [
+      'https://www.linkedin.com/in/mrdearg/',
+    ],
+    fullName: 'Dearg OBartuin',
+    position: 'Technology & Product',
+    photo1x: require('./imgs/dearg@1x.png'),
+    photo2x: require('./imgs/dearg@2x.png'),
+    tags: [
+      'CTO, BitPesa',
     ],
   },
   {
@@ -117,4 +131,28 @@ export default [
       'Lead Frontend Developer, FSD Team',
     ],
   },
+  {
+  links: [
+    'https://github.com/Burize/',
+  ],
+  fullName: 'Dmitry Hursevich',
+  position: 'Software Development',
+  photo1x: require('./imgs/dmitryh@1x.png'),
+  photo2x: require('./imgs/dmitryh@2x.png'),
+  tags: [
+    'React Developer',
+  ],
+},
+{
+  links: [
+    'https://github.com/krashaen/',
+  ],
+  fullName: 'Mikhail Krasheninnikov',
+  position: 'Software Development',
+  photo1x: require('./imgs/mikhailk@1x.png'),
+  photo2x: require('./imgs/mikhailk@2x.png'),
+  tags: [
+    'Lead Developer, FSD Team',
+  ],
+},
 ];

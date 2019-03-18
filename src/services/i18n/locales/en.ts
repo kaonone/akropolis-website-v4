@@ -56,7 +56,7 @@ export default {
       title: 'Events',
     },
     pastEvents: {
-      title: 'Past events',
+      title: 'More past events',
     },
   },
   shared: {

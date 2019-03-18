@@ -1,17 +1,20 @@
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
+const borderRadius = 5;
+
 const styles = (theme: Theme) => ({
   root: rule({
     position: 'relative',
     boxShadow: '0 2px 10px 0 rgba(0, 0, 0, 0.2)',
+    borderRadius,
     webkitFontSmoothing: 'antialiased',
     fontSmoothing: 'antialiased',
   }),
 
   image: rule({
     display: 'block',
-    borderRadius: 5,
+    borderRadius,
     overflow: 'hidden',
   }),
 

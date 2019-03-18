@@ -28,7 +28,6 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/alexander-mazaletskiy',
       'https://github.com/AlexanderMazaletskiy',
     ],
     fullName: 'Alexander Mazaletskiy',
@@ -53,7 +52,6 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/akozlovskij',
       'https://github.com/fzzr-',
     ],
     fullName: 'Aleksander Koz',
@@ -71,7 +69,6 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/dmitriy-serdtsev-8307b617b',
       'https://github.com/in19farkt',
     ],
     fullName: 'Dmitriy Serdtsev',

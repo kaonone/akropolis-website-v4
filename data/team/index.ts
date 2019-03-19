@@ -110,6 +110,26 @@ export default [
   },
   {
     links: [
+      'https://linkedin.com/in/paymentexpert',
+    ],
+    fullName: 'Dominic Melo',
+    position: 'Business Development',
+    photo1x: require('./imgs/melo@1x.png'),
+    photo2x: require('./imgs/melo@2x.png'),
+    tags: [
+      'Payments',
+      'Business Development',
+      'Business Strategy',
+      'Mobile Payments',
+      'Financial Services',
+    ],
+    background: [
+      'iSignthis',
+      'Lewisham College',
+    ],
+  },
+  {
+    links: [
       'https://github.com/fzzr-',
     ],
     fullName: 'Alexander Kozlovskiy',

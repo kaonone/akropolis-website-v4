@@ -4,7 +4,7 @@ node_js:
 
 before_deploy:
   - npm i
-  - npm run prod
+  - npm run build:prod
   - echo -e "node_modules\npackage-lock.json" > .gitignore
 
 deploy:

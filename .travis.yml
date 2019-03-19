@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "10"
+
+before_deploy:
+  - npm i
+  - npm run prod
+  - echo -e "node_modules\npackage-lock.json" > .gitignore
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: ci-setting

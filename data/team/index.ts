@@ -113,7 +113,7 @@ export default [
       'https://linkedin.com/in/paymentexpert',
     ],
     fullName: 'Dominic Melo',
-    position: 'Business Development',
+    position: 'Global Payments Infrastructure',
     photo1x: require('./imgs/melo@1x.png'),
     photo2x: require('./imgs/melo@2x.png'),
     tags: [

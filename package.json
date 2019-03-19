@@ -15,7 +15,7 @@
     "server:dev:debug": "better-npm-run server:dev:debug",
     "server:prod": "better-npm-run server:prod",
     "server:prod:debug": "better-npm-run server:prod:debug",
-    "test": "jest && tsc -p . --noEmit",
+    "test": "tsc -p . --noEmit && jest",
     "test:watch": "./node_modules/.bin/jest --watch",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --watch",
     "test:coverage": "node_modules/.bin/jest --coverage --watch",

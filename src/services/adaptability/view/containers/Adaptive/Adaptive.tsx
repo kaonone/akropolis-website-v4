@@ -1,7 +1,8 @@
 import * as React from 'react';
-import cn from 'classnames';
+// import cn from 'classnames';
 import { connect } from 'react-redux';
-import MediaQuery from 'react-responsive';
+// import MediaQuery from 'react-responsive';
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import { Breakpoint, Breakpoints } from '@material-ui/core/styles/createBreakpoints';
 
 import { IAppReduxState } from 'shared/types/app';
@@ -10,8 +11,8 @@ import * as selectors from './../../../redux/selectors';
 import { StylesProps, provideStyles } from './Adaptive.style';
 
 interface IOwnProps {
-  from?: Breakpoint;
-  to?: Breakpoint;
+  from?: Breakpoint | number;
+  to?: Breakpoint | number;
   className?: string;
   children: React.ReactNode;
 }
@@ -30,40 +31,30 @@ function mapState(state: IAppReduxState): IStateProps {
 
 // TODO ds: remove react-responsive, after react-hooks release https://material-ui.com/layout/use-media-query/
 
-class Adaptive extends React.PureComponent<IProps> {
-  public render() {
-    const { classes, theme, from = '', to = '', className, hydrated, children } = this.props;
+function Adaptive(props: IProps) {
+  const { theme, from = '', to = '', className, children } = props;
 
-    const fromQuery = theme && from && up(from, theme.breakpoints).split(' ')[1];
-    const toQuery = theme && to && down(to, theme.breakpoints).split(' ')[1];
-    const query = [fromQuery, toQuery].filter(Boolean).join(' and ');
+  const fromQuery = theme && from && up(from, theme.breakpoints).split(' ')[1];
+  const toQuery = theme && to && down(to, theme.breakpoints).split(' ')[1];
+  const query = [fromQuery, toQuery].filter(Boolean).join(' and ');
 
-    const adaptClasses = cn(classes.root, {
-      [classes[`from${from.toUpperCase()}`]]: !!from,
-      [classes[`to${to.toUpperCase()}`]]: !!to,
-    });
+  const matched = useMediaQuery(query);
 
-    const finalClassName = cn(
-      className,
-      hydrated ? undefined : adaptClasses,
-    );
+  const wrappedChildren = <div className={className}>{children}</div>;
 
-    const wrappedChildren = <div className={finalClassName}>{children}</div>;
-
-    return hydrated ? <MediaQuery query={query}>{wrappedChildren}</MediaQuery> : wrappedChildren;
-  }
+  return matched ? wrappedChildren : null;
 }
 
 const unit = 'px';
 const step = 5;
 
-function up(key: Breakpoint, breakpoints: Breakpoints) {
-  const value = typeof breakpoints.values[key] === 'number' ? breakpoints.values[key] : key;
+function up(key: Breakpoint | number, breakpoints: Breakpoints) {
+  const value = typeof key === 'number' ? key : breakpoints.values[key];
   return `@media (min-width:${value}${unit})`;
 }
 
-function down(key: Breakpoint, breakpoints: Breakpoints): string {
-  const endIndex = breakpoints.keys.indexOf(key);
+function down(key: Breakpoint | number, breakpoints: Breakpoints): string {
+  const endIndex = breakpoints.keys.indexOf(key as Breakpoint);
   const upperbound = breakpoints.values[breakpoints.keys[endIndex]];
 
   const value = typeof upperbound === 'number' && endIndex >= 0 ? upperbound : key;

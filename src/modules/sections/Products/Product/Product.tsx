@@ -2,6 +2,7 @@ import * as React from 'react';
 import cn from 'classnames';
 
 import { useTranslate, tKeys } from 'services/i18n';
+import { Adaptive } from 'services/adaptability';
 import { Preview } from 'shared/view/components';
 
 import { StylesProps, provideStyles } from './Product.style';
@@ -14,6 +15,8 @@ interface IProps {
   type: ProductType;
 }
 
+const iPhonePlusWidth = 414;
+
 function Product(props: IProps & StylesProps) {
   const { classes, type } = props;
   const { t } = useTranslate();
@@ -22,7 +25,12 @@ function Product(props: IProps & StylesProps) {
     hackathon0x: () => (
       <>
         <img className={classes.title} src={logo0xImg} />
-        <div className={classes.subtitle}>Hackathon winner</div>
+        <div className={classes.subtitle}>
+          <Adaptive to={iPhonePlusWidth}>Hackathon winner</Adaptive>
+          <Adaptive from={iPhonePlusWidth} to="md">Global hackathon winner</Adaptive>
+          <Adaptive from="md" to={830}>Hackathon winner</Adaptive>
+          <Adaptive from={830}>Global hackathon winner</Adaptive>
+        </div>
         <SecondPlaceIcon className={classes.icon} />
       </>
     ),

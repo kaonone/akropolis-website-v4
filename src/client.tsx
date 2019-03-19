@@ -17,7 +17,7 @@ const appData = configureApp();
 render(<App {...appData} />, appData);
 
 /* Hot Module Replacement API */
-if ((module as any).hot && process.env.NODE_ENV !== 'production') {
+if ((module).hot && process.env.NODE_ENV !== 'production') {
   (module as any).hot.accept(['./core/App', './core/configureApp'], () => {
     const nextConfigureApp: typeof configureApp = require('./core/configureApp').default;
     const NextApp: typeof App = require('./core/App').App;

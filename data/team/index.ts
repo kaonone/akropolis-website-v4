@@ -125,7 +125,7 @@ export default [
     ],
     background: [
       'iSignthis',
-      'Lewisham College',
+      'Paymundo Systems',
     ],
   },
   {

@@ -77,3 +77,5 @@ Images should be placed in the folder `data/events/imgs`.
 
 ### Other
 Some texts can be edited in the file `src/services/i18n/locales/en.ts`.
+
+MIT, 2019

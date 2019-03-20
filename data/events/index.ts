@@ -2,6 +2,24 @@ import { IEvent } from 'shared/types/models';
 
 // tslint:disable
 const events: IEvent[] = [
+{
+    eventName: 'Financial Inclusion Summit 2019',
+    link: 'https://financial-inclusion.com',
+    location: 'Oslo',
+    description: 'Akropolis Founder Ana Andria will be attending an invite-only Financial Inclusion Summit 2019 with MakerDAO Head of Product Soren Peter Nelsen. The Summit convenes an international gathering of stakeholders from governments and the public sector, financial institutions and fintech innovators with the goal to identify viable long-term solutions to financial inclusion, aided by latest advances in financial technology, that reduce poverty and drive economic growth.',
+    startDate: '03.28.2019',
+    image1x: require('./imgs/oslo.png'),
+    image2x: require('./imgs/oslo@2x.png'),
+  },
+{
+    eventName: 'Blockchain In Digital Economy 2019',
+    link: 'http://londonblockchainlabs.com/bide2019/',
+    location: 'London',
+    description: 'Bank of England, HSBC, Barclays Bank, academics, blockchain practitioners and investors will gather at the prestigious Imperial College London for the Blockchain in Digital Economy conference. This event brings together the UK's best blockchain talent, policymakers and business decision-makers. Akropolis Founder Ana Andria will be moderating a fintech panel.',
+    startDate: '03.23.2019',
+    image1x: require('./imgs/london.png'),
+    image2x: require('./imgs/london@2x.png'),
+  },
   {
     eventName: 'EDCON 2019',
     link: 'https://www.edcon.io',

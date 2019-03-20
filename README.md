@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.org/akropolisio/akropolis-website-v4.svg?branch=master)](https://www.travis-ci.org/akropolisio/akropolis-website-v4)
+
 # Akropolis website v4
 
 ## How do I work?

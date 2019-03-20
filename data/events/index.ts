@@ -15,7 +15,7 @@ const events: IEvent[] = [
     eventName: 'Blockchain In Digital Economy 2019',
     link: 'http://londonblockchainlabs.com/bide2019/',
     location: 'London',
-    description: 'Bank of England, HSBC, Barclays Bank, academics, blockchain practitioners and investors will gather at the prestigious Imperial College London for the Blockchain in Digital Economy conference. This event brings together the UK's best blockchain talent, policymakers and business decision-makers. Akropolis Founder Ana Andria will be moderating a fintech panel.',
+    description: 'Bank of England, HSBC, Barclays Bank, academics, blockchain practitioners and investors will gather at the prestigious Imperial College London for the Blockchain in Digital Economy conference. This event brings together the UK\'s best blockchain talent, policymakers and business decision-makers. Akropolis Founder Ana Andria will be moderating a fintech panel.',
     startDate: '03.23.2019',
     image1x: require('./imgs/london.png'),
     image2x: require('./imgs/london@2x.png'),
@@ -31,7 +31,7 @@ const events: IEvent[] = [
     image2x: require('./imgs/Sydney@1320w.png'),
   },
   {
-    eventName: 'Ethereum Meetup March - DAOs edition',
+    eventName: 'Ethereum Meetup March - DAO edition',
     link: 'https://www.meetup.com/Berlin-Ethereum-Meetup/events/259557778/',
     location: 'Berlin',
     description: 'Join us at DAO governance meetup at Berlin’s blockchain centre, FullNode. The panel will feature speakers from DAOStack, Aragon’s ecosystem AutarkLabs, Gnosis, InBlock and Akropolis. The panelists will discuss various blockchain governance approaches, with Akropolis focussing on practical examples of collective governance from the African saving circles.',

@@ -10,6 +10,7 @@ import threadLoaderLib from 'thread-loader';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import FileManagerWebpackPlugin from 'filemanager-webpack-plugin';
 import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import PrerenderSPAPlugin from 'prerender-spa-plugin';
 
 import postcssReporter from 'postcss-reporter';
 import postcssSCSS from 'postcss-scss';
@@ -64,14 +65,28 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
     cwd: process.cwd(),
   }),
   new FaviconsWebpackPlugin(path.resolve(__dirname, '..', 'src', 'assets', 'favicon.png')),
+  new PrerenderSPAPlugin({
+    staticDir: path.join(__dirname, '..', 'build'),
+    routes: ['/', '/company', '/events'],
+    postProcess(renderedRoute: any) {
+      const styleRegExp = /<style.*?>[^<]*<\/style>/gi;
+      const styles = (renderedRoute.html.match(styleRegExp) || []).join('');
+      const wrappedStyles = `<div id="server-side-styles">${styles}</div>`;
+      renderedRoute.html = renderedRoute.html
+        .replace(styleRegExp, '')
+        .replace(/<\/head>/i, `${wrappedStyles}<\/head>`);
+      return renderedRoute;
+    },
+  }),
   new FileManagerWebpackPlugin({
     onEnd: {
-      copy: [
-        {
-          source: `src/assets/copyToRoot/**`,
-          destination: `build`,
-        },
-      ],
+      copy: [{
+        source: `src/assets/copyToRoot/**`,
+        destination: `build`,
+      }].concat(forGHPages ? {
+        source: `build/index.html`,
+        destination: `build/404.html`,
+      } : []),
     },
   }),
 ]
@@ -91,13 +106,6 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   ) : [])
   .concat(withHot && type !== 'prod' ? (
     new webpack.HotModuleReplacementPlugin()
-  ) : [])
-  .concat(forGHPages ? (
-    new HtmlWebpackPlugin({
-      filename: '404.html',
-      template: 'assets/index.html',
-      chunksSortMode: sortChunks,
-    })
   ) : [])
   .concat(forGHPages ? new FileManagerWebpackPlugin({
     onEnd: {
@@ -246,6 +254,12 @@ export const commonConfig: webpack.Configuration = {
     },
   },
   stats: {
+    colors: true,
+    errors: true,
+    errorDetails: true,
+    warnings: true,
+    assets: false,
+    modules: false,
     // typescript would remove the interfaces but also remove the imports of typings
     // and because of this, warnings are shown https://github.com/TypeStrong/ts-loader/issues/653
     warningsFilter: /export .* was not found in/,

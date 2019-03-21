@@ -195,29 +195,6 @@ export default [
   },
   {
     links: [
-      'https://github.com/in19farkt',
-    ],
-    fullName: 'Dmitriy Serdtsev',
-    position: 'UI/UX',
-    photo1x: require('./imgs/serdtsev@1x.png'),
-    photo2x: require('./imgs/serdtsev@2x.png'),
-    tags: [
-      'React',
-      'Redux',
-      'Saga',
-      'UI',
-      'UX',
-      'Frontend',
-      'Visualisation',
-    ],
-    background: [
-      'BSc Computer Science',
-      '10 commercial implementations',
-      '5 years of Frontend development',
-    ],
-  },
-  {
-    links: [
       'https://www.linkedin.com/in/ian-grigg-0379/',
     ],
     fullName: 'Ian Grigg',
@@ -255,7 +232,7 @@ export default [
       'Smart Contract Developer and Auditor',
     ],
   },
-    {
+  {
     links: [
       'https://www.linkedin.com/in/ajitkt/',
     ],
@@ -272,6 +249,29 @@ export default [
     background: [
       'Financial Infrastructure, ConsenSys',
       'Head of Blockchain, PriceWaterCoopers',      
+    ],
+  },
+  {
+    links: [
+      'https://github.com/in19farkt',
+    ],
+    fullName: 'Dmitriy Serdtsev',
+    position: 'UI/UX',
+    photo1x: require('./imgs/serdtsev@1x.png'),
+    photo2x: require('./imgs/serdtsev@2x.png'),
+    tags: [
+      'React',
+      'Redux',
+      'Saga',
+      'UI',
+      'UX',
+      'Frontend',
+      'Visualisation',
+    ],
+    background: [
+      'BSc Computer Science',
+      '10 commercial implementations',
+      '5 years of Frontend development',
     ],
   },
   {

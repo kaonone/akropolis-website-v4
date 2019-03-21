@@ -255,6 +255,25 @@ export default [
       'Smart Contract Developer and Auditor',
     ],
   },
+    {
+    links: [
+      'https://www.linkedin.com/in/ajitkt/',
+    ],
+    fullName: 'Ajit Tripathi',
+    position: 'Fintech Advisor',
+    photo1x: require('./imgs/ajit@1x.png'),
+    photo2x: require('./imgs/ajit@2x.png'),
+    tags: [
+      'Financial Infrastructure',
+      'Blockchain Architecture',
+      'Risk Managment',
+	  'Investment Banking',
+    ],
+    background: [
+      'Financial Infrastructure, ConsenSys',
+      'Head of Blockchain, PriceWaterCoopers',      
+    ],
+  },
   {
     links: [
       'https://github.com/krashaen/',

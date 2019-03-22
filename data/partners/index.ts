@@ -48,4 +48,16 @@ export default [
     icon1x: require('./imgs/Polymath@1x.png'),
     icon2x: require('./imgs/Polymath@2x.png'),
   },
+  {
+    url: 'https://www.bancor.network',
+    partnerName: 'Bancor',
+    icon1x: require('./imgs/bancor@1x.png'),
+    icon2x: require('./imgs/bancor@2x.png'),
+  },
+  {
+    url: 'https://www.lightstreams.network',
+    partnerName: 'Lightstreams Network',
+    icon1x: require('./imgs/light@1x.png'),
+    icon2x: require('./imgs/light@2x.png'),
+  },
 ];

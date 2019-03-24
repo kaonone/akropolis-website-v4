@@ -14,6 +14,10 @@ interface IProps {
 function Footer(props: IProps & StylesProps) {
   const { classes } = props;
   const { t, tKeys } = useTranslate();
+
+  const startYear = 2017;
+  const yearNow = new Date().getFullYear();
+
   return (
     <footer className={classes.root}>
       <div className={classes.content}>
@@ -34,6 +38,7 @@ function Footer(props: IProps & StylesProps) {
           'Akropolis Decentralised Ltd.',
           'Suite 23 Portland House, Glacis Road, Gibraltar, GX11 1AA',
           'COMPANY NUMBER: 116430',
+          `${startYear}${yearNow > startYear ? '-' + yearNow : ''}, All right reserved`,
         ].join(' | ')}
       </small>
     </footer>

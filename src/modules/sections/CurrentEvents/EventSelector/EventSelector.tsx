@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { useTranslate } from 'services/i18n';
 import { IEvent } from 'shared/types/models';
-import { Grid } from 'shared/view/elements';
+import { Grid, Link } from 'shared/view/elements';
 import { getEventTense } from 'shared/helpers/model';
 
 import DateButton from './DateButton/DateButton';
@@ -40,7 +40,7 @@ function EventSelector(props: IProps & StylesProps) {
             </DateButton>
           </Grid>
           <Grid item xs="auto">
-            <div className={classes.title}>{event.eventName}</div>
+            <Link className={classes.title} onClick={onSelect.bind(null, event)}>{event.eventName}</Link>
             <div className={classes.subtitle}>
               {t(tKeys.shared.eventTenses[getEventTense(event.startDate, event.finishDate)].getKey())}
             </div>

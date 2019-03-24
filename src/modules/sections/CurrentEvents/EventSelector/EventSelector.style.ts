@@ -16,6 +16,7 @@ const styles = (theme: Theme) => ({
     fontSize: 14,
     lineHeight: 1.71,
     color: '#000',
+    cursor: 'pointer',
 
     [theme.breakpoints.up('md')]: {
       fontSize: 18,

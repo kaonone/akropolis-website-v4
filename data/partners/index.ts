@@ -60,4 +60,10 @@ export default [
     icon1x: require('./imgs/light@1x.png'),
     icon2x: require('./imgs/light@2x.png'),
   },
+  {
+    url: 'https://zerion.io/',
+    partnerName: 'Zerion',
+    icon1x: require('./imgs/zerion@1x.png'),
+    icon2x: require('./imgs/zerion@2x.png'),
+  },
 ];

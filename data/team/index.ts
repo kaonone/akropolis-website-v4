@@ -157,7 +157,7 @@ export default [
     links: [
       'https://ru.linkedin.com/in/ilgiz-gimaltdinov-8bbba411',
     ],
-    fullName: 'Giz Gimal',
+    fullName: 'Ilgiz Gimal',
     position: 'Product',
     photo1x: require('./imgs/ilgiz@1x.png'),
     photo2x: require('./imgs/ilgiz@2x.png'),

@@ -44,7 +44,7 @@ export default [
     links: [
       'https://github.com/AlexanderMazaletskiy',
     ],
-    fullName: 'Alexander Mazaletskiy',
+    fullName: 'Alex Maz',
     position: 'Technology Lead',
     photo1x: require('./imgs/maz@1x.png'),
     photo2x: require('./imgs/maz@2x.png'),
@@ -132,7 +132,7 @@ export default [
     links: [
       'https://github.com/fzzr-',
     ],
-    fullName: 'Alexander Kozlovskiy',
+    fullName: 'Alex Koz',
     position: 'Blockchain R&D',
     photo1x: require('./imgs/koz@1x.png'),
     photo2x: require('./imgs/koz@2x.png'),
@@ -157,7 +157,7 @@ export default [
     links: [
       'https://ru.linkedin.com/in/ilgiz-gimaltdinov-8bbba411',
     ],
-    fullName: 'Ilgiz Gimaltdinov',
+    fullName: 'Giz Gimal',
     position: 'Product',
     photo1x: require('./imgs/ilgiz@1x.png'),
     photo2x: require('./imgs/ilgiz@2x.png'),
@@ -176,7 +176,7 @@ export default [
     links: [
       'https://www.linkedin.com/in/abalyasnikov',
     ],
-    fullName: 'Andrey Balyasnikov',
+    fullName: 'Andrew Bal',
     position: 'Product',
     photo1x: require('./imgs/andrey@1x.png'),
     photo2x: require('./imgs/andrey@2x.png'),
@@ -255,7 +255,7 @@ export default [
     links: [
       'https://github.com/in19farkt',
     ],
-    fullName: 'Dmitriy Serdtsev',
+    fullName: 'Dima Serd',
     position: 'UI/UX',
     photo1x: require('./imgs/serdtsev@1x.png'),
     photo2x: require('./imgs/serdtsev@2x.png'),
@@ -278,7 +278,7 @@ export default [
     links: [
       'https://github.com/krashaen/',
     ],
-    fullName: 'Mikhail Krasheninnikov',
+    fullName: 'Mike Krash',
     position: 'Software Development',
     photo1x: require('./imgs/mikhailk@1x.png'),
     photo2x: require('./imgs/mikhailk@2x.png'),
@@ -295,7 +295,7 @@ export default [
     links: [
       'https://github.com/Burize/',
     ],
-    fullName: 'Dmitry Hursevich',
+    fullName: 'Dima Hurs',
     position: 'Software Development',
     photo1x: require('./imgs/dmitryh@1x.png'),
     photo2x: require('./imgs/dmitryh@2x.png'),

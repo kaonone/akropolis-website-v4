@@ -110,6 +110,16 @@ export const getTheme = (): Theme => {
       spacing: {
         unit: extraTheme.spacing.unit,
       },
+      overrides: {
+        MuiSnackbarContent: {
+          root: {
+            backgroundColor: '#fff',
+          },
+          message: {
+            color: colors.rhino,
+          },
+        },
+      },
     })),
     extra: extraTheme,
   };

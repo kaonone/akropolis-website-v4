@@ -22,3 +22,4 @@ export { default as SocialLink } from './SocialLink/SocialLink';
 export { default as Link } from '@material-ui/core/Link';
 export { default as Grid } from '@material-ui/core/Grid';
 export { default as ButtonBase } from '@material-ui/core/ButtonBase';
+export { default as Snackbar } from '@material-ui/core/Snackbar';

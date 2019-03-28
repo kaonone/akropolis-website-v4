@@ -77,6 +77,12 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
         .replace(/<\/head>/i, `${wrappedStyles}<\/head>`);
       return renderedRoute;
     },
+    renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
+      injectProperty: '__PRERENDER_INJECTED__',
+      inject: {
+        isServer: true,
+      },
+    }),
   }),
   new FileManagerWebpackPlugin({
     onEnd: {

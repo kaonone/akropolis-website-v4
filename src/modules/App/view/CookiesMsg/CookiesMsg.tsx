@@ -9,7 +9,8 @@ function CookiesMsg() {
 
   React.useEffect(() => {
     try {
-      const hideMsg: boolean = JSON.parse(localStorage.getItem(HIDE_COOKIES_MSG_KEY) || 'false');
+      const defaultValue = window.__PRERENDER_INJECTED__ && window.__PRERENDER_INJECTED__.isServer ? 'true' : 'false';
+      const hideMsg: boolean = JSON.parse(localStorage.getItem(HIDE_COOKIES_MSG_KEY) || defaultValue);
       setIsOpenedMsg(!hideMsg);
     } catch {
       //

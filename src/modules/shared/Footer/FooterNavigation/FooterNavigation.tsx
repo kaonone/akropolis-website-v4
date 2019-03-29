@@ -20,10 +20,9 @@ const menuItems: IMenuItem[] = [
     scrollTo: 'products',
   },
   {
-    path: '',
-    title: 'Wiki (Coming soon)',
+    path: 'https://wiki.akropolis.io',
+    title: 'Wiki',
     isExternal: true,
-    disabled: true,
   },
   {
     path: routes.company.getRoutePath(),

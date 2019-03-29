@@ -7,14 +7,14 @@ export const menuItems: IMenuItem[] = [
     title: 'Products',
     scrollTo: 'products',
   },
-  // {
-  //   path: 'https://wiki.akropolis.io',
-  //   title: 'Wiki',
-  //   isExternal: true,
-  // },
   {
     path: routes.company.getRoutePath(),
     title: 'Company',
+  },
+  {
+    path: 'https://wiki.akropolis.io',
+    title: 'Wiki',
+    isExternal: true,
   },
   {
     path: routes.events.getRoutePath(),

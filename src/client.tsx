@@ -13,6 +13,9 @@ const { appVersion } = getEnvParams();
 
 const appData = configureApp();
 
+// this need for iframes on wiki site
+document.domain = 'akropolis.io';
+
 /* Start application */
 render(<App {...appData} />, appData);
 

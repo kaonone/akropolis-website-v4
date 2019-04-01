@@ -9,11 +9,11 @@ const ForWikiModule: IModule = {
   getRoutes() {
     return [(
       <Route exact key="ForWikiPartners" path={routes.forWiki.partners.getRoutePath()} >
-        <Partners withoutTitle />
+        <Partners withTitle={false} />
       </Route>
     ), (
       <Route exact key="ForWikiNews" path={routes.forWiki.news.getRoutePath()} >
-        <News withoutTitle />
+        <News withTitle={false} withPagination={false} />
       </Route>
     )];
   },

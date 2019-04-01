@@ -14,25 +14,33 @@ const groupedByTwo = getNewsGroups(2);
 const groupedByFour = getNewsGroups(4);
 
 interface IProps {
-  withoutTitle?: boolean;
+  withTitle?: boolean;
+  withPagination?: boolean;
 }
 
-function News({ withoutTitle }: IProps) {
+function News({ withTitle = true, withPagination = true }: IProps) {
   const { t, tKeys } = useTranslate();
 
   return (
     <PageBlock xsVPadding={1} mdVPadding={10} lgVPadding={12}>
-      <Section title={withoutTitle ? undefined : t(tKeys.sections.news.title.getKey())}>
-        <Adaptive to="md">
-          <Carousel animateHeight pagination="dots">
-            {renderGroupedNews(groupedByTwo, 12)}
-          </Carousel>
-        </Adaptive>
-        <Adaptive from="md">
-          <Carousel animateHeight pagination="arrows">
-            {renderGroupedNews(groupedByFour, 6)}
-          </Carousel>
-        </Adaptive>
+      <Section title={withTitle ? t(tKeys.sections.news.title.getKey()) : undefined}>
+        {withPagination ? (
+          <>
+            <Adaptive to="md">
+              <Carousel animateHeight pagination="dots">
+                {renderGroupedNews(groupedByTwo, 12)}
+              </Carousel>
+            </Adaptive>
+            <Adaptive from="md">
+              <Carousel animateHeight pagination="arrows">
+                {renderGroupedNews(groupedByFour, 6)}
+              </Carousel>
+            </Adaptive>
+          </>
+        ) : (
+            renderGroupedNews([news], 12)
+          )
+        }
       </Section>
     </PageBlock>
   );

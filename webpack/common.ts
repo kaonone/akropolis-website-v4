@@ -67,7 +67,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   new FaviconsWebpackPlugin(path.resolve(__dirname, '..', 'src', 'assets', 'favicon.png')),
   new PrerenderSPAPlugin({
     staticDir: path.join(__dirname, '..', 'build'),
-    routes: ['/', '/company', '/events'],
+    routes: ['/', '/company', '/events', 'forWiki/partners', 'forWiki/news'],
     postProcess(renderedRoute: any) {
       const styleRegExp = /<style.*?>[^<]*<\/style>/gi;
       const styles = (renderedRoute.html.match(styleRegExp) || []).join('');

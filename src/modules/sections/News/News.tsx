@@ -13,12 +13,16 @@ import NewsCard from './NewsCard/NewsCard';
 const groupedByTwo = getNewsGroups(2);
 const groupedByFour = getNewsGroups(4);
 
-function News() {
+interface IProps {
+  withoutTitle?: boolean;
+}
+
+function News({ withoutTitle }: IProps) {
   const { t, tKeys } = useTranslate();
 
   return (
     <PageBlock xsVPadding={1} mdVPadding={10} lgVPadding={12}>
-      <Section title={t(tKeys.sections.news.title.getKey())}>
+      <Section title={withoutTitle ? undefined : t(tKeys.sections.news.title.getKey())}>
         <Adaptive to="md">
           <Carousel animateHeight pagination="dots">
             {renderGroupedNews(groupedByTwo, 12)}

@@ -8,12 +8,16 @@ import { Grid } from 'shared/view/elements';
 
 import PartnerCard from './PartnerCard';
 
-function Partners() {
+interface IProps {
+  withoutTitle?: boolean;
+}
+
+function Partners({ withoutTitle }: IProps) {
   const { t, tKeys } = useTranslate();
 
   return (
     <PageBlock xsVPadding={1} mdVPadding={2}>
-      <Section title={t(tKeys.sections.partners.title.getKey())}>
+      <Section title={withoutTitle ? undefined : t(tKeys.sections.partners.title.getKey())}>
         <Grid container spacing={16} justify="center">
           {partners.map(item => (
             <Grid key={item.url} item xs={6} md={4} lg={3}>

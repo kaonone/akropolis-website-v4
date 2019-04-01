@@ -21,6 +21,16 @@ const events: IEvent[] = [
     image1x: require('./imgs/oslo.png'),
     image2x: require('./imgs/oslo@2x.png'),
   },
+
+  {
+    eventName: 'Financial Inclusion Summit 2019',
+    link: 'https://financial-inclusion.com',
+    location: 'Oslo',
+    description: 'Akropolis Founder Ana Andria will be attending an invite-only Financial Inclusion Summit 2019 with MakerDAO Head of Product Soren Peter Nielsen. The Summit convenes an asdsadasdasdsadas gathering of stakeholders from governments and the public sector, financial institutions and fintech innovators with the goal to identify viable long-term solutions to financial inclusion, aided by latest advances in financial technology, that reduce poverty and drive economic growth.',
+    startDate: '03.28.2019',
+    image1x: require('./imgs/oslo.png'),
+    image2x: require('./imgs/oslo@2x.png'),
+
   {
     eventName: 'Blockchain In Digital Economy 2019',
     link: 'http://londonblockchainlabs.com/bide2019/',

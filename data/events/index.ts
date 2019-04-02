@@ -15,7 +15,7 @@ const events: IEvent[] = [
   }, 
 
   { 
-    eventName: 'ETH Cape Town Hackathone',
+    eventName: 'ETH Cape Town Hackathon',
     link: 'https://ethcapetown.com/',
     location: 'Cape Town', 
     description: 'ETHCapeTown Hackathon is the first Africa\'s ETHGlobal event that will take place in Cape Town, South Africa, on April 19-21. It will bring together over 200 international hackers, developers and curious minds to collaborate on building a decentralized future using Ethereum. The occasion will be inclusive and educational, inspiring communities through the creative design of blockchain applications.',

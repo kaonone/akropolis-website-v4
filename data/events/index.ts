@@ -7,33 +7,32 @@ const events: IEvent[] = [
     eventName: 'The Next Web 2019',
     link: 'https://thenextweb.com/conference/',
     location: 'Amsterdam', 
-    description: 'The Next Web conference is a two day technology festival that brings together 15,000 digital minds to predict, discuss and invent the future. It will take place on May 9-10 in Amsterdam, Netherlands, with over 200 speakers sharing insights about AI, blockchain, design thinking, machine learning, trading, future of work and more.'
-    startDate: '05.09.2019'
-    endDate: '05.10.2019'
+    description: 'The Next Web conference is a two day technology festival that brings together 15,000 digital minds to predict, discuss and invent the future. It will take place on May 9-10 in Amsterdam, Netherlands, with over 200 speakers sharing insights about AI, blockchain, design thinking, machine learning, trading, future of work and more.',
+    startDate: '05.09.2019',
+    endDate: '05.10.2019',
     image1x: require('./imgs/Amsterdam@660w.png'),
-    image2x: require('.imgs/Amsterdam@1320w.png'),
+    image2x: require('./imgs/Amsterdam@1320w.png'),
   }, 
 
   { 
     eventName: 'ETH Cape Town Hackathone',
     link: 'https://ethcapetown.com/',
     location: 'Cape Town', 
-    description: 'ETHCapeTown Hackathon is the first Africa's ETHGlobal event that will take place in Cape Town, South Africa, on April 19-21. It will bring together over 200 international hackers, developers and curious minds to collaborate on building a decentralized future using Ethereum. The occasion will be inclusive and educational, inspiring communities through the creative design of blockchain applications.'
-    startDate: '04.19.2019'
-    endDate: '04.21.2019'
+    description: 'ETHCapeTown Hackathon is the first Africa\'s ETHGlobal event that will take place in Cape Town, South Africa, on April 19-21. It will bring together over 200 international hackers, developers and curious minds to collaborate on building a decentralized future using Ethereum. The occasion will be inclusive and educational, inspiring communities through the creative design of blockchain applications.',
+    startDate: '04.19.2019',
+    endDate: '04.21.2019',
     image1x: require('./imgs/Capetown@660w .png'),
-    image2x: require('.imgs/Capetown@1320w.png'),
+    image2x: require('./imgs/Capetown@1320w.png'),
   },
 
   {
     eventName: 'DeFi Cape Town: Decentralised Financial Inclusion',
     link: 'https://www.eventbrite.com/e/defi-cape-town-decentralised-financial-inclusion-registration-59050781477',
     location: 'Cape Town', 
-    DeFi Cape Town: Decentralised Financial Inclusion is a DeFi event that will happen on April 18 in a Cape Town as a part of the upcoming Blockchain Week ZA. It will focus on highlighting the challenges of financial inclusion in the region and sharing insights from developing solutions in the open DeFi ecosystem, such as ensuring a stable monetary infrastructure, expanding financing opportunities to MSME’s,  enabling faster and cheaper remittances and much more.
-    startDate: '04.18.2019'
-    endDate: '04.18.2019'
+    description: 'DeFi Cape Town: Decentralised Financial Inclusion is a DeFi event that will happen on April 18 in a Cape Town as a part of the upcoming Blockchain Week ZA. It will focus on highlighting the challenges of financial inclusion in the region and sharing insights from developing solutions in the open DeFi ecosystem, such as ensuring a stable monetary infrastructure, expanding financing opportunities to MSME\’s,  enabling faster and cheaper remittances and much more.',
+    startDate: '04.18.2019',
     image1x: require('./imgs/Capetown2@660w.png'),
-    image2x: require('.imgs/Capetown2@1320.png'),
+    image2x: require('./imgs/Capetown2@1320.png'),
   },
 
   {

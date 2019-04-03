@@ -1,5 +1,10 @@
 // tslint:disable
 export default [
+ {
+    summary: 'Ana Adrianova will be judging ETHGlobal hakathon in Cape Town',
+    url: 'https://twitter.com/ana_andrianova/status/1113138840670175232',
+    date: '04.02.2019',
+  },
   {
     summary: 'Akropolis joins Full Node panel on DAO governance and product-market fit',
     url: 'https://twitter.com/akropolisio/status/1105494593238380549',

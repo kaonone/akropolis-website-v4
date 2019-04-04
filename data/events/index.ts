@@ -14,6 +14,16 @@ const events: IEvent[] = [
     image2x: require('./imgs/Amsterdam@1320w.png'),
   }, 
 
+   {
+    eventName: 'The Next Web Special',
+    link: 'https://www.meetup.com/BCNLfoundation/events/259893194/',
+    location: 'Amsterdam', 
+    description: 'The Next Web Special is a meet up organized by Netherlands Blockchain Community around the main TNW event. It will feature international TNW speakers as well as some members of Dutch Blockchain ecosystem. This year, main topics of discussion will cover the state of DAOs and how one can use a DAO to organize or govern community driven initiatives.',
+    startDate: '05.08.2019',
+    image1x: require('./imgs/Amsterdam1@660w.png'),
+    image2x: require('./imgs/Amsterdam1@1320w.png'),
+  }, 
+
   { 
     eventName: 'ETH Cape Town',
     link: 'https://ethcapetown.com/',

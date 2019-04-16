@@ -8,7 +8,7 @@ export default {
       events: 'Events',
       blog: 'Blog',
       cashflowRelay: 'Cashflow Relay',
-      chamaNetwork: 'Chama Network',
+      chamaNetwork: 'Akropolis Network',
       privacyPolicy: 'Privacy Policy',
       termsConditions: 'Terms & Conditions',
     },
@@ -26,7 +26,7 @@ export default {
         description: 'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing',
       },
       chamaNetwork: {
-        title: 'Akropolis network',
+        title: 'Akropolis Network',
         description: 'Сreate a savings group with those who you know personally and trust',
       },
     },

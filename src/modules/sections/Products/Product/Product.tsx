@@ -17,6 +17,11 @@ interface IProps {
 
 const iPhonePlusWidth = 414;
 
+const linkByType: Record<ProductType, string> = {
+  hackathon0x: 'https://www.cashflowrelay.com/',
+  chamaNetwork: '',
+};
+
 function Product(props: IProps & StylesProps) {
   const { classes, type } = props;
   const { t } = useTranslate();
@@ -26,10 +31,12 @@ function Product(props: IProps & StylesProps) {
       <>
         <img className={classes.title} src={logo0xImg} />
         <div className={classes.subtitle}>
-          <Adaptive to={iPhonePlusWidth}>Hackathon winner</Adaptive>
-          <Adaptive from={iPhonePlusWidth} to="md">Global hackathon winner</Adaptive>
-          <Adaptive from="md" to={830}>Hackathon winner</Adaptive>
-          <Adaptive from={830}>Global hackathon winner</Adaptive>
+          <Adaptive to={iPhonePlusWidth}>{t(tKeys.sections.products.hackathon0x.headerLabelShort.getKey())}</Adaptive>
+          <Adaptive from={iPhonePlusWidth} to="md">
+            {t(tKeys.sections.products.hackathon0x.headerLabel.getKey())}
+          </Adaptive>
+          <Adaptive from="md" to={830}>{t(tKeys.sections.products.hackathon0x.headerLabelShort.getKey())}</Adaptive>
+          <Adaptive from={830}>{t(tKeys.sections.products.hackathon0x.headerLabel.getKey())}</Adaptive>
         </div>
         <SecondPlaceIcon className={classes.icon} />
       </>
@@ -37,7 +44,7 @@ function Product(props: IProps & StylesProps) {
     chamaNetwork: () => <AfricaIcon className={classes.icon} />,
   };
 
-  const link = t(tKeys.sections.products[type].link.getKey());
+  const link = linkByType[type];
 
   return (
     <div className={classes.root}>

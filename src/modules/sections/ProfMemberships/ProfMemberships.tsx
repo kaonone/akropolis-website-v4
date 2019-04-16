@@ -9,15 +9,15 @@ import { Grid } from 'shared/view/elements';
 import ProfMembership from './ProfMembership/ProfMembership';
 
 function ProfMemberships() {
-  const { t, tKeys } = useTranslate();
+  const { t, tKeys, locale } = useTranslate();
 
   return (
     <PageBlock xsVPadding={1} mdVPadding={8}>
       <Section title={t(tKeys.sections.profMemberships.title.getKey())}>
         <Grid container spacing={32}>
-          {profMemberships.map(item => (
+          {profMemberships.map(({ description, ...item }) => (
             <Grid item xs={12} key={item.membershipName}>
-              <ProfMembership {...item} />
+              <ProfMembership {...item} description={description[locale]} />
             </Grid>
           ))}
         </Grid>

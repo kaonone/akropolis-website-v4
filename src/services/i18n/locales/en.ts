@@ -1,6 +1,18 @@
 // tslint:disable:max-line-length
 export default {
-  modules: {},
+  modules: {
+    navigation: {
+      products: 'Products',
+      company: 'Company',
+      wiki: 'Wiki',
+      events: 'Events',
+      blog: 'Blog',
+      cashflowRelay: 'Cashflow Relay',
+      chamaNetwork: 'Chama Network',
+      privacyPolicy: 'Privacy Policy',
+      termsConditions: 'Terms & Conditions',
+    },
+  },
   sections: {
     intro: {
       title: 'Unlocking the potential of informal economy with DeFi',
@@ -8,14 +20,14 @@ export default {
     },
     products: {
       hackathon0x: {
+        headerLabel: 'Global hackathon winner',
+        headerLabelShort: 'Hackathon winner',
         title: 'Cashflow Relay',
         description: 'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing',
-        link: 'https://www.cashflowrelay.com/',
       },
       chamaNetwork: {
         title: 'Chama network',
         description: 'Сreate a savings group with those who you know personally and trust',
-        link: '',
       },
     },
     whatYouCanBuild: {
@@ -60,6 +72,8 @@ export default {
     },
   },
   shared: {
+    learnMore: 'Learn more',
+    comingSoon: 'Coming soon',
     date: {
       months: {
         1: 'January',

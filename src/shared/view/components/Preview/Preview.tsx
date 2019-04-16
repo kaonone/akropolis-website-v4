@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { StylesProps, provideStyles } from './Preview.style';
+import { useTranslate } from 'services/i18n';
 import { LaunchIcon, Link } from 'shared/view/elements';
+import { StylesProps, provideStyles } from './Preview.style';
 
 interface IProps {
   title: string;
@@ -14,6 +15,7 @@ interface IProps {
 
 function Preview(props: IProps & StylesProps) {
   const { classes, title, description, moreLink, titleIcon, isComingSoon, subtitle } = props;
+  const { t, tKeys } = useTranslate();
   return (
     <article className={classes.root}>
       <h3 className={classes.title}>
@@ -26,12 +28,12 @@ function Preview(props: IProps & StylesProps) {
         <footer className={classes.footer}>
           {moreLink && (
             <Link href={moreLink} target="_blank" rel="noopener noreferrer" className={classes.moreLink}>
-              Learn more
+              {t(tKeys.shared.learnMore.getKey())}
               <LaunchIcon className={classes.moreLinkIcon} />
             </Link>
           )}
           {isComingSoon && (
-            <span>Coming soon</span>
+            <span>{t(tKeys.shared.comingSoon.getKey())}</span>
           )}
         </footer>
       )}

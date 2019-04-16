@@ -1,28 +1,29 @@
-import { IMenuItem } from 'shared/types/common';
 import routes from 'modules/routes';
+import { tKeys } from 'services/i18n';
+import { IMenuItem } from 'shared/types/common';
 
 export const menuItems: IMenuItem[] = [
   {
     path: '/',
-    title: 'Products',
+    title: tKeys.modules.navigation.products.getKey(),
     scrollTo: 'products',
   },
   {
     path: routes.company.getRoutePath(),
-    title: 'Company',
+    title: tKeys.modules.navigation.company.getKey(),
   },
   {
     path: 'https://wiki.akropolis.io',
-    title: 'Wiki',
+    title: tKeys.modules.navigation.wiki.getKey(),
     isExternal: true,
   },
   {
     path: routes.events.getRoutePath(),
-    title: 'Events',
+    title: tKeys.modules.navigation.events.getKey(),
   },
   {
     path: 'https://medium.com/akropolis',
-    title: 'Blog',
+    title: tKeys.modules.navigation.blog.getKey(),
     isExternal: true,
   },
 ];

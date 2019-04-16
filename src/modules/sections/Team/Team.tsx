@@ -9,7 +9,7 @@ import { Grid } from 'shared/view/elements';
 import TeamMember from './TeamMember/TeamMember';
 
 function Team() {
-  const { t, tKeys } = useTranslate();
+  const { t, tKeys, locale } = useTranslate();
 
   return (
     <PageBlock xsVPadding={1} mdVPadding={10}>
@@ -18,9 +18,14 @@ function Team() {
         subtitle={t(tKeys.sections.team.subtitle.getKey())}
       >
         <Grid container spacing={24} justify="center">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map(({ position, tags, background, ...member }, index) => (
             <Grid key={index} item xs={6} md={4}>
-              <TeamMember {...member} />
+              <TeamMember
+                tags={tags[locale]}
+                position={position[locale]}
+                background={background[locale]}
+                {...member}
+              />
             </Grid>
           ))}
         </Grid>

@@ -22,11 +22,11 @@ export default {
       hackathon0x: {
         headerLabel: '세계 해커톤 대회 우승',
         headerLabelShort: '세계 해커톤 대회 우승',
-        title: '캐시플로우 릴레이',
+        title: 'Cashflow Relay',
         description: '새로운 금융업의 시초이자 캐시플로우 파이낸싱 탈중앙화 금융산업과 같은 미래 현금흐름 협약(C2FC)의 설정 및 거래',
       },
       chamaNetwork: {
-        title: 'Chama 네트워크',
+        title: 'Akropolis network',
         description: '개인적으로 믿고 신뢰할 수 있는 사람들과 저축 그룹을 형성',
       },
     },

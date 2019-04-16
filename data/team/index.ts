@@ -697,4 +697,45 @@ export default [
       ],
     },
   },
+  {
+    links: [
+      'https://www.linkedin.com/in/ross-marakhonov/',
+    ],
+    fullName: 'Ross Mar',
+    position: {
+      en: 'Marketing',
+      ja: '',
+      ko: '마케팅',
+    },
+    photo1x: require('./imgs/rossm@1x.png'),
+    photo2x: require('./imgs/rossm@2x.png'),
+    tags: {
+      en: [
+        'Digital Marketing',
+        'Project Management',
+        'Community',
+      ],
+      ja: [
+
+      ],
+      ko: [
+        '디지털 마케팅',
+        '프로젝트 관리',
+        '커뮤니티',
+      ],
+    },
+    background: {
+      en: [
+        'Marketing & Community, Cindicator',
+        'MSc Business Management',
+      ],
+      ja: [
+
+      ],
+      ko: [
+        '신디케이터 마케팅 및 커뮤니티',
+        '경영학 석사',
+      ],
+    },
+  },
 ];

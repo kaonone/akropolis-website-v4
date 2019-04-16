@@ -31,13 +31,13 @@ class TextInput extends React.PureComponent<IProps, IState> {
 
     return (
       <TextField
+        fullWidth
         {...this.props as TextFieldProps}
         type={type}
         InputProps={{
           ...this.props.InputProps,
           endAdornment: this.renderEndAdornment(),
         }}
-        fullWidth
       />
     );
   }

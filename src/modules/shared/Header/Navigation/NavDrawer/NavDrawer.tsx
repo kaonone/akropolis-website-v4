@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
+import { useTranslate } from 'services/i18n';
 import { NavMenuItem, AkropolisSocialLinks } from 'shared/view/components';
 import { Drawer, IconButton } from 'shared/view/elements';
 import { MenuIcon, ClearIcon } from 'shared/view/elements/Icons';
@@ -10,6 +11,7 @@ import { StylesProps, provideStyles } from './NavDrawer.style';
 
 function NavDrawer(props: StylesProps) {
   const { classes } = props;
+  const { t } = useTranslate();
   const [opened, setOpened] = React.useState(false);
   const handleDrawerToggle = React.useCallback(() => setOpened(!opened), [opened]);
 
@@ -19,7 +21,7 @@ function NavDrawer(props: StylesProps) {
         color="inherit"
         aria-label="Open mobile navigation"
         onClick={handleDrawerToggle}
-        className={cn(classes.button, { [classes.open]: true })}
+        className={cn(classes.button, classes.open)}
       >
         <MenuIcon />
       </IconButton>
@@ -37,12 +39,12 @@ function NavDrawer(props: StylesProps) {
             color="inherit"
             aria-label="Close mobile navigation"
             onClick={handleDrawerToggle}
-            className={cn(classes.button, { [classes.close]: true })}
+            className={cn(classes.button, classes.close)}
           >
             <ClearIcon />
           </IconButton>
-          {menuItems.map(item => (
-            <NavMenuItem key={item.title} className={classes.link} onClick={handleDrawerToggle} {...item} />
+          {menuItems.map(({ title, ...item }) => (
+            <NavMenuItem key={title} className={classes.link} onClick={handleDrawerToggle} title={t(title)} {...item} />
           ))}
           <div className={classes.socials}><AkropolisSocialLinks /></div>
         </div>

@@ -7,7 +7,6 @@ const styles = (theme: Theme) => ({
     margin: '0 auto',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
     color: theme.extra.colors.rhino,
     maxWidth: theme.extra.sizes.maxContentWidth,
 
@@ -22,11 +21,30 @@ const styles = (theme: Theme) => ({
 
   logo: rule({
     display: 'flex',
+    marginRight: 'auto',
     fontSize: 36,
     color: 'inherit',
 
     [theme.breakpoints.up('lg')]: {
       fontSize: 48,
+    },
+  }),
+
+  navInline: rule({
+    display: 'none',
+    marginRight: theme.spacing.unit * 4,
+
+    [theme.breakpoints.up('lg')]: {
+      display: 'block',
+    },
+  }),
+
+  navDrawer: rule({
+    display: 'block',
+    marginLeft: theme.spacing.unit * 2,
+
+    [theme.breakpoints.up('lg')]: {
+      display: 'none',
     },
   }),
 });

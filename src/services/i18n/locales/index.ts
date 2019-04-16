@@ -1,6 +1,11 @@
 import en from './en';
-import ru from './ru';
+import ja from './ja';
+import ko from './ko';
 
-const phrasesByLocale: { en: typeof en, ru: typeof ru } = { en, ru };
+const phrasesByLocale: {
+  en: typeof en,
+  ja: typeof ja,
+  ko: typeof ko,
+} = { en, ja, ko };
 
-export { en, ru, phrasesByLocale };
+export { en, phrasesByLocale };

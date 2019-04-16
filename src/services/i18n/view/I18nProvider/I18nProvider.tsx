@@ -2,10 +2,11 @@ import React from 'react';
 import { bind } from 'decko';
 import Polyglot from 'node-polyglot';
 
+import { LOCALE_STORAGE_KEY } from 'core/constants';
 import { withProps } from 'shared/helpers/react';
 
 import { ITranslateFunction, Lang, ITranslateKey } from '../../namespace';
-import { DEFAULT_LANGUAGE, I18nContext, tKeys } from '../../constants';
+import { INITIAL_LANGUAGE, I18nContext, tKeys } from '../../constants';
 import { phrasesByLocale as phrases } from '../../locales';
 
 interface IOwnProps {
@@ -22,12 +23,12 @@ type IProps = IOwnProps;
 
 class I18nProvider extends React.Component<IProps, IState> {
   public polyglot: Polyglot = new Polyglot({
-    locale: DEFAULT_LANGUAGE,
-    phrases: this.props.phrasesByLocale[DEFAULT_LANGUAGE],
+    locale: INITIAL_LANGUAGE,
+    phrases: this.props.phrasesByLocale[INITIAL_LANGUAGE],
   });
 
   public state: IState = {
-    locale: DEFAULT_LANGUAGE,
+    locale: INITIAL_LANGUAGE,
     translator: this.makeTranslator(this.polyglot),
     changeLanguage: this.changeLanguage,
   };
@@ -55,6 +56,12 @@ class I18nProvider extends React.Component<IProps, IState> {
   @bind
   private changeLanguage(value: Lang) {
     this.setState({ locale: value });
+
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, JSON.stringify(value));
+    } catch {
+      //
+    }
   }
 
   @bind

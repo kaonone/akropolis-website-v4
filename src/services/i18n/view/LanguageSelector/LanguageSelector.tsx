@@ -1,7 +1,9 @@
 import React, { useCallback } from 'react';
 
+import { TextInput, MenuItem } from 'shared/view/elements';
 import { Lang } from '../../namespace';
 import useTranslate from '../../hooks/useTranslate';
+import { StylesProps, provideStyles } from './LanguageSelector.style';
 
 interface IOption {
   value: Lang;
@@ -9,11 +11,12 @@ interface IOption {
 }
 
 const options: IOption[] = [
-  { value: 'en', label: 'en' },
-  { value: 'ru', label: 'ru' },
+  { value: 'en', label: 'English' },
+  // { value: 'ja', label: 'ja' },
+  { value: 'ko', label: '한국어' },
 ];
 
-function LanguageSelector() {
+function LanguageSelector(props: StylesProps) {
   const { locale, changeLanguage } = useTranslate();
 
   const handleChangeLanguage = useCallback(
@@ -22,14 +25,23 @@ function LanguageSelector() {
   );
 
   return (
-    <div>
-      <select value={locale} onChange={handleChangeLanguage}>
-        {options.map(({ value, label }, i) => (
-          <option value={value} key={i}>{label}</option>
-        ))}
-      </select>
-    </div>
+    <TextInput
+      fullWidth={false}
+      select
+      variant="outlined"
+      value={locale}
+      onChange={handleChangeLanguage}
+      InputProps={{
+        classes: {
+          input: props.classes.input,
+        },
+      }}
+    >
+      {options.map(({ value, label }, i) => (
+        <MenuItem value={value} key={i}>{label}</MenuItem>
+      ))}
+    </TextInput>
   );
 }
 
-export default LanguageSelector;
+export default provideStyles(LanguageSelector);

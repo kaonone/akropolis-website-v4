@@ -726,14 +726,14 @@ export default [
     },
     background: {
       en: [
-        'Marketing & Community, Cindicator',
-        'MSc Business Management',
+        'Head of Community, Cindicator',
+        'BSc Economy of the Middle East',
       ],
       ja: [
 
       ],
       ko: [
-        '',
+
       ],
     },
   },
@@ -754,14 +754,13 @@ export default [
         'Fundraising',
         'Communication strategies',
         'Negotiations',
-		'Token Sale Marketing',
+        'Token Sale Marketing',
       ],
       ja: [
 
       ],
       ko: [
-        '',
-        '',
+
       ],
     },
     background: {
@@ -773,7 +772,7 @@ export default [
 
       ],
       ko: [
-        '',
+
       ],
     },
   },

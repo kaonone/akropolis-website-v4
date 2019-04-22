@@ -699,16 +699,16 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/ross-marakhonov/',
+      'https://www.linkedin.com/in/yana-marakhonova/',
     ],
-    fullName: 'Ross Mar',
+    fullName: 'Yana Mar',
     position: {
-      en: 'Marketing',
+      en: 'Community & Marketing',
       ja: '',
-      ko: '마케팅',
+      ko: '커뮤니티 및 마케팅',
     },
-    photo1x: require('./imgs/rossm@1x.png'),
-    photo2x: require('./imgs/rossm@2x.png'),
+    photo1x: require('./imgs/yana@1x.png'),
+    photo2x: require('./imgs/yana@2x.png'),
     tags: {
       en: [
         'Digital Marketing',
@@ -733,8 +733,47 @@ export default [
 
       ],
       ko: [
-        '신디케이터 마케팅 및 커뮤니티',
-        '경영학 석사',
+        '',
+      ],
+    },
+  },
+  {
+    links: [
+      'https://www.linkedin.com/in/laura-toma-59bb9a7/',
+    ],
+    fullName: 'Laura Toma',
+    position: {
+      en: 'Marketing Adviser',
+      ja: '',
+      ko: '',
+    },
+    photo1x: require('./imgs/laura@1x.png'),
+    photo2x: require('./imgs/laura@2x.png'),
+    tags: {
+      en: [
+        'Fundraising',
+        'Communication strategies',
+        'Negotiations',
+		'Token Sale Marketing',
+      ],
+      ja: [
+
+      ],
+      ko: [
+        '',
+        '',
+      ],
+    },
+    background: {
+      en: [
+        'Co-Founder and Head of Operations at Renowned&Co',
+        'BSc Marketing, Academia de Studii Economice din București',
+      ],
+      ja: [
+
+      ],
+      ko: [
+        '',
       ],
     },
   },

@@ -733,7 +733,8 @@ export default [
 
       ],
       ko: [
-
+        'Head of Community, Cindicator',
+        'BSc Economy of the Middle East',
       ],
     },
   },
@@ -745,7 +746,7 @@ export default [
     position: {
       en: 'Marketing Adviser',
       ja: '',
-      ko: '',
+      ko: 'Marketing Adviser',
     },
     photo1x: require('./imgs/laura@1x.png'),
     photo2x: require('./imgs/laura@2x.png'),
@@ -760,7 +761,10 @@ export default [
 
       ],
       ko: [
-
+        'Fundraising',
+        'Communication strategies',
+        'Negotiations',
+        'Token Sale Marketing',
       ],
     },
     background: {
@@ -772,7 +776,8 @@ export default [
 
       ],
       ko: [
-
+        'Co-Founder and Head of Operations at Renowned&Co',
+        'BSc Marketing, Academia de Studii Economice din București',
       ],
     },
   },

@@ -744,9 +744,9 @@ export default [
     ],
     fullName: 'Laura Toma',
     position: {
-      en: 'Marketing Adviser',
+      en: 'Marketing Advisor',
       ja: '',
-      ko: 'Marketing Adviser',
+      ko: 'Marketing Advisor',
     },
     photo1x: require('./imgs/laura@1x.png'),
     photo2x: require('./imgs/laura@2x.png'),
@@ -769,14 +769,14 @@ export default [
     },
     background: {
       en: [
-        'Co-Founder and Head of Operations at Renowned&Co',
+        'Co-Founder & Head of Operations, Renowned&Co',
         'BSc Marketing, Academia de Studii Economice din București',
       ],
       ja: [
 
       ],
       ko: [
-        'Co-Founder and Head of Operations at Renowned&Co',
+        'Co-Founder & Head of Operations, Renowned&Co',
         'BSc Marketing, Academia de Studii Economice din București',
       ],
     },

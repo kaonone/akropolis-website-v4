@@ -769,15 +769,16 @@ export default [
     },
     background: {
       en: [
-        'Co-Founder & Head of Operations, Renowned&Co',
-		'Codex, Gochain, POA Network advising',
+        'Co-Founder & Head of Operations, Renowned & Co',
+	'Codex, Gochain, POA Network advising',
         'BSc Marketing, Academia de Studii Economice din București',
       ],
       ja: [
 
       ],
       ko: [
-        'Co-Founder & Head of Operations, Renowned&Co',
+        'Co-Founder & Head of Operations, Renowned & Co',
+	'Codex, Gochain, POA Network advising',
         'BSc Marketing, Academia de Studii Economice din București',
       ],
     },

@@ -55,12 +55,6 @@ export default [
     icon2x: require('./imgs/bancor@2x.png'),
   },
   {
-    url: 'https://www.lightstreams.network',
-    partnerName: 'Lightstreams Network',
-    icon1x: require('./imgs/light@1x.png'),
-    icon2x: require('./imgs/light@2x.png'),
-  },
-  {
     url: 'https://zerion.io/',
     partnerName: 'Zerion',
     icon1x: require('./imgs/zerion@1x.png'),

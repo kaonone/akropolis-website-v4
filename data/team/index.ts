@@ -551,7 +551,7 @@ export default [
     background: {
       en: [
         'Financial Infrastructure, ConsenSys',
-        'Head of Blockchain, PriceWaterCoopers',
+        'Head of Blockchain, PwC',
       ],
       ja: [
 

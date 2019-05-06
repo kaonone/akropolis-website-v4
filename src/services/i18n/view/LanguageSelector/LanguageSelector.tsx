@@ -14,6 +14,7 @@ const options: IOption[] = [
   { value: 'en', label: 'English' },
   // { value: 'ja', label: 'ja' },
   { value: 'ko', label: '한국어' },
+  { value: 'zh', label: '简体中文' },
 ];
 
 function LanguageSelector(props: StylesProps) {

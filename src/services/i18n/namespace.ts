@@ -9,7 +9,7 @@ interface IPhraseWithOptions {
 export type ITranslateFunction = Polyglot['t'] & CustomTranslateFunction;
 export type ITranslateKey = string | IPhraseWithOptions;
 
-export type Lang = 'en' | 'ja' | 'ko';
+export type Lang = 'en' | 'ko' | 'zh';
 
 export interface ITranslateProps<Keys> {
   tKeys: Keys;

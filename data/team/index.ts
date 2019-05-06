@@ -7,7 +7,7 @@ export default [
     fullName: 'Ana Andria',
     position: {
       en: 'Founder, Strategy & Product',
-      ja: '',
+      zh: '创始人、战略与产品',
       ko: '창립자, 전략 및 상품개발자',
     },
     photo1x: require('./imgs/andrianova@1x.png'),
@@ -19,8 +19,11 @@ export default [
         'Business Development',
         'Fundraising',
       ],
-      ja: [
-
+      zh: [
+        '产品',
+        '战略',
+        '业务发展',
+        '融资',
       ],
       ko: [
         '상품제작',
@@ -35,8 +38,10 @@ export default [
         'Lehman Brothers',
         'PhD (cand.) Oxford University',
       ],
-      ja: [
-
+      zh: [
+        'Web3 Foundation ，顾问',
+        'Lehman Brothers',
+        '牛津大学博士（在读）',
       ],
       ko: [
         '지도 고문, Web3 재단',
@@ -52,7 +57,7 @@ export default [
     fullName: 'Kate Kurbanova',
     position: {
       en: 'Co-Founder, Operations & People',
-      ja: '',
+      zh: '联合创始人，运营与人力',
       ko: '공동 창립자, 운영 및 인력관리',
     },
     photo1x: require('./imgs/kurbanova@1x.png'),
@@ -65,8 +70,12 @@ export default [
         'Data Analytics',
         'Community',
       ],
-      ja: [
-
+      zh: [
+        '运营',
+        '客户开发',
+        '项目管理',
+        '数据分析',
+        '社区',
       ],
       ko: [
         '운영',
@@ -81,8 +90,9 @@ export default [
         'Head of Analytics, Cindicator',
         'MSc Computer Science',
       ],
-      ja: [
-
+      zh: [
+        '数据分析主管，Cindicator',
+        '计算机学，硕士',
       ],
       ko: [
         '신디케이터 분석 책임자',
@@ -97,7 +107,7 @@ export default [
     fullName: 'Alex Maz',
     position: {
       en: 'Technology Lead',
-      ja: '',
+      zh: '技术主管',
       ko: '기술 책임자',
     },
     photo1x: require('./imgs/maz@1x.png'),
@@ -113,8 +123,15 @@ export default [
         'WASM',
         'Team Management',
       ],
-      ja: [
-
+      zh: [
+        '区块链架构',
+        'C#/.NET',
+        'Java',
+        'Polkadot/Substrate',
+        '产品战略',
+        'Solidity',
+        'WASM',
+        '团队管理',
       ],
       ko: [
         '블럭체인 구축자',
@@ -136,8 +153,13 @@ export default [
         'PhD (cand.) Machine Learning',
         'MSc Applied Maths & Computer Science',
       ],
-      ja: [
-
+      zh: [
+        '2012年以来的区块链开发者',
+        '开源贡献者',
+        '16本科学出版物',
+        '10次商业实践',
+        '机器学习博士（在读）',
+        '应用数学与计算机科学硕士',
       ],
       ko: [
         '블럭체인 개발자(2012년부터)',
@@ -156,7 +178,7 @@ export default [
     fullName: 'Peter Robertson',
     position: {
       en: 'Pensions & Insurance Advisor',
-      ja: '',
+      zh: '养老金与保险顾问',
       ko: '연금 및 보험분야 고문',
     },
     photo1x: require('./imgs/peter.png'),
@@ -171,8 +193,14 @@ export default [
         'Strategy',
         'Business Development',
       ],
-      ja: [
-
+      zh: [
+        '数字资产',
+        '精算科学',
+        '金融产品设计',
+        '养老金',
+        '保险',
+        '策略',
+        '业务发展',
       ],
       ko: [
         '디지털 자산',
@@ -190,8 +218,10 @@ export default [
         'Vanguard Asset Management',
         'Kings College London',
       ],
-      ja: [
-
+      zh: [
+        'Genesis Mining',
+        'Vanguard Asset Management',
+        'Kings College London',
       ],
       ko: [
         'Genesis Mining',
@@ -207,7 +237,7 @@ export default [
     fullName: 'Dearg OBartuin',
     position: {
       en: 'Technology & Country Advisor',
-      ja: '',
+      zh: '技术与国家顾问',
       ko: '기술 및 국가 관련 고문',
     },
     photo1x: require('./imgs/dearg@1x.png'),
@@ -219,8 +249,11 @@ export default [
         'Product Development',
         'Africa',
       ],
-      ja: [
-
+      zh: [
+        '区块链',
+        '汇款',
+        '产品开发',
+        '非洲',
       ],
       ko: [
         '블럭 체인',
@@ -233,8 +266,8 @@ export default [
       en: [
         'CTO, BitPesa',
       ],
-      ja: [
-
+      zh: [
+        '首席技术官, BitPesa',
       ],
       ko: [
         '최고기술 경영자, BitPesa',
@@ -248,7 +281,7 @@ export default [
     fullName: 'Dominic Melo',
     position: {
       en: 'Global Payments Infrastructure',
-      ja: '',
+      zh: '全球支付基础设施',
       ko: '글로벌 결제 인프라',
     },
     photo1x: require('./imgs/melo@1x.png'),
@@ -261,8 +294,12 @@ export default [
         'Mobile Payments',
         'Financial Services',
       ],
-      ja: [
-
+      zh: [
+        '支付',
+        '业务发展',
+        '业务战略',
+        '移动支付',
+        '金融服务',
       ],
       ko: [
         '지불 관련',
@@ -277,8 +314,9 @@ export default [
         'iSignthis',
         'Paymundo Systems',
       ],
-      ja: [
-
+      zh: [
+        'iSignthis',
+        'Paymundo Systems',
       ],
       ko: [
         'iSignthis',
@@ -293,7 +331,7 @@ export default [
     fullName: 'Alex Koz',
     position: {
       en: 'Blockchain R&D',
-      ja: '',
+      zh: '区块链研发',
       ko: '블럭체인 연구개발',
     },
     photo1x: require('./imgs/koz@1x.png'),
@@ -308,8 +346,14 @@ export default [
         'Obj-C++',
         'Python',
       ],
-      ja: [
-
+      zh: [
+        'Polkadot/Substrate',
+        'Rust',
+        'WASM',
+        'Haxe',
+        'Java',
+        'Obj-C++',
+        'Python',
       ],
       ko: [
         'Polkadot/Substrate',
@@ -329,8 +373,12 @@ export default [
         'Leo Burnett',
         'Open Source contributor',
       ],
-      ja: [
-
+      zh: [
+        'Mail.ru',
+        'Rambler',
+        'Sberbank',
+        'Leo Burnett',
+        '开源贡献者',
       ],
       ko: [
         'Mail.ru',
@@ -348,7 +396,7 @@ export default [
     fullName: 'Ilgiz Gimal',
     position: {
       en: 'Product',
-      ja: '',
+      zh: '产品经理',
       ko: '상품 관리자',
     },
     photo1x: require('./imgs/ilgiz@1x.png'),
@@ -360,8 +408,11 @@ export default [
         'Project Management',
         'Ecosystem Analysis',
       ],
-      ja: [
-
+      zh: [
+        '产品开发',
+        '分期开发',
+        '项目管理',
+        '生态系统分析',
       ],
       ko: [
         '상품 개발',
@@ -375,8 +426,9 @@ export default [
         'VTB Bank',
         'PhD Computer Science & Mathematics',
       ],
-      ja: [
-
+      zh: [
+        'VTB Bank',
+        '计算机科学与数学博士',
       ],
       ko: [
         'VTB Bank',
@@ -391,7 +443,7 @@ export default [
     fullName: 'Andrew Bal',
     position: {
       en: 'Product',
-      ja: '',
+      zh: '产品经理',
       ko: '상품 관리자',
     },
     photo1x: require('./imgs/andrey@1x.png'),
@@ -404,8 +456,12 @@ export default [
         'Digital Marketing',
         'Data Analysis',
       ],
-      ja: [
-
+      zh: [
+        '客户开发',
+        '产品开发',
+        '产品管理',
+        '数字营销',
+        '数据分析',
       ],
       ko: [
         '고객 개발',
@@ -421,8 +477,10 @@ export default [
         'Head of Product, Zerion',
         'BSc World Economy',
       ],
-      ja: [
-
+      zh: [
+        'QIWI 高级产品负责人',
+        'Zerion产品负责人',
+        '世界经济学士',
       ],
       ko: [
         'QIWI의 고위 상품 소유주',
@@ -438,7 +496,7 @@ export default [
     fullName: 'Ian Grigg',
     position: {
       en: 'Blockchain R&D Advisor',
-      ja: '',
+      zh: '区块链研发顾问',
       ko: '블럭체인 연구개발 고문',
     },
     photo1x: require('./imgs/ian.png'),
@@ -449,8 +507,10 @@ export default [
         'Blockchain architecture',
         'Java',
       ],
-      ja: [
-
+      zh: [
+        '财务密码学',
+        '区块链架构',
+        'Java',
       ],
       ko: [
         '금융 암호화',
@@ -464,8 +524,10 @@ export default [
         'Architecture Consultant at R3',
         'Inventor of Ricardian Contract',
       ],
-      ja: [
-
+      zh: [
+        'Block.one（EOS）合伙人',
+        'R3架构顾问',
+        'Ricardian合约发明者',
       ],
       ko: [
         'Block.one(EOS)의 파트너',
@@ -481,7 +543,7 @@ export default [
     fullName: 'Bokky Poobah',
     position: {
       en: 'Blockchain Security Advisor',
-      ja: '',
+      zh: '区块链安全顾问',
       ko: '블럭체인 보안 관리자',
     },
     photo1x: require('./imgs/bokky.png'),
@@ -495,8 +557,13 @@ export default [
         'Quant Software Development',
         'Cryptoderivatives',
       ],
-      ja: [
-
+      zh: [
+        '安全审计',
+        'Solidity',
+        '软件开发',
+        '精算科学',
+        '定量软件开发',
+        'Cryptoderivatives',
       ],
       ko: [
         '보안 감사',
@@ -511,8 +578,8 @@ export default [
       en: [
         'Smart Contract Developer and Auditor',
       ],
-      ja: [
-
+      zh: [
+        '智能合约开发者和审计员',
       ],
       ko: [
         'Smart 계약 개발자 및 감사인',
@@ -526,7 +593,7 @@ export default [
     fullName: 'Ajit Tripathi',
     position: {
       en: 'Fintech Advisor',
-      ja: '',
+      zh: 'Fintech顾问',
       ko: '핀테크 고문',
     },
     photo1x: require('./imgs/ajit@1x.png'),
@@ -538,8 +605,11 @@ export default [
         'Risk Managment',
         'Investment Banking',
       ],
-      ja: [
-
+      zh: [
+        '金融基础设施',
+        '区块链架构',
+        '风险管理',
+        '投资银行',
       ],
       ko: [
         '금융 인프라',
@@ -553,8 +623,9 @@ export default [
         'Financial Infrastructure, ConsenSys',
         'Head of Blockchain, PwC',
       ],
-      ja: [
-
+      zh: [
+        '金融基础设施，ConsenSys',
+        '区块链主管，普华永道',
       ],
       ko: [
         'ConsenSys 금융 인프라',
@@ -569,7 +640,7 @@ export default [
     fullName: 'Dima Serd',
     position: {
       en: 'UI/UX',
-      ja: '',
+      zh: 'UI/UX',
       ko: 'UI/UX',
     },
     photo1x: require('./imgs/serdtsev@1x.png'),
@@ -584,8 +655,14 @@ export default [
         'Frontend',
         'Visualisation',
       ],
-      ja: [
-
+      zh: [
+        'React',
+        'Redux',
+        'Saga',
+        'UI',
+        'UX',
+        '前端',
+        '可视化',
       ],
       ko: [
         'React',
@@ -603,8 +680,10 @@ export default [
         '10 commercial implementations',
         '5 years of Frontend development',
       ],
-      ja: [
-
+      zh: [
+        '计算机科学学士',
+        '10年商业实践',
+        '5年前端开发',
       ],
       ko: [
         '컴퓨터 공학 학사',
@@ -620,7 +699,7 @@ export default [
     fullName: 'Mike Krash',
     position: {
       en: 'Software Development',
-      ja: '',
+      zh: '软件开发',
       ko: '소프트웨어 개발자',
     },
     photo1x: require('./imgs/mikhailk@1x.png'),
@@ -630,8 +709,9 @@ export default [
         'React',
         'Redux',
       ],
-      ja: [
-
+      zh: [
+        'React',
+        'Redux',
       ],
       ko: [
         'React',
@@ -643,8 +723,9 @@ export default [
         'MSc Engineering',
         'Lead Developer',
       ],
-      ja: [
-
+      zh: [
+        '工程学硕士',
+        '开发主管',
       ],
       ko: [
         '엔지니어링 이학석사',
@@ -659,7 +740,7 @@ export default [
     fullName: 'Dima Hurs',
     position: {
       en: 'Software Development',
-      ja: '',
+      zh: '软件开发',
       ko: '소프트웨어 개발자',
     },
     photo1x: require('./imgs/dmitryh@1x.png'),
@@ -673,8 +754,13 @@ export default [
         'Dart',
         'Flutter',
       ],
-      ja: [
-
+      zh: [
+        'React',
+        'Redux',
+        'Typescript',
+        'React Native',
+        'Dart',
+        'Flutter',
       ],
       ko: [
         'React',
@@ -689,8 +775,8 @@ export default [
       en: [
         'BSc Computer Science',
       ],
-      ja: [
-
+      zh: [
+        '计算机科学学士',
       ],
       ko: [
         '컴퓨터 공학 학사',
@@ -704,7 +790,7 @@ export default [
     fullName: 'Yana Mar',
     position: {
       en: 'Community & Marketing',
-      ja: '',
+      zh: '',
       ko: '커뮤니티 및 마케팅',
     },
     photo1x: require('./imgs/yana@1x.png'),
@@ -715,8 +801,10 @@ export default [
         'Project Management',
         'Community',
       ],
-      ja: [
-
+      zh: [
+        'Digital Marketing',
+        'Project Management',
+        'Community',
       ],
       ko: [
         '디지털 마케팅',
@@ -729,8 +817,9 @@ export default [
         'Head of Community, Cindicator',
         'BSc Economy of the Middle East',
       ],
-      ja: [
-
+      zh: [
+        '社区负责人，Cindicator',
+        '中东经济学学士',
       ],
       ko: [
         'Head of Community, Cindicator',
@@ -745,7 +834,7 @@ export default [
     fullName: 'Laura Toma',
     position: {
       en: 'Marketing Advisor',
-      ja: '',
+      zh: '营销顾问',
       ko: 'Marketing Advisor',
     },
     photo1x: require('./imgs/laura@1x.png'),
@@ -757,8 +846,11 @@ export default [
         'Negotiations',
         'Token Sale Marketing',
       ],
-      ja: [
-
+      zh: [
+        '融资',
+        '沟通策略',
+        '谈判',
+        '代币销售营销',
       ],
       ko: [
         'Fundraising',
@@ -770,15 +862,17 @@ export default [
     background: {
       en: [
         'Co-Founder & Head of Operations, Renowned & Co',
-	'Codex, Gochain, POA Network advising',
+        'Codex, Gochain, POA Network advising',
         'BSc Marketing, Academia de Studii Economice din București',
       ],
-      ja: [
-
+      zh: [
+        'Renowned&Co联合创始人兼运营主管',
+        'Codex, Gochain, POA Network advising',
+        '营销学学士，布加勒斯特经济研究中心',
       ],
       ko: [
         'Co-Founder & Head of Operations, Renowned & Co',
-	'Codex, Gochain, POA Network advising',
+        'Codex, Gochain, POA Network advising',
         'BSc Marketing, Academia de Studii Economice din București',
       ],
     },

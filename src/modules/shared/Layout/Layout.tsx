@@ -28,7 +28,7 @@ function Layout(props: IProps) {
         <div className={cn(classes.header, { [classes.isAbsolute]: !!introContent })}>{headerContent}</div>
       )}
       {introContent && <div className={classes.intro}>{introContent}</div>}
-      <div className={classes.content}>{allowedChildren}</div>
+      {!!allowedChildren.length && <div className={classes.content}>{allowedChildren}</div>}
       {footerContent && <div className={classes.footer}>{footerContent}</div>}
       <div className={classes.socials}><AkropolisSocialLinks direction="column" /></div>
     </div>

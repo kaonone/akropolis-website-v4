@@ -13,6 +13,10 @@ export const menuItems: IMenuItem[] = [
     title: tKeys.modules.navigation.company.getKey(),
   },
   {
+    path: routes.quest.getRoutePath(),
+    title: tKeys.modules.navigation.quest.getKey(),
+  },
+  {
     path: 'https://wiki.akropolis.io',
     title: tKeys.modules.navigation.wiki.getKey(),
     isExternal: true,

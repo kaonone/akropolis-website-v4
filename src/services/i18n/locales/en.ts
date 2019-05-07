@@ -7,6 +7,7 @@ export default {
       wiki: 'Wiki',
       events: 'Events',
       blog: 'Blog',
+      quest: 'Quest',
       cashflowRelay: 'Cashflow Relay',
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: 'Privacy Policy',

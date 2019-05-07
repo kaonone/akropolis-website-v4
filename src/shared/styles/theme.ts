@@ -57,6 +57,11 @@ const baseThemeStyles = {
       xsHeight: unit * 3,
       lgHeight: unit * 4,
     },
+    headerHeight: {
+      xs: 80,
+      md: 96,
+      lg: 112,
+    },
     horizontalPagePaddings: {
       xs: {
         small: unit,

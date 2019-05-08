@@ -790,7 +790,7 @@ export default [
     fullName: 'Yana Mar',
     position: {
       en: 'Community & Marketing',
-      zh: '',
+      zh: '社区&营销',
       ko: '커뮤니티 및 마케팅',
     },
     photo1x: require('./imgs/yana@1x.png'),
@@ -802,9 +802,9 @@ export default [
         'Community',
       ],
       zh: [
-        'Digital Marketing',
-        'Project Management',
-        'Community',
+        '数字营销',
+        '项目管理',
+        '社区',
       ],
       ko: [
         '디지털 마케팅',
@@ -822,8 +822,8 @@ export default [
         '中东经济学学士',
       ],
       ko: [
-        'Head of Community, Cindicator',
-        'BSc Economy of the Middle East',
+        '공동체 대표, 신디케이터',
+        '중동의 BSc 경제',
       ],
     },
   },
@@ -835,7 +835,7 @@ export default [
     position: {
       en: 'Marketing Advisor',
       zh: '营销顾问',
-      ko: 'Marketing Advisor',
+      ko: '마케팅 고문',
     },
     photo1x: require('./imgs/laura@1x.png'),
     photo2x: require('./imgs/laura@2x.png'),
@@ -853,10 +853,10 @@ export default [
         '代币销售营销',
       ],
       ko: [
-        'Fundraising',
-        'Communication strategies',
-        'Negotiations',
-        'Token Sale Marketing',
+        '모금활동',
+        '커뮤니케이션 전략',
+        '협상',
+        '토큰 세일 마케팅',
       ],
     },
     background: {
@@ -871,9 +871,9 @@ export default [
         '营销学学士，布加勒斯特经济研究中心',
       ],
       ko: [
-        'Co-Founder & Head of Operations, Renowned & Co',
+        'Renowned&Co,의 공동대표이자 사업본부장',
         'Codex, Gochain, POA Network advising',
-        'BSc Marketing, Academia de Studii Economice din București',
+        'BSc 마케팅,수투디 학파 부쿠레슈티 경제',
       ],
     },
   },

@@ -68,7 +68,7 @@ export default {
       title: '이벤트',
     },
     pastEvents: {
-      title: '지난 이벤트',
+      title: '더 많은 지난 행사들',
     },
   },
   shared: {
@@ -105,9 +105,9 @@ export default {
       },
     },
     eventTenses: {
-      past: 'Past event',
-      current: 'Current event',
-      future: 'Future event',
+      past: '지난 행사들',
+      current: '현재 진행중인 행사들',
+      future: '향후 예정된 행사들',
     },
   },
 };

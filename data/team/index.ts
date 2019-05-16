@@ -491,6 +491,53 @@ export default [
   },
   {
     links: [
+      'https://www.linkedin.com/in/ian-grigg-0379/',
+    ],
+    fullName: 'Ian Grigg',
+    position: {
+      en: 'Blockchain R&D Advisor',
+      zh: '区块链研发顾问',
+      ko: '블럭체인 연구개발 고문',
+    },
+    photo1x: require('./imgs/ian.png'),
+    photo2x: require('./imgs/ian@2x.png'),
+    tags: {
+      en: [
+        'Financial Cryptography',
+        'Blockchain architecture',
+        'Java',
+      ],
+      zh: [
+        '财务密码学',
+        '区块链架构',
+        'Java',
+      ],
+      ko: [
+        '금융 암호화',
+        '블럭체인 구축자',
+        'Java',
+      ],
+    },
+    background: {
+      en: [
+        'Partner at Block.one (EOS)',
+        'Architecture Consultant at R3',
+        'Inventor of Ricardian Contract',
+      ],
+      zh: [
+        'Block.one（EOS）合伙人',
+        'R3架构顾问',
+        'Ricardian合约发明者',
+      ],
+      ko: [
+        'Block.one(EOS)의 파트너',
+        'R3 구축 컨설턴트',
+        'Ricardian Contract 창안자',
+      ],
+    },
+  },
+  {
+    links: [
       'https://github.com/bokkypoobah'
     ],
     fullName: 'Bokky Poobah',

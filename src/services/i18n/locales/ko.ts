@@ -5,6 +5,7 @@ export default {
       products: '사업',
       company: '회사소개',
       wiki: 'Wiki',
+      whitepaper: 'Whitepaper',
       events: '이벤트',
       blog: '블로그',
       cashflowRelay: 'Cashflow Relay',

@@ -5,6 +5,7 @@ export default {
       products: '产品',
       company: '公司',
       wiki: '百科',
+      whitepaper: 'Whitepaper',
       events: '活动',
       blog: '博客',
       cashflowRelay: 'Cashflow Relay',

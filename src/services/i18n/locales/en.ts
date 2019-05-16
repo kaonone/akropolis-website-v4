@@ -5,6 +5,7 @@ export default {
       products: 'Products',
       company: 'Company',
       wiki: 'Wiki',
+      whitepaper: 'Whitepaper',
       events: 'Events',
       blog: 'Blog',
       cashflowRelay: 'Cashflow Relay',

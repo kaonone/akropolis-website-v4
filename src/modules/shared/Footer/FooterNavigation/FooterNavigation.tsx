@@ -27,6 +27,11 @@ const menuItems: IMenuItem[] = [
     isExternal: true,
   },
   {
+    path: 'https://wiki.akropolis.io/whitepaper/',
+    title: tKeys.modules.navigation.whitepaper.getKey(),
+    isExternal: true,
+  },
+  {
     path: routes.company.getRoutePath(),
     title: tKeys.modules.navigation.company.getKey(),
   },

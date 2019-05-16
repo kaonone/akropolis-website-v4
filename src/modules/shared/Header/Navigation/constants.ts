@@ -18,8 +18,9 @@ export const menuItems: IMenuItem[] = [
     isExternal: true,
   },
   {
-    path: routes.events.getRoutePath(),
-    title: tKeys.modules.navigation.events.getKey(),
+    path: 'https://wiki.akropolis.io/whitepaper/',
+    title: tKeys.modules.navigation.whitepaper.getKey(),
+    isExternal: true,
   },
   {
     path: 'https://medium.com/akropolis',

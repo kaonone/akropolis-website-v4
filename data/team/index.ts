@@ -7,6 +7,7 @@ export default [
     fullName: 'Ana Andria',
     position: {
       en: 'Founder, Strategy & Product',
+      vi: 'Người sáng lập, Chiến lược & Sản phẩm',
       zh: '创始人、战略与产品',
       ko: '창립자, 전략 및 상품개발자',
     },
@@ -18,6 +19,12 @@ export default [
         'Strategy',
         'Business Development',
         'Fundraising',
+      ],
+      vi: [
+        'Sản phẩm',
+        'Chiến lược',
+        'Phát triển kinh doanh',
+        'Gây quỹ',
       ],
       zh: [
         '产品',
@@ -38,6 +45,11 @@ export default [
         'Lehman Brothers',
         'PhD (cand.) Oxford University',
       ],
+      vi: [
+        'Cố vấn, Quỹ Web3',
+        'Lehman Brothers',
+        'Tiến sĩ (cand.) Đại học Oxford',
+      ],
       zh: [
         'Web3 Foundation ，顾问',
         'Lehman Brothers',
@@ -57,6 +69,7 @@ export default [
     fullName: 'Kate Kurbanova',
     position: {
       en: 'Co-Founder, Operations & People',
+      vi: 'Người đồng sáng lập, hoạt động và con người',
       zh: '联合创始人，运营与人力',
       ko: '공동 창립자, 운영 및 인력관리',
     },
@@ -69,6 +82,13 @@ export default [
         'Project Management',
         'Data Analytics',
         'Community',
+      ],
+      vi: [
+        'Hoạt động',
+        'Phát triển khách hàng',
+        'Quản lý dự án',
+        'Phân tích dữ liệu',
+        'Cộng đồng',
       ],
       zh: [
         '运营',
@@ -90,6 +110,10 @@ export default [
         'Head of Analytics, Cindicator',
         'MSc Computer Science',
       ],
+      vi: [
+        'Trưởng phòng phân tích, Cindicator',
+        'ThS Khoa học máy tính',
+      ],
       zh: [
         '数据分析主管，Cindicator',
         '计算机学，硕士',
@@ -107,6 +131,7 @@ export default [
     fullName: 'Alex Maz',
     position: {
       en: 'Technology Lead',
+      vi: 'Trưởng nhóm công nghệ',
       zh: '技术主管',
       ko: '기술 책임자',
     },
@@ -122,6 +147,16 @@ export default [
         'Solidity',
         'WASM',
         'Team Management',
+      ],
+      vi: [
+        'Kiến trúc blockchain',
+        'C#/.NET',
+        'Java',
+        'Polkadot/Substrate',
+        'Chiến lược sản phẩm',
+        'Solidity',
+        'WASM',
+        'Quản lý đội',
       ],
       zh: [
         '区块链架构',
@@ -153,6 +188,14 @@ export default [
         'PhD (cand.) Machine Learning',
         'MSc Applied Maths & Computer Science',
       ],
+      vi: [
+        'Nhà phát triển Blockchain từ năm 2012',
+        'Người đóng góp mã nguồn mở',
+        '16 ấn phẩm khoa học',
+        '10 triển khai thương mại',
+        'Tiến sĩ (cand.) nghiên cứu máy móc',
+        'ThS Toán ứng dụng & Khoa học máy tính',
+      ],
       zh: [
         '2012年以来的区块链开发者',
         '开源贡献者',
@@ -178,6 +221,7 @@ export default [
     fullName: 'Peter Robertson',
     position: {
       en: 'Pensions & Insurance Advisor',
+      vi: 'Cố vấn lương hưu và bảo hiểm',
       zh: '养老金与保险顾问',
       ko: '연금 및 보험분야 고문',
     },
@@ -192,6 +236,15 @@ export default [
         'Insurance',
         'Strategy',
         'Business Development',
+      ],
+      vi: [
+        'Tài sản kỹ thuật số',
+        'Khoa học tính toán bảo hiểm',
+        'Thiết kế sản phẩm tài chính',
+        'Lương hưu',
+        'Bảo hiểm',
+        'Chiến lược',
+        'Phát triển kinh doanh',
       ],
       zh: [
         '数字资产',
@@ -218,6 +271,11 @@ export default [
         'Vanguard Asset Management',
         'Kings College London',
       ],
+      vi: [
+        'Khai thác Genesis',
+        'Quản lý tài sản Vanguard',
+        'Đại học Kings London',
+      ],
       zh: [
         'Genesis Mining',
         'Vanguard Asset Management',
@@ -237,6 +295,7 @@ export default [
     fullName: 'Dearg OBartuin',
     position: {
       en: 'Technology & Country Advisor',
+      vi: 'Cố vấn Công nghệ & Quốc gia',
       zh: '技术与国家顾问',
       ko: '기술 및 국가 관련 고문',
     },
@@ -248,6 +307,12 @@ export default [
         'Remittances',
         'Product Development',
         'Africa',
+      ],
+      vi: [
+        'Blockchain',
+        'Chuyển tiền',
+        'Phát triển sản phẩm',
+        'Châu phi',
       ],
       zh: [
         '区块链',
@@ -266,6 +331,9 @@ export default [
       en: [
         'CTO, BitPesa',
       ],
+      vi: [
+        'Giám đốc công nghệ, BitPesa',
+      ],
       zh: [
         '首席技术官, BitPesa',
       ],
@@ -281,6 +349,7 @@ export default [
     fullName: 'Dominic Melo',
     position: {
       en: 'Global Payments Infrastructure',
+      vi: 'Cơ sở hạ tầng thanh toán toàn cầu',
       zh: '全球支付基础设施',
       ko: '글로벌 결제 인프라',
     },
@@ -293,6 +362,13 @@ export default [
         'Business Strategy',
         'Mobile Payments',
         'Financial Services',
+      ],
+      vi: [
+        'Thanh toán',
+        'Phát triển kinh doanh',
+        'Chiến lược kinh doanh',
+        'Thanh toán di động',
+        'Các dịch vụ tài chính',
       ],
       zh: [
         '支付',
@@ -314,6 +390,10 @@ export default [
         'iSignthis',
         'Paymundo Systems',
       ],
+      vi: [
+        'iSignthis',
+        'Paymundo Systems',
+      ],
       zh: [
         'iSignthis',
         'Paymundo Systems',
@@ -331,6 +411,7 @@ export default [
     fullName: 'Alex Koz',
     position: {
       en: 'Blockchain R&D',
+      vi: 'Nghiên cứu và phát triển Blockchain',
       zh: '区块链研发',
       ko: '블럭체인 연구개발',
     },
@@ -338,6 +419,15 @@ export default [
     photo2x: require('./imgs/koz@2x.png'),
     tags: {
       en: [
+        'Polkadot/Substrate',
+        'Rust',
+        'WASM',
+        'Haxe',
+        'Java',
+        'Obj-C++',
+        'Python',
+      ],
+      vi: [
         'Polkadot/Substrate',
         'Rust',
         'WASM',
@@ -373,6 +463,13 @@ export default [
         'Leo Burnett',
         'Open Source contributor',
       ],
+      vi: [
+        'Mail.ru',
+        'Rambler',
+        'Sberbank',
+        'Leo Burnett',
+        'Người đóng góp mã nguồn mở',
+      ],
       zh: [
         'Mail.ru',
         'Rambler',
@@ -396,6 +493,7 @@ export default [
     fullName: 'Ilgiz Gimal',
     position: {
       en: 'Product',
+      vi: 'Giám đốc sản xuất',
       zh: '产品经理',
       ko: '상품 관리자',
     },
@@ -407,6 +505,12 @@ export default [
         'Staging Development',
         'Project Management',
         'Ecosystem Analysis',
+      ],
+      vi: [
+        'Phát triển sản phẩm',
+        'Phát triển dàn dựng',
+        'Quản lý dự án',
+        'Phân tích hệ sinh thái',
       ],
       zh: [
         '产品开发',
@@ -426,6 +530,10 @@ export default [
         'VTB Bank',
         'PhD Computer Science & Mathematics',
       ],
+      vi: [
+        'VTB Bank',
+        'Tiến sĩ Khoa học Máy tính & Toán học',
+      ],
       zh: [
         'VTB Bank',
         '计算机科学与数学博士',
@@ -443,6 +551,7 @@ export default [
     fullName: 'Andrew Bal',
     position: {
       en: 'Product',
+      vi: 'Giám đốc sản xuất',
       zh: '产品经理',
       ko: '상품 관리자',
     },
@@ -455,6 +564,13 @@ export default [
         'Product Management',
         'Digital Marketing',
         'Data Analysis',
+      ],
+      vi: [
+        'Phát triển khách hàng',
+        'Phát triển sản phẩm',
+        'Quản lý sản phẩm',
+        'Tiếp thị kỹ thuật số',
+        'Phân tích dữ liệu',
       ],
       zh: [
         '客户开发',
@@ -477,6 +593,11 @@ export default [
         'Head of Product, Zerion',
         'BSc World Economy',
       ],
+      vi: [
+        'Chủ sở hữu sản phẩm cao cấp, QIWI',
+        'Trưởng phòng sản phẩm, Zerion',
+        'Cử nhân kinh tế thế giới',
+      ],
       zh: [
         'QIWI 高级产品负责人',
         'Zerion产品负责人',
@@ -496,6 +617,7 @@ export default [
     fullName: 'Ian Grigg',
     position: {
       en: 'Blockchain R&D Advisor',
+      vi: 'Cố vấn nghiên cứu và phát triển Blockchain',
       zh: '区块链研发顾问',
       ko: '블럭체인 연구개발 고문',
     },
@@ -505,6 +627,11 @@ export default [
       en: [
         'Financial Cryptography',
         'Blockchain architecture',
+        'Java',
+      ],
+      vi: [
+        'Mật mã tài chính',
+        'Kiến trúc blockchain',
         'Java',
       ],
       zh: [
@@ -523,6 +650,11 @@ export default [
         'Partner at Block.one (EOS)',
         'Architecture Consultant at R3',
         'Inventor of Ricardian Contract',
+      ],
+      vi: [
+        'Đối tác tại Block.one (EOS)',
+        'Tư vấn kiến trúc tại R3',
+        'Nhà phát minh hợp đồng Ricardian',
       ],
       zh: [
         'Block.one（EOS）合伙人',
@@ -543,6 +675,7 @@ export default [
     fullName: 'Bokky Poobah',
     position: {
       en: 'Blockchain Security Advisor',
+      vi: 'Cố vấn bảo mật Blockchain',
       zh: '区块链安全顾问',
       ko: '블럭체인 보안 관리자',
     },
@@ -556,6 +689,14 @@ export default [
         'Actuarial Science',
         'Quant Software Development',
         'Cryptoderivatives',
+      ],
+      vi: [
+        'Kiểm toán an ninh',
+        'Solidity',
+        'Phát triển phần mềm',
+        'Khoa học tính toán bảo hiểm',
+        'Phát triển phần mềm lượng tử',
+        'Các loại tiền điện tử',
       ],
       zh: [
         '安全审计',
@@ -578,6 +719,9 @@ export default [
       en: [
         'Smart Contract Developer and Auditor',
       ],
+      vi: [
+        'Nhà phát triển và kiểm toán viên hợp đồng thông minh',
+      ],
       zh: [
         '智能合约开发者和审计员',
       ],
@@ -593,6 +737,7 @@ export default [
     fullName: 'Ajit Tripathi',
     position: {
       en: 'Fintech Advisor',
+      vi: 'Cố vấn Fintech',
       zh: 'Fintech顾问',
       ko: '핀테크 고문',
     },
@@ -604,6 +749,12 @@ export default [
         'Blockchain Architecture',
         'Risk Managment',
         'Investment Banking',
+      ],
+      vi: [
+        'Cơ sở hạ tầng tài chính',
+        'Kiến trúc blockchain',
+        'Quản lý rủi ro',
+        'Ngân hàng đầu tư',
       ],
       zh: [
         '金融基础设施',
@@ -623,6 +774,10 @@ export default [
         'Financial Infrastructure, ConsenSys',
         'Head of Blockchain, PwC',
       ],
+      vi: [
+        'Cơ sở hạ tầng tài chính, ConsenSys',
+        'Người đứng đầu Blockchain, PriceWaterCoopers',
+      ],
       zh: [
         '金融基础设施，ConsenSys',
         '区块链主管，普华永道',
@@ -640,6 +795,7 @@ export default [
     fullName: 'Dima Serd',
     position: {
       en: 'UI/UX',
+      vi: 'UI/UX',
       zh: 'UI/UX',
       ko: 'UI/UX',
     },
@@ -654,6 +810,15 @@ export default [
         'UX',
         'Frontend',
         'Visualisation',
+      ],
+      vi: [
+        'React',
+        'Redux',
+        'Saga',
+        'UI',
+        'UX',
+        'Frontend',
+        'Hình dung',
       ],
       zh: [
         'React',
@@ -680,6 +845,11 @@ export default [
         '10 commercial implementations',
         '5 years of Frontend development',
       ],
+      vi: [
+        'Cử nhân Khoa học Máy tính',
+        '10 triển khai thương mại',
+        '5 năm phát triển Frontend',
+      ],
       zh: [
         '计算机科学学士',
         '10年商业实践',
@@ -699,6 +869,7 @@ export default [
     fullName: 'Mike Krash',
     position: {
       en: 'Software Development',
+      vi: 'Phát triển phần mềm',
       zh: '软件开发',
       ko: '소프트웨어 개발자',
     },
@@ -706,6 +877,10 @@ export default [
     photo2x: require('./imgs/mikhailk@2x.png'),
     tags: {
       en: [
+        'React',
+        'Redux',
+      ],
+      vi: [
         'React',
         'Redux',
       ],
@@ -722,6 +897,10 @@ export default [
       en: [
         'MSc Engineering',
         'Lead Developer',
+      ],
+      vi: [
+        'ThS Kỹ thuật',
+        'Nhà phát triển chính',
       ],
       zh: [
         '工程学硕士',
@@ -740,6 +919,7 @@ export default [
     fullName: 'Dima Hurs',
     position: {
       en: 'Software Development',
+      vi: 'Phát triển phần mềm',
       zh: '软件开发',
       ko: '소프트웨어 개발자',
     },
@@ -747,6 +927,14 @@ export default [
     photo2x: require('./imgs/dmitryh@2x.png'),
     tags: {
       en: [
+        'React',
+        'Redux',
+        'Typescript',
+        'React Native',
+        'Dart',
+        'Flutter',
+      ],
+      vi: [
         'React',
         'Redux',
         'Typescript',
@@ -775,6 +963,9 @@ export default [
       en: [
         'BSc Computer Science',
       ],
+      vi: [
+        'Cử nhân Khoa học Máy tính',
+      ],
       zh: [
         '计算机科学学士',
       ],
@@ -790,6 +981,7 @@ export default [
     fullName: 'Yana Mar',
     position: {
       en: 'Community & Marketing',
+      vi: 'Cộng đồng & Tiếp thị',
       zh: '社区&营销',
       ko: '커뮤니티 및 마케팅',
     },
@@ -800,6 +992,11 @@ export default [
         'Digital Marketing',
         'Project Management',
         'Community',
+      ],
+      vi: [
+        'Tiếp thị kỹ thuật số',
+        'Quản lý dự án',
+        'Cộng đồng',
       ],
       zh: [
         '数字营销',
@@ -817,6 +1014,10 @@ export default [
         'Head of Community, Cindicator',
         'BSc Economy of the Middle East',
       ],
+      vi: [
+        'Người đứng đầu cộng đồng, Cindicator',
+        'Cử nhân kinh tế Trung Đông',
+      ],
       zh: [
         '社区负责人，Cindicator',
         '中东经济学学士',
@@ -828,12 +1029,13 @@ export default [
     },
   },
   {
-	links: [
+    links: [
       'https://www.linkedin.com/in/maría-paula-fernández-a96a8034/',
     ],
     fullName: 'María Paula Fernández',
     position: {
       en: 'External Communications and PR',
+      vi: 'External Communications and PR',
       zh: 'External Communications and PR',
       ko: 'External Communications and PR',
     },
@@ -841,39 +1043,50 @@ export default [
     photo2x: require('./imgs/mpf@2x.png'),
     tags: {
       en: [
-	    'Public Relations', 
-		'Marketing',
-	    'Social Media',
-		'Events Management',
-		'Strategic Communications'
+        'Public Relations',
+        'Marketing',
+        'Social Media',
+        'Events Management',
+        'Strategic Communications'
+      ],
+      vi: [
+        'Public Relations',
+        'Marketing',
+        'Social Media',
+        'Events Management',
+        'Strategic Communications'
       ],
       zh: [
-	    'Public Relations', 
-		'Marketing',
-	    'Social Media',
-		'Events Management',
-		'Strategic Communications'
+        'Public Relations',
+        'Marketing',
+        'Social Media',
+        'Events Management',
+        'Strategic Communications'
       ],
       ko: [
-    	'Public Relations', 
-		'Marketing',
-	    'Social Media',
-		'Events Management',
-		'Strategic Communications'
+        'Public Relations',
+        'Marketing',
+        'Social Media',
+        'Events Management',
+        'Strategic Communications'
       ],
     },
     background: {
       en: [
         'External Relations, Golem Factory',
-		'External Relations Officer, Web3 Foundation'
+        'External Relations Officer, Web3 Foundation'
+      ],
+      vi: [
+        'External Relations, Golem Factory',
+        'External Relations Officer, Web3 Foundation'
       ],
       zh: [
         'External Relations, Golem Factory',
-		'External Relations Officer, Web3 Foundation'
+        'External Relations Officer, Web3 Foundation'
       ],
       ko: [
         'External Relations, Golem Factory',
-		'External Relations Officer, Web3 Foundation'
+        'External Relations Officer, Web3 Foundation'
       ],
     },
   },
@@ -884,6 +1097,7 @@ export default [
     fullName: 'Laura Toma',
     position: {
       en: 'Marketing Advisor',
+      vi: 'Cố vấn tiếp thị',
       zh: '营销顾问',
       ko: '마케팅 고문',
     },
@@ -895,6 +1109,12 @@ export default [
         'Communication strategies',
         'Negotiations',
         'Token Sale Marketing',
+      ],
+      vi: [
+        'Gây quỹ',
+        'Chiến lược truyền thông',
+        'Đàm phán',
+        'Tiếp thị bán token',
       ],
       zh: [
         '融资',
@@ -914,6 +1134,11 @@ export default [
         'Co-Founder & Head of Operations, Renowned & Co',
         'Codex, Gochain, POA Network advising',
         'BSc Marketing, Academia de Studii Economice din București',
+      ],
+      vi: [
+        'Đồng sáng lập và Trưởng phòng hoạt động tại Renished & Co',
+        'Codex, Gochain, POA Network advising',
+        'Cử nhân tiếp thị, Academia de Studii economice din București',
       ],
       zh: [
         'Renowned&Co联合创始人兼运营主管',

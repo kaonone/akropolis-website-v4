@@ -781,8 +781,7 @@ export default [
     },
   },
   {
-	{
-    links: [
+	links: [
       'https://www.linkedin.com/in/maría-paula-fernández-a96a8034/',
     ],
     fullName: 'María Paula Fernández',

@@ -781,15 +781,6 @@ export default [
     },
   },
   {
-    links: [
-      'https://www.linkedin.com/in/laura-toma-59bb9a7/',
-    ],
-    fullName: 'Laura Toma',
-    position: {
-      en: 'Marketing Advisor',
-      zh: '营销顾问',
-      ko: '마케팅 고문',
-    },
 	{
     links: [
       'https://www.linkedin.com/in/maría-paula-fernández-a96a8034/',

@@ -14,7 +14,7 @@ interface IProps {
 function EventPreview(props: IProps) {
   const { event } = props;
   const { eventName, description, link, startDate, finishDate } = event;
-  const { t, tKeys } = useTranslate();
+  const { t, tKeys, locale } = useTranslate();
   return (
     <Grid container spacing={24}>
       <Grid item xs={12}>
@@ -24,7 +24,7 @@ function EventPreview(props: IProps) {
         <Preview
           title={eventName}
           subtitle={t(tKeys.shared.eventTenses[getEventTense(startDate, finishDate)].getKey())}
-          description={description}
+          description={description[locale]}
           moreLink={link}
         />
       </Grid>

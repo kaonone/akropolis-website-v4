@@ -12,8 +12,9 @@ interface IOption {
 
 const options: IOption[] = [
   { value: 'en', label: 'English' },
-  // { value: 'ja', label: 'ja' },
   { value: 'ko', label: '한국어' },
+  { value: 'zh', label: '简体中文' },
+  { value: 'vi', label: 'Tiếng Việt' },
 ];
 
 function LanguageSelector(props: StylesProps) {

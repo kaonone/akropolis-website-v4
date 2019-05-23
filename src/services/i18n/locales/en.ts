@@ -72,10 +72,25 @@ export default {
     pastEvents: {
       title: 'More past events',
     },
+    quest: {
+      title: 'Akropolis Community Quest III',
+      // tslint:disable-next-line:max-line-length
+      subtitle: 'Historical in its fanfare, exciting in its adventure, the Akropolis community quest is here once again. Bringing you a series of exciting rounds with a total prize pool of $100,000  in AKT & ETH, we welcome  everyone on this journey! Seasoned professional or a lurking rookie, test your knowledge of the cryptosphere on a geeky adventure second to none.',
+      totalRewards: 'Total rewards',
+      rounds: 'Rounds',
+      winners: 'Winners',
+      termsConditions: 'Terms & Conditions',
+      pointSystem: 'Point System',
+      names: {
+        quest1: 'Quest I',
+        quest2: 'Quest II',
+      },
+    },
   },
   shared: {
     learnMore: 'Learn more',
     comingSoon: 'Coming soon',
+    joinIn: 'Join in',
     date: {
       months: {
         1: 'January',

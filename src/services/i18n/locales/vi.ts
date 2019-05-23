@@ -71,10 +71,25 @@ export default {
     pastEvents: {
       title: 'Thêm nhiều sự kiện trong quá khứ',
     },
+    quest: {
+      title: 'CHƯƠNG TRÌNH PHÁT TRIỂN CỘNG ĐỒNG III',
+      // tslint:disable-next-line:max-line-length
+      subtitle: 'Chương trình phát triển cộng đồng Akropolis với tổng giải thưởng lên tới 100,000 USD AKT token sắp quay trở lại. Người tham dự có cơ hội tham gia nhiều vòng thi cực kỳ hấp dẫn nhằm kiểm tra mức độ am hiểu của người chơi trong thị trường crypto. Chúng tôi hân hạnh được chào đón tất cả các bạn!',
+      totalRewards: 'TỔNG GIẢI THƯỞNG',
+      rounds: 'VÒNG',
+      winners: 'NGƯỜI THẮNG CUỘC',
+      termsConditions: 'Điều khoản và điều kiện',
+      pointSystem: 'Hệ thống điểm',
+      names: {
+        quest1: 'Chương trình phát triển cộng đồng I',
+        quest2: 'Chương trình phát triển cộng đồng II',
+      },
+    },
   },
   shared: {
     learnMore: 'Tìm hiểu thêm',
     comingSoon: 'Sắp có',
+    joinIn: 'Tham gia ngay',
     date: {
       months: {
         1: 'January',

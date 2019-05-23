@@ -1,42 +1,36 @@
 import * as React from 'react';
 import cn from 'classnames';
 
+import { useTranslate, tKeys as allTKeys } from 'services/i18n';
 import { Button, Grid } from 'shared/view/elements';
 import { StylesProps, provideStyles } from './Quest.style';
 import { useCurrentTimeBreakpoint } from './useCurrentTimeBreakpoint';
 import QuestWinners from './QuestWinners/QuestWinners';
 import QuestFooter from './QuestFooter/QuestFooter';
 
-const text = {
-  title: 'Akropolis Community Quest III',
-  // tslint:disable-next-line:max-line-length
-  subtitle: 'Historical in its fanfare, exciting in its adventure, the Akropolis community quest is here once again. Bringing you a series of exciting rounds with a total prize pool of $xxxxxx in AKT & ETH, we welcome  everyone on this journey! Seasoned professional or a lurking rookie, test your knowledge of the cryptosphere on a geeky adventure second to none.',
-  button: 'Join in',
-};
-
 const morningTime = '07:00:00';
 const dayTime = '14:00:00';
 const nightTime = '20:00:00';
 
-const questLink = '';
-
 interface IQuestResult {
-  questName: string;
+  questNameTKey: string;
   totalRewards: string;
   roundsCount: number;
   winners: string[];
 }
 
+const tKeysShared = allTKeys.shared;
+const tKeys = allTKeys.sections.quest;
 const questResults: IQuestResult[] = [
   {
-    questName: 'Quest I',
+    questNameTKey: tKeys.names.quest1.getKey(),
     roundsCount: 10,
     totalRewards: '$45,000',
     winners: [
       'Ivan', 'Jack', 'Toad', 'Andrew Skripa', 'Amy', 'OWLBE', 'thebillionnet', 'Adina', 'Baltimora', 'Hansice',
     ],
   }, {
-    questName: 'Quest II',
+    questNameTKey: tKeys.names.quest2.getKey(),
     roundsCount: 10,
     totalRewards: '$55,000',
     winners: [
@@ -48,6 +42,7 @@ const questResults: IQuestResult[] = [
 function Quest(props: StylesProps) {
   const { classes } = props;
 
+  const { t } = useTranslate();
   const currentTime = useCurrentTimeBreakpoint([morningTime, dayTime, nightTime]);
 
   const classByTime: Record<string, string> = {
@@ -58,10 +53,9 @@ function Quest(props: StylesProps) {
 
   return (
     <div className={cn(classes.root, classByTime[currentTime])}>
-      <p className={classes.title}>{text.title}</p>
-      <p className={classes.subtitle}>{text.subtitle}</p>
+      <p className={classes.title}>{t(tKeys.title.getKey())}</p>
+      <p className={classes.subtitle}>{t(tKeys.subtitle.getKey())}</p>
       <Button
-        href={questLink}
         target="_blank"
         rel="noopener noreferrer"
         className={classes.button}
@@ -69,13 +63,13 @@ function Quest(props: StylesProps) {
         color="primary"
         size="large"
       >
-        {text.button}
+        {t(tKeysShared.comingSoon.getKey())}
       </Button>
       <div className={classes.resultsContainer}>
         <Grid container spacing={16} className={classes.results}>
           {questResults.map(result => (
-            <Grid key={result.questName} item>
-              <QuestWinners {...result} />
+            <Grid key={result.questNameTKey} item>
+              <QuestWinners {...result} questName={t(result.questNameTKey)} />
             </Grid>
           ))}
         </Grid>

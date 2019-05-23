@@ -13,6 +13,7 @@ export default {
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: 'Privacy Policy',
       termsConditions: 'Terms & Conditions',
+      pointSystem: 'Point System',
     },
   },
   sections: {
@@ -79,8 +80,6 @@ export default {
       totalRewards: 'Total rewards',
       rounds: 'Rounds',
       winners: 'Winners',
-      termsConditions: 'Terms & Conditions',
-      pointSystem: 'Point System',
       names: {
         quest1: 'Quest I',
         quest2: 'Quest II',

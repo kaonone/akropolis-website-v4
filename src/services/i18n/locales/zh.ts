@@ -12,6 +12,7 @@ export default {
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: '隐私政策',
       termsConditions: '条款和条件',
+      pointSystem: '积分系统',
     },
   },
   sections: {
@@ -78,8 +79,6 @@ export default {
       totalRewards: '总奖励',
       rounds: '回合',
       winners: '获奖者',
-      termsConditions: '条款和声明',
-      pointSystem: '积分系统',
       names: {
         quest1: '挑战I',
         quest2: '挑战II',

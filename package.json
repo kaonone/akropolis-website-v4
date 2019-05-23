@@ -8,6 +8,7 @@
     "dev": "npm run watch:dev",
     "prod": "npm run watch:prod",
     "deploy": "npm run build:gh-pages && gh-pages -d build",
+    "deploy-staging": "npm run build:gh-pages && gh-pages -r git@github.com:in19farkt/akropolis-website-v4.git -d build",
     "fast": "better-npm-run watch:dev:fast",
     "watch:dev": "better-npm-run watch:dev",
     "watch:prod": "better-npm-run watch:prod",

@@ -12,6 +12,7 @@ export default {
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: 'Chính sách bảo mật',
       termsConditions: 'Điều khoản và điều kiện',
+      pointSystem: 'Hệ thống điểm',
     },
   },
   sections: {
@@ -78,8 +79,6 @@ export default {
       totalRewards: 'TỔNG GIẢI THƯỞNG',
       rounds: 'VÒNG',
       winners: 'NGƯỜI THẮNG CUỘC',
-      termsConditions: 'Điều khoản và điều kiện',
-      pointSystem: 'Hệ thống điểm',
       names: {
         quest1: 'Chương trình phát triển cộng đồng I',
         quest2: 'Chương trình phát triển cộng đồng II',

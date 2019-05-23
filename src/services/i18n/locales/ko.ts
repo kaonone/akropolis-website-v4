@@ -13,6 +13,7 @@ export default {
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: '개인정보 보호 정책',
       termsConditions: '약관 및 조건',
+      pointSystem: '포인트 시스템',
     },
   },
   sections: {
@@ -79,8 +80,6 @@ export default {
       totalRewards: '총 보상',
       rounds: '라운드',
       winners: '당첨자',
-      termsConditions: '이용 약관',
-      pointSystem: '포인트 시스템',
       names: {
         quest1: '퀘스트 I',
         quest2: '퀘스트 II',

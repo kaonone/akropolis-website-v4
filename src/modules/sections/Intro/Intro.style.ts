@@ -2,10 +2,6 @@ import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 import bgUrl from './intro_bg.jpg';
 
-const xsHeaderHeight = 80;
-const mdHeaderHeight = 96;
-const lgHeaderHeight = 112;
-
 const styles = (theme: Theme) => {
   return {
     root: rule({
@@ -14,7 +10,7 @@ const styles = (theme: Theme) => {
       flexWrap: 'wrap',
       flexDirection: 'column',
       // tslint:disable-next-line:max-line-length
-      padding: `${xsHeaderHeight}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px calc(27vh + ${xsHeaderHeight}px)`,
+      padding: `${theme.extra.spacing.headerHeight.xs}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px calc(27vh + ${theme.extra.spacing.headerHeight.xs}px)`,
       position: 'relative',
       background: `url(${bgUrl}) no-repeat center bottom/cover`,
       color: theme.extra.colors.rhino,
@@ -26,12 +22,13 @@ const styles = (theme: Theme) => {
 
       [theme.breakpoints.up('md')]: {
         // tslint:disable-next-line:max-line-length
-        padding: `${mdHeaderHeight}px ${theme.extra.spacing.horizontalPagePaddings.md.large}px calc(27vh + ${mdHeaderHeight}px)`,
+        padding: `${theme.extra.spacing.headerHeight.md}px ${theme.extra.spacing.horizontalPagePaddings.md.large}px calc(27vh + ${theme.extra.spacing.headerHeight.md}px)`,
       },
 
       [theme.breakpoints.up('lg')]: {
         minHeight: `calc(100vh + ${theme.extra.spacing.layoutContentSkew.lgHeight}px)`,
-        padding: `${lgHeaderHeight}px ${theme.spacing.unit * 10}px calc(27vh + ${lgHeaderHeight}px)`,
+        // tslint:disable-next-line:max-line-length
+        padding: `${theme.extra.spacing.headerHeight.lg}px ${theme.spacing.unit * 10}px calc(27vh + ${theme.extra.spacing.headerHeight.lg}px)`,
       },
     }),
 

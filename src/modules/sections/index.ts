@@ -7,3 +7,4 @@ export { default as Team } from './Team/Team';
 export { default as ProfMemberships } from './ProfMemberships/ProfMemberships';
 export { default as CurrentEvents } from './CurrentEvents/CurrentEvents';
 export { default as PastEvents } from './PastEvents/PastEvents';
+export { default as Quest } from './Quest/Quest';

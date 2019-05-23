@@ -8,10 +8,12 @@ export default {
       whitepaper: 'Whitepaper',
       events: '이벤트',
       blog: '블로그',
+      quest: 'Quest',
       cashflowRelay: 'Cashflow Relay',
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: '개인정보 보호 정책',
       termsConditions: '약관 및 조건',
+      pointSystem: '포인트 시스템',
     },
   },
   sections: {
@@ -71,10 +73,23 @@ export default {
     pastEvents: {
       title: '더 많은 지난 행사들',
     },
+    quest: {
+      title: '아크로폴리스 커뮤니티 퀘스트 III',
+      // tslint:disable-next-line:max-line-length
+      subtitle: `역사적인 지금 이 순간, 모험의 짜릿함을 느끼게 해줄 '아크로폴리스 커뮤니티 퀘스트'가 다시 한번 여러분들 앞으로 찾아왔습니다! 당신이 암호화폐 고인물이건 모습을 들어내지 않던 재야의 숨은 고수이건 상관 없습니다! 누구나 참여해서 여러 흥미로운 라운드를 거쳐 총 100,000달러 가치의 AKT를 얻을 수 있는 기회를 잡아보세요! 그저 우리는 역대급 모험을 통해 당신의 역량을 확인하고 싶을 뿐...선택은 자유입니다!`,
+      totalRewards: '총 보상',
+      rounds: '라운드',
+      winners: '당첨자',
+      names: {
+        quest1: '퀘스트 I',
+        quest2: '퀘스트 II',
+      },
+    },
   },
   shared: {
     learnMore: '더 알아보기',
     comingSoon: '곧 출시 예정',
+    joinIn: '참여하기',
     date: {
       months: {
         1: 'January',

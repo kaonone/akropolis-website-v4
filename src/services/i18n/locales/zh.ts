@@ -8,6 +8,7 @@ export default {
       whitepaper: 'Whitepaper',
       events: '活动',
       blog: '博客',
+      quest: 'Quest',
       cashflowRelay: 'Cashflow Relay',
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: '隐私政策',

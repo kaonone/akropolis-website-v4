@@ -8,6 +8,7 @@ export default {
       whitepaper: 'Whitepaper',
       events: 'Các sự kiện',
       blog: 'Blog',
+      quest: 'Quest',
       cashflowRelay: 'Cashflow Relay',
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: 'Chính sách bảo mật',

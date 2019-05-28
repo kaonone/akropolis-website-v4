@@ -1,5 +1,15 @@
 // tslint:disable
 export default [
+{
+    summary: 'Ana Andrianova will be speaking and judging at CryptoChicks Hackathon in Toronto',
+    url: 'https://twitter.com/akropolisio/status/1133112199235481601',
+    date: '05.27.2019',
+  },
+ {
+    summary: 'Akropolis Development update is here, check it out!',
+    url: 'https://medium.com/akropolis/akropolis-development-update-82aaee0f5ee2',
+    date: '05.21.2019',
+  },
  {
     summary: 'Ana Adrianova will be judging ETHGlobal hakathon in Cape Town',
     url: 'https://twitter.com/ana_andrianova/status/1113138840670175232',

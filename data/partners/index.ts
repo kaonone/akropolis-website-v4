@@ -13,16 +13,16 @@ export default [
     icon2x: require('./imgs/Polkadot@2x.png'),
   },
   {
-    url: 'https://melonport.com',
-    partnerName: 'Melonport',
-    icon1x: require('./imgs/Melonport@1x.png'),
-    icon2x: require('./imgs/Melonport@2x.png'),
+    url: 'https://kenetic.capital',
+    partnerName: 'Kenetic Capital',
+    icon1x: require('./imgs/kenetic@1x.png'),
+    icon2x: require('./imgs/kenetic@2x.png'),
   },
   {
-    url: 'https://aragon.org',
-    partnerName: 'Aragon',
-    icon1x: require('./imgs/Aragon@1x.png'),
-    icon2x: require('./imgs/Aragon@2x.png'),
+    url: 'https://aurum.expert',
+    partnerName: 'Aurum Law Firm',
+    icon1x: require('./imgs/aurum@1x.png'),
+    icon2x: require('./imgs/aurum@2x.png'),
   },
   {
     url: 'https://sendwyre.com',
@@ -41,12 +41,6 @@ export default [
     partnerName: 'Cindicator',
     icon1x: require('./imgs/Cindicator@1x.png'),
     icon2x: require('./imgs/Cindicator@2x.png'),
-  },
-  {
-    url: 'https://polymath.network',
-    partnerName: 'Polymath',
-    icon1x: require('./imgs/Polymath@1x.png'),
-    icon2x: require('./imgs/Polymath@2x.png'),
   },
   {
     url: 'https://www.bancor.network',

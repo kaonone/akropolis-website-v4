@@ -290,60 +290,6 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/mrdearg/',
-    ],
-    fullName: 'Dearg OBartuin',
-    position: {
-      en: 'Technology & Country Advisor',
-      vi: 'Cố vấn Công nghệ & Quốc gia',
-      zh: '技术与国家顾问',
-      ko: '기술 및 국가 관련 고문',
-    },
-    photo1x: require('./imgs/dearg@1x.png'),
-    photo2x: require('./imgs/dearg@2x.png'),
-    tags: {
-      en: [
-        'Blockchain',
-        'Remittances',
-        'Product Development',
-        'Africa',
-      ],
-      vi: [
-        'Blockchain',
-        'Chuyển tiền',
-        'Phát triển sản phẩm',
-        'Châu phi',
-      ],
-      zh: [
-        '区块链',
-        '汇款',
-        '产品开发',
-        '非洲',
-      ],
-      ko: [
-        '블럭 체인',
-        '송금',
-        '제품개발',
-        '아프리카',
-      ],
-    },
-    background: {
-      en: [
-        'CTO, BitPesa',
-      ],
-      vi: [
-        'Giám đốc công nghệ, BitPesa',
-      ],
-      zh: [
-        '首席技术官, BitPesa',
-      ],
-      ko: [
-        '최고기술 경영자, BitPesa',
-      ],
-    },
-  },
-  {
-    links: [
       'https://github.com/fzzr-',
     ],
     fullName: 'Alex Koz',

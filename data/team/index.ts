@@ -276,56 +276,6 @@ export default [
   },
   {
     links: [
-      'https://linkedin.com/in/paymentexpert',
-    ],
-    fullName: 'Dominic Melo',
-    position: {
-      en: 'Global Payments Infrastructure',
-      zh: '全球支付基础设施',
-      ko: '글로벌 결제 인프라',
-    },
-    photo1x: require('./imgs/melo@1x.png'),
-    photo2x: require('./imgs/melo@2x.png'),
-    tags: {
-      en: [
-        'Payments',
-        'Business Development',
-        'Business Strategy',
-        'Mobile Payments',
-        'Financial Services',
-      ],
-      zh: [
-        '支付',
-        '业务发展',
-        '业务战略',
-        '移动支付',
-        '金融服务',
-      ],
-      ko: [
-        '지불 관련',
-        '사업 개발',
-        '사업 전략',
-        '모바일 결제',
-        '금융 서비스',
-      ],
-    },
-    background: {
-      en: [
-        'iSignthis',
-        'Paymundo Systems',
-      ],
-      zh: [
-        'iSignthis',
-        'Paymundo Systems',
-      ],
-      ko: [
-        'iSignthis',
-        'Paymundo Systems',
-      ],
-    },
-  },
-  {
-    links: [
       'https://github.com/fzzr-',
     ],
     fullName: 'Alex Koz',

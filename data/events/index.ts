@@ -14,8 +14,8 @@ const events: IEvent[] = [
     },
     startDate: '05.31.2019',
     finishDate: '06.02.2019',
-    image1x: require('./imgs/chicks@660w.png'),
-    image2x: require('./imgs/chicks@1320w.png'),
+    image1x: require('./imgs/chicks@660w.jpg'),
+    image2x: require('./imgs/chicks@1320w.jpg'),
   },
   {
     eventName: 'The Next Web 2019',

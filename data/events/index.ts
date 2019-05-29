@@ -3,6 +3,21 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'CryptoChicks Hackathon & Conference',
+    link: 'https://www.toronto.cryptochicks.ca/',
+    location: 'Toronto', 
+    description: {
+      en: 'CryptoChicks is a Blockchain & AI Conference and Hackathon held in Toronto. CryptoChicks’ global hackathon and conference series are an integral part of the mission to grow the economic, professional and leadership potential of women in blockchain and AI technologies through education, mentorship, business and diverse employment opportunities. This year’s Toronto event combines technology competitions and an educational conference that will run side by side, over three consecutive days. ',
+      vi: 'CryptoChicks is a Blockchain & AI Conference and Hackathon held in Toronto. CryptoChicks’ global hackathon and conference series are an integral part of the mission to grow the economic, professional and leadership potential of women in blockchain and AI technologies through education, mentorship, business and diverse employment opportunities. This year’s Toronto event combines technology competitions and an educational conference that will run side by side, over three consecutive days.',
+      zh: 'CryptoChicks is a Blockchain & AI Conference and Hackathon held in Toronto. CryptoChicks’ global hackathon and conference series are an integral part of the mission to grow the economic, professional and leadership potential of women in blockchain and AI technologies through education, mentorship, business and diverse employment opportunities. This year’s Toronto event combines technology competitions and an educational conference that will run side by side, over three consecutive days.',
+      ko: 'CryptoChicks is a Blockchain & AI Conference and Hackathon held in Toronto. CryptoChicks’ global hackathon and conference series are an integral part of the mission to grow the economic, professional and leadership potential of women in blockchain and AI technologies through education, mentorship, business and diverse employment opportunities. This year’s Toronto event combines technology competitions and an educational conference that will run side by side, over three consecutive days.',
+    },
+    startDate: '05.31.2019',
+    finishDate: '06.02.2019',
+    image1x: require('./imgs/chicks@660w.png'),
+    image2x: require('./imgs/chicks@1320w.png'),
+  },
+  {
     eventName: 'The Next Web 2019',
     link: 'https://thenextweb.com/conference/',
     location: 'Amsterdam', 

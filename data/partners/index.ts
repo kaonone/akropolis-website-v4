@@ -13,18 +13,6 @@ export default [
     icon2x: require('./imgs/Polkadot@2x.png'),
   },
   {
-    url: 'https://kenetic.capital',
-    partnerName: 'Kenetic Capital',
-    icon1x: require('./imgs/kenetic@1x.png'),
-    icon2x: require('./imgs/kenetic@2x.png'),
-  },
-  {
-    url: 'https://aurum.expert',
-    partnerName: 'Aurum Law Firm',
-    icon1x: require('./imgs/aurum@1x.png'),
-    icon2x: require('./imgs/aurum@2x.png'),
-  },
-  {
     url: 'https://sendwyre.com',
     partnerName: 'Send Wyre',
     icon1x: require('./imgs/Wyre@1x.png'),
@@ -49,9 +37,21 @@ export default [
     icon2x: require('./imgs/bancor@2x.png'),
   },
   {
+    url: 'https://kenetic.capital',
+    partnerName: 'Kenetic Capital',
+    icon1x: require('./imgs/kenetic@1x.png'),
+    icon2x: require('./imgs/kenetic@2x.png'),
+  },
+  {
     url: 'https://zerion.io/',
     partnerName: 'Zerion',
     icon1x: require('./imgs/zerion@1x.png'),
     icon2x: require('./imgs/zerion@2x.png'),
+  },
+  {
+    url: 'https://aurum.expert',
+    partnerName: 'Aurum Law Firm',
+    icon1x: require('./imgs/aurum@1x.png'),
+    icon2x: require('./imgs/aurum@2x.png'),
   },
 ];

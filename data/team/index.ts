@@ -559,8 +559,8 @@ export default [
     fullName: 'Bokky Poobah',
     position: {
       en: 'Blockchain Security Auditor',
-      vi: 'Cố vấn bảo mật Blockchain',
-      zh: '区块链安全顾问',
+      vi: 'Chuyên viên bảo mật Blockchain',
+      zh: '区块链安全审计师',
       ko: '블록체인 보안 감사',
     },
     photo1x: require('./imgs/bokky.png'),

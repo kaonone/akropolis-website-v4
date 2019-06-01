@@ -220,7 +220,7 @@ export default [
     ],
     fullName: 'Peter Robertson',
     position: {
-      en: 'Pensions & Insurance Advisor',
+      en: 'Pensions & Insurance',
       vi: 'Lương hưu và bảo hiểm',
       zh: '养老金与保险',
       ko: '연금 및 보험분야',

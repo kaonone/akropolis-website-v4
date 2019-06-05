@@ -20,6 +20,7 @@ export default {
     intro: {
       title: 'Unlocking the potential of informal economy with DeFi',
       subtitle: 'We build products that help people save, grow and scale',
+      watchVideoButton: 'Watch video',
     },
     products: {
       hackathon0x: {

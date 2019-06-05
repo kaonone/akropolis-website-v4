@@ -20,6 +20,7 @@ export default {
     intro: {
       title: '탈중앙화 금융산업을 통해 비공식 경제의 잠재력의 문을 열다',
       subtitle: '우리는 모두가 경제적으로 절약하고 성장 및 확장에 도움이되는 상품을 개발합니다',
+      watchVideoButton: 'Watch video',
     },
     products: {
       hackathon0x: {

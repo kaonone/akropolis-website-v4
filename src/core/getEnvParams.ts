@@ -4,6 +4,7 @@ export default function getEnvParams() {
   const isProduction = process.env.NODE_ENV === 'production';
   const isDevelopment = process.env.NODE_ENV === 'development';
   const isWatchMode = process.env.WATCH_MODE === 'true';
+  const isStaging = process.env.IS_STAGING === 'true';
   const withAnalyze = process.env.BUNDLE_ANALYZE_MODE === 'true';
   const withoutTypeChecking = process.env.WITHOUT_TYPES_CHECKING === 'true';
   const forGHPages = process.env.FOR_GH_PAGES === 'true';
@@ -15,6 +16,6 @@ export default function getEnvParams() {
 
   return {
     isProduction, isDevelopment, isWatchMode, withAnalyze, withoutTypeChecking,
-    chunkName, chunkHash, withHot, appVersion, forGHPages,
+    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging,
   };
 }

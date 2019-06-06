@@ -22,7 +22,9 @@ import getEnvParams from '../src/core/getEnvParams';
 
 export type BuildType = 'dev' | 'prod' | 'server';
 
-const { chunkHash, withAnalyze, chunkName, withHot, isWatchMode, forGHPages, withoutTypeChecking } = getEnvParams();
+const {
+  chunkHash, withAnalyze, chunkName, withHot, isWatchMode, forGHPages, withoutTypeChecking, isStaging,
+} = getEnvParams();
 
 const threadLoader: webpack.Loader[] = (() => {
   if (process.env.THREADED === 'true') {
@@ -49,7 +51,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   }),
   new HtmlWebpackPlugin({
     filename: 'index.html',
-    template: 'assets/index.html',
+    template: `assets/${isStaging ? 'indexStaging' : 'index'}.html`,
     chunksSortMode: sortChunks,
   }),
   new webpack.DefinePlugin({
@@ -117,7 +119,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
     onEnd: {
       copy: [
         {
-          source: `src/assets/ghPages/**`,
+          source: `src/assets/${isStaging ? 'ghPagesStaging' : 'ghPages'}/**`,
           destination: `build`,
         },
       ],

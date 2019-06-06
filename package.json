@@ -7,8 +7,8 @@
     "check-types": "node_modules/.bin/tsc -p . --noEmit -w",
     "dev": "npm run watch:dev",
     "prod": "npm run watch:prod",
-    "deploy": "npm run build:gh-pages && gh-pages -d build",
-    "deploy-staging": "npm run build:gh-pages && gh-pages -r git@github.com:in19farkt/akropolis-website-v4.git -d build",
+    "deploy": "npm run build:gh-pages:prod && gh-pages -d build",
+    "deploy:staging": "npm run build:gh-pages:staging && gh-pages -r git@github.com:in19farkt/akropolis-website-v4.git -d build",
     "fast": "better-npm-run watch:dev:fast",
     "watch:dev": "better-npm-run watch:dev",
     "watch:prod": "better-npm-run watch:prod",
@@ -22,7 +22,8 @@
     "test:coverage": "node_modules/.bin/jest --coverage --watch",
     "build:dev": "better-npm-run build:dev",
     "build:prod": "better-npm-run build:prod",
-    "build:gh-pages": "better-npm-run build:gh-pages",
+    "build:gh-pages:prod": "better-npm-run build:gh-pages:prod",
+    "build:gh-pages:staging": "better-npm-run build:gh-pages:staging",
     "analyze:dev": "better-npm-run analyze:dev",
     "analyze:prod": "better-npm-run analyze:prod",
     "yeoman": "better-npm-run initial:yeoman",
@@ -143,11 +144,22 @@
         "THREADED": false
       }
     },
-    "build:gh-pages": {
+    "build:gh-pages:prod": {
       "command": "node_modules/.bin/webpack --progress --colors --config webpack/prod.config.ts",
       "env": {
         "FOR_GH_PAGES": true,
         "NODE_ENV": "production",
+        "TS_NODE_FILES": true,
+        "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}",
+        "THREADED": false
+      }
+    },
+    "build:gh-pages:staging": {
+      "command": "node_modules/.bin/webpack --progress --colors --config webpack/prod.config.ts",
+      "env": {
+        "FOR_GH_PAGES": true,
+        "NODE_ENV": "production",
+        "IS_STAGING": true,
         "TS_NODE_FILES": true,
         "TS_NODE_COMPILER_OPTIONS": "{\"target\": \"es5\", \"module\": \"commonjs\"}",
         "THREADED": false

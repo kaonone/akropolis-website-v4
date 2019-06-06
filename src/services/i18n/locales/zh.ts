@@ -20,6 +20,7 @@ export default {
     intro: {
       title: '利用去中心化金融释放非正式经济的潜力',
       subtitle: '我们构建的产品可以帮助人们储蓄，盈利并获得大幅增长',
+      watchVideoButton: '观看视频',
     },
     products: {
       hackathon0x: {

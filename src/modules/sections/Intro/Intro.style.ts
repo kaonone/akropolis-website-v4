@@ -78,9 +78,42 @@ const styles = (theme: Theme) => {
         fontSize: 36,
       },
     }),
+
+    button: rule({
+      marginBottom: 'auto',
+      minWidth: 150,
+      alignSelf: 'center',
+      height: theme.spacing.unit * 5,
+      borderRadius: theme.spacing.unit * 2.5,
+      background: 'linear-gradient(to bottom, #e66afd, #8238fc)',
+
+      [theme.breakpoints.up('md')]: {
+        minWidth: 200,
+        fontSize: '1rem',
+        height: theme.spacing.unit * 6,
+        borderRadius: theme.spacing.unit * 3,
+      },
+
+      [theme.breakpoints.up('lg')]: {
+        minWidth: 250,
+        fontSize: '1.25rem',
+        height: theme.spacing.unit * 7,
+        borderRadius: theme.spacing.unit * 3.5,
+      },
+    }),
+
+    modalRoot: rule({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }),
+
+    backDropRoot: rule({
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    }),
   };
 };
 
-export const provideStyles = withStyles(styles);
+export const provideStyles = withStyles(styles, { withTheme: true });
 
 export type StylesProps = WithStyles<typeof styles>;

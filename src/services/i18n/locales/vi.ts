@@ -20,6 +20,7 @@ export default {
     intro: {
       title: 'Giải phóng tiềm năng của nền kinh tế phi chính thức với DeFi',
       subtitle: 'Chúng tôi xây dựng các sản phẩm giúp mọi người tiết kiệm, phát triển và mở rộng quy mô',
+      watchVideoButton: 'xem video',
     },
     products: {
       hackathon0x: {

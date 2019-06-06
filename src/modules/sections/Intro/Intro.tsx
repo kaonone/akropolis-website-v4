@@ -7,10 +7,10 @@ import { Lang } from 'services/i18n/namespace';
 import { Adaptive } from 'services/adaptability';
 
 const videoByLang: Record<Lang, string> = {
-  en: 'https://www.youtube.com/embed/-z33EoqNVN0',
-  ko: 'https://www.youtube.com/embed/-z33EoqNVN0',
-  vi: 'https://www.youtube.com/embed/-z33EoqNVN0',
-  zh: 'https://www.youtube.com/embed/-z33EoqNVN0',
+  en: 'https://www.youtube.com/watch?v=WVWxCgzPihc',
+  ko: 'https://www.youtube.com/watch?v=WVWxCgzPihc',
+  vi: 'https://www.youtube.com/watch?v=WVWxCgzPihc',
+  zh: 'https://www.youtube.com/watch?v=WVWxCgzPihc',
 };
 
 function Intro(props: StylesProps) {

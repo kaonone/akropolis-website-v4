@@ -3,7 +3,7 @@ node_js:
   - "10"
 
 before_deploy:
-  - npm run build:gh-pages
+  - npm run build:gh-pages:prod
 
 deploy:
   provider: pages

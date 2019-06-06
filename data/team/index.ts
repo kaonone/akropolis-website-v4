@@ -914,68 +914,6 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/maría-paula-fernández-a96a8034/',
-    ],
-    fullName: 'María Paula Fernández',
-    position: {
-      en: 'External Communications and PR',
-      vi: 'External Communications and PR',
-      zh: 'External Communications and PR',
-      ko: 'External Communications and PR',
-    },
-    photo1x: require('./imgs/mpf@1x.png'),
-    photo2x: require('./imgs/mpf@2x.png'),
-    tags: {
-      en: [
-        'Public Relations',
-        'Marketing',
-        'Social Media',
-        'Events Management',
-        'Strategic Communications'
-      ],
-      vi: [
-        'Public Relations',
-        'Marketing',
-        'Social Media',
-        'Events Management',
-        'Strategic Communications'
-      ],
-      zh: [
-        'Public Relations',
-        'Marketing',
-        'Social Media',
-        'Events Management',
-        'Strategic Communications'
-      ],
-      ko: [
-        'Public Relations',
-        'Marketing',
-        'Social Media',
-        'Events Management',
-        'Strategic Communications'
-      ],
-    },
-    background: {
-      en: [
-        'External Relations, Golem Factory',
-        'External Relations Officer, Web3 Foundation'
-      ],
-      vi: [
-        'External Relations, Golem Factory',
-        'External Relations Officer, Web3 Foundation'
-      ],
-      zh: [
-        'External Relations, Golem Factory',
-        'External Relations Officer, Web3 Foundation'
-      ],
-      ko: [
-        'External Relations, Golem Factory',
-        'External Relations Officer, Web3 Foundation'
-      ],
-    },
-  },
-  {
-    links: [
       'https://www.linkedin.com/in/laura-toma-59bb9a7/',
     ],
     fullName: 'Laura Toma',

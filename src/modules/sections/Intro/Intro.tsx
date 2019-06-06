@@ -4,6 +4,7 @@ import { useTranslate } from 'services/i18n';
 import { Button, Modal } from 'shared/view/elements';
 import { StylesProps, provideStyles } from './Intro.style';
 import { Lang } from 'services/i18n/namespace';
+import { Adaptive } from 'services/adaptability';
 
 const videoByLang: Record<Lang, string> = {
   en: 'https://www.youtube.com/embed/-z33EoqNVN0',
@@ -13,8 +14,8 @@ const videoByLang: Record<Lang, string> = {
 };
 
 function Intro(props: StylesProps) {
-  const { classes } = props;
-  const { t, tKeys, locale } = useTranslate();
+  const { classes, theme } = props;
+  const { t, tKeys } = useTranslate();
   const [isOpened, setIsOpened] = React.useState(false);
   return (
     <div className={classes.root}>
@@ -39,16 +40,34 @@ function Intro(props: StylesProps) {
           },
         }}
       >
-        <iframe
-          width={560}
-          height={315}
-          src={videoByLang[locale]}
-          frameBorder={0}
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        <>
+          <Adaptive to="md">
+            <Video width={theme ? theme.breakpoints.values.sm : 0} />
+          </Adaptive>
+          <Adaptive from="md" to={860}>
+            <Video width={theme ? theme.breakpoints.values.md : 0} />
+          </Adaptive>
+          <Adaptive from={860}>
+            <Video width={860} />
+          </Adaptive>
+        </>
       </Modal>
     </div >
+  );
+}
+
+function Video({ width }: { width: number }) {
+  const { locale } = useTranslate();
+  return (
+    <iframe
+      style={{ maxWidth: '100vw' }}
+      width={width}
+      height={Math.floor(width * 0.5625)}
+      src={videoByLang[locale]}
+      frameBorder={0}
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
   );
 }
 

@@ -114,6 +114,6 @@ const styles = (theme: Theme) => {
   };
 };
 
-export const provideStyles = withStyles(styles);
+export const provideStyles = withStyles(styles, { withTheme: true });
 
 export type StylesProps = WithStyles<typeof styles>;

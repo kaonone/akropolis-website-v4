@@ -3,10 +3,18 @@ import * as React from 'react';
 import { useTranslate } from 'services/i18n';
 import { Button, Modal } from 'shared/view/elements';
 import { StylesProps, provideStyles } from './Intro.style';
+import { Lang } from 'services/i18n/namespace';
+
+const videoByLang: Record<Lang, string> = {
+  en: 'https://www.youtube.com/embed/-z33EoqNVN0',
+  ko: 'https://www.youtube.com/embed/-z33EoqNVN0',
+  vi: 'https://www.youtube.com/embed/-z33EoqNVN0',
+  zh: 'https://www.youtube.com/embed/-z33EoqNVN0',
+};
 
 function Intro(props: StylesProps) {
   const { classes } = props;
-  const { t, tKeys } = useTranslate();
+  const { t, tKeys, locale } = useTranslate();
   const [isOpened, setIsOpened] = React.useState(false);
   return (
     <div className={classes.root}>
@@ -34,7 +42,7 @@ function Intro(props: StylesProps) {
         <iframe
           width={560}
           height={315}
-          src="https://www.youtube.com/embed/-z33EoqNVN0"
+          src={videoByLang[locale]}
           frameBorder={0}
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

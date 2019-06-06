@@ -44,11 +44,11 @@ function Intro(props: StylesProps) {
           <Adaptive to="md">
             <Video width={theme ? theme.breakpoints.values.sm : 0} />
           </Adaptive>
-          <Adaptive from="md" to={860}>
+          <Adaptive from="md" to={920}>
             <Video width={theme ? theme.breakpoints.values.md : 0} />
           </Adaptive>
-          <Adaptive from={860}>
-            <Video width={860} />
+          <Adaptive from={920}>
+            <Video width={920} />
           </Adaptive>
         </>
       </Modal>
@@ -62,7 +62,7 @@ function Video({ width }: { width: number }) {
     <iframe
       style={{ maxWidth: '100vw' }}
       width={width}
-      height={Math.floor(width * 0.5625)}
+      height={width * 0.5625}
       src={videoByLang[locale]}
       frameBorder={0}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

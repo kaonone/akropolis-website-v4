@@ -220,10 +220,10 @@ export default [
     ],
     fullName: 'Peter Robertson',
     position: {
-      en: 'Pensions & Insurance Advisor',
-      vi: 'Cố vấn lương hưu và bảo hiểm',
-      zh: '养老金与保险顾问',
-      ko: '연금 및 보험분야 고문',
+      en: 'Pensions & Insurance',
+      vi: 'Lương hưu và bảo hiểm',
+      zh: '养老金与保险',
+      ko: '연금 및 보험분야',
     },
     photo1x: require('./imgs/peter.png'),
     photo2x: require('./imgs/peter@2x.png'),
@@ -285,122 +285,6 @@ export default [
         'Genesis Mining',
         'Vanguard Asset Management',
         'Kings College London',
-      ],
-    },
-  },
-  {
-    links: [
-      'https://www.linkedin.com/in/mrdearg/',
-    ],
-    fullName: 'Dearg OBartuin',
-    position: {
-      en: 'Technology & Country Advisor',
-      vi: 'Cố vấn Công nghệ & Quốc gia',
-      zh: '技术与国家顾问',
-      ko: '기술 및 국가 관련 고문',
-    },
-    photo1x: require('./imgs/dearg@1x.png'),
-    photo2x: require('./imgs/dearg@2x.png'),
-    tags: {
-      en: [
-        'Blockchain',
-        'Remittances',
-        'Product Development',
-        'Africa',
-      ],
-      vi: [
-        'Blockchain',
-        'Chuyển tiền',
-        'Phát triển sản phẩm',
-        'Châu phi',
-      ],
-      zh: [
-        '区块链',
-        '汇款',
-        '产品开发',
-        '非洲',
-      ],
-      ko: [
-        '블럭 체인',
-        '송금',
-        '제품개발',
-        '아프리카',
-      ],
-    },
-    background: {
-      en: [
-        'CTO, BitPesa',
-      ],
-      vi: [
-        'Giám đốc công nghệ, BitPesa',
-      ],
-      zh: [
-        '首席技术官, BitPesa',
-      ],
-      ko: [
-        '최고기술 경영자, BitPesa',
-      ],
-    },
-  },
-  {
-    links: [
-      'https://linkedin.com/in/paymentexpert',
-    ],
-    fullName: 'Dominic Melo',
-    position: {
-      en: 'Global Payments Infrastructure',
-      vi: 'Cơ sở hạ tầng thanh toán toàn cầu',
-      zh: '全球支付基础设施',
-      ko: '글로벌 결제 인프라',
-    },
-    photo1x: require('./imgs/melo@1x.png'),
-    photo2x: require('./imgs/melo@2x.png'),
-    tags: {
-      en: [
-        'Payments',
-        'Business Development',
-        'Business Strategy',
-        'Mobile Payments',
-        'Financial Services',
-      ],
-      vi: [
-        'Thanh toán',
-        'Phát triển kinh doanh',
-        'Chiến lược kinh doanh',
-        'Thanh toán di động',
-        'Các dịch vụ tài chính',
-      ],
-      zh: [
-        '支付',
-        '业务发展',
-        '业务战略',
-        '移动支付',
-        '金融服务',
-      ],
-      ko: [
-        '지불 관련',
-        '사업 개발',
-        '사업 전략',
-        '모바일 결제',
-        '금융 서비스',
-      ],
-    },
-    background: {
-      en: [
-        'iSignthis',
-        'Paymundo Systems',
-      ],
-      vi: [
-        'iSignthis',
-        'Paymundo Systems',
-      ],
-      zh: [
-        'iSignthis',
-        'Paymundo Systems',
-      ],
-      ko: [
-        'iSignthis',
-        'Paymundo Systems',
       ],
     },
   },
@@ -674,10 +558,10 @@ export default [
     ],
     fullName: 'Bokky Poobah',
     position: {
-      en: 'Blockchain Security Advisor',
-      vi: 'Cố vấn bảo mật Blockchain',
-      zh: '区块链安全顾问',
-      ko: '블럭체인 보안 관리자',
+      en: 'Blockchain Security Auditor',
+      vi: 'Chuyên viên bảo mật Blockchain',
+      zh: '区块链安全审计师',
+      ko: '블록체인 보안 감사',
     },
     photo1x: require('./imgs/bokky.png'),
     photo2x: require('./imgs/bokky@2x.png'),

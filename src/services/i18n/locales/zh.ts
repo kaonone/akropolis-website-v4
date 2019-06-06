@@ -8,10 +8,12 @@ export default {
       whitepaper: 'Whitepaper',
       events: '活动',
       blog: '博客',
+      quest: 'Quest',
       cashflowRelay: 'Cashflow Relay',
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: '隐私政策',
       termsConditions: '条款和条件',
+      pointSystem: '积分系统',
     },
   },
   sections: {
@@ -71,10 +73,23 @@ export default {
     pastEvents: {
       title: '更多以往活动',
     },
+    quest: {
+      title: 'AKROPOLIS社区挑战III',
+      // tslint:disable-next-line:max-line-length
+      subtitle: '锣鼓喧天，鞭炮齐鸣，Akropolis社区挑战又双叒回来啦！ 我们为您带来了一系列激动人心的回合，以及价值100,000美元的AKT奖励，欢迎所有人前来踏上此旅程！ 无论你是经验丰富的专业人士，还是潜力十足的新秀，都可以在这独一无二的极客冒险中检验你对虚拟货币领域的了解。',
+      totalRewards: '总奖励',
+      rounds: '回合',
+      winners: '获奖者',
+      names: {
+        quest1: '挑战I',
+        quest2: '挑战II',
+      },
+    },
   },
   shared: {
     learnMore: '了解更多',
     comingSoon: '即将推出',
+    joinIn: '加入',
     date: {
       months: {
         1: 'January',

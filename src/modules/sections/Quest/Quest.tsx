@@ -12,6 +12,8 @@ const morningTime = '07:00:00';
 const dayTime = '14:00:00';
 const nightTime = '20:00:00';
 
+const questLink = 'https://akroquest.typeform.com/to/njqLNv';
+
 interface IQuestResult {
   questNameTKey: string;
   totalRewards: string;
@@ -62,8 +64,9 @@ function Quest(props: StylesProps) {
         variant="contained"
         color="primary"
         size="large"
+        href={questLink}
       >
-        {t(tKeysShared.comingSoon.getKey())}
+        {t(tKeysShared.joinIn.getKey())}
       </Button>
       <div className={classes.resultsContainer}>
         <Grid container spacing={16} className={classes.results}>

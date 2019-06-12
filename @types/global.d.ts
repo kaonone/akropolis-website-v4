@@ -6,6 +6,8 @@ interface Window {
   };
   __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?(): any;
   __data: any; // initial redux state, maybe undefined
+  web3: any;
+  __CIPHER__: any;
 }
 
 declare var __DISABLE_SSR__: boolean;

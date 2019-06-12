@@ -13,9 +13,10 @@ export default function getEnvParams() {
   const chunkHash = isWatchMode && !isProduction ? 'hash' : 'chunkhash';
   const withHot = isWatchMode && isDevelopment;
   const appVersion = appInfo.version;
+  const network = process.env.NETWORK || '4';
 
   return {
     isProduction, isDevelopment, isWatchMode, withAnalyze, withoutTypeChecking,
-    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging,
+    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging, network,
   };
 }

@@ -254,6 +254,7 @@
     "@types/serialize-javascript": "^1.5.0",
     "@types/stylelint": "^9.4.1",
     "@types/uuid": "^3.4.4",
+    "@types/web3": "^1.0.18",
     "@types/webpack-hot-middleware": "^2.16.2",
     "@types/webpack-node-externals": "^1.6.2",
     "autoprefixer": "^9.3.1",
@@ -261,6 +262,7 @@
     "babel-polyfill": "^6.26.0",
     "bem-cn": "^3.0.1",
     "better-npm-run": "^0.1.1",
+    "bignumber.js": "^9.0.0",
     "bootstrap": "^3.3.7",
     "build-route-tree": "^1.0.1",
     "cheerio": "^1.0.0-rc.2",
@@ -271,6 +273,7 @@
     "css-loader": "^1.0.1",
     "decko": "^1.2.0",
     "doiuse": "^4.2.0",
+    "eth-provider": "^0.2.2",
     "express": "^4.16.3",
     "favicons-webpack-plugin": "0.0.9",
     "file-loader": "^2.0.0",
@@ -315,6 +318,7 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.4.5",
     "url-loader": "^1.1.2",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "web3": "^1.0.0-beta.55"
   }
 }

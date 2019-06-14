@@ -26,8 +26,8 @@ class HttpActions {
   }
 
   public get<T>(params: IHttpActionParams): AsyncRequest<T> {
-    const { url, options } = params;
-    return this.request.get(url, options);
+    const { url, options, data } = params;
+    return this.request.get(url, { ...options, params: data });
   }
 
   public post<T>(params: IHttpActionParams): AsyncRequest<T> {

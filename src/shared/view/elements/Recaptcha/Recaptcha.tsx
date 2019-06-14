@@ -2,8 +2,7 @@ import * as React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import { provideStyles, StylesProps } from './Recaptcha.style';
-
-const SITE_KEY = '6Ld31qgUAAAAAKbw86QqitirAhBDVw4BP_cCVDBG';
+import { RECAPTCHA_SITE_KEY } from 'core/constants';
 
 interface IOwnProps {
   onChange(value: string): void;
@@ -15,7 +14,7 @@ export default provideStyles(function Recaptcha(props: IProps) {
   return (
     <div>
       <ReCAPTCHA
-        sitekey={SITE_KEY}
+        sitekey={RECAPTCHA_SITE_KEY}
         onChange={onChange}
       />
     </div>

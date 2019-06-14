@@ -3,7 +3,7 @@ import { bind } from 'decko';
 import BaseApi from './BaseApi';
 import { IUser } from 'shared/types/models';
 
-import { convertRegisterUserRequest, convertUserResponse, convertCheckUserQueryString } from '../converters';
+import { convertRegisterUserRequest, convertUserResponse } from '../converters';
 import { IServerUser } from '../types/Note';
 
 // import delay from 'shared/helpers/delay';
@@ -14,25 +14,26 @@ const mockAddress = '0xFOO'; // сейчас есть несколько адд�
 export default class User extends BaseApi {
 
   @bind
-  public async registerUser(_address: string, captcha: string): Promise<IUser> {
+  public async registerUser(address: string, captcha: string): Promise<IUser> {
     // await delay(2000);
     // return mockUser;
 
     const response = await this.actions.post<IServerUser>({
       url: '/post',
-      data: convertRegisterUserRequest(mockAddress, captcha),
+      data: convertRegisterUserRequest(address, captcha),
     });
 
     return this.handleResponse(response, convertUserResponse);
   }
 
   @bind
-  public async checkAddress(_address: string, captcha: string): Promise<IUser> {
+  public async checkAddress(address: string, recaptcha: string): Promise<IUser> {
     // await delay(2000);
     // return mockUser;
 
     const response = await this.actions.get<IServerUser>({
-      url: `/get${convertCheckUserQueryString(mockAddress, captcha)}`,
+      url: `/get`,
+      data: { address, recaptcha },
     });
 
     return this.handleResponse(response, convertUserResponse);

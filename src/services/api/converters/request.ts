@@ -9,6 +9,6 @@ export function convertRegisterUserRequest(address: string, captcha: string): IR
   };
 }
 
-export function convertCheckUserQueryString(address: string, captcha: string): string {
-  return `?address=${address}&recaptcha=${captcha}`;
-}
+// export function convertCheckUserQueryString(address: string, captcha: string): string {
+//   return `?address=${address}&recaptcha=${captcha}`;
+// }

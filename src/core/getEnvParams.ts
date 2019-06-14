@@ -14,7 +14,7 @@ export default function getEnvParams() {
   const withHot = isWatchMode && isDevelopment;
   const appVersion = appInfo.version;
 
-  const apiUrl = 'http://134.209.96.94/1.0';
+  const apiUrl = 'https://api-bounty.akropolis.io/1.0';
 
   return {
     isProduction, isDevelopment, isWatchMode, withAnalyze, withoutTypeChecking,

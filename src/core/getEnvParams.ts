@@ -14,8 +14,10 @@ export default function getEnvParams() {
   const withHot = isWatchMode && isDevelopment;
   const appVersion = appInfo.version;
 
+  const apiUrl = 'http://134.209.96.94/1.0';
+
   return {
     isProduction, isDevelopment, isWatchMode, withAnalyze, withoutTypeChecking,
-    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging,
+    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging, apiUrl,
   };
 }

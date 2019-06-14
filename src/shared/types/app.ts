@@ -17,6 +17,7 @@ export interface IAppData {
   modules: IModule[];
   store: Store<IAppReduxState>;
   jssDeps: IJssDependencies;
+  deps: IDependencies;
 }
 
 export interface IJssDependencies {

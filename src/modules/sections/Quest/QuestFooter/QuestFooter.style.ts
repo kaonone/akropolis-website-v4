@@ -6,7 +6,7 @@ const styles = (theme: Theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#181b1f',
+    backgroundColor: theme.extra.colors.woodSmoke,
     color: '#fff',
     padding: 20,
     height: theme.extra.spacing.headerHeight.xs - theme.extra.spacing.layoutContentSkew.xsHeight,
@@ -25,7 +25,7 @@ const styles = (theme: Theme) => ({
       height: theme.extra.spacing.layoutContentSkew.xsHeight,
       position: 'absolute',
       bottom: '100%',
-      background: 'linear-gradient(to top left, #181b1f 49%, transparent 51%)',
+      background: `linear-gradient(to top left, ${theme.extra.colors.woodSmoke} 49%, transparent 51%)`,
 
       [theme.breakpoints.up('lg')]: {
         height: theme.extra.spacing.layoutContentSkew.lgHeight,

@@ -3,8 +3,8 @@ import { IUser } from 'shared/types/models';
 import { IServerUser, ServerUserErrorCode, IServerError, IServerUserError } from '../types';
 
 export function convertUserResponse(data: { user: IServerUser }): IUser {
-  const { address, tokens } = data.user;
-  return { address, tokens };
+  const { address, amount } = data.user;
+  return { address, tokens: amount };
 }
 
 export function convertUserErrorResponse(error: IServerError<ServerUserErrorCode>): IServerUserError {

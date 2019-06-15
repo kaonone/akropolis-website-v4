@@ -29,6 +29,7 @@ const styles = (theme: Theme) => ({
 
   error: rule({
     composes: '$text',
+    maxWidth: theme.extra.sizes.maxContentWidth,
     marginBottom: theme.spacing.unit * 3,
   }),
 

@@ -2,7 +2,7 @@ import { IRecaptchaRequest } from './common';
 
 export interface IServerUser {
   address: string;
-  tokens: number;
+  amount: number;
 }
 
 export interface IRegisterUserRequest extends IRecaptchaRequest {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 
-import { IUser, UserError } from 'shared/types/models';
+import { useMakeFieldsForCheckUser } from 'shared/helpers/react/useMakeFieldsForCheckUser';
 import { CheckAddressForm } from 'features/checkBounty';
 
 import BountyResult from '../BountyResult/BountyResult';
@@ -12,27 +12,13 @@ type IProps = RouteComponentProps & StylesProps;
 
 function CheckUserAddress(props: IProps) {
   const { classes } = props;
-  const [tokens, setTokens] = React.useState<number>(0);
-  const [address, setAddress] = React.useState('');
-
-  const [error, setError] = React.useState<null | UserError>(null);
-
-  const onSuccessChecking = React.useCallback((user: IUser) => {
-    setTokens(user.tokens);
-    setAddress(user.address);
-  }, []);
-
-  const onRetry = React.useCallback(() => {
-    setTokens(0);
-    setAddress('');
-    setError(null);
-  }, []);
+  const { address, tokens, error, onSuccessChecking, onError, onRetry } = useMakeFieldsForCheckUser();
 
   return (
     <div className={classes.root}>
       {!error && !address &&
         <div className={classes.form}>
-          <CheckAddressForm onSuccess={onSuccessChecking} onError={setError} />
+          <CheckAddressForm onSuccess={onSuccessChecking} onError={onError} />
         </div>}
       {(address || error) &&
         <BountyResult

@@ -2,27 +2,29 @@ import * as React from 'react';
 import { Form } from 'react-final-form';
 import { useDeps } from 'core';
 
+import { MarkAs } from '_helpers';
 import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
 import { tKeys as tKeysAll, useTranslate, ITranslateKey } from 'services/i18n';
-import { TextInputField, CheckboxInputField } from 'shared/view/form';
-import { Button, Grid, Recaptcha, CircleProgressBar, Link } from 'shared/view/elements';
+import { TextInputField, CheckboxInputField, RecaptchaField } from 'shared/view/form';
+import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
 import { IUser, UserError } from 'shared/types/models';
-import { MarkAs } from '_helpers';
+import { parseUserError } from 'shared/helpers/errors';
 
 import { IRegistrationFormData } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './RegistrationAddressForm.style';
-import { parseUserError } from 'shared/helpers/errors';
 
 const fieldNames: { [key in keyof IRegistrationFormData]: key } = {
   address: 'address',
+  recaptcha: 'recaptcha',
   isNotResident: 'isNotResident',
   isConfirmTerms: 'isConfirmTerms',
 };
 
 const initialValues: IRegistrationFormData = {
   address: '',
+  recaptcha: '',
   isNotResident: false,
   isConfirmTerms: false,
 };
@@ -30,6 +32,7 @@ const initialValues: IRegistrationFormData = {
 function validateForm(values: IRegistrationFormData): Partial<MarkAs<ITranslateKey, IRegistrationFormData>> {
   return {
     address: isRequired(values.address) || isEthereumAddress(values.address),
+    recaptcha: isRequired(values.recaptcha),
   };
 }
 
@@ -47,18 +50,16 @@ function RegistrationAddressForm(props: IProps) {
   const { t } = useTranslate();
   const deps = useDeps();
 
-  const [captcha, setCaptcha] = React.useState('');
-
   const onSubmit = React.useMemo(() => {
     return async (values: IRegistrationFormData) => {
       try {
-        const user = await deps.api.user.registerUser(values.address, captcha);
+        const user = await deps.api.user.registerUser(values.address, String(values.recaptcha));
         onSuccess(user);
       } catch (e) {
         onError(parseUserError(e));
       }
     };
-  }, [captcha]);
+  }, [onSuccess, onError]);
 
   return (
     <Form
@@ -90,7 +91,7 @@ function RegistrationAddressForm(props: IProps) {
               <Link className={classes.terms} href={termsURL}>{'Terms&Conditions'}</Link>
             </div>
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>
-              <Recaptcha onChange={setCaptcha} />
+              <RecaptchaField name={fieldNames.recaptcha} />
             </Grid>
             <Grid container wrap="nowrap" justify="center">
               <Button

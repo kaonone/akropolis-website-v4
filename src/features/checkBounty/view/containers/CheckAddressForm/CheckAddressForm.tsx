@@ -3,33 +3,32 @@ import { Form } from 'react-final-form';
 import { useDeps } from 'core';
 
 import { tKeys as tKeysAll, useTranslate, ITranslateKey } from 'services/i18n';
-import { TextInputField } from 'shared/view/form';
+import { TextInputField, RecaptchaField } from 'shared/view/form';
 
-import { Button, Grid, Recaptcha, CircleProgressBar } from 'shared/view/elements';
+import { Button, Grid, CircleProgressBar } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
 import { IUser, UserError } from 'shared/types/models';
 import { MarkAs } from '_helpers';
 
-import { IRegistrationFormData } from '../../../namespace';
+import { ICheckAddressFormData } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './CheckAddressForm.style';
-import { ApiError, parseUserError } from 'shared/helpers/errors';
+import { parseUserError } from 'shared/helpers/errors';
 
-const fieldNames: { [key in keyof IRegistrationFormData]: key } = {
+const fieldNames: { [key in keyof ICheckAddressFormData]: key } = {
+  recaptcha: 'recaptcha',
   address: 'address',
-  isNotResident: 'isNotResident',
-  isConfirmTerms: 'isConfirmTerms',
 };
 
-const initialValues: IRegistrationFormData = {
+const initialValues: ICheckAddressFormData = {
   address: '',
-  isNotResident: false,
-  isConfirmTerms: false,
+  recaptcha: '',
 };
 
-function validateForm(values: IRegistrationFormData): Partial<MarkAs<ITranslateKey, IRegistrationFormData>> {
+function validateForm(values: ICheckAddressFormData): Partial<MarkAs<ITranslateKey, ICheckAddressFormData>> {
   return {
     address: isRequired(values.address) || isEthereumAddress(values.address),
+    recaptcha: isRequired(values.recaptcha),
   };
 }
 
@@ -47,18 +46,16 @@ function CheckAddressForm(props: IProps) {
   const { t } = useTranslate();
   const deps = useDeps();
 
-  const [captcha, setCaptcha] = React.useState('');
-
   const onSubmit = React.useMemo(() => {
-    return async (values: IRegistrationFormData) => {
+    return async (values: ICheckAddressFormData) => {
       try {
-        const user = await deps.api.user.checkAddress(values.address, captcha);
+        const user = await deps.api.user.checkAddress(values.address, String(values.recaptcha));
         onSuccess(user);
       } catch (e) {
         onError(parseUserError(e));
       }
     };
-  }, [captcha, onSuccess]);
+  }, [onSuccess, onError]);
 
   return (
     <div>
@@ -77,7 +74,7 @@ function CheckAddressForm(props: IProps) {
               fullWidth
             />
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>
-              <Recaptcha onChange={setCaptcha} />
+              <RecaptchaField name={fieldNames.recaptcha} />
             </Grid>
             <Grid container wrap="nowrap" justify="center">
               <Button
@@ -85,7 +82,7 @@ function CheckAddressForm(props: IProps) {
                 type="submit"
                 color="gradient"
                 variant="contained"
-                disabled={submitting || invalid || !captcha}
+                disabled={submitting || invalid}
               >
                 {!submitting && 'Check Account'}
                 {submitting && <CircleProgressBar size={24} />}

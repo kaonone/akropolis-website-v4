@@ -8,7 +8,7 @@ import { IServerUser } from '../types/Note';
 
 // import delay from 'shared/helpers/delay';
 // const mockAddress = '0x29f2E74eE824ebeF53399A7A58102448F998B87c';
-const mockAddress = '0xFOO'; // сейчас есть несколько аддресов на беке - это один из них
+// const mockAddress = '0xFOO'; // сейчас есть несколько аддресов на беке - это один из них
 // const mockUser: IUser = { address: mockAddress, tokens: 73 };
 
 export default class User extends BaseApi {

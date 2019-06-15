@@ -14,7 +14,7 @@ import { StylesProps, provideStyles } from './BountyResult.style';
 interface IOwnProps {
   address: string;
   tokens: number;
-  error: UserError | null; 
+  error: UserError | null;
   onRetry(): void;
 }
 
@@ -84,8 +84,8 @@ function BountyResult(props: IProps) {
               variant="contained"
               onClick={isUnknownError ? onRetry : onEndCheck}
               className={classes.button}
-              >
-            {isUnknownError ? 'Retry' : 'ok'}
+            >
+              {isUnknownError ? 'Retry' : 'ok'}
             </Button>
           </Grid>
         </div>}

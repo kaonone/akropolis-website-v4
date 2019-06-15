@@ -19,7 +19,7 @@ export default class User extends BaseApi {
     // return mockUser;
 
     const response = await this.actions.post<IServerUser>({
-      url: '/post',
+      url: '/',
       data: convertRegisterUserRequest(address, captcha),
     });
 

@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
 import { SUPPORT_EMAIL } from 'core/constants';
 import { Typography, Button, Grid, Link } from 'shared/view/elements';
-import { IUserError } from 'shared/types/models';
+import { UserError } from 'shared/types/models';
 import routes from 'modules/routes';
 
 import { StylesProps, provideStyles } from './BountyResult.style';
@@ -14,7 +14,7 @@ import { StylesProps, provideStyles } from './BountyResult.style';
 interface IOwnProps {
   address: string;
   tokens: number;
-  error?: IUserError;
+  error: UserError | null; 
   onRetry(): void;
 }
 
@@ -27,7 +27,9 @@ function BountyResult(props: IProps) {
     history.push(routes.bounty.getRedirectPath());
   }, []);
 
-  const messageByError: Record<IUserError, () => React.ReactNode> = {
+  const isUnknownError = error === 'unknown';
+
+  const messageByError: Record<UserError, () => React.ReactNode> = {
     notConfirmed: () => (
       <Typography variant="body1" className={classes.error}>
         <span>It seems like we have your ETH address in our database, but you didn’t confirm your residency and</span>{' '}
@@ -47,6 +49,9 @@ function BountyResult(props: IProps) {
           </Link>
         </span>
       </Typography>),
+    unknown: () => (
+      <Typography className={classes.error} variant="body1" align="center">Unknown Error</Typography>
+    ),
   };
 
   return (
@@ -77,24 +82,10 @@ function BountyResult(props: IProps) {
             <Button
               color="gradient"
               variant="contained"
-              onClick={onEndCheck}
+              onClick={isUnknownError ? onRetry : onEndCheck}
               className={classes.button}
-            >
-              ok
-            </Button>
-          </Grid>
-        </div>}
-      {error && !messageByError[error] &&
-        <div>
-          <Typography className={classes.error} variant="body1" align="center">Unknown Error</Typography>
-          <Grid container wrap="nowrap" justify="center">
-            <Button
-              color="gradient"
-              variant="contained"
-              onClick={onRetry}
-              className={classes.button}
-            >
-              Retry
+              >
+            {isUnknownError ? 'Retry' : 'ok'}
             </Button>
           </Grid>
         </div>}

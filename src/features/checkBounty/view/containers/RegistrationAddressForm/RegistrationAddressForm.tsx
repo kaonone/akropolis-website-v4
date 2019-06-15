@@ -7,12 +7,13 @@ import { tKeys as tKeysAll, useTranslate, ITranslateKey } from 'services/i18n';
 import { TextInputField, CheckboxInputField } from 'shared/view/form';
 import { Button, Grid, Recaptcha, CircleProgressBar, Link } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
-import { IUser } from 'shared/types/models';
+import { IUser, UserError } from 'shared/types/models';
 import { MarkAs } from '_helpers';
 
 import { IRegistrationFormData } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './RegistrationAddressForm.style';
+import { parseUserError } from 'shared/helpers/errors';
 
 const fieldNames: { [key in keyof IRegistrationFormData]: key } = {
   address: 'address',
@@ -36,7 +37,7 @@ const tKeys = tKeysAll.features.checkBounty;
 
 interface IOwnProps {
   onSuccess(user: IUser): void;
-  onError(error: string): void;
+  onError(error: UserError): void;
 }
 
 type IProps = IOwnProps & StylesProps;
@@ -54,7 +55,7 @@ function RegistrationAddressForm(props: IProps) {
         const user = await deps.api.user.registerUser(values.address, captcha);
         onSuccess(user);
       } catch (e) {
-        onError(String(onError));
+        onError(parseUserError(e));
       }
     };
   }, [captcha]);

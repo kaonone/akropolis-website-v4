@@ -7,12 +7,13 @@ import { TextInputField } from 'shared/view/form';
 
 import { Button, Grid, Recaptcha, CircleProgressBar } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
-import { IUser } from 'shared/types/models';
+import { IUser, UserError } from 'shared/types/models';
 import { MarkAs } from '_helpers';
 
 import { IRegistrationFormData } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './CheckAddressForm.style';
+import { ApiError, parseUserError } from 'shared/helpers/errors';
 
 const fieldNames: { [key in keyof IRegistrationFormData]: key } = {
   address: 'address',
@@ -36,7 +37,7 @@ const tKeys = tKeysAll.features.checkBounty;
 
 interface IOwnProps {
   onSuccess(user: IUser): void;
-  onError(error: string): void;
+  onError(error: UserError): void;
 }
 
 type IProps = IOwnProps & StylesProps;
@@ -54,15 +55,10 @@ function CheckAddressForm(props: IProps) {
         const user = await deps.api.user.checkAddress(values.address, captcha);
         onSuccess(user);
       } catch (e) {
-        onError(String(e));
+        onError(parseUserError(e));
       }
     };
   }, [captcha, onSuccess]);
-
-  // const captchaChange = React.useCallback((value: string) => {
-  //   console.log('captcha', value);
-  //   setCaptcha(value);
-  // }, []);
 
   return (
     <div>

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 
-import { IUser } from 'shared/types/models';
+import { IUser, UserError } from 'shared/types/models';
 import { CheckAddressForm } from 'features/checkBounty';
-import { formatUserError } from 'shared/helpers/errors';
 
 import BountyResult from '../BountyResult/BountyResult';
 
@@ -16,7 +15,7 @@ function CheckUserAddress(props: IProps) {
   const [tokens, setTokens] = React.useState<number>(0);
   const [address, setAddress] = React.useState('');
 
-  const [error, setError] = React.useState('');
+  const [error, setError] = React.useState<null | UserError>(null);
 
   const onSuccessChecking = React.useCallback((user: IUser) => {
     setTokens(user.tokens);
@@ -26,7 +25,7 @@ function CheckUserAddress(props: IProps) {
   const onRetry = React.useCallback(() => {
     setTokens(0);
     setAddress('');
-    setError('');
+    setError(null);
   }, []);
 
   return (
@@ -39,7 +38,7 @@ function CheckUserAddress(props: IProps) {
         <BountyResult
           tokens={tokens}
           address={address}
-          error={formatUserError(error)}
+          error={error}
           onRetry={onRetry}
         />}
     </div>

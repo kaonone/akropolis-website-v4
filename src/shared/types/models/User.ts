@@ -3,4 +3,4 @@ export interface IUser {
   tokens: number;
 }
 
-export type IUserError = 'notConfirmed' | 'notExist';
+export type UserError = 'notConfirmed' | 'notExist' | 'unknown';

@@ -3,7 +3,7 @@ import { bind } from 'decko';
 import BaseApi from './BaseApi';
 import { IUser } from 'shared/types/models';
 
-import { convertRegisterUserRequest, convertUserResponse } from '../converters';
+import { convertRegisterUserRequest, convertUserResponse, convertUserErrorResponse } from '../converters';
 import { IServerUser } from '../types/Note';
 
 // import delay from 'shared/helpers/delay';
@@ -23,7 +23,7 @@ export default class User extends BaseApi {
       data: convertRegisterUserRequest(address, captcha),
     });
 
-    return this.handleResponse(response, convertUserResponse);
+    return this.handleResponse(response, convertUserResponse, convertUserErrorResponse);
   }
 
   @bind
@@ -36,6 +36,6 @@ export default class User extends BaseApi {
       data: { address, recaptcha },
     });
 
-    return this.handleResponse(response, convertUserResponse);
+    return this.handleResponse(response, convertUserResponse, convertUserErrorResponse);
   }
 }

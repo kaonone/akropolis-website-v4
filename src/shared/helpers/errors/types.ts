@@ -3,7 +3,7 @@ export interface IHeaders {
 }
 
 export interface IErrorPayload {
-  statusCode: string;
+  code: string;
   message: string;
 }
 

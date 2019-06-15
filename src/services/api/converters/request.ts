@@ -8,7 +8,3 @@ export function convertRegisterUserRequest(address: string, captcha: string): IR
     not_resident: true,
   };
 }
-
-// export function convertCheckUserQueryString(address: string, captcha: string): string {
-//   return `?address=${address}&recaptcha=${captcha}`;
-// }

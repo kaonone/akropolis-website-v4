@@ -13,13 +13,15 @@ class BaseApi {
     this.actions = actions;
   }
 
-  protected handleResponse<ResponseData, Result>(
+  protected handleResponse<ResponseData, Result, ErrorPayload>(
     response: AxiosResponse,
     converter?: Converter<ResponseData, Result> | null,
+    errorConverter?: (x: ErrorPayload) => any,
   ): Result;
-  protected handleResponse<ResponseData, Result>(
+  protected handleResponse<ResponseData, Result, ErrorPayload>(
     response: AxiosResponse,
     converter?: Converter<ResponseData, Result> | null,
+    errorConverter?: (x: ErrorPayload) => any,
   ): Result | void {
     if (isErrorStatus(response.status)) {
       const request = response.request;
@@ -30,6 +32,7 @@ class BaseApi {
         headers: response.headers,
         request,
         response: request.response,
+        payload: errorConverter && response.data.error && errorConverter(response.data.error),
       });
       throw apiError;
     }

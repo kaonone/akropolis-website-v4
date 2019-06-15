@@ -17,16 +17,18 @@ export default provideStyles(function Preview(props: IProps) {
   const { classes, children } = props;
 
   return (
-    <Layout isAbsoluteHeader>
+    <Layout>
       <Layout.Header>
         <Header />
       </Layout.Header>
-      <Grid container direction="column" alignItems="center" className={classes.root}>
-        <div className={classes.content}>
-          <p className={classes.title}>{'Bounty'}</p>
-          {children}
-        </div>
-      </Grid>
+      <Layout.Intro>
+        <Grid container direction="column" alignItems="center" className={classes.root}>
+          <div className={classes.content}>
+            <p className={classes.title}>{'Bounty'}</p>
+            {children}
+          </div>
+        </Grid>
+      </Layout.Intro>
       <Layout.Footer>
         <Footer />
       </Layout.Footer>

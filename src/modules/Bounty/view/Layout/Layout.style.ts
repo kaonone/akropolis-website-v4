@@ -8,7 +8,7 @@ const styles = (theme: Theme) => ({
     background: `url(${backgroundIrl}) no-repeat center bottom/cover`,
     overflow: 'hidden',
     color: theme.extra.colors.rhino,
-    minHeight: `calc(100vh + ${theme.extra.spacing.headerHeight.lg}px)`,
+    minHeight: '100vh',
 
     padding: `${theme.extra.spacing.headerHeight.xs}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
 
@@ -35,7 +35,7 @@ const styles = (theme: Theme) => ({
     width: '100%',
     maxWidth: theme.extra.sizes.maxContentWidth,
     margin: `auto`,
-    paddingBottom: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit * 2,
     fontFamily: theme.extra.typography.primaryFont,
     fontSize: 26,
     fontWeight: 'bold',
@@ -45,6 +45,7 @@ const styles = (theme: Theme) => ({
     textTransform: 'uppercase',
 
     [theme.breakpoints.up('md')]: {
+      paddingBottom: theme.spacing.unit * 3,
       fontSize: 38,
       lineHeight: 1.26,
       letterSpacing: '-0.3px',

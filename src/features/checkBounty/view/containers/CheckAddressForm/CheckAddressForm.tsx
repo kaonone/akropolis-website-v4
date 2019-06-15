@@ -46,15 +46,13 @@ function CheckAddressForm(props: IProps) {
   const { t } = useTranslate();
   const deps = useDeps();
 
-  const onSubmit = React.useMemo(() => {
-    return async (values: ICheckAddressFormData) => {
-      try {
-        const user = await deps.api.user.checkAddress(values.address, String(values.recaptcha));
-        onSuccess(user);
-      } catch (e) {
-        onError(parseUserError(e));
-      }
-    };
+  const onSubmit = React.useCallback(async (values: ICheckAddressFormData) => {
+    try {
+      const user = await deps.api.user.checkAddress(values.address, String(values.recaptcha));
+      onSuccess(user);
+    } catch (e) {
+      onError(parseUserError(e));
+    }
   }, [onSuccess, onError]);
 
   return (

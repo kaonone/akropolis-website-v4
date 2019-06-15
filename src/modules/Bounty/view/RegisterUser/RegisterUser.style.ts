@@ -7,6 +7,7 @@ const styles = (theme: Theme) => ({
   }),
 
   text: rule({
+    maxWidth: theme.extra.sizes.maxContentWidth,
     fontSize: 20,
     lineHeight: 1.29,
     letterSpacing: 0.1,

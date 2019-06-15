@@ -11,12 +11,15 @@ type IProps = IOwnProps & StylesProps;
 
 export default provideStyles(function Recaptcha(props: IProps) {
   const { onChange } = props;
+  const isServer = window.__PRERENDER_INJECTED__ && window.__PRERENDER_INJECTED__.isServer;
   return (
     <div>
-      <ReCAPTCHA
-        sitekey={RECAPTCHA_SITE_KEY}
-        onChange={onChange}
-      />
+      {!isServer && (
+        <ReCAPTCHA
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={onChange}
+        />
+      )}
     </div>
   );
 });

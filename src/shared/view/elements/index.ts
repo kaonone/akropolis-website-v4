@@ -25,3 +25,4 @@ export { default as Grid } from '@material-ui/core/Grid';
 export { default as ButtonBase } from '@material-ui/core/ButtonBase';
 export { default as Snackbar } from '@material-ui/core/Snackbar';
 export { default as Modal } from '@material-ui/core/Modal';
+export { default as NoSsr } from '@material-ui/core/NoSsr';

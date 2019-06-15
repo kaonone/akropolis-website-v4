@@ -28,14 +28,16 @@ function RegisterUser(props: IProps) {
   return (
     <div className={classes.root}>
       {!error && !address &&
-        <Grid container direction="column" alignItems="center">
-          <Typography variant="body1" className={classes.text}>
-            <div>{translations.important}</div>
-            <div>{translations.description}</div>
-            <div>{translations.tokenContract}</div>
-            <div>{translations.tokenSymbol}</div>
-            <div>{translations.tokenDecimal}</div>
-          </Typography>
+        <Grid container direction="column" alignItems="center" spacing={24}>
+          <Grid item>
+            <Typography variant="body1" className={classes.text}>{translations.important}</Typography>
+            <Typography variant="body1" className={classes.text}>{translations.description}</Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="body1" className={classes.text}>{translations.tokenContract}</Typography>
+            <Typography variant="body1" className={classes.text}>{translations.tokenSymbol}</Typography>
+            <Typography variant="body1" className={classes.text}>{translations.tokenDecimal}</Typography>
+          </Grid>
           <div className={classes.form}>
             <RegistrationAddressForm onSuccess={onSuccessChecking} onError={onError} />
           </div>

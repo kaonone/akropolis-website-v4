@@ -17,10 +17,6 @@ const styles = (theme: Theme) => ({
       fontSize: 27,
       lineHeight: 1.56,
     },
-
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 33,
-    },
   }),
 
   form: rule({

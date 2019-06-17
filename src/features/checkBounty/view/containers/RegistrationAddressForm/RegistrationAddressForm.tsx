@@ -10,6 +10,7 @@ import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
 import { IUser, UserError } from 'shared/types/models';
 import { parseUserError } from 'shared/helpers/errors';
+import { WHITE_SPACE } from 'core/constants';
 
 import { IRegistrationFormData } from '../../../namespace';
 
@@ -87,7 +88,8 @@ function RegistrationAddressForm(props: IProps) {
               <CheckboxInputField
                 name={fieldNames.isConfirmTerms}
                 label={t(tKeys.form.acceptTerms.getKey())}
-              />{' '}
+              />
+              {WHITE_SPACE}
               <Link className={classes.terms} href={termsURL}>{'Terms&Conditions'}</Link>
             </div>
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>

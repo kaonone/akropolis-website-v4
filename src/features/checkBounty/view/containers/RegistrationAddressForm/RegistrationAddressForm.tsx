@@ -82,12 +82,14 @@ function RegistrationAddressForm(props: IProps) {
               <CheckboxInputField
                 name={fieldNames.isNotResident}
                 label={t(tKeys.form.notResident.getKey())}
+                labelClasses={{ label: classes.terms }}
               />
             </div>
             <div className={classes.checkBoxField}>
               <CheckboxInputField
                 name={fieldNames.isConfirmTerms}
                 label={t(tKeys.form.acceptTerms.getKey())}
+                labelClasses={{ label: classes.terms }}
               />
               {WHITE_SPACE}
               <Link className={classes.terms} href={termsURL}>{'Terms&Conditions'}</Link>

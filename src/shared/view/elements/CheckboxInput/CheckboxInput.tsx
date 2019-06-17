@@ -2,13 +2,14 @@ import React from 'react';
 import { CheckIdentity } from '_helpers';
 import FormControl, { FormControlProps } from '@material-ui/core/FormControl';
 import FormHelperText, { FormHelperTextProps } from '@material-ui/core/FormHelperText';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControlLabel, { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
 import Checkbox, { CheckboxProps } from '../Checkbox/Checkbox';
 
 type IProps = CheckboxProps & Pick<FormControlProps, 'error' | 'required' | 'fullWidth'> & {
   label: React.ReactNode;
   helperText?: string;
   formHelperTextProps?: FormHelperTextProps;
+  labelClasses?: FormControlLabelProps['classes'];
 };
 
 interface INormalizedProps {
@@ -19,10 +20,11 @@ interface INormalizedProps {
     label: React.ReactNode | null;
     helperText: string | null;
   };
+  labelClasses: IProps['labelClasses'];
 }
 
 function CheckboxInput(props: IProps) {
-  const { formControlProps, formHelperTextProps, checkboxProps, other } = normalizeProps(props);
+  const { formControlProps, formHelperTextProps, checkboxProps, other, labelClasses } = normalizeProps(props);
   const { label, helperText } = other;
 
   return (
@@ -30,6 +32,7 @@ function CheckboxInput(props: IProps) {
       <FormControlLabel
         control={<Checkbox {...checkboxProps} />}
         label={label + (checkboxProps.required ? ' *' : '')}
+        classes={{ ...labelClasses }}
       />
       {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}
     </FormControl>
@@ -38,7 +41,7 @@ function CheckboxInput(props: IProps) {
 
 function normalizeProps(props: IProps): INormalizedProps {
   const {
-    error, helperText = null, label, formHelperTextProps = null, fullWidth,
+    error, helperText = null, label, formHelperTextProps = null, fullWidth, labelClasses,
     ...rest } = props;
 
   const checkboxProps: CheckIdentity<CheckboxProps, typeof rest> = rest;
@@ -48,6 +51,7 @@ function normalizeProps(props: IProps): INormalizedProps {
     formHelperTextProps,
     formControlProps,
     checkboxProps,
+    labelClasses,
     other: { label, helperText },
   };
 }

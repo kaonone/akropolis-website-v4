@@ -3,6 +3,21 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'ETHBerlinZwei',
+    link: 'https://ethberlinzwei.com',
+    location: 'Berlin', 
+    description: {
+      en: 'ETHBerlinZwei is a hackathon, a culture festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward. We are pushing even further into becoming a festival for people from all backgrounds, and most importantly, a hub where builders will be able to get their creative juices flowing by discovering various cultural and educational experiences spread across almost a week. ETHBerlinZwei’s talks and panels will be held at dAppcon Berlin so all participants will have access to the conference before diving deep into the Zwei experience.',
+      vi: 'ETHBerlinZwei is a hackathon, a culture festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward. We are pushing even further into becoming a festival for people from all backgrounds, and most importantly, a hub where builders will be able to get their creative juices flowing by discovering various cultural and educational experiences spread across almost a week. ETHBerlinZwei’s talks and panels will be held at dAppcon Berlin so all participants will have access to the conference before diving deep into the Zwei experience.',
+      zh: 'ETHBerlinZwei is a hackathon, a culture festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward. We are pushing even further into becoming a festival for people from all backgrounds, and most importantly, a hub where builders will be able to get their creative juices flowing by discovering various cultural and educational experiences spread across almost a week. ETHBerlinZwei’s talks and panels will be held at dAppcon Berlin so all participants will have access to the conference before diving deep into the Zwei experience.',
+      ko: 'ETHBerlinZwei is a hackathon, a culture festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward. We are pushing even further into becoming a festival for people from all backgrounds, and most importantly, a hub where builders will be able to get their creative juices flowing by discovering various cultural and educational experiences spread across almost a week. ETHBerlinZwei’s talks and panels will be held at dAppcon Berlin so all participants will have access to the conference before diving deep into the Zwei experience.',
+    },
+    startDate: '08.23.2019',
+    finishDate: '08.25.2019',
+    image1x: require('./imgs/zwei@660w.jpg'),
+    image2x: require('./imgs/zwei@1320w.jpg'),
+  },
+  {
     eventName: 'CryptoChicks Hackathon & Conference',
     link: 'https://www.toronto.cryptochicks.ca/',
     location: 'Toronto', 

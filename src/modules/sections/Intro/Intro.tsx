@@ -8,9 +8,9 @@ import { Adaptive } from 'services/adaptability';
 
 const videoByLang: Record<Lang, string> = {
   en: 'https://www.youtube.com/embed/WVWxCgzPihc',
-  ko: 'https://www.youtube.com/embed/WVWxCgzPihc',
-  vi: 'https://www.youtube.com/embed/WVWxCgzPihc',
-  zh: 'https://www.youtube.com/embed/WVWxCgzPihc',
+  ko: 'https://www.youtube.com/embed/y7Go1mVqjs0',
+  vi: 'https://www.youtube.com/embed/C45MWDqUIcA',
+  zh: 'https://www.youtube.com/embed/VMFUNDEYRQg',
 };
 
 function Intro(props: StylesProps) {

@@ -18,11 +18,14 @@ export default provideStyles(function Swap(props: IProps) {
       <Layout.Header>
         <Header />
       </Layout.Header>
-      <Grid container wrap="nowrap" justify="center" className={classes.root}>
-        <Grid item className={classes.swapForm}>
-          <SwapAKTFormAsync />
+      <Layout.Intro>
+        <Grid container wrap="nowrap" justify="center" className={classes.root}>
+          <div className={classes.content}>
+            <p className={classes.title}>{'Swap Tokens'}</p>
+            <SwapAKTFormAsync />
+          </div>
         </Grid>
-      </Grid>
+      </Layout.Intro>
       <Layout.Footer>
         <Footer />
       </Layout.Footer>

@@ -11,3 +11,5 @@ export { default as GithubIcon } from './GithubIcon';
 export { default as LinkedinIcon } from './LinkedinIcon';
 export { default as TelegramIcon } from './TelegramIcon';
 export { default as getSocialIconByLink } from './getSocialIconByLink';
+export { default as Cross } from './Cross';
+export { default as MetamaskFox } from './MetamaskFox';

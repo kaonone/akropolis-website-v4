@@ -1,8 +1,10 @@
+import { withStyles as muiWithStyles } from '@material-ui/core/styles';
 import { withStyles, WithStyles, Theme } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
 const styles = (theme: Theme) => ({
-  piechart: rule({
+  root: rule({
+    display: 'flex',
     position: 'relative',
   }),
   overlay: rule({
@@ -15,6 +17,6 @@ const styles = (theme: Theme) => ({
   }),
 });
 
-export const provideStyles = withStyles(styles);
+export const provideStyles = (muiWithStyles as typeof withStyles)(styles);
 
 export type StylesProps = WithStyles<typeof styles>;

@@ -239,9 +239,14 @@ export function shortenAddress(address: string, charsLength: number = 4): string
   );
 }
 
-export function checkNetwork(web3: Web3) {
-  return {
-    isMetaMask: getCurrentProviderType() === 'metamask',
-    isValidNetwork: (web3.version as any).network === NETWORK_CONFIG.id.toString(),
-  };
+export function isMetaMask() {
+  return getCurrentProviderType() === 'metamask';
+}
+export async function isValidNetwork(web3: Web3) {
+  const usedNetworkId = await web3.eth.net.getId();
+  return usedNetworkId === NETWORK_CONFIG.id;
+}
+
+export async function getAccounts(web3: Web3) {
+  return web3.eth.getAccounts();
 }

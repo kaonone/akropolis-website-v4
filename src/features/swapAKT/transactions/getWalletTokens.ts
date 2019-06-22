@@ -25,11 +25,10 @@ const minABI: AbiItem[] = [
   },
 ];
 
-export default async function getWalletTokens() {
+export default async function getWalletTokens(): Promise<BN> {
   const web3 = getWeb3(web3Providers.wallet);
   const contract = new web3.eth.Contract(minABI, tokenAddress);
   const userAddress = await getMainAccount(web3);
-  const _balance: BN = await contract.methods.balanceOf(userAddress).call();
-  const balance = new BN(_balance); // BigNumber from balanceOf can not div at ONE_ERC20
-  return balance.div(ONE_ERC20).toNumber();
+  const _balance = await contract.methods.balanceOf(userAddress).call(); // returns other version of bignumber
+  return new BN(_balance.toString()).div(ONE_ERC20);
 }

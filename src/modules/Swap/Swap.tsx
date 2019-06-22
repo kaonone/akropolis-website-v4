@@ -11,7 +11,7 @@ const SwapModule: IModule = {
       <Route
         exact
         key="swap"
-        path={routes.swap.getRoutePath()}
+        path={routes['token-swap'].getRoutePath()}
         component={Swap}
       />
     );

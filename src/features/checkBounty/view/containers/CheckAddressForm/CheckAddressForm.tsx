@@ -1,19 +1,20 @@
 import * as React from 'react';
 import { Form } from 'react-final-form';
 import { useDeps } from 'core';
+import { MarkAs } from '_helpers';
 
-import { tKeys as tKeysAll, useTranslate, ITranslateKey } from 'services/i18n';
+import { ITranslateKey } from 'services/i18n';
 import { TextInputField, RecaptchaField } from 'shared/view/form';
 
 import { Button, Grid, CircleProgressBar } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
 import { IUser, UserError } from 'shared/types/models';
-import { MarkAs } from '_helpers';
+import { parseUserError } from 'shared/helpers/errors';
 
+import { translations } from '../../../constants';
 import { ICheckAddressFormData } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './CheckAddressForm.style';
-import { parseUserError } from 'shared/helpers/errors';
 
 const fieldNames: { [key in keyof ICheckAddressFormData]: key } = {
   recaptcha: 'recaptcha',
@@ -32,8 +33,6 @@ function validateForm(values: ICheckAddressFormData): Partial<MarkAs<ITranslateK
   };
 }
 
-const tKeys = tKeysAll.features.checkBounty;
-
 interface IOwnProps {
   onSuccess(user: IUser): void;
   onError(error: UserError): void;
@@ -43,7 +42,6 @@ type IProps = IOwnProps & StylesProps;
 
 function CheckAddressForm(props: IProps) {
   const { onSuccess, classes, onError } = props;
-  const { t } = useTranslate();
   const deps = useDeps();
 
   const onSubmit = React.useCallback(async (values: ICheckAddressFormData) => {
@@ -68,7 +66,7 @@ function CheckAddressForm(props: IProps) {
             <TextInputField
               className={classes.field}
               name={fieldNames.address}
-              label={t(tKeys.form.address.getKey())}
+              label={translations.form.address}
               fullWidth
             />
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>

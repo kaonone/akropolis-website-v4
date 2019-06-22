@@ -4,7 +4,7 @@ import { useDeps } from 'core';
 
 import { MarkAs } from '_helpers';
 import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
-import { tKeys as tKeysAll, useTranslate, ITranslateKey } from 'services/i18n';
+import { ITranslateKey } from 'services/i18n';
 import { TextInputField, CheckboxInputField, RecaptchaField } from 'shared/view/form';
 import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';
 import { isRequired, isEthereumAddress } from 'shared/validators';
@@ -12,6 +12,7 @@ import { IUser, UserError } from 'shared/types/models';
 import { parseUserError } from 'shared/helpers/errors';
 import { WHITE_SPACE } from 'core/constants';
 
+import { translations } from '../../../constants';
 import { IRegistrationFormData } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './RegistrationAddressForm.style';
@@ -37,8 +38,6 @@ function validateForm(values: IRegistrationFormData): Partial<MarkAs<ITranslateK
   };
 }
 
-const tKeys = tKeysAll.features.checkBounty;
-
 interface IOwnProps {
   onSuccess(user: IUser): void;
   onError(error: UserError): void;
@@ -48,7 +47,6 @@ type IProps = IOwnProps & StylesProps;
 
 function RegistrationAddressForm(props: IProps) {
   const { onSuccess, onError, classes } = props;
-  const { t } = useTranslate();
   const deps = useDeps();
 
   const onSubmit = React.useMemo(() => {
@@ -75,20 +73,20 @@ function RegistrationAddressForm(props: IProps) {
           <form onSubmit={handleSubmit}>
             <TextInputField
               name={fieldNames.address}
-              label={t(tKeys.form.address.getKey())}
+              label={translations.form.address}
               fullWidth
             />
             <div className={classes.checkBoxField}>
               <CheckboxInputField
                 name={fieldNames.isNotResident}
-                label={t(tKeys.form.notResident.getKey())}
+                label={translations.form.notResident}
                 labelClasses={{ label: classes.terms }}
               />
             </div>
             <div className={classes.checkBoxField}>
               <CheckboxInputField
                 name={fieldNames.isConfirmTerms}
-                label={t(tKeys.form.acceptTerms.getKey())}
+                label={translations.form.acceptTerms}
                 labelClasses={{ label: classes.terms }}
               />
               {WHITE_SPACE}
@@ -105,7 +103,7 @@ function RegistrationAddressForm(props: IProps) {
                 variant="contained"
                 disabled={submitting || invalid || !isConfirmTerms || !isNotResident}
               >
-                {!submitting && t(tKeys.form.submit.getKey())}
+                {!submitting && translations.form.submit}
                 {submitting && <CircleProgressBar size={24} />}
               </Button>
             </Grid>

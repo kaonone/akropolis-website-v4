@@ -16,17 +16,6 @@ export default {
       pointSystem: 'Point System',
     },
   },
-  features: {
-    checkBounty: {
-      form: {
-        address: 'Please insert your ethereum address',
-        notResident: 'I’m not resident of USA',
-        acceptTerms: 'Accept',
-        submit: 'Submit',
-      },
-      termsAndConditions: 'Accept Terms & Conditions',
-    },
-  },
   sections: {
     intro: {
       title: 'Unlocking the potential of informal economy with DeFi',

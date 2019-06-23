@@ -6,7 +6,7 @@ export default [
     date: '06.20.2019',
   },
   {
-    summary: 'Quest � Registrations Are Open!',
+    summary: 'Quest - Registrations Are Open!',
     url: 'https://medium.com/akropolis/akropolis-quest-registrations-are-open-ef41cb235ac',
     date: '06.08.2019',
   },
@@ -36,7 +36,7 @@ export default [
     date: '03.12.2019',
   },
   {
-    summary: 'Akropolis’ Cashflow Relay wins second place in the 0x + CoinList Hackathon',
+    summary: 'Akropolisâ€™ Cashflow Relay wins second place in the 0x + CoinList Hackathon',
     url: 'https://medium.com/coinlist/announcing-the-winners-of-the-0x-coinlist-hackathon-c4bc8ff4f79d',
     date: '02.15.2019',
   },

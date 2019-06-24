@@ -37,7 +37,7 @@ export default async function sendTransaction(transaction: ITransaction) {
   const { to, value } = transaction;
   const web3 = getWeb3(web3Providers.wallet);
   const contract = new web3.eth.Contract(minABI, tokenAddress);
-  const resultAmount = ONE_ERC20.multipliedBy(value).toString();
+  const resultAmount = ONE_ERC20.multipliedBy(value).toFixed();
 
   const accounts = await web3.eth.getAccounts();
 

@@ -1,4 +1,5 @@
 import Web3 from 'web3';
+import BigNumber from 'bignumber.js';
 
 export type Provider = typeof Web3.givenProvider;
 export type ProviderType =
@@ -7,7 +8,7 @@ export type ProviderType =
 export interface ITransaction {
   from?: string;
   to: string;
-  value: string;
+  value: BigNumber;
   gas?: number;
   gasPrice?: string;
 }

@@ -250,3 +250,11 @@ export async function isValidNetwork(web3: Web3) {
 export async function getAccounts(web3: Web3) {
   return web3.eth.getAccounts();
 }
+
+export async function enableWeb3() {
+  if (window.ethereum) {
+    await window.ethereum.enable();
+  } else {
+    console.error('Cannot get ethereum instance from global scope');
+  }
+}

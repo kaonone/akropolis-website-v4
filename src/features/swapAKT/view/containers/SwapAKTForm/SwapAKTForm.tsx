@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { getWeb3, isMetaMask, isValidNetwork, getAccounts } from 'shared/helpers/web3';
+import { getWeb3, isMetaMask, isValidNetwork, getAccounts, enableWeb3 } from 'shared/helpers/web3';
 import { web3Providers } from 'core/contract/web3';
 import { Provider } from 'shared/types/models';
 import { RetryModal } from 'shared/view/components';
@@ -41,6 +41,7 @@ export default function SwapAKTForm() {
         return;
       }
 
+      await enableWeb3();
       const isUseValidNetwork = await isValidNetwork(web3);
       const accounts = await getAccounts(web3);
       if (!isUseValidNetwork || accounts.length === 0) {

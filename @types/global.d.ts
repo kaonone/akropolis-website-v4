@@ -8,6 +8,7 @@ interface Window {
   __data: any; // initial redux state, maybe undefined
   web3: any;
   __CIPHER__: any;
+  ethereum: any;
 }
 
 declare var __DISABLE_SSR__: boolean;

@@ -35,6 +35,10 @@ declare module '_helpers' {
     CheckExtends<T, R> | CheckExtends<R, T> | CheckExtends<keyof T, keyof R> | CheckExtends<keyof R, keyof T>
   ) extends true ? T : unknown;
 
+  export type MarkAs<A, T> = {
+    [key in keyof T]: A;
+  }
+
   export type MarkAsPartial<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>> & {
     [key in K]?: T[key];
   }

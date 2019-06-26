@@ -590,6 +590,11 @@
         "@types/express": "*"
       }
     },
+    "@types/crypto-js": {
+      "version": "3.1.43",
+      "resolved": "https://registry.npmjs.org/@types/crypto-js/-/crypto-js-3.1.43.tgz",
+      "integrity": "sha512-EHe/YKctU3IYNBsDmSOPX/7jLHPRlx8WaiDKSY9JCTnJ8XJeM4c0ZJvx+9Gxmr2s2ihI92R+3U/gNL1sq5oRuQ=="
+    },
     "@types/debug": {
       "version": "0.0.30",
       "resolved": "https://registry.npmjs.org/@types/debug/-/debug-0.0.30.tgz",
@@ -757,6 +762,14 @@
       "version": "16.8.2",
       "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.8.2.tgz",
       "integrity": "sha512-MX7n1wq3G/De15RGAAqnmidzhr2Y9O/ClxPxyqaNg96pGyeXUYPSvujgzEVpLo9oIP4Wn1UETl+rxTN02KEpBw==",
+      "requires": {
+        "@types/react": "*"
+      }
+    },
+    "@types/react-google-recaptcha": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/@types/react-google-recaptcha/-/react-google-recaptcha-1.0.0.tgz",
+      "integrity": "sha512-NhHWdRzRt766Zw+e5qvEAP0dVPHX9RDcv9BCrQ3GWXbN5qUjUe7ZSSpwa1lftVzjt4vD9755uBsSJ668rJpOHQ==",
       "requires": {
         "@types/react": "*"
       }
@@ -4388,6 +4401,11 @@
         "randombytes": "^2.0.0",
         "randomfill": "^1.0.3"
       }
+    },
+    "crypto-js": {
+      "version": "3.1.9-1",
+      "resolved": "https://registry.npmjs.org/crypto-js/-/crypto-js-3.1.9-1.tgz",
+      "integrity": "sha1-/aGedh/Ad+Af+/3G6f38WeiAbNg="
     },
     "crypto-random-string": {
       "version": "1.0.0",
@@ -15015,6 +15033,15 @@
         }
       }
     },
+    "react-async-script": {
+      "version": "1.0.1",
+      "resolved": "https://registry.npmjs.org/react-async-script/-/react-async-script-1.0.1.tgz",
+      "integrity": "sha512-EosAKCTgHc6oWPx7ONv4IjtaIKRi30DjR71iJfoGfb13+naFYGjLutH6dFC5rRaYX8odW57zmC9ekf/WuLiyOQ==",
+      "requires": {
+        "hoist-non-react-statics": "^3.0.1",
+        "prop-types": "^15.5.0"
+      }
+    },
     "react-dom": {
       "version": "16.8.4",
       "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-16.8.4.tgz",
@@ -15071,6 +15098,15 @@
       "integrity": "sha512-EdFWrT8nMWu5sHViuZ/VmlaYT+mLu/q5TMDWZZj5gnssUAWfgcila0QpptFNDg6+qNtepGgFh5ZPASlivoEXUA==",
       "requires": {
         "@babel/runtime": "^7.1.2"
+      }
+    },
+    "react-google-recaptcha": {
+      "version": "1.0.5",
+      "resolved": "https://registry.npmjs.org/react-google-recaptcha/-/react-google-recaptcha-1.0.5.tgz",
+      "integrity": "sha512-IUIIQVUIKgsG7Ok1AiqBdJZVpFRpIWOM3H/36fAJHMd52l+X0pn4sTxvm2YJEN01QXWR1jg79+93J8mQef7hfw==",
+      "requires": {
+        "prop-types": "^15.5.0",
+        "react-async-script": "^1.0.0"
       }
     },
     "react-helmet": {

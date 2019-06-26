@@ -1,25 +1,15 @@
-import { bind } from 'decko';
 
 import HttpActions from './HttpActions';
+import { User } from './entities';
 
 class Api {
-  private actions: HttpActions;
-
-  private headers = {
-    get: {
-      'Accept': 'application/vnd.github.v3+json',
-    },
-  };
+  public user: User;
 
   constructor() {
-    this.actions = new HttpActions('https://api_url.com/', this.headers);
+    const actions = new HttpActions();
+    this.user = new User(actions);
   }
 
-  @bind
-  public async loadData(URL: string) {
-    const response = await this.actions.get<any>(URL);
-    return response.data;
-  }
 }
 
 export default Api;

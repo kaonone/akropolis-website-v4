@@ -42,8 +42,12 @@ const styles = (theme: Theme) => ({
     },
 
     '&:after': {
-      top: '100%',
-      background: 'linear-gradient(to bottom right, #fff 49%, transparent 51%)',
+      top: `calc(100% - ${theme.extra.spacing.layoutContentSkew.xsHeight}px)`,
+      background: `linear-gradient(to bottom right, transparent 49%, ${theme.extra.colors.woodSmoke} 51%)`,
+
+      [theme.breakpoints.up('lg')]: {
+        top: `calc(100% - ${theme.extra.spacing.layoutContentSkew.lgHeight}px)`,
+      },
     },
   }),
 

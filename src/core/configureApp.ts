@@ -10,7 +10,7 @@ import { IAppData, IModule, RootSaga, IAppReduxState, IReduxEntry } from 'shared
 
 function configureApp(data?: IAppData): IAppData {
   /* Prepare main app elements */
-  const modules: IModule[] =  Object.values(allModules);
+  const modules: IModule[] = Object.values(allModules);
 
   if (data) {
     return { ...data, modules };
@@ -72,7 +72,7 @@ function configureApp(data?: IAppData): IAppData {
     }
   }
 
-  return { modules, store, jssDeps };
+  return { modules, store, jssDeps, deps: dependencies };
 }
 
 export default configureApp;

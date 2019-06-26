@@ -3,7 +3,7 @@ import { rule } from 'shared/helpers/style';
 
 const styles = (theme: Theme) => ({
   root: rule({
-    backgroundColor: '#181b1f',
+    backgroundColor: theme.extra.colors.woodSmoke,
     color: '#fff',
   }),
 

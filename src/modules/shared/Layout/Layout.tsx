@@ -10,12 +10,13 @@ interface IOwnProps {
   header?: React.ReactNode;
   intro?: React.ReactNode;
   footer?: React.ReactNode;
+  isAbsoluteHeader?: boolean;
 }
 
 type IProps = IOwnProps & StylesProps;
 
 function Layout(props: IProps) {
-  const { classes } = props;
+  const { classes, isAbsoluteHeader } = props;
   const children = React.Children.toArray(props.children);
   const headerContent = getContent(Header, children);
   const introContent = getContent(Intro, children);
@@ -25,7 +26,9 @@ function Layout(props: IProps) {
   return (
     <div className={classes.root}>
       {headerContent && (
-        <div className={cn(classes.header, { [classes.isAbsolute]: !!introContent })}>{headerContent}</div>
+        <div className={cn(classes.header, { [classes.isAbsolute]: !!introContent || isAbsoluteHeader })}>
+          {headerContent}
+        </div>
       )}
       {introContent && <div className={classes.intro}>{introContent}</div>}
       {!!allowedChildren.length && <div className={classes.content}>{allowedChildren}</div>}

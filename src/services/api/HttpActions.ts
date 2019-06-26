@@ -1,38 +1,53 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosPromise } from 'axios';
+import Axios, { AxiosPromise, AxiosRequestConfig, AxiosInstance } from 'axios';
+import getEnvParams from 'core/getEnvParams';
+
+type AsyncRequest<T> = AxiosPromise<T>;
+type DomainType = 'baseApi' | 'passport' | 'data' | 'subscription';
+
+interface IHttpActionParams {
+  url: string;
+  options?: AxiosRequestConfig;
+  data?: any;
+  domainType?: DomainType;
+}
 
 class HttpActions {
   private request: AxiosInstance;
+  private baseURL = getEnvParams().apiUrl;
 
-  constructor(baseURL: string, headers?: AxiosRequestConfig['headers']) {
+  constructor() {
     const config: AxiosRequestConfig = {
-      baseURL,
-      headers,
+      baseURL: this.baseURL,
       withCredentials: false,
+      validateStatus: status => status <= 503,
     };
 
-    this.request = axios.create(config);
+    this.request = Axios.create(config);
   }
 
-  public get<T>(url: string, params?: object, options?: AxiosRequestConfig): AxiosPromise<T> {
-    const config: AxiosRequestConfig = { params, ...options };
-    return this.request.get(url, config);
+  public get<T>(params: IHttpActionParams): AsyncRequest<T> {
+    const { url, options, data } = params;
+    return this.request.get(url, { ...options, params: data });
   }
 
-  public post<T>(url: string, data?: any, options?: AxiosRequestConfig): AxiosPromise<T> {
+  public post<T>(params: IHttpActionParams): AsyncRequest<T> {
+    const { url, data, options } = params;
     return this.request.post(url, data, options);
   }
 
-  public patch<T>(url: string, data: any, options: AxiosRequestConfig): AxiosPromise<T> {
+  public patch<T>(params: IHttpActionParams): AsyncRequest<T> {
+    const { url, data, options } = params;
     return this.request.patch(url, data, options);
   }
 
-  public del<T>(url: string, data: any, params: object, options: AxiosRequestConfig): AxiosPromise<T> {
-    const config: AxiosRequestConfig = { url, data, params, ...options };
-    return this.request.delete(url, config);
+  public del<T>(params: IHttpActionParams): AsyncRequest<T> {
+    const { url, data, options } = params;
+    return this.request.delete(url, { ...options, data });
   }
 
-  public put<T>(url: string, data: any, params: object, options: AxiosRequestConfig): AxiosPromise<T> {
-    return this.request.put(url, data, { params, ...options });
+  public put<T>(params: IHttpActionParams): AsyncRequest<T> {
+    const { url, data, options } = params;
+    return this.request.put(url, data, options);
   }
 }
 

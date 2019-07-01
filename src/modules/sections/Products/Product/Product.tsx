@@ -19,7 +19,7 @@ const iPhonePlusWidth = 414;
 
 const linkByType: Record<ProductType, string> = {
   hackathon0x: 'https://www.cashflowrelay.com/',
-  chamaNetwork: '',
+  chamaNetwork: 'https://testnet.akropolis.io/',
 };
 
 function Product(props: IProps & StylesProps) {

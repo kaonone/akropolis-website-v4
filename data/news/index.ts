@@ -36,7 +36,7 @@ export default [
     date: '03.12.2019',
   },
   {
-    summary: 'Akropolisâ€™ Cashflow Relay wins second place in the 0x + CoinList Hackathon',
+    summary: 'Akropolis Cashflow Relay wins second place in the 0x + CoinList Hackathon',
     url: 'https://medium.com/coinlist/announcing-the-winners-of-the-0x-coinlist-hackathon-c4bc8ff4f79d',
     date: '02.15.2019',
   },

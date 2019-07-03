@@ -857,7 +857,8 @@ export default [
         '컴퓨터 공학 학사',
       ],
     },
-    {
+  },
+  {
     links: [
       'https://www.linkedin.com/in/maría-paula-fernández-a96a8034/',
     ],
@@ -906,7 +907,8 @@ export default [
 		'External Relations Officer, Web3 Foundation'
       ],
     },
-    {
+  },
+  {
     links: [
       'https://www.linkedin.com/in/yana-marakhonova/',
     ],

@@ -54,4 +54,10 @@ export default [
     icon1x: require('./imgs/aurum@1x.png'),
     icon2x: require('./imgs/aurum@2x.png'),
   },
+  {
+    url: 'https://mixbytes.io/',
+    partnerName: 'mixBytes',
+    icon1x: require('./imgs/mixbytes@1x.png'),
+    icon2x: require('./imgs/mixbytes@2x.png'),
+  },
 ];

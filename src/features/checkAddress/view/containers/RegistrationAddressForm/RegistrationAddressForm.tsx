@@ -3,7 +3,7 @@ import { Form } from 'react-final-form';
 import { useDeps } from 'core';
 
 import { MarkAs } from '_helpers';
-import { T_AND_C_URL } from 'assets';
+import { BOUNTY_T_AND_C_URL, TOKEN_SWAP_T_AND_C_URL } from 'assets';
 import { ITranslateKey } from 'services/i18n';
 import { TextInputField, CheckboxInputField, RecaptchaField } from 'shared/view/form';
 import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';
@@ -16,6 +16,11 @@ import { translations } from '../../../constants';
 import { IRegistrationFormData, CheckType, IRegisterUserApi } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './RegistrationAddressForm.style';
+
+const tcUrlByType: Record<CheckType, string> = {
+  bounty: BOUNTY_T_AND_C_URL,
+  tokenSwap: TOKEN_SWAP_T_AND_C_URL,
+};
 
 const fieldNames: { [key in keyof IRegistrationFormData]: key } = {
   address: 'address',
@@ -96,7 +101,7 @@ function RegistrationAddressForm(props: IProps) {
                 labelClasses={{ label: classes.terms }}
               />
               {WHITE_SPACE}
-              <Link className={classes.terms} href={T_AND_C_URL}>{'Terms & Conditions'}</Link>
+              <Link className={classes.terms} href={tcUrlByType[type]}>{'Terms & Conditions'}</Link>
             </div>
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>
               <RecaptchaField name={fieldNames.recaptcha} />

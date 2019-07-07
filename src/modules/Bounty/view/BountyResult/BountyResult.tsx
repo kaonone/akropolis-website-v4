@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { T_AND_C_URL } from 'assets';
+import { BOUNTY_T_AND_C_URL } from 'assets';
 import { SUPPORT_EMAIL } from 'core/constants';
 import { Typography, Button, Grid, Link } from 'shared/view/elements';
 import { UserError } from 'shared/types/models';
@@ -33,7 +33,7 @@ function BountyResult(props: IProps) {
     notConfirmed: () => (
       <Typography variant="body1" className={classes.error}>
         <span>It seems like we have your ETH address in our database, but you didn’t confirm your residency and</span>{' '}
-        <Link href={T_AND_C_URL}>
+        <Link href={BOUNTY_T_AND_C_URL}>
           {'Terms & Conditions'}
         </Link>
         <span>, please do so </span>

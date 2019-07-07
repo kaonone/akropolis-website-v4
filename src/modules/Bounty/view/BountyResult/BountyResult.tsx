@@ -13,7 +13,7 @@ import { StylesProps, provideStyles } from './BountyResult.style';
 // tslint:disable: max-line-length
 interface IOwnProps {
   address: string;
-  tokens: number;
+  tokens: string;
   error: UserError | null;
   onRetry(): void;
 }
@@ -38,7 +38,7 @@ function BountyResult(props: IProps) {
         </Link>
         <span>, please do so </span>
         {<RouterLink to={routes.bounty.registration.getRedirectPath()}>here</RouterLink>}{' '}
-        <span>to see amount of AKT tokens you will receive.</span>
+        <span>to see amount of AKRO tokens you will receive.</span>
       </Typography>),
     notExist: () => (
       <Typography variant="body1" className={classes.error}>
@@ -62,7 +62,7 @@ function BountyResult(props: IProps) {
             {`Your ETH address  ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
-            {`You will receive ${tokens} AKT`}
+            {`You will receive ${tokens} AKRO (this is rounded amount of tokens)`}
           </Typography>
           <Grid container wrap="nowrap" justify="center">
             <Button

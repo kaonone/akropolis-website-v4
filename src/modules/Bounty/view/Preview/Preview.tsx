@@ -9,7 +9,7 @@ import routes from 'modules/routes';
 const translation = {
   bounty: 'Bounty',
   // tslint:disable-next-line: max-line-length
-  description: `This page is for our bounty and ambassador campaign participants - if you're one of them, please follow the procedure belove to claim your tokens.`,
+  description: `This page is for our bounty and ambassador campaign participants - if you're one of them, please follow the procedure below to claim your tokens.`,
   register: 'Register',
   checkAccount: 'Check Bounty Account',
 };

@@ -13,9 +13,9 @@ import { StylesProps, provideStyles } from './RegisterUser.style';
 const translations = {
   important: 'IMPORTANT!',
   // tslint:disable-next-line: max-line-length
-  description: 'Make sure that your ETH address is the one you’re holding private keys to. Using wrong address or exchange address could result in not receiving and losing your AKT tokens. To see AKT in your wallet you need to add custom token.',
-  tokenContract: 'Token Contract:',
-  tokenSymbol: 'Symbol: AKT',
+  description: 'Make sure that your ETH address is the one you’re holding private keys to. Using wrong address or exchange address could result in not receiving and losing your AKRO tokens. To see AKRO in your wallet you need to add custom token.',
+  tokenContract: 'Token Contract: 0x8ab7404063ec4dbcfd4598215992dc3f8ec853d7',
+  tokenSymbol: 'Symbol: AKRO',
   tokenDecimal: 'Decimals: 18',
 };
 

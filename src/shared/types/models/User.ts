@@ -1,6 +1,6 @@
 export interface IUser {
   address: string;
-  tokens: number;
+  tokens: string;
 }
 
 export type UserError = 'notConfirmed' | 'notExist' | 'unknown';

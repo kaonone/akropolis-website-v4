@@ -4,7 +4,7 @@ import { UserError, IUser } from 'shared/types/models';
 
 export function useMakeFieldsForCheckUser() {
 
-  const [tokens, setTokens] = React.useState(0);
+  const [tokens, setTokens] = React.useState('');
   const [address, setAddress] = React.useState('');
   const [error, setError] = React.useState<null | UserError>(null);
 
@@ -14,7 +14,7 @@ export function useMakeFieldsForCheckUser() {
   }, []);
 
   const onRetry = React.useCallback(() => {
-    setTokens(0);
+    setTokens('');
     setAddress('');
     setError(null);
   }, []);

@@ -11,24 +11,24 @@ const TokenSwapModule: IModule = {
     return (
       <Route
         key="token-swap"
-        path={routes['token-swap'].getRoutePath()}
+        path={routes.tokenswap.getRoutePath()}
       >
         {() => (
           <Layout>
             <Switch>
               <Route
                 exact
-                path={routes['token-swap'].getRoutePath()}
+                path={routes.tokenswap.getRoutePath()}
                 component={Preview}
               />,
               <Route
                 exact
-                path={routes['token-swap'].registration.getRoutePath()}
+                path={routes.tokenswap.registration.getRoutePath()}
                 component={RegisterUser}
               />,
               <Route
                 exact
-                path={routes['token-swap'].check.getRoutePath()}
+                path={routes.tokenswap.check.getRoutePath()}
                 component={CheckUserAddress}
               />,
             </Switch>

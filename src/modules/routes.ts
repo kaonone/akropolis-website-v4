@@ -4,7 +4,7 @@ const rawTree = {
   company: null,
   events: null,
   quest: null,
-  'token-swap': {
+  tokenswap: {
     registration: null,
     check: null,
   },

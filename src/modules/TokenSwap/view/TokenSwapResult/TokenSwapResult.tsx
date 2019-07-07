@@ -24,7 +24,7 @@ function TokenSwapResult(props: IProps) {
   const { classes, history, address, tokens, error, onRetry } = props;
 
   const onEndCheck = React.useCallback(() => {
-    history.push(routes['token-swap'].getRedirectPath());
+    history.push(routes.tokenswap.getRedirectPath());
   }, []);
 
   const isUnknownError = error === 'unknown';
@@ -37,7 +37,7 @@ function TokenSwapResult(props: IProps) {
           {'Terms & Conditions'}
         </Link>
         <span>, please do so </span>
-        {<RouterLink to={routes['token-swap'].registration.getRedirectPath()}>here</RouterLink>}{' '}
+        {<RouterLink to={routes.tokenswap.registration.getRedirectPath()}>here</RouterLink>}{' '}
         <span>to see amount of AKRO tokens you will receive.</span>
       </Typography>),
     notExist: () => (

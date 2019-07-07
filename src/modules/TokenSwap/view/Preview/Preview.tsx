@@ -20,11 +20,11 @@ export default provideStyles(function Preview(props: IProps) {
   const { classes, history } = props;
 
   const onRegister = React.useCallback(() => {
-    history.push(routes['token-swap'].registration.getRedirectPath());
+    history.push(routes.tokenswap.registration.getRedirectPath());
   }, []);
 
   const onCheckAddress = React.useCallback(() => {
-    history.push(routes['token-swap'].check.getRedirectPath());
+    history.push(routes.tokenswap.check.getRedirectPath());
   }, []);
 
   return (

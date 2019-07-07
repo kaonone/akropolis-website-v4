@@ -1,13 +1,18 @@
 
 import HttpActions from './HttpActions';
-import { User } from './entities';
+import { CheckUser } from './entities';
+import getEnvParams from 'core/getEnvParams';
 
 class Api {
-  public user: User;
+  public bounty: CheckUser;
+  public tokenSwap: CheckUser;
 
   constructor() {
-    const actions = new HttpActions();
-    this.user = new User(actions);
+    const bountyActions = new HttpActions(getEnvParams().bountyApiUrl);
+    const tokenSwapActions = new HttpActions(getEnvParams().tokenSwapApiUrl);
+
+    this.bounty = new CheckUser(bountyActions);
+    this.tokenSwap = new CheckUser(tokenSwapActions);
   }
 
 }

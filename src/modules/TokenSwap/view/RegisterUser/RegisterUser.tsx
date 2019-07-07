@@ -6,7 +6,7 @@ import { RegistrationAddressForm } from 'features/checkAddress';
 import { useMakeFieldsForCheckUser } from 'shared/helpers/react/useMakeFieldsForCheckUser';
 import { Typography, Grid } from 'shared/view/elements';
 
-import BountyResult from '../BountyResult/BountyResult';
+import TokenSwapResult from '../TokenSwapResult/TokenSwapResult';
 
 import { StylesProps, provideStyles } from './RegisterUser.style';
 
@@ -39,11 +39,11 @@ function RegisterUser(props: IProps) {
             <Typography variant="body1" className={classes.text}>{translations.tokenDecimal}</Typography>
           </Grid>
           <div className={classes.form}>
-            <RegistrationAddressForm type="bounty" onSuccess={onSuccessChecking} onError={onError} />
+            <RegistrationAddressForm type="tokenSwap" onSuccess={onSuccessChecking} onError={onError} />
           </div>
         </Grid>}
       {(address || error) &&
-        <BountyResult
+        <TokenSwapResult
           tokens={tokens}
           address={address}
           error={error}

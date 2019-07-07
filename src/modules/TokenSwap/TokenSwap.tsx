@@ -6,29 +6,29 @@ import { Layout, Preview, RegisterUser, CheckUserAddress } from './view';
 import routes from 'modules/routes';
 
 // tslint:disable: jsx-wrap-multiline
-const BountyModule: IModule = {
+const TokenSwapModule: IModule = {
   getRoutes() {
     return (
       <Route
-        key="bounty"
-        path={routes.bounty.getRoutePath()}
+        key="token-swap"
+        path={routes['token-swap'].getRoutePath()}
       >
         {() => (
           <Layout>
             <Switch>
               <Route
                 exact
-                path={routes.bounty.getRoutePath()}
+                path={routes['token-swap'].getRoutePath()}
                 component={Preview}
               />,
               <Route
                 exact
-                path={routes.bounty.registration.getRoutePath()}
+                path={routes['token-swap'].registration.getRoutePath()}
                 component={RegisterUser}
               />,
               <Route
                 exact
-                path={routes.bounty.check.getRoutePath()}
+                path={routes['token-swap'].check.getRoutePath()}
                 component={CheckUserAddress}
               />,
             </Switch>
@@ -39,4 +39,4 @@ const BountyModule: IModule = {
   },
 };
 
-export default BountyModule;
+export default TokenSwapModule;

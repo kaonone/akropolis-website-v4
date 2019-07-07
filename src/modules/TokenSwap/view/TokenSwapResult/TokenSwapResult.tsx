@@ -8,7 +8,7 @@ import { Typography, Button, Grid, Link } from 'shared/view/elements';
 import { UserError } from 'shared/types/models';
 import routes from 'modules/routes';
 
-import { StylesProps, provideStyles } from './BountyResult.style';
+import { StylesProps, provideStyles } from './TokenSwapResult.style';
 
 // tslint:disable: max-line-length
 interface IOwnProps {
@@ -20,11 +20,11 @@ interface IOwnProps {
 
 type IProps = IOwnProps & RouteComponentProps & StylesProps;
 
-function BountyResult(props: IProps) {
+function TokenSwapResult(props: IProps) {
   const { classes, history, address, tokens, error, onRetry } = props;
 
   const onEndCheck = React.useCallback(() => {
-    history.push(routes.bounty.getRedirectPath());
+    history.push(routes['token-swap'].getRedirectPath());
   }, []);
 
   const isUnknownError = error === 'unknown';
@@ -37,7 +37,7 @@ function BountyResult(props: IProps) {
           {'Terms & Conditions'}
         </Link>
         <span>, please do so </span>
-        {<RouterLink to={routes.bounty.registration.getRedirectPath()}>here</RouterLink>}{' '}
+        {<RouterLink to={routes['token-swap'].registration.getRedirectPath()}>here</RouterLink>}{' '}
         <span>to see amount of AKRO tokens you will receive.</span>
       </Typography>),
     notExist: () => (
@@ -62,7 +62,7 @@ function BountyResult(props: IProps) {
             {`Your ETH address ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
-            {`You will receive ${tokens} AKRO (this is rounded amount of tokens)`}
+            {`You will receive ${tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter.`}
           </Typography>
           <Grid container wrap="nowrap" justify="center">
             <Button
@@ -93,4 +93,4 @@ function BountyResult(props: IProps) {
   );
 }
 
-export default withRouter(provideStyles(BountyResult));
+export default withRouter(provideStyles(TokenSwapResult));

@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import termsAndCondsLink from 'assets/Akropolis_Terms_and_Conditions_Quest_3.pdf';
-import privacyLink from 'assets/Akropolis_Privacy_Policy.pdf';
+import { PRIVACY_POLICY_URL, QUEST_T_AND_C_URL } from 'assets';
 import { NavMenuItem } from 'shared/view/components';
 import { useTranslate } from 'services/i18n';
 
@@ -14,10 +13,10 @@ function QuestFooter(props: StylesProps) {
   const links = [
     {
       title: t(tKeys.modules.navigation.termsConditions.getKey()),
-      path: termsAndCondsLink,
+      path: QUEST_T_AND_C_URL,
     }, {
       title: t(tKeys.modules.navigation.privacyPolicy.getKey()),
-      path: privacyLink,
+      path: PRIVACY_POLICY_URL,
     }, {
       title: t(tKeys.modules.navigation.pointSystem.getKey()),
       path: 'https://wiki.akropolis.io/pointsys',

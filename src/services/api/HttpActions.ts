@@ -1,5 +1,4 @@
 import Axios, { AxiosPromise, AxiosRequestConfig, AxiosInstance } from 'axios';
-import getEnvParams from 'core/getEnvParams';
 
 type AsyncRequest<T> = AxiosPromise<T>;
 type DomainType = 'baseApi' | 'passport' | 'data' | 'subscription';
@@ -13,9 +12,10 @@ interface IHttpActionParams {
 
 class HttpActions {
   private request: AxiosInstance;
-  private baseURL = getEnvParams().apiUrl;
+  private baseURL: string;
 
-  constructor() {
+  constructor(baseUrl: string) {
+    this.baseURL = baseUrl;
     const config: AxiosRequestConfig = {
       baseURL: this.baseURL,
       withCredentials: false,

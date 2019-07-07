@@ -3,7 +3,7 @@ import { Form } from 'react-final-form';
 import { useDeps } from 'core';
 
 import { MarkAs } from '_helpers';
-import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
+import { T_AND_C_URL } from 'assets';
 import { ITranslateKey } from 'services/i18n';
 import { TextInputField, CheckboxInputField, RecaptchaField } from 'shared/view/form';
 import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';
@@ -13,7 +13,7 @@ import { parseUserError } from 'shared/helpers/errors';
 import { WHITE_SPACE } from 'core/constants';
 
 import { translations } from '../../../constants';
-import { IRegistrationFormData } from '../../../namespace';
+import { IRegistrationFormData, CheckType, IRegisterUserApi } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './RegistrationAddressForm.style';
 
@@ -39,6 +39,7 @@ function validateForm(values: IRegistrationFormData): Partial<MarkAs<ITranslateK
 }
 
 interface IOwnProps {
+  type: CheckType;
   onSuccess(user: IUser): void;
   onError(error: UserError): void;
 }
@@ -46,19 +47,24 @@ interface IOwnProps {
 type IProps = IOwnProps & StylesProps;
 
 function RegistrationAddressForm(props: IProps) {
-  const { onSuccess, onError, classes } = props;
+  const { onSuccess, onError, classes, type } = props;
   const deps = useDeps();
+
+  const apiByType: Record<CheckType, IRegisterUserApi> = {
+    bounty: deps.api.bounty,
+    tokenSwap: deps.api.tokenSwap,
+  };
 
   const onSubmit = React.useMemo(() => {
     return async (values: IRegistrationFormData) => {
       try {
-        const user = await deps.api.user.registerUser(values.address, String(values.recaptcha));
+        const user = await apiByType[type].registerUser(values.address, String(values.recaptcha));
         onSuccess(user);
       } catch (e) {
         onError(parseUserError(e));
       }
     };
-  }, [onSuccess, onError]);
+  }, [onSuccess, onError, type]);
 
   return (
     <Form
@@ -90,7 +96,7 @@ function RegistrationAddressForm(props: IProps) {
                 labelClasses={{ label: classes.terms }}
               />
               {WHITE_SPACE}
-              <Link className={classes.terms} href={termsURL}>{'Terms&Conditions'}</Link>
+              <Link className={classes.terms} href={T_AND_C_URL}>{'Terms & Conditions'}</Link>
             </div>
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>
               <RecaptchaField name={fieldNames.recaptcha} />

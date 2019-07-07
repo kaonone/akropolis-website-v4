@@ -1,0 +1,23 @@
+import { IUser } from 'shared/types/models';
+
+export type CheckType = 'bounty' | 'tokenSwap';
+
+export interface IRegistrationFormData {
+  address: string;
+  isNotResident: boolean;
+  isConfirmTerms: boolean;
+  recaptcha: string | null;
+}
+
+export interface ICheckAddressFormData {
+  address: string;
+  recaptcha: string | null;
+}
+
+export interface ICheckAddressApi {
+  checkAddress(address: string, recaptcha: string): Promise<IUser>;
+}
+
+export interface IRegisterUserApi {
+  registerUser(address: string, captcha: string): Promise<IUser>;
+}

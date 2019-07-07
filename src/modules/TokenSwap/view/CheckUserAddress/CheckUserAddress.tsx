@@ -4,7 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import { useMakeFieldsForCheckUser } from 'shared/helpers/react/useMakeFieldsForCheckUser';
 import { CheckAddressForm } from 'features/checkAddress';
 
-import BountyResult from '../BountyResult/BountyResult';
+import TokenSwapResult from '../TokenSwapResult/TokenSwapResult';
 
 import { StylesProps, provideStyles } from './CheckUserAddress.style';
 
@@ -18,10 +18,10 @@ function CheckUserAddress(props: IProps) {
     <div className={classes.root}>
       {!error && !address &&
         <div className={classes.form}>
-          <CheckAddressForm type="bounty" onSuccess={onSuccessChecking} onError={onError} />
+          <CheckAddressForm type="tokenSwap" onSuccess={onSuccessChecking} onError={onError} />
         </div>}
       {(address || error) &&
-        <BountyResult
+        <TokenSwapResult
           tokens={tokens}
           address={address}
           error={error}

@@ -3,7 +3,7 @@ import { Form } from 'react-final-form';
 import { useDeps } from 'core';
 
 import { MarkAs } from '_helpers';
-import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
+import termsURL from 'assets/Akropolis_Terms_and_Conditions_Bounty.pdf';
 import { ITranslateKey } from 'services/i18n';
 import { TextInputField, CheckboxInputField, RecaptchaField } from 'shared/view/form';
 import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';

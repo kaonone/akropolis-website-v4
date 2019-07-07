@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { Link as RouterLink } from 'react-router-dom';
 
-import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
+import termsURL from 'assets/Akropolis_Terms_and_Conditions_Bounty.pdf';
 import { SUPPORT_EMAIL } from 'core/constants';
 import { Typography, Button, Grid, Link } from 'shared/view/elements';
 import { UserError } from 'shared/types/models';

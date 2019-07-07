@@ -62,7 +62,7 @@ function BountyResult(props: IProps) {
             {`Your ETH address  ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
-            {`You will receive ${tokens} AKRO (this is rounded amount of tokens)`}
+            {`You will receive ${tokens} AKRO (this is rounded amount of tokens). Subject to 2 month lock-up after Huobi Prime Launch.`}
           </Typography>
           <Grid container wrap="nowrap" justify="center">
             <Button

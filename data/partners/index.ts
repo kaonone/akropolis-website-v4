@@ -13,18 +13,6 @@ export default [
     icon2x: require('./imgs/Polkadot@2x.png'),
   },
   {
-    url: 'https://sendwyre.com',
-    partnerName: 'Send Wyre',
-    icon1x: require('./imgs/Wyre@1x.png'),
-    icon2x: require('./imgs/Wyre@2x.png'),
-  },
-  {
-    url: 'https://poa.network',
-    partnerName: 'POA Network',
-    icon1x: require('./imgs/POA@1x.png'),
-    icon2x: require('./imgs/POA@2x.png'),
-  },
-  {
     url: 'https://web3.foundation',
     partnerName: 'Web3 Foundation',
     icon1x: require('./imgs/web3@1x.png'),
@@ -35,6 +23,18 @@ export default [
     partnerName: 'ChainX',
     icon1x: require('./imgs/chainx@1x.png'),
     icon2x: require('./imgs/chainx@2x.png'),
+  },
+  {
+    url: 'https://sendwyre.com',
+    partnerName: 'Send Wyre',
+    icon1x: require('./imgs/Wyre@1x.png'),
+    icon2x: require('./imgs/Wyre@2x.png'),
+  },
+  {
+    url: 'https://poa.network',
+    partnerName: 'POA Network',
+    icon1x: require('./imgs/POA@1x.png'),
+    icon2x: require('./imgs/POA@2x.png'),
   },
   {
     url: 'https://cindicator.com',

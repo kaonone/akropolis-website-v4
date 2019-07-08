@@ -33,7 +33,7 @@ export default class User extends BaseApi {
 
     const response = await this.actions.get<IServerUser>({
       url: `/get`,
-      data: { address, recaptcha },
+      data: { address: address.toLowerCase(), recaptcha },
     });
 
     return this.handleResponse(response, convertUserResponse, convertUserErrorResponse);

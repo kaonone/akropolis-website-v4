@@ -1,7 +1,7 @@
 // tslint:disable
 export default [
   {
-    summary: 'Building Akropolis on Polkadot?—?Pt. I',
+    summary: 'Building Akropolis on Polkadot? - Pt. I',
     url: 'https://medium.com/akropolis/building-akropolis-on-polkadot-pt-i-4147bf21b060',
     date: '07.04.2019',
   },

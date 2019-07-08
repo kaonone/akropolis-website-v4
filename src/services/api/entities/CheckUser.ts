@@ -22,7 +22,7 @@ export default class Bounty extends BaseApi {
   public async checkAddress(address: string, recaptcha: string): Promise<IUser> {
     const response = await this.actions.get<IServerUser>({
       url: `/get`,
-      data: { address, recaptcha },
+      data: { address: address.toLowerCase(), recaptcha },
     });
 
     return this.handleResponse(response, convertUserResponse, convertUserErrorResponse);

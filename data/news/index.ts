@@ -1,6 +1,21 @@
 // tslint:disable
 export default [
   {
+    summary: 'Building Akropolis on Polkadot? - Pt. I',
+    url: 'https://medium.com/akropolis/building-akropolis-on-polkadot-pt-i-4147bf21b060',
+    date: '07.04.2019',
+  },
+  {
+    summary: 'Akropolis To Launch On Huobi Prime',
+    url: 'https://medium.com/akropolis/akropolis-to-launch-on-huobi-prime-b64b50283757',
+    date: '07.02.2019',
+  },
+  {
+    summary: 'Akropolis launches the first Testnet AFO Governance Module',
+    url: 'https://medium.com/akropolis/akropolis-launches-the-first-testnet-afo-governance-module-9fbde56ce33f',
+    date: '07.01.2019',
+  },
+  {
     summary: 'Akropolis and ChainX announced partnership',
     url: 'https://medium.com/akropolis/akropolis-and-chainx-partnership-21b21e97ca1d',
     date: '06.20.2019',

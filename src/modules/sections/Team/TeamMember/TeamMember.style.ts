@@ -11,32 +11,31 @@ const styles = (theme: Theme) => ({
 
   title: rule({
     margin: `${theme.spacing.unit * 2.5}px 0 ${theme.spacing.unit * 1.5}px`,
-    display: 'flex',
-    alignItems: 'center',
+    display: 'block',
+    textAlign: 'center',
     fontFamily: theme.extra.typography.primaryFont,
     fontWeight: 'bold',
     fontSize: 16,
+    lineHeight: 1.75,
     color: theme.extra.colors.rhino,
 
     [theme.breakpoints.up('lg')]: {
       marginTop: theme.spacing.unit * 2,
       fontSize: 24,
+      lineHeight: 1.5,
     },
   }),
 
   name: rule({
     marginRight: theme.spacing.unit * 0.5,
-    whiteSpace: 'nowrap',
   }),
 
   socialLink: rule({
-    fontSize: 16,
+    fontSize: 'inherit',
     padding: theme.spacing.unit * 0.5,
     color: 'inherit',
-
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 24,
-    },
+    display: 'inline-flex',
+    verticalAlign: 'top',
   }),
 
   position: rule({
@@ -45,7 +44,7 @@ const styles = (theme: Theme) => ({
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     color: theme.extra.colors.cornflowerBlue,
-    whiteSpace: 'nowrap',
+    textAlign: 'center',
 
     [theme.breakpoints.up('lg')]: {
       fontSize: 16,

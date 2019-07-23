@@ -1,6 +1,6 @@
 // tslint:disable
 export default [
-   {
+  {
     summary: 'The AKRO tokenomics 101: Part I — validation rewards',
     url: 'https://medium.com/akropolis/the-akro-tokenomics-101-part-i-validation-rewards-4132a7fa58c9',
     date: '23.07.2019',

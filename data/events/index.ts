@@ -29,8 +29,8 @@ const events: IEvent[] = [
     },
     startDate: '08.21.2019',
     finishDate: '08.23.2019',
-    image1x: require('./imgs/dappcon@660.png'),
-    image2x: require('./imgs/dappcon@1320.png'),
+    image1x: require('./imgs/dappcon@660w.png'),
+    image2x: require('./imgs/dappcon@1320w.png'),
   },
   {
     eventName: 'CryptoChicks Hackathon & Conference',

@@ -1,5 +1,35 @@
 // tslint:disable
 export default [
+   {
+    summary: 'The AKRO tokenomics 101: Part I — validation rewards',
+    url: 'https://medium.com/akropolis/the-akro-tokenomics-101-part-i-validation-rewards-4132a7fa58c9',
+    date: '23.07.2019',
+  },
+  {
+    summary: 'BlockVC announces its support for project Akropolis',
+    url: 'https://medium.com/akropolis/blockvc-announces-its-support-for-project-akropolis-long-term-commitment-towards-large-scale-8d36d11f8c23',
+    date: '16.07.2019',
+  },
+  {
+    summary: 'Akropolis (AKRO) to launch on Huobi Prime: the why, the how and the what',
+    url: 'https://medium.com/akropolis/akropolis-akro-to-launch-on-huobi-prime-the-why-the-how-and-the-what-da53925bd88b',
+    date: '15.07.2019',
+  },
+  {
+    summary: 'Akropolis + Dai: creating safeguards against inflation and economic crises through technology',
+    url: 'https://medium.com/akropolis/akropolis-dai-creating-safeguards-against-inflation-and-economic-crises-through-technology-cb69b92c362c',
+    date: '11.07.2019',
+  },
+  {
+    summary: 'Interoperable DeFi: Akropolis, ChainX and Polkadot broadening the spectrum of the new financial system',
+    url: 'https://medium.com/akropolis/interoperable-defi-akropolis-chainx-and-polkadot-broadening-the-spectrum-of-the-new-financial-32683ff7b3f8',
+    date: '10.07.2019',
+  },
+  {
+    summary: 'Token Metrics, Token Swap Announcement and Instructions',
+    url: 'https://medium.com/akropolis/token-metrics-token-swap-announcement-and-instructions-5d659b64b617',
+    date: '08.07.2019',
+  },
   {
     summary: 'Building Akropolis on Polkadot? - Pt. I',
     url: 'https://medium.com/akropolis/building-akropolis-on-polkadot-pt-i-4147bf21b060',

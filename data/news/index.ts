@@ -21,12 +21,12 @@ export default [
     date: '07.25.2019',
   },
   {
-    summary: 'The AKRO tokenomics 101: Part II — the full scope of the AKRO token model',
+    summary: 'The AKRO tokenomics 101: Part II - the full scope of the AKRO token model',
     url: 'https://medium.com/akropolis/the-akro-tokenomics-101-part-ii-the-full-scope-of-the-akro-token-model-9f3e61871550',
     date: '07.26.2019',
   },
   {
-    summary: 'The AKRO tokenomics 101: Part I — validation rewards',
+    summary: 'The AKRO tokenomics 101: Part I - validation rewards',
     url: 'https://medium.com/akropolis/the-akro-tokenomics-101-part-i-validation-rewards-4132a7fa58c9',
     date: '07.23.2019',
   },

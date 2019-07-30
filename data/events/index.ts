@@ -14,8 +14,8 @@ const events: IEvent[] = [
     },
     startDate: '09.10.2019',
     finishDate: '09.11.2019',
-    image1x: require('./imgs/defilondon@660.png'),
-    image2x: require('./imgs/defilondon@1320.png'),
+    image1x: require('./imgs/defilondon@660w.png'),
+    image2x: require('./imgs/defilondon@1320w.png'),
   },
   {
     eventName: 'ETHBerlinZwei',

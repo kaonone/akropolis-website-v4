@@ -1,7 +1,32 @@
 // tslint:disable
 export default [
   {
-    summary: 'The AKRO tokenomics 101: Part I â€” validation rewards',
+    summary: 'Akropolis Development Update',
+    url: 'https://medium.com/akropolis/akropolis-development-update-3de01dab80bd',
+    date: '07.30.2019',
+  },
+  {
+    summary: 'Themes, trends, highlights: the best of Akropolis Community Quest 3',
+    url: 'https://medium.com/akropolis/themes-trends-highlights-the-best-of-akropolis-community-quest-3-1c3d22e8331',
+    date: '07.29.2019',
+  },
+  {
+    summary: 'Facts and Figures of our Huobi Prime Launch',
+    url: 'https://medium.com/akropolis/facts-and-figures-of-our-huobi-prime-launch-1de98863b861',
+    date: '07.28.2019',
+  },
+  {
+    summary: 'The importance of choosing the right oracles for Decentralized Finance: Chainlink and Akropolis',
+    url: 'https://medium.com/akropolis/the-importance-of-choosing-the-right-oracles-for-decentralized-finance-chainlink-and-akropolis-9387b98d289',
+    date: '07.25.2019',
+  },
+  {
+    summary: 'The AKRO tokenomics 101: Part II — the full scope of the AKRO token model',
+    url: 'https://medium.com/akropolis/the-akro-tokenomics-101-part-ii-the-full-scope-of-the-akro-token-model-9f3e61871550',
+    date: '07.26.2019',
+  },
+  {
+    summary: 'The AKRO tokenomics 101: Part I — validation rewards',
     url: 'https://medium.com/akropolis/the-akro-tokenomics-101-part-i-validation-rewards-4132a7fa58c9',
     date: '07.23.2019',
   },

@@ -2,6 +2,21 @@ import { IEvent } from 'shared/types/models';
 
 // tslint:disable
 const events: IEvent[] = [
+   {
+    eventName: 'DeFi Summit London',
+    link: 'https://defisumm.it',
+    location: 'London', 
+    description: {
+      en: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+      vi: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+      zh: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+      ko: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+    },
+    startDate: '09.10.2019',
+    finishDate: '09.11.2019',
+    image1x: require('./imgs/defilondon@660.png'),
+    image2x: require('./imgs/defilondon@1320.png'),
+  },
   {
     eventName: 'ETHBerlinZwei',
     link: 'https://ethberlinzwei.com',

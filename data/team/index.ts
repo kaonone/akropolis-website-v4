@@ -710,7 +710,7 @@ export default [
       ],
     },
   },
-    {
+  {
     links: [
       'https://github.com/andor0',
     ],
@@ -772,7 +772,7 @@ export default [
       ],
     },
   },
-    {
+  {
     links: [
       'https://github.com/alekspickle',
     ],

@@ -776,7 +776,7 @@ export default [
     links: [
       'https://github.com/alekspickle',
     ],
-    fullName: 'Alex Gnatovskiy',
+    fullName: 'Alex Gnatovskyi',
     position: {
       en: 'Software Development',
       vi: 'Phát triển phần mềm',

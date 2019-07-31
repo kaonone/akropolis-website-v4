@@ -25,6 +25,12 @@ export default [
     icon2x: require('./imgs/chainx@2x.png'),
   },
   {
+    url: 'https://chain.link',
+    partnerName: 'ChainLink',
+    icon1x: require('./imgs/chainlink@1x.png'),
+    icon2x: require('./imgs/chainlink@2x.png'),
+  },
+  {
     url: 'https://sendwyre.com',
     partnerName: 'Send Wyre',
     icon1x: require('./imgs/Wyre@1x.png'),

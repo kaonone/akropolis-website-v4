@@ -725,35 +725,35 @@ export default [
     photo2x: require('./imgs/andrew@2x.png'),
     tags: {
       en: [
-        'Rust'
-        'Erlang'
-        'Elixir'
-        'Python'
-        'Haskell, Polkadot'
+        'Rust',
+        'Erlang',
+        'Elixir',
+        'Python',
+        'Haskell, Polkadot',
 		'Substrate',
       ],
       vi: [
-        'Rust'
-        'Erlang'
-        'Elixir'
-        'Python'
-        'Haskell, Polkadot'
+        'Rust',
+        'Erlang',
+        'Elixir',
+        'Python',
+        'Haskell, Polkadot',
 		'Substrate',
       ],
       zh: [
-        'Rust'
-        'Erlang'
-        'Elixir'
-        'Python'
-        'Haskell, Polkadot'
+        'Rust',
+        'Erlang',
+        'Elixir',
+        'Python',
+        'Haskell, Polkadot',
 		'Substrate',
       ],
       ko: [
-        'Rust'
-        'Erlang'
-        'Elixir'
-        'Python'
-        'Haskell, Polkadot'
+        'Rust',
+        'Erlang',
+        'Elixir',
+        'Python',
+        'Haskell, Polkadot',
 		'Substrate',
       ],
     },
@@ -787,69 +787,69 @@ export default [
     photo2x: require('./imgs/alexg@2x.png'),
     tags: {
       en: [
-        'Rust'
-        'NodeJs'
-        'Postgresql'
-        'MongoDB'
-        'MySQL'
-        'Python'
-        'Flask'
-        'GraphQL'
-        'React'
+        'Rust',
+        'NodeJs',
+        'Postgresql',
+        'MongoDB',
+        'MySQL',
+        'Python',
+        'Flask',
+        'GraphQL',
+        'React',
         'Angular6+',
       ],
       vi: [
-        'Rust'
-        'NodeJs'
-        'Postgresql'
-        'MongoDB'
-        'MySQL'
-        'Python'
-        'Flask'
-        'GraphQL'
-        'React'
+        'Rust',
+        'NodeJs',
+        'Postgresql',
+        'MongoDB',
+        'MySQL',
+        'Python',
+        'Flask',
+        'GraphQL',
+        'React',
         'Angular6+',
       ],
       zh: [
-        'Rust'
-        'NodeJs'
-        'Postgresql'
-        'MongoDB'
-        'MySQL'
-        'Python'
-        'Flask'
-        'GraphQL'
-        'React'
+        'Rust',
+        'NodeJs',
+        'Postgresql',
+        'MongoDB',
+        'MySQL',
+        'Python',
+        'Flask',
+        'GraphQL',
+        'React',
         'Angular6+',
       ],
       ko: [
-        'Rust'
-        'NodeJs'
-        'Postgresql'
-        'MongoDB'
-        'MySQL'
-        'Python'
-        'Flask'
-        'GraphQL'
-        'React'
+        'Rust',
+        'NodeJs',
+        'Postgresql',
+        'MongoDB',
+        'MySQL',
+        'Python',
+        'Flask',
+        'GraphQL',
+        'React',
         'Angular6+',
       ],
     },
     background: {
       en: [
-        'BSc Electrical Engineering and Electrotechnologies'
+        'BSc Electrical Engineering and Electrotechnologies',
 		'Udacity, Java Developer',
       ],
       vi: [
-        'BSc Electrical Engineering and Electrotechnologies'
+        'BSc Electrical Engineering and Electrotechnologies',
 		'Udacity, Java Developer',
       ],
       zh: [
-        'BSc Electrical Engineering and Electrical Technologies'
+        'BSc Electrical Engineering and Electrical Technologies',
 		'Udacity, Java Developer',
       ],
       ko: [
-        'BSc Electrical Engineering and Electrical Technologies'
+        'BSc Electrical Engineering and Electrical Technologies',
 		'Udacity, Java Developer',
       ],
     },

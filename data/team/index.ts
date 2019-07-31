@@ -759,16 +759,16 @@ export default [
     },
     background: {
       en: [
-        'MSc Computer systems, complexes, and networks',
+        'MSc Computer systems, Complexes and Networks',
       ],
       vi: [
-        'MSc Computer systems, complexes, systems and networks',
+        'MSc Computer systems, Complexes and Networks',
       ],
       zh: [
-        'MSc Computer systems, complexes, systems and networks',
+        'MSc Computer systems, complexes and Networks',
       ],
       ko: [
-        'MSc Computer systems, complexes, systems and networks',
+        'MSc Computer systems, complexes and Networks',
       ],
     },
   },

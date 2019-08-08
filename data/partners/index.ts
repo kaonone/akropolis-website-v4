@@ -67,6 +67,12 @@ export default [
     icon2x: require('./imgs/zerion@2x.png'),
   },
   {
+    url: 'https://certik.org',
+    partnerName: 'Certik',
+    icon1x: require('./imgs/certik@1x.png'),
+    icon2x: require('./imgs/certik@2x.png'),
+  },
+  {
     url: 'https://aurum.expert',
     partnerName: 'Aurum Law Firm',
     icon1x: require('./imgs/aurum@1x.png'),

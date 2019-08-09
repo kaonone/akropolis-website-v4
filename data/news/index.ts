@@ -1,6 +1,16 @@
 // tslint:disable
 export default [
   {
+    summary: 'AKRO token security Audit by CertiK',
+    url: 'https://medium.com/akropolis/akro-token-security-audit-by-certik-fd9d908cd98d',
+    date: '08.07.2019',
+  },
+  {
+    summary: 'Important Announcement: SCHEDULED token movement ',
+    url: 'https://medium.com/akropolis/important-announcement-scheduled-token-movement-no-action-required-fcfbb8009157',
+    date: '08.06.2019',
+  },
+  {
     summary: 'Akropolis Development Update',
     url: 'https://medium.com/akropolis/akropolis-development-update-3de01dab80bd',
     date: '07.30.2019',

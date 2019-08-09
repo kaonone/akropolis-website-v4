@@ -28,7 +28,6 @@ const styles = (theme: Theme) => ({
 
   content: rule({
     padding: `${theme.extra.spacing.layoutContentSkew.lgHeight}px 0`,
-
   }),
 
   title: rule({
@@ -56,6 +55,14 @@ const styles = (theme: Theme) => ({
       lineHeight: 1.21,
       letterSpacing: '-0.5px',
     },
+  }),
+
+  children: rule({
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    maxWidth: theme.extra.sizes.maxContentWidth,
+    margin: `auto`,
   }),
 });
 

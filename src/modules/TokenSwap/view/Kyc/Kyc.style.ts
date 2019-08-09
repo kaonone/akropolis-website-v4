@@ -5,6 +5,7 @@ const styles = (_theme: Theme) => ({
   root: rule({
     position: 'relative',
     minHeight: 50,
+    width: '100%',
   }),
 });
 

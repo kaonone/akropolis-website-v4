@@ -22,10 +22,10 @@ export default provideStyles(function Preview(props: IProps) {
         <Header />
       </Layout.Header>
       <Layout.Intro>
-        <Grid container direction="column" alignItems="center" className={classes.root}>
+        <Grid container direction="column" alignItems="stretch" className={classes.root}>
           <div className={classes.content}>
             <p className={classes.title}>{'Token Swap'}</p>
-            {children}
+            <div className={classes.children}>{children}</div>
           </div>
         </Grid>
       </Layout.Intro>

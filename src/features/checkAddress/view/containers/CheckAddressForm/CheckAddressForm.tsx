@@ -28,7 +28,7 @@ const initialValues: ICheckAddressFormData = {
 
 function validateForm(values: ICheckAddressFormData): Partial<MarkAs<ITranslateKey, ICheckAddressFormData>> {
   return {
-    address: isRequired(values.address) || isEthereumAddress(values.address),
+    address: isRequired(values.address.trim()) || isEthereumAddress(values.address.trim()),
     recaptcha: isRequired(values.recaptcha),
   };
 }
@@ -52,7 +52,7 @@ function CheckAddressForm(props: IProps) {
 
   const onSubmit = React.useCallback(async (values: ICheckAddressFormData) => {
     try {
-      const user = await apiByType[type].checkAddress(values.address, String(values.recaptcha));
+      const user = await apiByType[type].checkAddress(values.address.trim(), String(values.recaptcha));
       onSuccess(user);
     } catch (e) {
       onError(parseUserError(e));

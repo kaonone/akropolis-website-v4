@@ -15,16 +15,18 @@ function Kyc({ classes }: IProps) {
     }
   }, []);
 
+  const isServer = window.__PRERENDER_INJECTED__ && window.__PRERENDER_INJECTED__.isServer;
+
   return (
-    <>
-      <div id="idensic" className={classes.root}>
-        <Preloader isShown />
-      </div>
-      <Helmet
-        script={[{ src: 'https://test-api.sumsub.com/idensic/static/sumsub-kyc.js' }]}
-        onChangeClientState={handleScriptInject}
-      />
-    </>
+    <div id="idensic" className={classes.root}>
+      <Preloader isShown />
+      {!isServer && (
+        <Helmet
+          script={[{ src: 'https://test-api.sumsub.com/idensic/static/sumsub-kyc.js' }]}
+          onChangeClientState={handleScriptInject}
+        />
+      )}
+    </div>
   );
 }
 

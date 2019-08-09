@@ -2,6 +2,21 @@ import { IEvent } from 'shared/types/models';
 
 // tslint:disable
 const events: IEvent[] = [
+   {
+    eventName: 'DeFi Summit London',
+    link: 'https://defisumm.it',
+    location: 'London', 
+    description: {
+      en: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+      vi: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+      zh: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+      ko: 'DeFi Summit London is a 2 day community conference connecting DeFi entrepreneurs, liquidity providers, academics, investors, economists, regulators and others who are looking to learn and network in the Decentralized Finance industry. Through presentations, round table discussions and demos attendees will explore the current opportunities and challenges in the space. The summit is focused on 7 core themes: Banking The Unbanked & Financial Inclusion, DeFi Maturity and Adoption, Compliance & Regulation, DeFi Trading, Open Finance & Economic History, Risk and DeFi Composability.',
+    },
+    startDate: '09.10.2019',
+    finishDate: '09.11.2019',
+    image1x: require('./imgs/defilondon@660w.png'),
+    image2x: require('./imgs/defilondon@1320w.png'),
+  },
   {
     eventName: 'ETHBerlinZwei',
     link: 'https://ethberlinzwei.com',
@@ -16,6 +31,21 @@ const events: IEvent[] = [
     finishDate: '08.25.2019',
     image1x: require('./imgs/zwei@660.png'),
     image2x: require('./imgs/zwei@1320.png'),
+  },
+  {
+    eventName: 'DappCon',
+    link: 'https://dappcon.io',
+    location: 'Berlin', 
+    description: {
+      en: 'DappCon is a nonprofit global developer conference focusing on decentralized applications, tooling, and foundational infrastructure on Ethereum. Organized by developers for developers, the conference aims to open critical discussions on the next generation of dapps and provide a learning opportunity for developers who strive to build Ethereum’s core infrastructure and applications. Organized by Gnosis, it will take place in Berlin, the heart of dApps development in Europe. Our CEO and co-Founder Ana Andrianova will be speaking about "Decoupling from the Legacy Financial System: benefits from Finance-oriented DAOs" - join us!',
+      vi: 'DappCon is a nonprofit global developer conference focusing on decentralized applications, tooling, and foundational infrastructure on Ethereum. Organized by developers for developers, the conference aims to open critical discussions on the next generation of dapps and provide a learning opportunity for developers who strive to build Ethereum’s core infrastructure and applications. Organized by Gnosis, it will take place in Berlin, the heart of dApps development in Europe. Our CEO and co-Founder Ana Andrianova will be speaking about "Decoupling from the Legacy Financial System: benefits from Finance-oriented DAOs" - join us!',
+      zh: 'DappCon is a nonprofit global developer conference focusing on decentralized applications, tooling, and foundational infrastructure on Ethereum. Organized by developers for developers, the conference aims to open critical discussions on the next generation of dapps and provide a learning opportunity for developers who strive to build Ethereum’s core infrastructure and applications. Organized by Gnosis, it will take place in Berlin, the heart of dApps development in Europe. Our CEO and co-Founder Ana Andrianova will be speaking about "Decoupling from the Legacy Financial System: benefits from Finance-oriented DAOs" - join us!',
+      ko: 'DappCon is a nonprofit global developer conference focusing on decentralized applications, tooling, and foundational infrastructure on Ethereum. Organized by developers for developers, the conference aims to open critical discussions on the next generation of dapps and provide a learning opportunity for developers who strive to build Ethereum’s core infrastructure and applications. Organized by Gnosis, it will take place in Berlin, the heart of dApps development in Europe. Our CEO and co-Founder Ana Andrianova will be speaking about "Decoupling from the Legacy Financial System: benefits from Finance-oriented DAOs" - join us!',
+    },
+    startDate: '08.21.2019',
+    finishDate: '08.23.2019',
+    image1x: require('./imgs/dappcon@660w.png'),
+    image2x: require('./imgs/dappcon@1320w.png'),
   },
   {
     eventName: 'CryptoChicks Hackathon & Conference',

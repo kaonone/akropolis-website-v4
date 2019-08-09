@@ -13,6 +13,24 @@ export default [
     icon2x: require('./imgs/Polkadot@2x.png'),
   },
   {
+    url: 'https://web3.foundation',
+    partnerName: 'Web3 Foundation',
+    icon1x: require('./imgs/web3@1x.png'),
+    icon2x: require('./imgs/web3@2x.png'),
+  },
+  {
+    url: 'https://chainx.org',
+    partnerName: 'ChainX',
+    icon1x: require('./imgs/chainx@1x.png'),
+    icon2x: require('./imgs/chainx@2x.png'),
+  },
+  {
+    url: 'https://chain.link',
+    partnerName: 'ChainLink',
+    icon1x: require('./imgs/chainlink@1x.png'),
+    icon2x: require('./imgs/chainlink@2x.png'),
+  },
+  {
     url: 'https://sendwyre.com',
     partnerName: 'Send Wyre',
     icon1x: require('./imgs/Wyre@1x.png'),
@@ -47,6 +65,12 @@ export default [
     partnerName: 'Zerion',
     icon1x: require('./imgs/zerion@1x.png'),
     icon2x: require('./imgs/zerion@2x.png'),
+  },
+  {
+    url: 'https://certik.org',
+    partnerName: 'Certik',
+    icon1x: require('./imgs/certik@1x.png'),
+    icon2x: require('./imgs/certik@2x.png'),
   },
   {
     url: 'https://aurum.expert',

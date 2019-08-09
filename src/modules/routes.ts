@@ -7,6 +7,7 @@ const rawTree = {
   tokenswap: {
     registration: null,
     check: null,
+    kyc: null,
   },
   bounty: {
     registration: null,

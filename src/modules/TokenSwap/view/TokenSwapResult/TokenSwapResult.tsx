@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { T_AND_C_URL } from 'assets';
+import { TOKEN_SWAP_T_AND_C_URL } from 'assets';
 import { SUPPORT_EMAIL } from 'core/constants';
 import { Typography, Button, Grid, Link } from 'shared/view/elements';
 import { UserError } from 'shared/types/models';
@@ -33,11 +33,11 @@ function TokenSwapResult(props: IProps) {
     notConfirmed: () => (
       <Typography variant="body1" className={classes.error}>
         <span>It seems like we have your ETH address in our database, but you didn’t confirm your residency and</span>{' '}
-        <Link href={T_AND_C_URL}>
+        <Link href={TOKEN_SWAP_T_AND_C_URL}>
           {'Terms & Conditions'}
         </Link>
         <span>, please do so </span>
-        {<RouterLink to={routes.tokenswap.registration.getRedirectPath()}>here</RouterLink>}{' '}
+        <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>here</RouterLink>{' '}
         <span>to see amount of AKRO tokens you will receive.</span>
       </Typography>),
     notExist: () => (
@@ -62,7 +62,8 @@ function TokenSwapResult(props: IProps) {
             {`Your ETH address ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
-            {`You will receive ${tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter.`}
+            <span>You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter. To receive tokens you need to go through </span>
+            <RouterLink to={routes.tokenswap.kyc.getRedirectPath()}>KYC procedure</RouterLink>.
           </Typography>
           <Grid container wrap="nowrap" justify="center">
             <Button

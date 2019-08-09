@@ -73,7 +73,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
       '/', '/company', '/events', '/quest',
       '/forWiki/partners', '/forWiki/news',
       '/bounty', '/bounty/check', '/bounty/registration',
-      '/tokenswap', '/tokenswap/check', '/tokenswap/registration',
+      '/tokenswap', '/tokenswap/check', '/tokenswap/registration', '/tokenswap/kyc',
     ],
     postProcess(renderedRoute: any) {
       const styleRegExp = /<style.*?>[^<]*<\/style>/gi;

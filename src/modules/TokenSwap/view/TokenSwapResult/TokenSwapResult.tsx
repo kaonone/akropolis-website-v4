@@ -62,7 +62,7 @@ function TokenSwapResult(props: IProps) {
             {`Your ETH address ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
-            <span>You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter. To receive tokens you need to go through </span>
+            <span>You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter (you will receive 1/12 of tokens each month starting from September 16). To receive tokens you need to go through </span>
             <RouterLink to={routes.tokenswap.kyc.getRedirectPath()}>KYC procedure</RouterLink>.
           </Typography>
           <Grid container wrap="nowrap" justify="center">

@@ -35,6 +35,13 @@ function init() {
     '#idensic',
     {
       'clientId': 'akropolis',
+      'requiredIdDocs': {
+        'docSets': [{
+          'idDocSetType': 'IDENTITY',
+          'types': ['ID_CARD', 'PASSPORT', 'DRIVERS'],
+        },
+        { 'idDocSetType': 'PAYMENT_METHODS', 'types': ['PAYMENT_METHOD'] }],
+      },
       'navConf': {
         'skipWelcomeScreen': false,
         'skipAgreementsScreen': false,
@@ -64,14 +71,6 @@ function init() {
           'PAYMENT_METHODS': {
             'subTitle': '',
             'paymentMethods': [
-              {
-                'type': 'bankCard',
-                'subTypes': [
-                  'VISA',
-                  'MASTERCARD',
-                ],
-                'requiredPhotos': true,
-              },
               {
                 'type': 'cryptoWallet',
                 'subTypes': [

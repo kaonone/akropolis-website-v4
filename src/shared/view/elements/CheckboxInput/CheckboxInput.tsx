@@ -31,7 +31,12 @@ function CheckboxInput(props: IProps) {
     <FormControl {...formControlProps}>
       <FormControlLabel
         control={<Checkbox {...checkboxProps} />}
-        label={label + (checkboxProps.required ? ' *' : '')}
+        label={(
+          <>
+            {label}
+            {checkboxProps.required ? ' *' : ''}
+          </>
+        )}
         classes={{ ...labelClasses }}
       />
       {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}

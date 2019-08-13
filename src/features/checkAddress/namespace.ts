@@ -6,6 +6,7 @@ export interface IRegistrationFormData {
   address: string;
   isNotResident: boolean;
   isConfirmTerms: boolean;
+  isUnderstandPersonalData: boolean;
   recaptcha: string | null;
 }
 

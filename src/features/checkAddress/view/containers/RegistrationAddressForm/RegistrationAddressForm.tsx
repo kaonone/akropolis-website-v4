@@ -3,7 +3,7 @@ import { Form } from 'react-final-form';
 import { useDeps } from 'core';
 
 import { MarkAs } from '_helpers';
-import { BOUNTY_T_AND_C_URL, TOKEN_SWAP_T_AND_C_URL } from 'assets';
+import { BOUNTY_T_AND_C_URL, TOKEN_SWAP_T_AND_C_URL, PRIVACY_POLICY_URL } from 'assets';
 import { ITranslateKey } from 'services/i18n';
 import { TextInputField, CheckboxInputField, RecaptchaField } from 'shared/view/form';
 import { Button, Grid, CircleProgressBar, Link } from 'shared/view/elements';
@@ -27,6 +27,7 @@ const fieldNames: { [key in keyof IRegistrationFormData]: key } = {
   recaptcha: 'recaptcha',
   isNotResident: 'isNotResident',
   isConfirmTerms: 'isConfirmTerms',
+  isUnderstandPersonalData: 'isUnderstandPersonalData',
 };
 
 const initialValues: IRegistrationFormData = {
@@ -34,6 +35,7 @@ const initialValues: IRegistrationFormData = {
   recaptcha: '',
   isNotResident: false,
   isConfirmTerms: false,
+  isUnderstandPersonalData: false,
 };
 
 function validateForm(values: IRegistrationFormData): Partial<MarkAs<ITranslateKey, IRegistrationFormData>> {
@@ -71,6 +73,22 @@ function RegistrationAddressForm(props: IProps) {
     };
   }, [onSuccess, onError, type]);
 
+  const tcLink = (
+    <Link href={tcUrlByType[type]} target="_blank" rel="noopener noreferrer">
+      {'Terms & Conditions'}
+    </Link>
+  );
+  const ppLink = (
+    <Link href={PRIVACY_POLICY_URL} target="_blank" rel="noopener noreferrer">
+      {'Privacy Policy'}
+    </Link>
+  );
+
+  const checkBoxLabelClasses = {
+    root: classes.labelRoot,
+    label: classes.label,
+  };
+
   return (
     <Form
       onSubmit={onSubmit}
@@ -83,25 +101,48 @@ function RegistrationAddressForm(props: IProps) {
         return (
           <form onSubmit={handleSubmit}>
             <TextInputField
+              required
               name={fieldNames.address}
               label={translations.form.address}
               fullWidth
             />
             <div className={classes.checkBoxField}>
               <CheckboxInputField
-                name={fieldNames.isNotResident}
-                label={translations.form.notResident}
-                labelClasses={{ label: classes.terms }}
+                required
+                name={fieldNames.isConfirmTerms}
+                label={(
+                  <>
+                    {translations.form.acceptTerms}
+                    {WHITE_SPACE}
+                    {tcLink}
+                  </>
+                )}
+                labelClasses={checkBoxLabelClasses}
               />
             </div>
             <div className={classes.checkBoxField}>
               <CheckboxInputField
-                name={fieldNames.isConfirmTerms}
-                label={translations.form.acceptTerms}
-                labelClasses={{ label: classes.terms }}
+                required
+                name={fieldNames.isNotResident}
+                label={translations.form.notResident}
+                labelClasses={checkBoxLabelClasses}
               />
-              {WHITE_SPACE}
-              <Link className={classes.terms} href={tcUrlByType[type]}>{'Terms & Conditions'}</Link>
+            </div>
+            <div className={classes.checkBoxField}>
+              <CheckboxInputField
+                required
+                name={fieldNames.isUnderstandPersonalData}
+                label={(
+                  <>
+                    {translations.form.personalData.map(item => (
+                      item === 'PP_ANCHOR' && ppLink ||
+                      item === 'T&C_ANCHOR' && tcLink ||
+                      item
+                    ))}
+                  </>
+                )}
+                labelClasses={checkBoxLabelClasses}
+              />
             </div>
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>
               <RecaptchaField name={fieldNames.recaptcha} />

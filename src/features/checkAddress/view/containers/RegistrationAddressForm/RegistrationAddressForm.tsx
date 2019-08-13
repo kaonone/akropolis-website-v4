@@ -124,26 +124,28 @@ function RegistrationAddressForm(props: IProps) {
               <CheckboxInputField
                 required
                 name={fieldNames.isNotResident}
-                label={translations.form.notResident}
+                label={translations.form.notResident[type]}
                 labelClasses={checkBoxLabelClasses}
               />
             </div>
-            <div className={classes.checkBoxField}>
-              <CheckboxInputField
-                required
-                name={fieldNames.isUnderstandPersonalData}
-                label={(
-                  <>
-                    {translations.form.personalData.map(item => (
-                      item === 'PP_ANCHOR' && ppLink ||
-                      item === 'T&C_ANCHOR' && tcLink ||
-                      item
-                    ))}
-                  </>
-                )}
-                labelClasses={checkBoxLabelClasses}
-              />
-            </div>
+            {type === 'tokenSwap' && (
+              <div className={classes.checkBoxField}>
+                <CheckboxInputField
+                  required
+                  name={fieldNames.isUnderstandPersonalData}
+                  label={(
+                    <>
+                      {translations.form.personalData.map(item => (
+                        item === 'PP_ANCHOR' && ppLink ||
+                        item === 'T&C_ANCHOR' && tcLink ||
+                        item
+                      ))}
+                    </>
+                  )}
+                  labelClasses={checkBoxLabelClasses}
+                />
+              </div>
+            )}
             <Grid container wrap="nowrap" justify="center" className={classes.captcha}>
               <RecaptchaField name={fieldNames.recaptcha} />
             </Grid>

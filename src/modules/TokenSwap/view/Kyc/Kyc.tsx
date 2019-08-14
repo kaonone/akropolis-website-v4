@@ -37,10 +37,23 @@ function init() {
       'clientId': 'akropolis',
       'requiredIdDocs': {
         'docSets': [{
+          'idDocSetType': 'APPLICANT_DATA',
+          'types': null,
+          'subTypes': null,
+          'fields': [
+            {
+              'name': 'firstName',
+              'required': true,
+            },
+            {
+              'name': 'lastName',
+              'required': true,
+            },
+          ],
+        }, {
           'idDocSetType': 'IDENTITY',
-          'types': ['ID_CARD', 'PASSPORT', 'DRIVERS'],
-        },
-        { 'idDocSetType': 'PAYMENT_METHODS', 'types': ['PAYMENT_METHOD'] }],
+          'types': ['ID_CARD', 'PASSPORT', 'DRIVERS', 'RESIDENCE_PERMIT'],
+        }],
       },
       'navConf': {
         'skipWelcomeScreen': false,
@@ -52,6 +65,15 @@ function init() {
         'customCss': '',
         'lang': 'en',
         'steps': {
+          'APPLICANT_DATA': {
+            'customFields': [
+              {
+                'name': 'ETH wallet',
+                'displayName': 'ETH wallet (for identification)',
+                'required': true,
+              },
+            ],
+          },
           'IDENTITY': {
             'subTitle': '',
           },

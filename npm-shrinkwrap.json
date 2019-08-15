@@ -8636,6 +8636,11 @@
       "integrity": "sha1-xg7taebY/bazEEofy8ocGS3FtQE=",
       "dev": true
     },
+    "iframe-resizer": {
+      "version": "4.1.1",
+      "resolved": "https://registry.npmjs.org/iframe-resizer/-/iframe-resizer-4.1.1.tgz",
+      "integrity": "sha512-+cs/M4ivpLyKYDs9AZWK0eRA1FKXut0yQr0iaEqdMKuk5yZJeF9H691q1qW1Cz5D3wHmiT+cTubWEsaSJBLUJA=="
+    },
     "ignore": {
       "version": "3.3.8",
       "resolved": "https://registry.npmjs.org/ignore/-/ignore-3.3.8.tgz",
@@ -15164,6 +15169,14 @@
           "integrity": "sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==",
           "dev": true
         }
+      }
+    },
+    "react-iframe-resizer-super": {
+      "version": "0.2.2",
+      "resolved": "https://registry.npmjs.org/react-iframe-resizer-super/-/react-iframe-resizer-super-0.2.2.tgz",
+      "integrity": "sha512-iWPEkYsNjQYi7ZEy1IBoJUIjTV47De8RhSbxxtAP2YUcYEArS6GKxIAAyl2gexM65ahXW9+NUP6hPFIxO0Du8A==",
+      "requires": {
+        "babel-runtime": "^6.5.0"
       }
     },
     "react-is": {

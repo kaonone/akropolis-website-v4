@@ -51,6 +51,7 @@ declare module 'circular-dependency-plugin';
 declare module 'filemanager-webpack-plugin';
 declare module 'prerender-spa-plugin';
 declare module 'react-dotdotdot';
+declare module 'react-iframe-resizer-super';
 
 declare module '*.pdf' {
   const URL: string;

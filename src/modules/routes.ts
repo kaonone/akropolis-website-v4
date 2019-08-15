@@ -12,6 +12,7 @@ const rawTree = {
     partners: null,
     news: null,
   },
+  bnbridge: null,
 };
 
 const routes = build(rawTree);

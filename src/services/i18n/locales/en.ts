@@ -74,6 +74,9 @@ export default {
     pastEvents: {
       title: 'More past events',
     },
+    bnbridge: {
+      title: 'Bnbridge',
+    },
     quest: {
       title: 'Akropolis Community Quest III',
       // tslint:disable-next-line:max-line-length

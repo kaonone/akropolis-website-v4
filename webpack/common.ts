@@ -70,7 +70,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   new PrerenderSPAPlugin({
     staticDir: path.join(__dirname, '..', 'build'),
     routes: [
-      '/', '/company', '/events', '/quest',
+      '/', '/company', '/events', '/quest', '/bnbridge',
       '/forWiki/partners', '/forWiki/news',
       '/bounty', '/bounty/check', '/bounty/registration',
     ],

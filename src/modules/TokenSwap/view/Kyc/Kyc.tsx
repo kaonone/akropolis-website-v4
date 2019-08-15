@@ -53,6 +53,12 @@ function init() {
         }, {
           'idDocSetType': 'IDENTITY',
           'types': ['ID_CARD', 'PASSPORT', 'DRIVERS', 'RESIDENCE_PERMIT'],
+        }, {
+          'idDocSetType': 'SELFIE',
+          'types': ['SELFIE'],
+        }, {
+          'idDocSetType': 'PROOF_OF_RESIDENCE',
+          'types': ['UTILITY_BILL'],
         }],
       },
       'navConf': {

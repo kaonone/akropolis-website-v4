@@ -48,6 +48,21 @@ const events: IEvent[] = [
     image2x: require('./imgs/dappcon@1320w.png'),
   },
   {
+    eventName: 'DOTCon',
+    link: 'https://polkadot.network/dotcon/',
+    location: 'Berlin', 
+    description: {
+      en: 'The second annual DOTCon: all things Polkadot. The Second Annual DOTCon will be an afternoon of in-depth presentations, demos, talks and workshops on all things Polkadot. DOTCon0.5 will be an immersive technical deep dive into the protocol. Attendees are encouraged to have existing technical knowledge, and come prepared with a laptop for maximum enjoyment of DOTCon0.5.',
+      vi: 'The second annual DOTCon: all things Polkadot. The Second Annual DOTCon will be an afternoon of in-depth presentations, demos, talks and workshops on all things Polkadot. DOTCon0.5 will be an immersive technical deep dive into the protocol. Attendees are encouraged to have existing technical knowledge, and come prepared with a laptop for maximum enjoyment of DOTCon0.5.',
+      zh: 'The second annual DOTCon: all things Polkadot. The Second Annual DOTCon will be an afternoon of in-depth presentations, demos, talks and workshops on all things Polkadot. DOTCon0.5 will be an immersive technical deep dive into the protocol. Attendees are encouraged to have existing technical knowledge, and come prepared with a laptop for maximum enjoyment of DOTCon0.5.',
+      ko: 'The second annual DOTCon: all things Polkadot. The Second Annual DOTCon will be an afternoon of in-depth presentations, demos, talks and workshops on all things Polkadot. DOTCon0.5 will be an immersive technical deep dive into the protocol. Attendees are encouraged to have existing technical knowledge, and come prepared with a laptop for maximum enjoyment of DOTCon0.5.',
+    },
+    startDate: '08.18.2019',
+    finishDate: '08.18.2019',
+    image1x: require('./imgs/dotcon@660w.png'),
+    image2x: require('./imgs/dotcon@1320w.png'),
+  },
+  {
     eventName: 'CryptoChicks Hackathon & Conference',
     link: 'https://www.toronto.cryptochicks.ca/',
     location: 'Toronto', 

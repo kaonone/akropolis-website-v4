@@ -57,6 +57,8 @@ interface IOwnProps {
 
 type IProps = IOwnProps & StylesProps & RouteComponentProps;
 
+const isServer = window.__PRERENDER_INJECTED__ && window.__PRERENDER_INJECTED__.isServer;
+
 function RegistrationAddressForm(props: IProps) {
   const { onSuccess, onError, classes, type } = props;
   const [isExpiredToken, setIsExpiredToken] = React.useState(false);
@@ -157,7 +159,7 @@ function RegistrationAddressForm(props: IProps) {
         return (
           <form onSubmit={handleSubmit}>
             {isNeedLog && (<>
-              <Dialog open={isExpiredToken} onClose={makeOnRetryClickHandler(reset)}>
+              <Dialog open={!isServer && isExpiredToken} onClose={makeOnRetryClickHandler(reset)}>
                 <DialogTitle>Your registration session is expired.</DialogTitle>
                 <DialogActions>
                   <Button onClick={makeOnRetryClickHandler(reset)} color="primary" variant="contained">

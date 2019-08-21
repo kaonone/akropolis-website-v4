@@ -14,7 +14,6 @@ class Api {
     this.bounty = new CheckUser(bountyActions);
     this.tokenSwap = new CheckUser(tokenSwapActions);
   }
-
 }
 
 export default Api;

@@ -12,7 +12,7 @@ import { IUser, UserError } from 'shared/types/models';
 import { parseUserError } from 'shared/helpers/errors';
 
 import { translations } from '../../../constants';
-import { ICheckAddressFormData, CheckType, ICheckAddressApi } from '../../../namespace';
+import { ICheckAddressFormData, CheckType } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './CheckAddressForm.style';
 
@@ -45,19 +45,21 @@ function CheckAddressForm(props: IProps) {
   const { onSuccess, classes, onError, type } = props;
   const deps = useDeps();
 
-  const apiByType: Record<CheckType, ICheckAddressApi> = {
-    bounty: deps.api.bounty,
-    tokenSwap: deps.api.tokenSwap,
-  };
+  const api = React.useMemo(() => {
+    return {
+      bounty: deps.api.bounty,
+      tokenSwap: deps.api.tokenSwap,
+    }[type];
+  }, [type]);
 
   const onSubmit = React.useCallback(async (values: ICheckAddressFormData) => {
     try {
-      const user = await apiByType[type].checkAddress(values.address.trim(), String(values.recaptcha));
+      const user = await api.checkAddress(values.address.trim(), String(values.recaptcha));
       onSuccess(user);
     } catch (e) {
       onError(parseUserError(e));
     }
-  }, [onSuccess, onError, type]);
+  }, [onSuccess, onError, api]);
 
   return (
     <div>

@@ -15,10 +15,6 @@ export interface ICheckAddressFormData {
   recaptcha: string | null;
 }
 
-export interface ICheckAddressApi {
-  checkAddress(address: string, recaptcha: string): Promise<IUser>;
-}
-
 export interface IRegisterUserApi {
   registerUser(address: string, captcha: string): Promise<IUser>;
 }

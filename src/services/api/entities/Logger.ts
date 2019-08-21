@@ -10,11 +10,6 @@ export default class Logger extends BaseApi {
   @bind
   public async log<T extends CheckUserActionType>(action: T, payload: PayloadByCheckUserActionType[T]): Promise<void> {
     const token = await this._getToken();
-    console.log({
-      token,
-      action,
-      payload,
-    });
 
     try {
       const response = await this.actions.post({

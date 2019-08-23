@@ -1,17 +1,18 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import { Preloader } from 'shared/view/elements';
 import { StylesProps, provideStyles } from './Kyc.style';
 
-type IProps = RouteComponentProps & StylesProps;
+type IProps = StylesProps & {
+  group: 'quest' | 'tokenswap';
+};
 
-function Kyc({ classes }: IProps) {
+function Kyc({ classes, group }: IProps) {
   const handleScriptInject: any = React.useCallback((_newState: any, { scriptTags }: { scriptTags: any[] }) => {
     if (scriptTags) {
       const scriptTag: HTMLScriptElement = scriptTags[0];
-      scriptTag.addEventListener('load', init);
+      scriptTag.addEventListener('load', init.bind(null, group));
     }
   }, []);
 
@@ -30,7 +31,17 @@ function Kyc({ classes }: IProps) {
   );
 }
 
-function init() {
+const bannedCountries = {
+  quest: ['USA'],
+  tokenswap: [
+    'USA', 'AFG', 'BLR', 'BIH', 'BDI', 'CAN',
+    'CAF', 'CUB', 'COD', 'GIN', 'GNB', 'IRN',
+    'IRQ', 'LBN', 'LBR', 'LBY', 'MYS', 'PRK',
+    'SOM', 'SSD', 'SDN', 'SYR', 'YEM', 'ZWE',
+  ],
+};
+
+function init(group: 'quest' | 'tokenswap') {
   window.idensic.init(
     '#idensic',
     {
@@ -67,6 +78,7 @@ function init() {
         'skipReviewScreen': false,
         'registration': 'enabled',
       },
+      'excludedCountries': bannedCountries[group],
       'uiConf': {
         'customCss': '',
         'lang': 'en',

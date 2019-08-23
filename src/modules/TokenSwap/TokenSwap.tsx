@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { IModule } from 'shared/types/app';
-import { Layout, Preview, RegisterUser, CheckUserAddress, Kyc } from './view';
 import routes from 'modules/routes';
+import { IModule } from 'shared/types/app';
+import { Kyc } from 'shared/view/components';
+import { Layout, Preview, RegisterUser, CheckUserAddress } from './view';
 
 // tslint:disable: jsx-wrap-multiline
 const TokenSwapModule: IModule = {
@@ -34,8 +35,9 @@ const TokenSwapModule: IModule = {
               <Route
                 exact
                 path={routes.tokenswap.kyc.getRoutePath()}
-                component={Kyc}
-              />,
+              >
+                <Kyc group="tokenswap" />
+              </Route>,
             </Switch>
           </Layout>
         )}

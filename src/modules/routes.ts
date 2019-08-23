@@ -3,7 +3,9 @@ import build from 'build-route-tree';
 const rawTree = {
   company: null,
   events: null,
-  quest: null,
+  quest: {
+    kyc: null,
+  },
   tokenswap: {
     registration: null,
     check: null,

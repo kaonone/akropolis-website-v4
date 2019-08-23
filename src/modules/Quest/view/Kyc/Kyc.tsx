@@ -21,7 +21,7 @@ export default provideStyles(function QuestKyc(props: IProps) {
       <Layout.Intro>
         <Grid container direction="column" alignItems="stretch" className={classes.root}>
           <div className={classes.content}>
-            <p className={classes.title}>{'Quest'}</p>
+            <p className={classes.title}>{'Quest participants KYC'}</p>
             <div className={classes.children}>
               <Kyc group="quest" />
             </div>

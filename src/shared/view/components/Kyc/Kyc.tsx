@@ -23,7 +23,7 @@ function Kyc({ classes, group }: IProps) {
       <Preloader isShown />
       {!isServer && (
         <Helmet
-          script={[{ src: 'https://test-api.sumsub.com/idensic/static/sumsub-kyc.js' }]}
+          script={[{ src: 'https://api.sumsub.com/idensic/static/sumsub-kyc.js' }]}
           onChangeClientState={handleScriptInject}
         />
       )}

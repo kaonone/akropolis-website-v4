@@ -636,6 +636,11 @@
         "@types/range-parser": "*"
       }
     },
+    "@types/fingerprintjs2": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/@types/fingerprintjs2/-/fingerprintjs2-2.0.0.tgz",
+      "integrity": "sha512-isSTwNnW5I6zGZnpkinmVcV9pJqr7cLELns+tXDYzskIOAb2J+iCQ0mQJ9bRjHJhZfdlTFXZoCYK9ZgT3oMWXQ=="
+    },
     "@types/history": {
       "version": "4.7.2",
       "resolved": "https://registry.npmjs.org/@types/history/-/history-4.7.2.tgz",
@@ -6653,6 +6658,11 @@
         "array-uniq": "^1.0.0",
         "semver-regex": "^1.0.0"
       }
+    },
+    "fingerprintjs2": {
+      "version": "2.1.0",
+      "resolved": "https://registry.npmjs.org/fingerprintjs2/-/fingerprintjs2-2.1.0.tgz",
+      "integrity": "sha512-H1k/ESTD2rJ3liupyqWBPjZC+LKfCGixQzz/NDN4dkgbmG1bVFyMOh7luKSkVDoyfhgvRm62pviNMPI+eJTZcQ=="
     },
     "first-chunk-stream": {
       "version": "2.0.0",

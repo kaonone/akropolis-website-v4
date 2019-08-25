@@ -13,7 +13,7 @@ export type CheckUserActionType = keyof PayloadByCheckUserActionType;
 
 // tslint:disable-next-line: interface-name
 export type PayloadByCheckUserActionType = SubSet<Record<string, Record<string, string> | undefined>, {
-  enter_page: {
+  start_registration: {
     page: 'bounty' | 'tokenSwap';
   };
   accept_terms: {
@@ -39,7 +39,7 @@ export type PayloadByCheckUserActionType = SubSet<Record<string, Record<string, 
     code: string;
   };
   reset_form: {},
-  leave_page: {
+  change_page: {
     toPage: string;
   };
 }>;

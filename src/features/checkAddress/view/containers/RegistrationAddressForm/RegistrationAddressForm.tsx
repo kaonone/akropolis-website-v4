@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { FormState } from 'final-form';
 import { Form, FormSpy } from 'react-final-form';
-import { withRouter, RouteComponentProps } from 'react-router';
 import { useDeps } from 'core';
 import { equals } from 'ramda';
 
@@ -55,7 +54,7 @@ interface IOwnProps {
   onError(error: UserError): void;
 }
 
-type IProps = IOwnProps & StylesProps & RouteComponentProps;
+type IProps = IOwnProps & StylesProps;
 
 const isServer = window.__PRERENDER_INJECTED__ && window.__PRERENDER_INJECTED__.isServer;
 
@@ -79,7 +78,7 @@ function RegistrationAddressForm(props: IProps) {
       isNeedLog && await api.log(action, payload);
     } catch (error) {
       const ignoredActions: CheckUserActionType[] = [
-        'submit_form_succeeded', 'submit_form_failed', 'leave_page',
+        'submit_form_succeeded', 'submit_form_failed', 'change_page',
       ];
       !ignoredActions.includes(action) && setIsExpiredToken(true);
     }
@@ -100,14 +99,8 @@ function RegistrationAddressForm(props: IProps) {
   }, [onSuccess, onError, api, log]);
 
   React.useEffect(() => {
-    !isExpiredToken && log('enter_page', { page: type });
+    !isExpiredToken && log('start_registration', { page: type });
   }, [log, isExpiredToken]);
-
-  React.useEffect(() => {
-    return props.history.listen(location => {
-      log('leave_page', { toPage: location.pathname });
-    });
-  }, []);
 
   const makeOnRetryClickHandler = React.useCallback((resetForm: () => void) => () => {
     log('reset_form', {});
@@ -236,4 +229,4 @@ function RegistrationAddressForm(props: IProps) {
   );
 }
 
-export default provideStyles(withRouter(RegistrationAddressForm));
+export default provideStyles(RegistrationAddressForm);

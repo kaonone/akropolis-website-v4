@@ -3,21 +3,23 @@ import { bind } from 'decko';
 import BaseApi from './BaseApi';
 import { IUser } from 'shared/types/models';
 
+import HttpActions from '../HttpActions';
 import { convertRegisterUserRequest, convertUserResponse, convertUserErrorResponse } from '../converters';
 import { IServerUser } from '../types/Note';
+import Logger from './Logger';
 
-// import delay from 'shared/helpers/delay';
-// const mockAddress = '0x29f2E74eE824ebeF53399A7A58102448F998B87c';
-// const mockAddress = '0xFOO'; // сейчас есть несколько аддресов на беке - это один из них
-// const mockUser: IUser = { address: mockAddress, tokens: 73 };
+export default class CheckUser extends BaseApi {
+  public log: Logger['log'];
+  private _logger: Logger;
 
-export default class User extends BaseApi {
+  constructor(actions: HttpActions) {
+    super(actions);
+    this._logger = new Logger(actions);
+    this.log = this._logger.log;
+  }
 
   @bind
   public async registerUser(address: string, captcha: string): Promise<IUser> {
-    // await delay(2000);
-    // return mockUser;
-
     const response = await this.actions.post<IServerUser>({
       url: '/',
       data: convertRegisterUserRequest(address, captcha),
@@ -28,9 +30,6 @@ export default class User extends BaseApi {
 
   @bind
   public async checkAddress(address: string, recaptcha: string): Promise<IUser> {
-    // await delay(2000);
-    // return mockUser;
-
     const response = await this.actions.get<IServerUser>({
       url: `/get`,
       data: { address: address.toLowerCase(), recaptcha },

@@ -10,11 +10,17 @@ const styles = ({ extra: theme }: Theme) => (
     }),
 
     captcha: rule({
+      marginTop: theme.spacing.unit * 2,
       marginBottom: theme.spacing.unit * 2,
     }),
 
-    terms: rule({
+    labelRoot: rule({
+      alignItems: 'flex-start',
+    }),
+
+    label: rule({
       fontSize: '1rem',
+      paddingTop: 12,
     }),
 
     submitButton: rule({

@@ -18,19 +18,16 @@ const BountyModule: IModule = {
             <Switch>
               <Route
                 exact
-                key="bounty"
                 path={routes.bounty.getRoutePath()}
                 component={Preview}
               />,
               <Route
                 exact
-                key="registration"
                 path={routes.bounty.registration.getRoutePath()}
                 component={RegisterUser}
               />,
               <Route
                 exact
-                key="check"
                 path={routes.bounty.check.getRoutePath()}
                 component={CheckUserAddress}
               />,

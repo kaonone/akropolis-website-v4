@@ -67,12 +67,25 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
     cwd: process.cwd(),
   }),
   new FaviconsWebpackPlugin(path.resolve(__dirname, '..', 'src', 'assets', 'favicon.png')),
+  new FileManagerWebpackPlugin({
+    onEnd: {
+      copy: [{
+        source: `src/assets/copyToRoot/**`,
+        destination: `build`,
+      }].concat(forGHPages ? {
+        source: `build/index.html`,
+        destination: `build/404.html`,
+      } : []),
+    },
+  }),
   new PrerenderSPAPlugin({
     staticDir: path.join(__dirname, '..', 'build'),
     routes: [
-      '/', '/company', '/events', '/quest',
+      '/', '/company', '/events',
+      '/quest', '/quest/kyc',
       '/forWiki/partners', '/forWiki/news',
       '/bounty', '/bounty/check', '/bounty/registration',
+      '/tokenswap', '/tokenswap/check', '/tokenswap/registration',
     ],
     postProcess(renderedRoute: any) {
       const styleRegExp = /<style.*?>[^<]*<\/style>/gi;
@@ -89,17 +102,6 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
         isServer: true,
       },
     }),
-  }),
-  new FileManagerWebpackPlugin({
-    onEnd: {
-      copy: [{
-        source: `src/assets/copyToRoot/**`,
-        destination: `build`,
-      }].concat(forGHPages ? {
-        source: `build/index.html`,
-        destination: `build/404.html`,
-      } : []),
-    },
   }),
 ]
   .concat(isWatchMode && !withoutTypeChecking ? (

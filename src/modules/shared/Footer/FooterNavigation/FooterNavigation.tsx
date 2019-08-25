@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import privacyPolicyURL from 'assets/Akropolis_Privacy_Policy.pdf';
-import termsURL from 'assets/Akropolis_Terms_and_Conditions.pdf';
+import { PRIVACY_POLICY_URL, T_AND_C_URL } from 'assets';
 import routes from 'modules/routes';
 import { tKeys, useTranslate } from 'services/i18n';
 
@@ -44,12 +43,12 @@ const menuItems: IMenuItem[] = [
     title: tKeys.modules.navigation.quest.getKey(),
   },
   {
-    path: privacyPolicyURL,
+    path: PRIVACY_POLICY_URL,
     title: tKeys.modules.navigation.privacyPolicy.getKey(),
     isExternal: true,
   },
   {
-    path: termsURL,
+    path: T_AND_C_URL,
     title: tKeys.modules.navigation.termsConditions.getKey(),
     isExternal: true,
   },

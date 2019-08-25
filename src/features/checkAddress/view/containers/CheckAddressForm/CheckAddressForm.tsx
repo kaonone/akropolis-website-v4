@@ -12,7 +12,7 @@ import { IUser, UserError } from 'shared/types/models';
 import { parseUserError } from 'shared/helpers/errors';
 
 import { translations } from '../../../constants';
-import { ICheckAddressFormData } from '../../../namespace';
+import { ICheckAddressFormData, CheckType } from '../../../namespace';
 
 import { StylesProps, provideStyles } from './CheckAddressForm.style';
 
@@ -28,12 +28,13 @@ const initialValues: ICheckAddressFormData = {
 
 function validateForm(values: ICheckAddressFormData): Partial<MarkAs<ITranslateKey, ICheckAddressFormData>> {
   return {
-    address: isRequired(values.address) || isEthereumAddress(values.address),
+    address: isRequired(values.address.trim()) || isEthereumAddress(values.address.trim()),
     recaptcha: isRequired(values.recaptcha),
   };
 }
 
 interface IOwnProps {
+  type: CheckType;
   onSuccess(user: IUser): void;
   onError(error: UserError): void;
 }
@@ -41,17 +42,24 @@ interface IOwnProps {
 type IProps = IOwnProps & StylesProps;
 
 function CheckAddressForm(props: IProps) {
-  const { onSuccess, classes, onError } = props;
+  const { onSuccess, classes, onError, type } = props;
   const deps = useDeps();
+
+  const api = React.useMemo(() => {
+    return {
+      bounty: deps.api.bounty,
+      tokenSwap: deps.api.tokenSwap,
+    }[type];
+  }, [type]);
 
   const onSubmit = React.useCallback(async (values: ICheckAddressFormData) => {
     try {
-      const user = await deps.api.user.checkAddress(values.address, String(values.recaptcha));
+      const user = await api.checkAddress(values.address.trim(), String(values.recaptcha));
       onSuccess(user);
     } catch (e) {
       onError(parseUserError(e));
     }
-  }, [onSuccess, onError]);
+  }, [onSuccess, onError, api]);
 
   return (
     <div>

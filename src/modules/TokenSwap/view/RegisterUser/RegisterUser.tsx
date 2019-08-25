@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
 
 import { RegistrationAddressForm } from 'features/checkAddress';
 
 import { useMakeFieldsForCheckUser } from 'shared/helpers/react/useMakeFieldsForCheckUser';
 import { Typography, Grid } from 'shared/view/elements';
+import { IUser } from 'shared/types/models';
 
-import BountyResult from '../BountyResult/BountyResult';
-
+import TokenSwapResult from '../TokenSwapResult/TokenSwapResult';
 import { StylesProps, provideStyles } from './RegisterUser.style';
 
 const translations = {
@@ -19,11 +18,18 @@ const translations = {
   tokenDecimal: 'Decimals: 18',
 };
 
-type IProps = RouteComponentProps & StylesProps;
+type IProps = StylesProps & {
+  onSuccess?(): void;
+};
 
 function RegisterUser(props: IProps) {
-  const { classes } = props;
+  const { classes, onSuccess } = props;
   const { address, tokens, error, onSuccessChecking, onError, onRetry } = useMakeFieldsForCheckUser();
+
+  const handleRegistration = React.useCallback((user: IUser) => {
+    onSuccess && onSuccess();
+    onSuccessChecking(user);
+  }, []);
 
   return (
     <div className={classes.root}>
@@ -39,11 +45,11 @@ function RegisterUser(props: IProps) {
             <Typography variant="body1" className={classes.text}>{translations.tokenDecimal}</Typography>
           </Grid>
           <div className={classes.form}>
-            <RegistrationAddressForm type="bounty" onSuccess={onSuccessChecking} onError={onError} />
+            <RegistrationAddressForm type="tokenSwap" onSuccess={handleRegistration} onError={onError} />
           </div>
         </Grid>}
       {(address || error) &&
-        <BountyResult
+        <TokenSwapResult
           tokens={tokens}
           address={address}
           error={error}

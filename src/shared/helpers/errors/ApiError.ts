@@ -27,5 +27,8 @@ export default class ApiError<T extends IErrorPayload> extends Error {
     this.request = request;
     this.response = response;
     this.payload = payload;
+
+    // Set the prototype explicitly.
+    Object.setPrototypeOf(this, ApiError.prototype);
   }
 }

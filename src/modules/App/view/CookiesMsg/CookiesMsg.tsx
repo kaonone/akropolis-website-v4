@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Snackbar, Button, Link } from 'shared/view/elements';
-import privacyUrl from 'assets/Akropolis_Privacy_Policy.pdf';
+import { PRIVACY_POLICY_URL } from 'assets';
 
 const HIDE_COOKIES_MSG_KEY = 'hideCookiesMsg';
 
@@ -41,7 +41,7 @@ function CookiesMsg() {
           {'We use cookies on our website. '}
           {'By continuing to use the site, or by clicking "I agree", you consent to the use of cookies. '}
           {'For more info '}
-          <Link href={privacyUrl} target="_blank" rel="noopener noreferrer">click here</Link>
+          <Link href={PRIVACY_POLICY_URL} target="_blank" rel="noopener noreferrer">click here</Link>
         </span>
       )}
       action={[

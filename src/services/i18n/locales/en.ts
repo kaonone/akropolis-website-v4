@@ -9,6 +9,7 @@ export default {
       events: 'Events',
       blog: 'Blog',
       quest: 'Quest',
+      tokenswap: 'Tokenswap',
       cashflowRelay: 'Cashflow Relay',
       chamaNetwork: 'Akropolis Network',
       privacyPolicy: 'Privacy Policy',

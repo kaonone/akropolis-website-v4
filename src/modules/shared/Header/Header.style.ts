@@ -34,7 +34,7 @@ const styles = (theme: Theme) => ({
     display: 'none',
     marginRight: theme.spacing.unit * 4,
 
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up(1140)]: {
       display: 'block',
     },
   }),
@@ -43,7 +43,7 @@ const styles = (theme: Theme) => ({
     display: 'block',
     marginLeft: theme.spacing.unit * 2,
 
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up(1140)]: {
       display: 'none',
     },
   }),

@@ -4,7 +4,7 @@ import { rule } from 'shared/helpers/style';
 const styles = (theme: Theme) => ({
   button: rule({
     '&$open': {
-      [theme.breakpoints.up('lg')]: {
+      [theme.breakpoints.up(1140)]: {
         display: 'none',
       },
     },

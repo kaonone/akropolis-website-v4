@@ -13,8 +13,8 @@ export const menuItems: IMenuItem[] = [
     title: tKeys.modules.navigation.company.getKey(),
   },
   {
-    path: routes.quest.getRoutePath(),
-    title: tKeys.modules.navigation.quest.getKey(),
+    path: routes.tokenswap.getRoutePath(),
+    title: tKeys.modules.navigation.tokenswap.getKey(),
   },
   {
     path: 'https://wiki.akropolis.io',

@@ -9,7 +9,7 @@ import routes from 'modules/routes';
 const translation = {
   tokenSwap: 'Token Swap',
   // tslint:disable-next-line: max-line-length
-  description: `This page is for our seed/private/presale participants - if you're one of them, please follow the procedure below to do a tokenswap of old AKT to AKRO tokens.`,
+  description: `This page is for our AKT token holders - if you’re one of them, please follow the procedure below to do a tokenswap of old AKT to AKRO tokens.`,
   register: 'Register',
   checkAccount: 'Check Account',
 };

@@ -1,7 +1,7 @@
 // tslint:disable
 export default [
   {
-    summary: 'A ‘DAO Renaissance’ Begins',
+    summary: 'A "DAO Renaissance" Begins',
     url: 'https://www.coindesk.com/in-berlin-a-dao-renaissance-begins',
     date: '08.24.2019',
   },
@@ -11,12 +11,12 @@ export default [
     date: '08.22.2019',
   },
   {
-    summary: 'Increasing Transparency — Akropolis on Xangle',
+    summary: 'Increasing Transparency - Akropolis on Xangle',
     url: 'https://medium.com/akropolis/increasing-transparency-akropolis-on-xangle-c48e6097e7ba',
     date: '08.20.2019',
   },
   {
-    summary: 'Quest 3.0 — creative wizards and the road ahead',
+    summary: 'Quest 3.0 - creative wizards and the road ahead',
     url: 'https://medium.com/akropolis/quest-3-0-creative-wizards-and-the-road-ahead-2639a1a49edd',
     date: '08.19.2019',
   },

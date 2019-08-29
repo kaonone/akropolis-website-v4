@@ -15,13 +15,14 @@ interface IOwnProps {
   address: string;
   tokens: string;
   error: UserError | null;
+  resultsFor: 'registration' | 'checking';
   onRetry(): void;
 }
 
 type IProps = IOwnProps & RouteComponentProps & StylesProps;
 
 function TokenSwapResult(props: IProps) {
-  const { classes, history, address, tokens, error, onRetry } = props;
+  const { classes, history, address, tokens, error, onRetry, resultsFor } = props;
 
   const onEndCheck = React.useCallback(() => {
     history.push(routes.tokenswap.getRedirectPath());
@@ -62,8 +63,17 @@ function TokenSwapResult(props: IProps) {
             {`Your ETH address ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
-            <span>You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter (you will receive 1/12 of tokens each month starting from September 16). To receive tokens you need to go through </span>
-            <RouterLink to={routes.tokenswap.kyc.getRedirectPath()}>KYC procedure</RouterLink>.
+            <span>You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter (you will receive 1/12 of tokens each month starting from September 16). </span>
+            {resultsFor === 'registration'
+              ? (<>
+                <span>To receive tokens you need to go through </span>
+                <RouterLink to={routes.tokenswap.kyc.getRedirectPath()}>KYC procedure</RouterLink>.
+            </>) : (<>
+                <span>To receive tokens you need to go through KYC procedure. If you already did so and got a confirmation from KYC provider - you don’t need to do anything else. If you still haven’t passed KYC - please go through the </span>
+                <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>registration process</RouterLink>{' '}
+                <span>again.</span>
+              </>)
+            }
           </Typography>
           <Grid container wrap="nowrap" justify="center">
             <Button

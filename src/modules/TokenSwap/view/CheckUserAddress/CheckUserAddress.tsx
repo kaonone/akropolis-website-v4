@@ -22,6 +22,7 @@ function CheckUserAddress(props: IProps) {
         </div>}
       {(address || error) &&
         <TokenSwapResult
+          resultsFor="checking"
           tokens={tokens}
           address={address}
           error={error}

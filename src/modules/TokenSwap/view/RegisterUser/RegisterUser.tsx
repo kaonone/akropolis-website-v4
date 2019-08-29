@@ -50,6 +50,7 @@ function RegisterUser(props: IProps) {
         </Grid>}
       {(address || error) &&
         <TokenSwapResult
+          resultsFor="registration"
           tokens={tokens}
           address={address}
           error={error}

@@ -84,4 +84,16 @@ export default [
     icon1x: require('./imgs/mixbytes@1x.png'),
     icon2x: require('./imgs/mixbytes@2x.png'),
   },
+  {
+    url: 'https://messari.io/',
+    partnerName: 'Messari Cryptoninjas',
+    icon1x: require('./imgs/messari@1x.png'),
+    icon2x: require('./imgs/messari@2x.png'),
+  },
+  {
+    url: 'https://xangle.io',
+    partnerName: 'Xangle',
+    icon1x: require('./imgs/xangle@1x.png'),
+    icon2x: require('./imgs/xangle@2x.png'),
+  },
 ];

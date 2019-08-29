@@ -45,7 +45,7 @@ function init(group: 'quest' | 'tokenswap') {
   window.idensic.init(
     '#idensic',
     {
-      'clientId': 'akropolis',
+      'clientId': group === 'tokenswap' ? 'akropolis' : 'akropolis.io',
       'requiredIdDocs': {
         'docSets': [{
           'idDocSetType': 'APPLICANT_DATA',

@@ -6,6 +6,11 @@ export default [
     date: '08.24.2019',
   },
   {
+    summary: 'AKRO is now listed on Bittrex International',
+    url: 'https://twitter.com/akropolisio/status/1164620929294655489',
+    date: '08.22.2019',
+  },
+  {
     summary: 'Increasing Transparency — Akropolis on Xangle',
     url: 'https://medium.com/akropolis/increasing-transparency-akropolis-on-xangle-c48e6097e7ba',
     date: '08.20.2019',

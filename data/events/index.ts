@@ -48,6 +48,21 @@ const events: IEvent[] = [
     image2x: require('./imgs/dappcon@1320w.png'),
   },
   {
+    eventName: 'Web3 Summit 2019',
+    link: 'https://web3summit.com',
+    location: 'Berlin', 
+    description: {
+      en: 'Web3 Summit is an open and collaborative space where the community can create their own programming. Web3 Foundation invites a full line up of high quality speakers, while individuals, teams and projects use the rest of the space for workshops, presentations, AMA sessions – both intimate and large-scale, chilling, and most importantly, hacking.',
+      vi: 'Web3 Summit is an open and collaborative space where the community can create their own programming. Web3 Foundation invites a full line up of high quality speakers, while individuals, teams and projects use the rest of the space for workshops, presentations, AMA sessions – both intimate and large-scale, chilling, and most importantly, hacking.',
+      zh: 'Web3 Summit is an open and collaborative space where the community can create their own programming. Web3 Foundation invites a full line up of high quality speakers, while individuals, teams and projects use the rest of the space for workshops, presentations, AMA sessions – both intimate and large-scale, chilling, and most importantly, hacking.',
+      ko: 'Web3 Summit is an open and collaborative space where the community can create their own programming. Web3 Foundation invites a full line up of high quality speakers, while individuals, teams and projects use the rest of the space for workshops, presentations, AMA sessions – both intimate and large-scale, chilling, and most importantly, hacking.',
+    },
+    startDate: '08.19.2019',
+    finishDate: '08.21.2019',
+    image1x: require('./imgs/web3sum@660w.png'),
+    image2x: require('./imgs/web3sum@1320w.png'),
+  },
+  {
     eventName: 'DOTCon',
     link: 'https://polkadot.network/dotcon/',
     location: 'Berlin', 

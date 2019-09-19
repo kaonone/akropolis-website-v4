@@ -8,6 +8,7 @@ import { Typography, Button, Grid, Link } from 'shared/view/elements';
 import { UserError } from 'shared/types/models';
 import routes from 'modules/routes';
 
+import { addressesWithoutKYC } from '../../constants';
 import { StylesProps, provideStyles } from './TokenSwapResult.style';
 
 // tslint:disable: max-line-length
@@ -29,6 +30,7 @@ function TokenSwapResult(props: IProps) {
   }, []);
 
   const isUnknownError = error === 'unknown';
+  const withKYC = !addressesWithoutKYC.includes(address.toLowerCase());
 
   const messageByError: Record<UserError, () => React.ReactNode> = {
     notConfirmed: () => (
@@ -64,16 +66,18 @@ function TokenSwapResult(props: IProps) {
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1" >
             <span>You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting monthly over 12 months thereafter (you will receive 1/12 of tokens each month starting from September 16). </span>
-            {resultsFor === 'registration'
-              ? (<>
-                <span>To receive tokens you need to go through </span>
-                <RouterLink to={routes.tokenswap.kyc.getRedirectPath()}>KYC procedure</RouterLink>.
-            </>) : (<>
-                <span>To receive tokens you need to go through KYC procedure. If you already did so and got a confirmation from KYC provider - you don’t need to do anything else. If you still haven’t passed KYC - please go through the </span>
-                <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>registration process</RouterLink>{' '}
-                <span>again.</span>
-              </>)
-            }
+            {withKYC && (<>
+              {resultsFor === 'registration'
+                ? (<>
+                  <span>To receive tokens you need to go through </span>
+                  <RouterLink to={routes.tokenswap.kyc.getRedirectPath()}>KYC procedure</RouterLink>.
+                </>) : (<>
+                  <span>To receive tokens you need to go through KYC procedure. If you already did so and got a confirmation from KYC provider - you don’t need to do anything else. If you still haven’t passed KYC - please go through the </span>
+                  <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>registration process</RouterLink>{' '}
+                  <span>again.</span>
+                </>)
+              }
+            </>)}
           </Typography>
           <Grid container wrap="nowrap" justify="center">
             <Button

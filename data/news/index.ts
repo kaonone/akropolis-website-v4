@@ -1,6 +1,16 @@
 // tslint:disable
 export default [
   {
+    summary: 'Akropolis joins the Messari Disclosure Registry',
+    url: 'https://medium.com/akropolis/joining-the-messari-disclosure-registry-what-it-means-for-akro-and-the-project-343409d17193',
+    date: '09.26.2019',
+  },
+  {
+    summary: 'Akropolis Development Update: August 2019',
+    url: 'https://medium.com/akropolis/akropolis-development-update-august-2019-2b54318566a1',
+    date: '09.11.2019',
+  },
+  {
     summary: 'A "DAO Renaissance" Begins',
     url: 'https://www.coindesk.com/in-berlin-a-dao-renaissance-begins',
     date: '08.24.2019',

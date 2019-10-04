@@ -12,10 +12,11 @@ import EntrepreneurIcon from './EntrepreneurIcon';
 import ForbesIcon from './ForbesIcon';
 import InvestopediaIcon from './InvestopediaIcon';
 import NasdaqIcon from './NasdaqIcon';
+import RiotIcon from './RiotIcon';
 
 type LinkType =
   'linkedin' | 'github' | 'twitter' | 'telegram' | 'medium' | 'benzinga' | 'cnbc' | 'entrepreneur' | 'forbes'
-  | 'investopedia' | 'nasdaq';
+  | 'investopedia' | 'nasdaq' | 'riot';
 
 export default function getSocialIconByLink(href: string, FallbackIcon?: React.ComponentType<SvgIconProps>) {
   const linkType = getLinkType(href);
@@ -35,6 +36,7 @@ const IconByType: Record<LinkType, React.StatelessComponent<SvgIconProps>> = {
   forbes: ForbesIcon,
   investopedia: InvestopediaIcon,
   nasdaq: NasdaqIcon,
+  riot: RiotIcon,
 };
 
 const linkedinRegExp = /^.+?\blinkedin\.com\b.+$/;
@@ -48,6 +50,7 @@ const entrepreneurRegExp = /^.+?\bentrepreneur\.com\b.+$/;
 const forbesRegExp = /^.+?\bforbes\.com\b.+$/;
 const investopediaRegExp = /^.+?\binvestopedia\.com\b.+$/;
 const nasdaqRegExp = /^.+?\bnasdaq\.com\b.+$/;
+const riotRegExp = /^.+?\briot\.im\b.+$/;
 
 const typeByRegExp = new Map<RegExp, LinkType>([
   [linkedinRegExp, 'linkedin'],
@@ -61,12 +64,13 @@ const typeByRegExp = new Map<RegExp, LinkType>([
   [forbesRegExp, 'forbes'],
   [investopediaRegExp, 'investopedia'],
   [nasdaqRegExp, 'nasdaq'],
+  [riotRegExp, 'riot'],
 ]);
 
 function getLinkType(link: string): LinkType | 'unknown' {
   const regExps = [
     linkedinRegExp, githubRegExp, mediumRegExp, telegramRegExp, twitterRegExp, benzingaRegExp, cnbcRegExp,
-    entrepreneurRegExp, forbesRegExp, investopediaRegExp, nasdaqRegExp,
+    entrepreneurRegExp, forbesRegExp, investopediaRegExp, nasdaqRegExp, riotRegExp,
   ];
   const linkRegExp = regExps.find(item => item.test(link));
   return linkRegExp && typeByRegExp.get(linkRegExp) || 'unknown';

@@ -16,7 +16,9 @@ const styles = (_theme: Theme) => ({
 
   link: rule({
     color: 'inherit',
+  }),
 
+  fillPath: rule({
     '& path': {
       fill: 'currentColor',
     },

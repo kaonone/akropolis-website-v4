@@ -8,19 +8,22 @@ interface IProps {
   direction?: 'row' | 'column';
 }
 
-const links: string[] = [
-  'https://github.com/akropolisio',
-  'https://twitter.com/akropolisio',
-  'https://t.me/akropolis_official',
-  'https://medium.com/akropolis',
-  'https://www.linkedin.com/company/akropolisio/',
+// [url, need_to_fill_svg-paths]
+const links: Array<[string, boolean]> = [
+  ['https://github.com/akropolisio', true],
+  ['https://twitter.com/akropolisio', true],
+  ['https://t.me/akropolis_official', true],
+  ['https://medium.com/akropolis', true],
+  ['https://riot.im/app/#/room/#akropolis:matrix.org', false],
 ];
 
 function AkropolisSocialLinks(props: IProps & StylesProps) {
   const { classes, direction = 'row' } = props;
   return (
     <div className={cn(classes.root, { [classes[direction]]: true })}>
-      {links.map(link => <SocialLink key={link} className={classes.link} href={link} />)}
+      {links.map(([link, needToFill]) => (
+        <SocialLink key={link} className={cn(classes.link, { [classes.fillPath]: needToFill })} href={link} />
+      ))}
     </div>
   );
 }

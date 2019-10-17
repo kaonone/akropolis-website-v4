@@ -1,6 +1,11 @@
 // tslint:disable
 export default [
   {
+    summary: 'Akropolis reviewed in Coingecko Quarterly Report',
+    url: 'https://twitter.com/akropolisio/status/1181641641641332738',
+    date: '11.08.2019',
+  },
+  {
     summary: 'Akropolis joins the Messari Disclosure Registry',
     url: 'https://medium.com/akropolis/joining-the-messari-disclosure-registry-what-it-means-for-akro-and-the-project-343409d17193',
     date: '09.26.2019',

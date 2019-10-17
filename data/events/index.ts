@@ -2,7 +2,22 @@ import { IEvent } from 'shared/types/models';
 
 // tslint:disable
 const events: IEvent[] = [
-   {
+  {
+    eventName: 'KuCoin Global Meetup Russia',
+    link: 'https://www.kucoin.com',
+    location: 'Moscow', 
+    description: {
+      en: 'KuCoin will be hosting a Meetup event in Moscow, Russia on October 18, 2019, to share thoughts about new and upcoming blockchain trends and how we will approach these changes. A number of leading blockchain projects will be joining us to share their insights into the blockchain industry. Giveaway activities will also be arranged to reward participants. Join us to get a closer look at the KuCoin Exchange!',
+      vi: 'KuCoin will be hosting a Meetup event in Moscow, Russia on October 18, 2019, to share thoughts about new and upcoming blockchain trends and how we will approach these changes. A number of leading blockchain projects will be joining us to share their insights into the blockchain industry. Giveaway activities will also be arranged to reward participants. Join us to get a closer look at the KuCoin Exchange!',
+      zh: 'KuCoin will be hosting a Meetup event in Moscow, Russia on October 18, 2019, to share thoughts about new and upcoming blockchain trends and how we will approach these changes. A number of leading blockchain projects will be joining us to share their insights into the blockchain industry. Giveaway activities will also be arranged to reward participants. Join us to get a closer look at the KuCoin Exchange!',
+      ko: 'KuCoin will be hosting a Meetup event in Moscow, Russia on October 18, 2019, to share thoughts about new and upcoming blockchain trends and how we will approach these changes. A number of leading blockchain projects will be joining us to share their insights into the blockchain industry. Giveaway activities will also be arranged to reward participants. Join us to get a closer look at the KuCoin Exchange!',
+    },
+    startDate: '10.18.2019',
+    finishDate: '10.18.2019',
+    image1x: require('./imgs/kucoin@660w.png'),
+    image2x: require('./imgs/kucoin@1320w.png'),
+  },
+  {
     eventName: 'DeFi Summit London',
     link: 'https://defisumm.it',
     location: 'London', 

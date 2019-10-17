@@ -14,8 +14,8 @@ const events: IEvent[] = [
     },
     startDate: '10.18.2019',
     finishDate: '10.18.2019',
-    image1x: require('./imgs/kucoin@660w.png'),
-    image2x: require('./imgs/kucoin@1320w.png'),
+    image1x: require('./imgs/kucoin@660w.jpg'),
+    image2x: require('./imgs/kucoin@1320w.jpg'),
   },
   {
     eventName: 'DeFi Summit London',

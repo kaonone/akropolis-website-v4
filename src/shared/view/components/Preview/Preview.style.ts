@@ -47,6 +47,7 @@ const styles = (theme: Theme) => ({
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 16,
     lineHeight: 1.63,
+    whiteSpace: 'pre-wrap',
 
     [theme.breakpoints.up('lg')]: {
       marginTop: theme.spacing.unit * 3,

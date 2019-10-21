@@ -35,7 +35,9 @@ function Product(props: IProps & StylesProps) {
           <Adaptive from={iPhonePlusWidth} to="md">
             {t(tKeys.sections.products.hackathon0x.headerLabel.getKey())}
           </Adaptive>
-          <Adaptive from="md" to={830}>{t(tKeys.sections.products.hackathon0x.headerLabelShort.getKey())}</Adaptive>
+          <Adaptive from="md" to={830}>
+            {t(tKeys.sections.products.hackathon0x.headerLabelShort.getKey())}
+          </Adaptive>
           <Adaptive from={830}>{t(tKeys.sections.products.hackathon0x.headerLabel.getKey())}</Adaptive>
         </div>
         <SecondPlaceIcon className={classes.icon} />
@@ -53,7 +55,7 @@ function Product(props: IProps & StylesProps) {
         <Preview
           title={t(tKeys.sections.products[type].title.getKey())}
           description={t(tKeys.sections.products[type].description.getKey())}
-          moreLink={link}
+          /*moreLink={link}*/
           isComingSoon={!link}
         />
       </div>

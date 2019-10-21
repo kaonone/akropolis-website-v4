@@ -19,8 +19,8 @@ export default {
   },
   sections: {
     intro: {
-      title: 'Decentralized and autonomous community economies - lending and pensions made simple.',
-      subtitle: 'A hybrid DAO + DeFi platform for all.',
+      title: 'Decentralized and autonomous community economies - lending and pensions made simple',
+      subtitle: 'A hybrid DAO + DeFi platform for all',
       watchVideoButton: 'Watch video',
     },
     products: {

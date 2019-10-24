@@ -33,49 +33,45 @@ function BountyResult(props: IProps) {
     notConfirmed: () => (
       <Typography variant="body1" className={classes.error}>
         <span>It seems like we have your ETH address in our database, but you didn’t confirm your residency and</span>{' '}
-        <Link href={BOUNTY_T_AND_C_URL}>
-          {'Terms & Conditions'}
-        </Link>
+        <Link href={BOUNTY_T_AND_C_URL}>{'Terms & Conditions'}</Link>
         <span>, please do so </span>
         {<RouterLink to={routes.bounty.registration.getRedirectPath()}>here</RouterLink>}{' '}
         <span>to see amount of AKRO tokens you will receive.</span>
-      </Typography>),
+      </Typography>
+    ),
     notExist: () => (
       <Typography variant="body1" className={classes.error}>
         <span>{`We’re sorry, but it seems like your ETH address ${address} is not in our database. Please contact us via `}</span>
         <span>
-          <Link href={`mailto:${SUPPORT_EMAIL}`}>
-            {SUPPORT_EMAIL}
-          </Link>
+          <Link href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</Link>
         </span>
-      </Typography>),
+      </Typography>
+    ),
     unknown: () => (
-      <Typography className={classes.error} variant="body1" align="center">Unknown Error</Typography>
+      <Typography className={classes.error} variant="body1" align="center">
+        Unknown Error
+      </Typography>
     ),
   };
 
   return (
     <div className={classes.root}>
-      {!error &&
+      {!error && (
         <>
-          <Typography variant="body1" className={classes.text} >
+          <Typography variant="body1" className={classes.text}>
             {`Your ETH address ${address} is registered in our database.`}
           </Typography>
-          <Typography className={classes.tokensAmount} variant="body1" >
-            {`You will receive ${tokens} AKRO (this is rounded amount of tokens). Subject to 2 month lock-up after Huobi Prime Launch.`}
+          <Typography className={classes.tokensAmount} variant="body1">
+            {`You will receive ${tokens} AKRO. Tokens are sent once per month, on 16th day of the month.`}
           </Typography>
           <Grid container wrap="nowrap" justify="center">
-            <Button
-              color="gradient"
-              variant="contained"
-              onClick={onEndCheck}
-              className={classes.button}
-            >
+            <Button color="gradient" variant="contained" onClick={onEndCheck} className={classes.button}>
               ok
             </Button>
           </Grid>
-        </>}
-      {error && messageByError[error] &&
+        </>
+      )}
+      {error && messageByError[error] && (
         <div>
           {messageByError[error]()}
           <Grid container wrap="nowrap" justify="center">
@@ -88,7 +84,8 @@ function BountyResult(props: IProps) {
               {isUnknownError ? 'Retry' : 'ok'}
             </Button>
           </Grid>
-        </div>}
+        </div>
+      )}
     </div>
   );
 }

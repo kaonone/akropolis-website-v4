@@ -6,7 +6,7 @@ import { Adaptive } from 'services/adaptability';
 import { Preview } from 'shared/view/components';
 
 import { StylesProps, provideStyles } from './Product.style';
-import { AfricaIcon, SecondPlaceIcon } from './icons';
+import { AfricaIcon } from './icons';
 import logo0xImg from './imgs/0x_logo.png';
 
 type ProductType = keyof typeof tKeys.sections.products;
@@ -40,7 +40,6 @@ function Product(props: IProps & StylesProps) {
           </Adaptive>
           <Adaptive from={830}>{t(tKeys.sections.products.hackathon0x.headerLabel.getKey())}</Adaptive>
         </div>
-        <SecondPlaceIcon className={classes.icon} />
       </>
     ),
     chamaNetwork: () => <AfricaIcon className={classes.icon} />,

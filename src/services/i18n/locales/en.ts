@@ -19,8 +19,8 @@ export default {
   },
   sections: {
     intro: {
-      title: 'Decentralized and autonomous community economies - lending and pensions made simple',
-      subtitle: 'A hybrid DAO + DeFi platform for all',
+      title: 'Decentralized and autonomous community economies',
+      subtitle: 'Lending and pensions made simple',
       watchVideoButton: 'Watch video',
     },
     products: {
@@ -29,22 +29,21 @@ export default {
         headerLabelShort: 'Hackathon winner',
         title: 'Cashflow Relay',
         description:
-          'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing (winner of the 0x Coinlist Hackathon).',
+          'Set up and trade Commitments to Future Cashflows (C2FC), a new financial primitive and a DeFi equivalent of cashflow financing (second place winner of the 0x Coinlist Hackathon)',
       },
       chamaNetwork: {
         title: 'Akropolis Network',
         description:
-          'Akropolis tokenizes credit unions and allows user groups to get uncollateralized loans, provide capital to pools and earn interest out of it.',
+          'Akropolis tokenizes credit unions and allows user groups to get uncollateralized loans, provide capital to pools and earn interest.',
       },
     },
     whatYouCanBuild: {
-      title: 'An easy to use interface for Group Financial Operations and decision-making',
+      title: 'An easy-to-use interface for financial operations and decision-making',
       items: {
         ownSavings: {
           title: 'Early adopter incentives',
           description:
-            'No counterparties, no geographic limitations. A fair and transparent new way of managing finances.\n' +
-            'Early adopters earn more over time thanks to each pool’s bonding curve.',
+            'No counterparties, no geographic limitations. A fair and transparent new way of managing finances. A bonding curve allows early users to earn profit over time.',
         },
         novelInstruments: {
           title: 'Automated  Treasury functions',
@@ -58,7 +57,7 @@ export default {
         bank: {
           title: 'Join whenever you want, leave whenever you wish',
           description:
-            'Create savings and lending infrastructure for groups, and access traditional and decentralized finance options without borders and unnecessary fees.',
+            'Create savings and lending infrastructure for groups, and access traditional and decentralized finance options without borders or unnecessary fees.',
         },
       },
     },

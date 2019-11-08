@@ -3,6 +3,21 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'KuCoin Blockchain Day Berlin 2019',
+    link: 'https://www.eventbrite.com/e/kucoin-blockchain-day-berlin-2019-tickets-79497460043',
+    location: 'Berlin', 
+    description: {
+      en: 'KuCoin is organizing a welcoming party together with Akropolis. In addition prominent projects such as Algorand, Ocean Protocol, Cosmos and the Staking as a Service Berlin-Based firm, Chorus One will attend.',
+      vi: 'KuCoin is organizing a welcoming party together with Akropolis. In addition prominent projects such as Algorand, Ocean Protocol, Cosmos and the Staking as a Service Berlin-Based firm, Chorus One will attend.',
+      zh: 'KuCoin is organizing a welcoming party together with Akropolis. In addition prominent projects such as Algorand, Ocean Protocol, Cosmos and the Staking as a Service Berlin-Based firm, Chorus One will attend.',
+      ko: 'KuCoin is organizing a welcoming party together with Akropolis. In addition prominent projects such as Algorand, Ocean Protocol, Cosmos and the Staking as a Service Berlin-Based firm, Chorus One will attend.',
+    },
+    startDate: '11.11.2019',
+    finishDate: '11.11.2019',
+    image1x: require('./imgs/kucoin-ber@660w.jpg'),
+    image2x: require('./imgs/kucoin-ber@1320w.jpg'),
+  },
+  {
     eventName: 'KuCoin Global Meetup Russia',
     link: 'https://www.kucoin.com',
     location: 'Moscow', 

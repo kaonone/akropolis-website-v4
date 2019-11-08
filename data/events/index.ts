@@ -14,8 +14,8 @@ const events: IEvent[] = [
     },
     startDate: '11.11.2019',
     finishDate: '11.11.2019',
-    image1x: require('./imgs/kucoin-ber@660w.jpg'),
-    image2x: require('./imgs/kucoin-ber@1320w.jpg'),
+    image1x: require('./imgs/kucoin-ber@660w.png'),
+    image2x: require('./imgs/kucoin-ber@1320w.png'),
   },
   {
     eventName: 'KuCoin Global Meetup Russia',

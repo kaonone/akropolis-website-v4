@@ -147,15 +147,15 @@ function RegistrationAddressForm(props: IProps) {
       initialValues={initialValues}
       validate={validateForm}
     >
-      {({ handleSubmit, submitting, values, invalid, reset }) => {
+      {({ handleSubmit, submitting, values, invalid, form }) => {
         const { isConfirmTerms, isNotResident } = values as IRegistrationFormData;
         return (
           <form onSubmit={handleSubmit}>
             {isNeedLog && (<>
-              <Dialog open={!isServer && isExpiredToken} onClose={makeOnRetryClickHandler(reset)}>
+              <Dialog open={!isServer && isExpiredToken} onClose={makeOnRetryClickHandler(form.reset)}>
                 <DialogTitle>Your registration session is expired.</DialogTitle>
                 <DialogActions>
-                  <Button onClick={makeOnRetryClickHandler(reset)} color="primary" variant="contained">
+                  <Button onClick={makeOnRetryClickHandler(form.reset)} color="primary" variant="contained">
                     Retry
                   </Button>
                 </DialogActions>

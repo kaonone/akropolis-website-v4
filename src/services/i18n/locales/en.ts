@@ -20,7 +20,7 @@ export default {
   sections: {
     intro: {
       title: 'Decentralized and autonomous community economies',
-      subtitle: 'Lending and pensions made simple',
+      subtitle: 'We build products that help people save, grow and scale',
       watchVideoButton: 'Watch video',
     },
     products: {

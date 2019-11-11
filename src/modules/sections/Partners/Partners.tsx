@@ -20,13 +20,13 @@ function Partners({ withTitle = true }: IProps) {
       <Section title={withTitle ? t(tKeys.sections.partners.title.getKey()) : undefined}>
         <Grid container spacing={16} justify="center">
           {partners.map(item => (
-            <Grid key={item.url} item xs={6} md={4} lg={3}>
+            <Grid key={item.url} item xs={4} md={3} lg={2}>
               <PartnerCard {...item} />
             </Grid>
           ))}
         </Grid>
-      </Section >
-    </PageBlock >
+      </Section>
+    </PageBlock>
   );
 }
 

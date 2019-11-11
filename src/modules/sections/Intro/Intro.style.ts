@@ -46,13 +46,13 @@ const styles = (theme: Theme) => {
       textTransform: 'uppercase',
 
       [theme.breakpoints.up('md')]: {
-        fontSize: 38,
+        fontSize: 34,
         lineHeight: 1.26,
         letterSpacing: '-0.3px',
       },
 
       [theme.breakpoints.up('lg')]: {
-        fontSize: 56,
+        fontSize: 44,
         lineHeight: 1.21,
         letterSpacing: '-0.5px',
       },

@@ -132,6 +132,7 @@ export default [
     position: {
       en: 'Technology Lead',
       vi: 'Trưởng nhóm công nghệ',
+      vi: 'Trưởng nhóm công nghệ',
       zh: '技术主管',
       ko: '기술 책임자',
     },
@@ -220,10 +221,10 @@ export default [
     ],
     fullName: 'Peter Robertson',
     position: {
-      en: 'Pensions & Insurance',
-      vi: 'Lương hưu và bảo hiểm',
-      zh: '养老金与保险',
-      ko: '연금 및 보험분야',
+      en: 'Pensions & Insurance Advisor',
+      vi: 'Cố vấn Lương hưu và bảo hiểm ',
+      zh: '养老金与保险 顾问',
+      ko: '연금 및 보험분야 고문',
     },
     photo1x: require('./imgs/peter.png'),
     photo2x: require('./imgs/peter@2x.png'),

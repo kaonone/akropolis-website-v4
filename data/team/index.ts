@@ -216,6 +216,80 @@ export default [
   },
   {
     links: [
+      'https://www.linkedin.com/in/peter-robertson-0780bba/',
+    ],
+    fullName: 'Peter Robertson',
+    position: {
+      en: 'Pensions & Insurance',
+      vi: 'Lương hưu và bảo hiểm',
+      zh: '养老金与保险',
+      ko: '연금 및 보험분야',
+    },
+    photo1x: require('./imgs/peter.png'),
+    photo2x: require('./imgs/peter@2x.png'),
+    tags: {
+      en: [
+        'Digital Assets',
+        'Actuarial Science',
+        'Financial Product Design',
+        'Pensions',
+        'Insurance',
+        'Strategy',
+        'Business Development',
+      ],
+      vi: [
+        'Tài sản kỹ thuật số',
+        'Khoa học tính toán bảo hiểm',
+        'Thiết kế sản phẩm tài chính',
+        'Lương hưu',
+        'Bảo hiểm',
+        'Chiến lược',
+        'Phát triển kinh doanh',
+      ],
+      zh: [
+        '数字资产',
+        '精算科学',
+        '金融产品设计',
+        '养老金',
+        '保险',
+        '策略',
+        '业务发展',
+      ],
+      ko: [
+        '디지털 자산',
+        '계리 과학',
+        '금융 상품 디자인',
+        '연금',
+        '보험',
+        '전략',
+        '사업 개발',
+      ],
+    },
+    background: {
+      en: [
+        'Genesis Mining',
+        'Vanguard Asset Management',
+        'Kings College London',
+      ],
+      vi: [
+        'Khai thác Genesis',
+        'Quản lý tài sản Vanguard',
+        'Đại học Kings London',
+      ],
+      zh: [
+        'Genesis Mining',
+        'Vanguard Asset Management',
+        'Kings College London',
+      ],
+      ko: [
+        'Genesis Mining',
+        'Vanguard Asset Management',
+        'Kings College London',
+      ],
+    },
+  },
+  {
+    links: [
       'https://ru.linkedin.com/in/ilgiz-gimaltdinov-8bbba411',
     ],
     fullName: 'Ilgiz Gimal',
@@ -463,6 +537,118 @@ export default [
         '컴퓨터 공학 학사',
         '10개의 상업상품 구현',
         'Frontend의 개발자로 5년간 근무',
+      ],
+    },
+  },
+  {
+    links: [
+      'https://github.com/krashaen/',
+    ],
+    fullName: 'Mike Krash',
+    position: {
+      en: 'Software Development',
+      vi: 'Phát triển phần mềm',
+      zh: '软件开发',
+      ko: '소프트웨어 개발자',
+    },
+    photo1x: require('./imgs/mikhailk@1x.png'),
+    photo2x: require('./imgs/mikhailk@2x.png'),
+    tags: {
+      en: [
+        'React',
+        'Redux',
+      ],
+      vi: [
+        'React',
+        'Redux',
+      ],
+      zh: [
+        'React',
+        'Redux',
+      ],
+      ko: [
+        'React',
+        'Redux',
+      ],
+    },
+    background: {
+      en: [
+        'MSc Engineering',
+        'Lead Developer',
+      ],
+      vi: [
+        'ThS Kỹ thuật',
+        'Nhà phát triển chính',
+      ],
+      zh: [
+        '工程学硕士',
+        '开发主管',
+      ],
+      ko: [
+        '엔지니어링 이학석사',
+        '수석 개발자',
+      ],
+    },
+  },
+  {
+    links: [
+      'https://github.com/Burize/',
+    ],
+    fullName: 'Dima Hurs',
+    position: {
+      en: 'Software Development',
+      vi: 'Phát triển phần mềm',
+      zh: '软件开发',
+      ko: '소프트웨어 개발자',
+    },
+    photo1x: require('./imgs/dmitryh@1x.png'),
+    photo2x: require('./imgs/dmitryh@2x.png'),
+    tags: {
+      en: [
+        'React',
+        'Redux',
+        'Typescript',
+        'React Native',
+        'Dart',
+        'Flutter',
+      ],
+      vi: [
+        'React',
+        'Redux',
+        'Typescript',
+        'React Native',
+        'Dart',
+        'Flutter',
+      ],
+      zh: [
+        'React',
+        'Redux',
+        'Typescript',
+        'React Native',
+        'Dart',
+        'Flutter',
+      ],
+      ko: [
+        'React',
+        'Redux',
+        'Typescript',
+        'React Native',
+        'Dart',
+        'Flutter',
+      ],
+    },
+    background: {
+      en: [
+        'BSc Computer Science',
+      ],
+      vi: [
+        'Cử nhân Khoa học Máy tính',
+      ],
+      zh: [
+        '计算机科学学士',
+      ],
+      ko: [
+        '컴퓨터 공학 학사',
       ],
     },
   },

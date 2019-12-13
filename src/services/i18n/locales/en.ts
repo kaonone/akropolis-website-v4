@@ -40,28 +40,6 @@ export default {
     openSourceDevelopment: {
       title: 'Open Source Development',
       moreLinkText: 'View on GitHub',
-      openSourceProducts: {
-        polkahub: {
-          title: 'Polkahub',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quia, aliquid incidunt sunt cumque corporis, ut libero ipsam soluta omnis numquam minus deleniti? Ipsa autem itaque laborum praesentium hic quibusdam!',
-        },
-        bridge: {
-          title: 'Bridge',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quia, aliquid incidunt sunt cumque corporis, ut libero ipsam soluta omnis numquam minus deleniti? Ipsa autem itaque laborum praesentium hic quibusdam!',
-        },
-        stakingPortal: {
-          title: 'Staking Portal',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quia, aliquid incidunt sunt cumque corporis, ut libero ipsam soluta omnis numquam minus deleniti? Ipsa autem itaque laborum praesentium hic quibusdam!',
-        },
-        web3WalletsKit: {
-          title: 'Web3 Wallets Kit',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quia, aliquid incidunt sunt cumque corporis, ut libero ipsam soluta omnis numquam minus deleniti? Ipsa autem itaque laborum praesentium hic quibusdam!',
-        },
-      },
     },
     whatYouCanBuild: {
       title: 'An easy-to-use interface for financial operations and decision-making',

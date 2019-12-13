@@ -5,22 +5,21 @@ import { Preview } from 'shared/view/components';
 
 import { StylesProps, provideStyles } from './OpenSourceDevelopmentCard.style';
 
-export type OpenSourceName = keyof typeof tKeys.sections.openSourceDevelopment.openSourceProducts;
-
 interface IProps {
   url: string;
-  name: OpenSourceName;
+  title: string;
+  description: string;
 }
 
 function OpenSourceDevelopmentCard(props: IProps & StylesProps) {
-  const { classes, url, name } = props;
+  const { classes, url, title, description } = props;
   const { t } = useTranslate();
 
   return (
     <div className={classes.root}>
       <Preview
-        title={t(tKeys.sections.openSourceDevelopment.openSourceProducts[name].title.getKey())}
-        description={t(tKeys.sections.openSourceDevelopment.openSourceProducts[name].description.getKey())}
+        title={title}
+        description={description}
         moreLink={url}
         moreLinkText={t(tKeys.sections.openSourceDevelopment.moreLinkText.getKey())}
       />

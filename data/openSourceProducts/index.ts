@@ -1,27 +1,27 @@
-import { OpenSourceName } from 'modules/sections/OpenSourceDevelopment/OpenSourceDevelopmentCard';
-
-interface IOpenSourceProduct {
-  url: string;
-  name: OpenSourceName;
-}
-
-const openSourceProduct: IOpenSourceProduct[] = [
+// tslint:disable:max-line-length
+export default [
   {
     url: 'https://github.com/akropolisio/polkahub-cli',
-    name: 'polkahub',
+    title: 'polkahub',
+    description:
+      'Platform-as-a-Service for Substrate Nodes.',
   },
   {
     url: 'https://github.com/akropolisio/akropolisOS-chain-node',
-    name: 'bridge',
+    title: 'polkadai-bridge',
+    description:
+      'Вridge for self transfers of DAI Token (ERC20) to sDAI (ERC20 representation).',
   },
   {
     url: 'https://github.com/akropolisio/staking-portal',
-    name: 'stakingPortal',
+    title: 'staking-portal',
+    description:
+      'Frontend for Polkadot chain.',
   },
   {
     url: 'https://github.com/akropolisio/web3-wallets-kit',
-    name: 'web3WalletsKit',
+    title: 'web3-wallet-kit',
+    description:
+      'Package for connecting different Ethereum wallets for dApp.',
   },
 ];
-
-export default openSourceProduct;

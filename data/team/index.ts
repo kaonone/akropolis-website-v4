@@ -132,7 +132,6 @@ export default [
     position: {
       en: 'Technology Lead',
       vi: 'Trưởng nhóm công nghệ',
-      vi: 'Trưởng nhóm công nghệ',
       zh: '技术主管',
       ko: '기술 책임자',
     },

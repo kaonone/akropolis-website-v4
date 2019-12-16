@@ -12,7 +12,7 @@ function OpenSourceDevelopment() {
   const { t, tKeys } = useTranslate();
 
   return (
-    <PageBlock xsVPadding={1} mdVPadding={2} lgVPadding={10}>
+    <PageBlock xsVPadding={1} mdVPadding={2}>
       <Section title={t(tKeys.sections.openSourceDevelopment.title.getKey())}>
         <Grid container spacing={16} justify="center">
           {openSourceProducts.map(item => (

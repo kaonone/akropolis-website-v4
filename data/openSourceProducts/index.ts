@@ -20,7 +20,7 @@ export default [
   },
   {
     url: 'https://github.com/akropolisio/web3-wallets-kit',
-    title: 'web3-wallet-kit',
+    title: 'web3-wallets-kit',
     description:
       'Package for connecting different Ethereum wallets for dApp.',
   },

@@ -34,8 +34,8 @@ function Home(props: RouteComponentProps & StylesProps) {
         <Intro />
       </Layout.Intro>
       <Products />
-      <OpenSourceDevelopment />
       <WhatYouCanBuild />
+      <OpenSourceDevelopment />
       <Partners />
       <News />
       <CurrentEvents onChangeSelectedEvent={handleSelectCurrentEvent} />

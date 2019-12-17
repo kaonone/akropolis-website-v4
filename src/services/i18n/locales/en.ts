@@ -38,7 +38,7 @@ export default {
       },
     },
     openSourceDevelopment: {
-      title: 'Open Source Development',
+      title: 'Web3 Ecosystem Development',
       moreLinkText: 'View on GitHub',
     },
     whatYouCanBuild: {

@@ -16,7 +16,7 @@ function OpenSourceDevelopment() {
       <Section title={t(tKeys.sections.openSourceDevelopment.title.getKey())}>
         <Grid container spacing={16} justify="center">
           {openSourceProducts.map(item => (
-            <Grid key={item.url} item container xs={12} md={6}>
+            <Grid key={item.url} item container xs={12} md={6} lg={3}>
               <OpenSourceDevelopmentCard {...item} />
             </Grid>
           ))}

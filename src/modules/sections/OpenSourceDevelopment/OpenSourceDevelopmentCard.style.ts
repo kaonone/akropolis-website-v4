@@ -4,7 +4,6 @@ import { rule } from 'shared/helpers/style';
 const styles = (theme: Theme) => ({
   root: rule({
     flexGrow: 1,
-    display: 'flex',
     padding: theme.spacing.unit,
     borderRadius: 6,
     boxShadow: '0 2px 8px 0 rgba(120, 120, 120, 0.2)',
@@ -14,6 +13,29 @@ const styles = (theme: Theme) => ({
 
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing.unit * 2,
+    },
+  }),
+
+  link: rule({
+    display: 'flex',
+    alignItems: 'baseline',
+    padding: 0,
+    color: 'inherit',
+    transition: 'color .4s ease',
+
+    '&:hover': {
+      color: theme.extra.palette.link.hover,
+    },
+  }),
+
+  linkIcon: rule({
+    position: 'relative',
+    top: '0.1em',
+    fontSize: 20,
+    marginLeft: theme.spacing.unit,
+
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 26,
     },
   }),
 

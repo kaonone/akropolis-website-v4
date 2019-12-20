@@ -39,7 +39,6 @@ export default {
     },
     openSourceDevelopment: {
       title: 'Web3 Ecosystem Development',
-      moreLinkText: 'View on GitHub',
     },
     whatYouCanBuild: {
       title: 'An easy-to-use interface for financial operations and decision-making',

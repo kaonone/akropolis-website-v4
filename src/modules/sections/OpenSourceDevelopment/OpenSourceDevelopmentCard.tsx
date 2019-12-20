@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-import { useTranslate, tKeys } from 'services/i18n';
-import { Preview } from 'shared/view/components';
-
 import { StylesProps, provideStyles } from './OpenSourceDevelopmentCard.style';
 
 interface IProps {
@@ -13,17 +10,14 @@ interface IProps {
 
 function OpenSourceDevelopmentCard(props: IProps & StylesProps) {
   const { classes, url, title, description } = props;
-  const { t } = useTranslate();
 
   return (
-    <div className={classes.root}>
-      <Preview
-        title={title}
-        description={description}
-        moreLink={url}
-        moreLinkText={t(tKeys.sections.openSourceDevelopment.moreLinkText.getKey())}
-      />
-    </div>
+    <a className={classes.root} href={url} target="_blank" rel="noopener noreferrer">
+      <article>
+        <h3 className={classes.title}>{title}</h3>
+        <p className={classes.description}>{description}</p>
+      </article>
+    </a>
   );
 }
 

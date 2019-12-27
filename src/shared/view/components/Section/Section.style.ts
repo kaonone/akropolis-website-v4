@@ -27,7 +27,7 @@ const styles = (theme: Theme) => ({
   }),
 
   subtitle: rule({
-    maxWidth: theme.extra.sizes.maxContentWidth,
+    maxWidth: theme.extra.sizes.maxSubtitleWidth,
     margin: `0 auto ${theme.spacing.unit * 3.5}px`,
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,

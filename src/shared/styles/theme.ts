@@ -52,6 +52,7 @@ const baseThemeStyles = {
       borderRadius: 4,
     },
     maxContentWidth: 1400,
+    maxSubtitleWidth: 768,
   },
   spacing: {
     unit,

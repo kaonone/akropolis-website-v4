@@ -39,6 +39,8 @@ export default {
     },
     openSourceDevelopment: {
       title: 'Web3 Ecosystem Development',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius assumenda nam illum cum temporibus quidem sint porro possimus perferendis',
     },
     whatYouCanBuild: {
       title: 'An easy-to-use interface for financial operations and decision-making',

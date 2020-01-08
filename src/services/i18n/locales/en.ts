@@ -40,7 +40,7 @@ export default {
     openSourceDevelopment: {
       title: 'Web3 Ecosystem Development',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius assumenda nam illum cum temporibus quidem sint porro possimus perferendis',
+        'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',
     },
     whatYouCanBuild: {
       title: 'An easy-to-use interface for financial operations and decision-making',

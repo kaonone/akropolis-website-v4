@@ -10,11 +10,12 @@ interface IProps {
   titleIcon?: React.ReactNode;
   description: string;
   moreLink?: string;
+  moreLinkText?: string;
   isComingSoon?: boolean;
 }
 
 function Preview(props: IProps & StylesProps) {
-  const { classes, title, description, moreLink, titleIcon, isComingSoon, subtitle } = props;
+  const { classes, title, description, moreLink, moreLinkText, titleIcon, isComingSoon, subtitle } = props;
   const { t, tKeys } = useTranslate();
   return (
     <article className={classes.root}>
@@ -28,7 +29,7 @@ function Preview(props: IProps & StylesProps) {
         <footer className={classes.footer}>
           {moreLink && (
             <Link href={moreLink} target="_blank" rel="noopener noreferrer" className={classes.moreLink}>
-              {t(tKeys.shared.learnMore.getKey())}
+              {moreLinkText || t(tKeys.shared.learnMore.getKey())}
               <LaunchIcon className={classes.moreLinkIcon} />
             </Link>
           )}

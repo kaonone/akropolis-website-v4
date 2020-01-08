@@ -4,7 +4,15 @@ import { RouteComponentProps } from 'react-router';
 import Layout from 'modules/shared/Layout/Layout';
 import Header from 'modules/shared/Header/Header';
 import Footer from 'modules/shared/Footer/Footer';
-import { Intro, News, Partners, Products, WhatYouCanBuild, CurrentEvents } from 'modules/sections';
+import {
+  Intro,
+  News,
+  Partners,
+  Products,
+  WhatYouCanBuild,
+  CurrentEvents,
+  OpenSourceDevelopment,
+} from 'modules/sections';
 import { AnchorName } from 'shared/types/common';
 
 import { StylesProps, provideStyles } from './Home.style';
@@ -27,6 +35,7 @@ function Home(props: RouteComponentProps & StylesProps) {
       </Layout.Intro>
       <Products />
       <WhatYouCanBuild />
+      <OpenSourceDevelopment />
       <Partners />
       <News />
       <CurrentEvents onChangeSelectedEvent={handleSelectCurrentEvent} />

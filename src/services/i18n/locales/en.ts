@@ -37,11 +37,6 @@ export default {
           'Akropolis tokenizes credit unions and allows user groups to get uncollateralized loans, provide capital to pools and earn interest.',
       },
     },
-    openSourceDevelopment: {
-      title: 'Web3 Ecosystem Development',
-      description:
-        'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',
-    },
     whatYouCanBuild: {
       title: 'An easy-to-use interface for financial operations and decision-making',
       items: {

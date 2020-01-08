@@ -2,19 +2,22 @@ import * as React from 'react';
 
 import openSourceProducts from 'data/openSourceProducts';
 import PageBlock from 'modules/shared/PageBlock/PageBlock';
-import { useTranslate } from 'services/i18n';
 import { Section } from 'shared/view/components';
 import { Grid } from 'shared/view/elements';
 
 import OpenSourceDevelopmentCard from './OpenSourceDevelopmentCard';
 
-function OpenSourceDevelopment() {
-  const { t, tKeys: tKeysAll } = useTranslate();
-  const tKeys = tKeysAll.sections.openSourceDevelopment;
+const translates = {
+  title: 'Web3 Ecosystem Development',
+  description:
+    // tslint:disable-next-line: max-line-length
+    'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',
+};
 
+function OpenSourceDevelopment() {
   return (
     <PageBlock xsVPadding={1} mdVPadding={2}>
-      <Section title={t(tKeys.title.getKey())} subtitle={t(tKeys.description.getKey())}>
+      <Section title={translates.title} subtitle={translates.description}>
         <Grid container spacing={16} justify="center">
           {openSourceProducts.map(item => (
             <Grid key={item.url} item container xs={12} md={6}>

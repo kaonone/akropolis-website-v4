@@ -8,7 +8,7 @@ import { Grid } from 'shared/view/elements';
 import OpenSourceDevelopmentCard from './OpenSourceDevelopmentCard';
 
 const translates = {
-  title: 'Web3 Ecosystem Development',
+  title: 'Open source development',
   description:
     // tslint:disable-next-line: max-line-length
     'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',

@@ -1,7 +1,7 @@
 // tslint:disable
 export default [
   {
-    summary: 'Akoropolis is in top 15 DeFi projects by Average Development Activity in January',
+    summary: 'Akropolis is in top 15 DeFi projects by Average Development Activity in January',
     url: 'https://twitter.com/akropolisio/status/1222118244250738688',
     date: '01.28.2020',
   }

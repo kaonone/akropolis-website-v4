@@ -1,10 +1,10 @@
 // tslint:disable
 export default [
   {
-    summary: 'Akropolis is in top 15 DeFi projects by Average Development Activity in January',
+    summary: 'Akropolis is in Top 15 DeFi projects by Average Development Activity in January',
     url: 'https://twitter.com/akropolisio/status/1222118244250738688',
     date: '01.28.2020',
-  }
+  },
   {
     summary: 'Akropolis Development Update: December 2019',
     url: 'https://medium.com/akropolis/akropolis-development-update-december-2019-7d3122bd53f',

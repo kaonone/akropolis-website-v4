@@ -1,6 +1,26 @@
 // tslint:disable
 export default [
   {
+    summary: 'Akropolis is in Top 15 DeFi projects by Average Development Activity in January',
+    url: 'https://twitter.com/akropolisio/status/1222118244250738688',
+    date: '01.28.2020',
+  },
+  {
+    summary: 'Akropolis Development Update: December 2019',
+    url: 'https://medium.com/akropolis/akropolis-development-update-december-2019-7d3122bd53f',
+    date: '12.31.2019',
+  },
+  {
+    summary: 'PolkaHub: Scalable Blockchain Infrastructure',
+    url: 'https://medium.com/akropolis/polkahub-scalable-blockchain-infrastructure-5d5696fc0d60',
+    date: '12.24.2019',
+  },
+  {
+    summary: 'Web3Foundation: Wave Four Grant Recipients',
+    url: 'https://twitter.com/web3foundation/status/1209167282678702081',
+    date: '12.24.2019',
+  },
+  {
     summary: 'Akropolis reviewed in Coingecko Quarterly Report',
     url: 'https://twitter.com/akropolisio/status/1181641641641332738',
     date: '11.08.2019',
@@ -99,6 +119,11 @@ export default [
     summary: 'Interoperable DeFi: Akropolis, ChainX and Polkadot broadening the spectrum of the new financial system',
     url: 'https://medium.com/akropolis/interoperable-defi-akropolis-chainx-and-polkadot-broadening-the-spectrum-of-the-new-financial-32683ff7b3f8',
     date: '07.10.2019',
+  },
+  {
+    summary: 'Camilla Russo (TheDefiant) interview with Ana Andria',
+    url: 'https://twitter.com/akropolisio/status/1148300577601970176',
+    date: '07.08.2019',
   },
   {
     summary: 'Token Metrics, Token Swap Announcement and Instructions',

@@ -3,6 +3,36 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'ETHCC [3]',
+    link: 'https://ethcc.io',
+    location: 'Paris', 
+    description: {
+      en: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
+      vi: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
+      zh: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
+      ko: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
+    },
+    startDate: '03.03.2020',
+    finishDate: '03.05.2019',
+    image1x: require('./imgs/ethcc3@660w.png'),
+    image2x: require('./imgs/ethcc3@1320w.png'),
+  },
+  {
+    eventName: 'ETHDenver | Polkadot – Colorado "Buidl" Week Meetup',
+    link: 'https://www.ethdenver.com',
+    location: 'Denver', 
+    description: {
+      en: 'Akropolis will present Polkahub on Polkadot – Colorado "Buidl" Week Meetup.',
+      vi: 'Akropolis will present Polkahub on Polkadot – Colorado "Buidl" Week Meetup.',
+      zh: 'Akropolis will present Polkahub on Polkadot – Colorado "Buidl" Week Meetup.',
+      ko: 'Akropolis will present Polkahub on Polkadot – Colorado "Buidl" Week Meetup.',
+    },
+    startDate: '02.11.2020',
+    finishDate: '02.11.2019',
+    image1x: require('./imgs/denver@660w.png'),
+    image2x: require('./imgs/denver@1320w.png'),
+  },
+  {
     eventName: 'KuCoin Blockchain Day Berlin 2019',
     link: 'https://www.eventbrite.com/e/kucoin-blockchain-day-berlin-2019-tickets-79497460043',
     location: 'Berlin', 

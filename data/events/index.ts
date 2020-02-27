@@ -7,9 +7,9 @@ const events: IEvent[] = [
     link: 'https://ethcc.io',
     location: 'Paris', 
     description: {
-      en: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
-      vi: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
-      zh: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
+      en: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
+      vi: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
+      zh: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
       ko: 'Ana Andria will have a speech on "Uncollateralized loans + DAOs: how to combine these" topic.',
     },
     startDate: '03.03.2020',

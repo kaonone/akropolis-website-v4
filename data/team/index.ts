@@ -290,64 +290,6 @@ export default [
   },
   {
     links: [
-      'https://ru.linkedin.com/in/ilgiz-gimaltdinov-8bbba411',
-    ],
-    fullName: 'Ilgiz Gimal',
-    position: {
-      en: 'Product',
-      vi: 'Giám đốc sản xuất',
-      zh: '产品经理',
-      ko: '상품 관리자',
-    },
-    photo1x: require('./imgs/ilgiz@1x.png'),
-    photo2x: require('./imgs/ilgiz@2x.png'),
-    tags: {
-      en: [
-        'Product Development',
-        'Staging Development',
-        'Project Management',
-        'Ecosystem Analysis',
-      ],
-      vi: [
-        'Phát triển sản phẩm',
-        'Phát triển dàn dựng',
-        'Quản lý dự án',
-        'Phân tích hệ sinh thái',
-      ],
-      zh: [
-        '产品开发',
-        '分期开发',
-        '项目管理',
-        '生态系统分析',
-      ],
-      ko: [
-        '상품 개발',
-        '스테이징 개발',
-        '프로젝트 관리',
-        '에코시스템 분석',
-      ],
-    },
-    background: {
-      en: [
-        'VTB Bank',
-        'PhD Computer Science & Mathematics',
-      ],
-      vi: [
-        'VTB Bank',
-        'Tiến sĩ Khoa học Máy tính & Toán học',
-      ],
-      zh: [
-        'VTB Bank',
-        '计算机科学与数学博士',
-      ],
-      ko: [
-        'VTB Bank',
-        '컴퓨터 공학 및 수학 박사',
-      ],
-    },
-  },
-  {
-    links: [
       'https://github.com/bokkypoobah'
     ],
     fullName: 'Bokky Poobah',

@@ -3,6 +3,51 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'Monolith Digital #DeFi Meetup',
+    link: 'https://www.meetup.com/ru-RU/monolith/events/269605712/',
+    location: 'Online Conference', 
+    description: {
+      en: 'Ana Andrianova will join the "DeFi for good: hacking communities" disscussion. Can the crypto-economics, game theory & other learning drawn from cryptocurrencies help design the framework for sustainable communities? ',
+      vi: 'Ana Andrianova will join the "DeFi for good: hacking communities" disscussion. Can the crypto-economics, game theory & other learning drawn from cryptocurrencies help design the framework for sustainable communities? ',
+      zh: 'Ana Andrianova will join the "DeFi for good: hacking communities" disscussion. Can the crypto-economics, game theory & other learning drawn from cryptocurrencies help design the framework for sustainable communities? ',
+      ko: 'Ana Andrianova will join the "DeFi for good: hacking communities" disscussion. Can the crypto-economics, game theory & other learning drawn from cryptocurrencies help design the framework for sustainable communities? ',
+    },
+    startDate: '03.30.2020',
+    finishDate: '03.30.2020',
+    image1x: require('./imgs/defi@660w.png'),
+    image2x: require('./imgs/defi@1320w.png'),
+  },
+  {
+    eventName: 'InterCon — The Virtual Conference',
+    link: 'https://www.youtube.com/watch?v=EN0t7hRgjoQ',
+    location: 'Online Conference', 
+    description: {
+      en: 'Ana speaking on "Undercollateraized loan issuance using the DAO" topic on InterCon Virtual Conference',
+      vi: 'Ana speaking on "Undercollateraized loan issuance using the DAO" topic on InterCon Virtual Conference',
+      zh: 'Ana speaking on "Undercollateraized loan issuance using the DAO" topic on InterCon Virtual Conference',
+      ko: 'Ana speaking on "Undercollateraized loan issuance using the DAO" topic on InterCon Virtual Conference',
+    },
+    startDate: '03.13.2020',
+    finishDate: '03.13.2020',
+    image1x: require('./imgs/intercon@660w.png'),
+    image2x: require('./imgs/intercon@1320w.png'),
+  },
+  {
+    eventName: 'Substrate Seminar',
+    link: 'https://www.youtube.com/watch?v=D5oeAwuqGDQ',
+    location: 'Online Conference', 
+    description: {
+      en: 'This week we explore PolkaHub. PolkaHub is a Heroku-like tool for deploying Substrate-based nodes.',
+      vi: 'This week we explore PolkaHub. PolkaHub is a Heroku-like tool for deploying Substrate-based nodes.',
+      zh: 'This week we explore PolkaHub. PolkaHub is a Heroku-like tool for deploying Substrate-based nodes',
+      ko: 'This week we explore PolkaHub. PolkaHub is a Heroku-like tool for deploying Substrate-based nodes.',
+    },
+    startDate: '03.10.2020',
+    finishDate: '03.10.2020',
+    image1x: require('./imgs/polkahub@660w.png'),
+    image2x: require('./imgs/polkahub@1320w.png'),
+  },
+  {
     eventName: 'ETHCC [3]',
     link: 'https://ethcc.io',
     location: 'Paris', 

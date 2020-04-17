@@ -4,7 +4,6 @@ import { Store, Reducer, ActionCreator, Action } from 'redux';
 import { SagaIterator } from 'redux-saga';
 import { GenerateClassName } from 'jss';
 
-import Api from 'services/api/Api';
 import * as adaptabilityService from 'services/adaptability';
 import { JSS } from 'shared/styles';
 
@@ -25,9 +24,8 @@ export interface IJssDependencies {
   generateClassName: GenerateClassName<any>;
 }
 
-export interface IDependencies {
-  api: Api;
-}
+// tslint:disable-next-line: no-empty-interface
+export interface IDependencies {}
 
 export type IDictionary<T, S extends keyof any = string> = {
   [key in S]: T;

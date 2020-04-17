@@ -14,11 +14,8 @@ export default function getEnvParams() {
   const withHot = isWatchMode && isDevelopment;
   const appVersion = appInfo.version;
 
-  const bountyApiUrl = 'https://api-bounty.akropolis.io/1.0';
-  const tokenSwapApiUrl = 'https://swap.akropolis.io/1.0';
-
   return {
     isProduction, isDevelopment, isWatchMode, withAnalyze, withoutTypeChecking,
-    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging, bountyApiUrl, tokenSwapApiUrl,
+    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging,
   };
 }

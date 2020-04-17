@@ -97,7 +97,7 @@ export const getTheme = (): Theme => {
   const extraTheme = baseThemeStyles;
 
   return {
-    ...(createMuiTheme({
+    ...createMuiTheme({
       breakpoints: {
         values: {
           xs: 0,
@@ -119,6 +119,13 @@ export const getTheme = (): Theme => {
         unit: extraTheme.spacing.unit,
       },
       overrides: {
+        MuiDrawer: {
+          paper: {
+            width: '26.875rem',
+            maxWidth: '100vw',
+            backgroundColor: colors.blackCurrant,
+          },
+        },
         MuiSnackbarContent: {
           root: {
             backgroundColor: '#fff',
@@ -151,7 +158,7 @@ export const getTheme = (): Theme => {
           overline: { fontSize: '0.625rem' },
         },
       },
-    })),
+    }),
     extra: extraTheme,
   };
 };

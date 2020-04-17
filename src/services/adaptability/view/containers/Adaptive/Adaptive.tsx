@@ -1,7 +1,5 @@
 import * as React from 'react';
-// import cn from 'classnames';
 import { connect } from 'react-redux';
-// import MediaQuery from 'react-responsive';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import { Breakpoint, Breakpoints } from '@material-ui/core/styles/createBreakpoints';
 
@@ -28,8 +26,6 @@ function mapState(state: IAppReduxState): IStateProps {
     hydrated: selectors.selectHydrated(state),
   };
 }
-
-// TODO ds: remove react-responsive, after react-hooks release https://material-ui.com/layout/use-media-query/
 
 function Adaptive(props: IProps) {
   const { theme, from = '', to = '', className, children } = props;

@@ -1,8 +1,7 @@
 import React from 'react';
-import block from 'bem-cn';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-import CircleProgressBar from '../CircleProgressBar/CircleProgressBar';
-import './Preloader.scss';
+import { StylesProps, provideStyles } from './Preloader.style';
 
 interface IProps {
   isShown: boolean;
@@ -10,17 +9,13 @@ interface IProps {
   backgroundColor?: string;
 }
 
-const b = block('preloader');
-
-function Preloader(props: IProps) {
-  const { isShown, size, backgroundColor} = props;
-  return isShown
-    ? (
-      <div className={b()} style={{ backgroundColor }}>
-        <CircleProgressBar size={size} />
-      </div>
-    )
-    : null;
+function Preloader(props: IProps & StylesProps) {
+  const { isShown, size, backgroundColor, classes } = props;
+  return isShown ? (
+    <div className={classes.root} style={{ backgroundColor }}>
+      <CircularProgress size={size} />
+    </div>
+  ) : null;
 }
 
-export default Preloader;
+export default provideStyles(Preloader);

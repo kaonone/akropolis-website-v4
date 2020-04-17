@@ -39,10 +39,6 @@ const menuItems: IMenuItem[] = [
     title: tKeys.modules.navigation.events.getKey(),
   },
   {
-    path: routes.quest.getRoutePath(),
-    title: tKeys.modules.navigation.quest.getKey(),
-  },
-  {
     path: PRIVACY_POLICY_URL,
     title: tKeys.modules.navigation.privacyPolicy.getKey(),
     isExternal: true,

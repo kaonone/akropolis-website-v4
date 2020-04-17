@@ -82,7 +82,6 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
     staticDir: path.join(__dirname, '..', 'build'),
     routes: [
       '/', '/company', '/events',
-      '/quest', '/quest/kyc',
       '/forWiki/partners', '/forWiki/news',
     ],
     postProcess(renderedRoute: any) {

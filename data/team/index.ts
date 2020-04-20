@@ -410,6 +410,72 @@ export default [
   },
   {
     links: [
+      'https://github.com/pash7ka',
+    ],
+    fullName: 'Pavel Rubin',
+    position: {
+      en: 'Solidity Developer',
+      vi: 'Solidity Developer',
+      zh: 'Solidity Developer',
+      ko: 'Solidity Developer',
+    },
+    photo1x: require('./imgs/rubin@1x.png'),
+    photo2x: require('./imgs/rubin@2x.png'),
+    tags: {
+      en: [
+        'Solidity',
+        'Smart-contracs',
+        'PHP',
+		'Java',
+		'Typescript',
+        'Backend',
+      ],
+      vi: [
+        'Solidity',
+        'Smart-contracs',
+        'PHP',
+		'Java',
+		'Typescript',
+        'Backend',
+      ],
+      zh: [
+        'Solidity',
+        'Smart-contracs',
+        'PHP',
+		'Java',
+		'Typescript',
+        'Backend',
+      ],
+      ko: [
+        'Solidity',
+        'Smart-contracs',
+        'PHP',
+		'Java',
+		'Typescript',
+        'Backend',
+      ],
+    },
+    background: {
+      en: [
+        'MSc Design and Technology of Electronic Equipment',
+        '16 commercial implementations',
+      ],
+      vi: [
+        'MSc Design and Technology of Electronic Equipment',
+        '16 commercial implementations',
+      ],
+      zh: [
+        'MSc Design and Technology of Electronic Equipment',
+        '16 commercial implementations',
+      ],
+      ko: [
+        'MSc Design and Technology of Electronic Equipment',
+        '16 commercial implementations',
+      ],
+    },
+  },
+  {
+    links: [
       'https://github.com/in19farkt',
     ],
     fullName: 'Dima Serd',

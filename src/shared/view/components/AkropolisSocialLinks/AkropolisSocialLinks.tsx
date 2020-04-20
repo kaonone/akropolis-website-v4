@@ -14,7 +14,7 @@ const links: Array<[string, boolean]> = [
   ['https://twitter.com/akropolisio', true],
   ['https://t.me/akropolis_official', true],
   ['https://medium.com/akropolis', true],
-  ['https://riot.im/app/#/room/#akropolis:matrix.org', false],
+  ['https://discord.gg/Y58CGUW', true],
 ];
 
 function AkropolisSocialLinks(props: IProps & StylesProps) {

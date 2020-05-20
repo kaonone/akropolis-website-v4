@@ -4,7 +4,7 @@ export default [
     links: [
       'https://www.linkedin.com/in/anastasia-andrianova-79198b4',
     ],
-    fullName: 'Anastasia Andrianova',
+    fullName: 'Ana Andrianova',
     position: {
       en: 'Founder, Strategy & Product',
       vi: 'Người sáng lập, Chiến lược & Sản phẩm',

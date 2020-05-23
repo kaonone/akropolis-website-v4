@@ -8,7 +8,7 @@ const events: IEvent[] = [
     location: 'Online Conference', 
     description: {
       en: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
-      vi: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.,
+      vi: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
       zh: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
       ko: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
     },

@@ -3,6 +3,21 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'Messari’s Mainnet ',
+    link: 'https://mainnet.events',
+    location: 'Online Conference', 
+    description: {
+      en: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
+      vi: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
+      zh: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
+      ko: 'Mainnet by Messari is a virtual conference focused on bringing crypto professionals from around the world together to learn, collaborate, and discuss the industry’s greatest opportunities, issues, and solutions, all to advance the development of our global sovereign financial future.',
+    },
+    startDate: '06.01.2020',
+    finishDate: '06.03.2020',
+    image1x: require('./imgs/messari@660w.png'),
+    image2x: require('./imgs/messari@1320w.png'),
+  },
+  {
     eventName: 'Monolith Digital #DeFi Meetup',
     link: 'https://www.meetup.com/ru-RU/monolith/events/269605712/',
     location: 'Online Conference', 

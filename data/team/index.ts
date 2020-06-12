@@ -349,65 +349,7 @@ export default [
         'Smart 계약 개발자 및 감사인',
       ],
     },
-  },
-  {
-    links: [
-      'https://www.linkedin.com/in/ajitkt/',
-    ],
-    fullName: 'Ajit Tripathi',
-    position: {
-      en: 'Fintech Advisor',
-      vi: 'Cố vấn Fintech',
-      zh: 'Fintech顾问',
-      ko: '핀테크 고문',
-    },
-    photo1x: require('./imgs/ajit@1x.png'),
-    photo2x: require('./imgs/ajit@2x.png'),
-    tags: {
-      en: [
-        'Financial Infrastructure',
-        'Blockchain Architecture',
-        'Risk Managment',
-        'Investment Banking',
-      ],
-      vi: [
-        'Cơ sở hạ tầng tài chính',
-        'Kiến trúc blockchain',
-        'Quản lý rủi ro',
-        'Ngân hàng đầu tư',
-      ],
-      zh: [
-        '金融基础设施',
-        '区块链架构',
-        '风险管理',
-        '投资银行',
-      ],
-      ko: [
-        '금융 인프라',
-        '블럭체인 구축자',
-        '위기 관리',
-        '투자은행업무',
-      ],
-    },
-    background: {
-      en: [
-        'Financial Infrastructure, ConsenSys',
-        'Head of Blockchain, PwC',
-      ],
-      vi: [
-        'Cơ sở hạ tầng tài chính, ConsenSys',
-        'Người đứng đầu Blockchain, PriceWaterCoopers',
-      ],
-      zh: [
-        '金融基础设施，ConsenSys',
-        '区块链主管，普华永道',
-      ],
-      ko: [
-        'ConsenSys 금융 인프라',
-        'PriceWaterCoopers 블럭체인 담당자',
-      ],
-    },
-  },
+  }, 
   {
     links: [
       'https://github.com/pash7ka',

@@ -1,18 +1,36 @@
+branches:
+  only:
+    - master
+    - develop
+
 language: node_js
 node_js:
   - "10"
 
+install: skip
+script: skip
+
 before_deploy:
-  - npm run build:gh-pages:prod
+  - yarn
+  - yarn test
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then yarn build:gh-pages:prod; fi
+  - if [ "$TRAVIS_BRANCH" = "develop" ]; then yarn build:gh-pages:staging; fi
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local-dir: "./build"
-  on:
-    branch: master
-    
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local-dir: "./build"
+    on:
+      branch: master
+
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local-dir: "./build"
+    repo: in19farkt/akropolis-website-v4
+    on:
+      branch: develop
+
 notifications:
   slack: akropolisio:xUhLQpSGEoBylmWK3DW8Kblm
-

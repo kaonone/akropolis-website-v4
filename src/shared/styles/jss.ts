@@ -1,6 +1,6 @@
 // tslint:disable-next-line:import-blacklist
 import injectSheet, { Theme, WithStyles, SheetsRegistry, JSS, CSSProperties, JssProvider } from 'react-jss';
-import withStyleSheet from '@material-ui/core/styles/withStyles';
+import { withStyles as withStyleSheet } from '@material-ui/core/styles';
 
 const withStyles = withStyleSheet as typeof injectSheet;
 

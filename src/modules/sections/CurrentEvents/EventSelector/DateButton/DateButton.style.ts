@@ -4,14 +4,14 @@ import { rule } from 'shared/helpers/style';
 const styles = (theme: Theme) => ({
   root: rule({
     position: 'relative',
-    width: theme.spacing.unit * 9,
-    height: theme.spacing.unit * 9,
+    width: theme.spacing(9),
+    height: theme.spacing(9),
     borderRadius: 6,
     backgroundImage: 'linear-gradient(to bottom, #b46fd7, #0674c5)',
 
     [theme.breakpoints.up('md')]: {
-      width: theme.spacing.unit * 11,
-      height: theme.spacing.unit * 11,
+      width: theme.spacing(11),
+      height: theme.spacing(11),
     },
 
     '&:hover, &$focusVisible': {

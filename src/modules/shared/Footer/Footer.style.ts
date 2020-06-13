@@ -9,18 +9,18 @@ const styles = (theme: Theme) => ({
 
   content: rule({
     // tslint:disable-next-line:max-line-length
-    padding: `${theme.spacing.unit * 10.5}px ${theme.extra.spacing.horizontalPagePaddings.xs.large}px ${theme.spacing.unit * 5}px`,
+    padding: `${theme.spacing(10.5)}px ${theme.extra.spacing.horizontalPagePaddings.xs.large}px ${theme.spacing(5)}px`,
     margin: '0 auto',
     display: 'flex',
     flexWrap: 'wrap',
     maxWidth: theme.extra.sizes.maxContentWidth,
 
     [theme.breakpoints.up('md')]: {
-      padding: `${theme.spacing.unit * 14}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
+      padding: `${theme.spacing(14)}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
     },
 
     [theme.breakpoints.up('lg')]: {
-      padding: `${theme.spacing.unit * 14}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
+      padding: `${theme.spacing(14)}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
     },
   }),
 
@@ -36,7 +36,7 @@ const styles = (theme: Theme) => ({
     '&$left': {
       flexDirection: 'column',
       alignItems: 'center',
-      marginBottom: theme.spacing.unit * 3.5,
+      marginBottom: theme.spacing(3.5),
 
       [theme.breakpoints.up('md')]: {
         marginBottom: 0,
@@ -54,13 +54,13 @@ const styles = (theme: Theme) => ({
 
   logo: rule({
     display: 'flex',
-    marginBottom: theme.spacing.unit * 3.5,
+    marginBottom: theme.spacing(3.5),
     fontSize: 40,
     color: 'inherit',
 
     [theme.breakpoints.up('md')]: {
       alignSelf: 'flex-start',
-      marginBottom: theme.spacing.unit * 5,
+      marginBottom: theme.spacing(5),
     },
   }),
 
@@ -84,7 +84,7 @@ const styles = (theme: Theme) => ({
 
   address: rule({
     display: 'block',
-    padding: `${theme.spacing.unit * 3}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
+    padding: `${theme.spacing(3)}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
     backgroundColor: '#000',
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 12,

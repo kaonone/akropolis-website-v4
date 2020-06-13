@@ -8,12 +8,12 @@ const styles = (theme: Theme) => ({
 
   icon: rule({
     width: '20%',
-    maxWidth: theme.spacing.unit * 20,
-    marginRight: theme.spacing.unit * 3,
+    maxWidth: theme.spacing(20),
+    marginRight: theme.spacing(3),
     flexShrink: 0,
 
     [theme.breakpoints.up('md')]: {
-      marginRight: theme.spacing.unit * 7,
+      marginRight: theme.spacing(7),
     },
   }),
 

@@ -2,7 +2,6 @@ import { ReactElement } from 'react';
 import { RouteProps } from 'react-router';
 import { Store, Reducer, ActionCreator, Action } from 'redux';
 import { SagaIterator } from 'redux-saga';
-import { GenerateClassName } from 'jss';
 
 import * as adaptabilityService from 'services/adaptability';
 import { JSS } from 'shared/styles';
@@ -21,7 +20,6 @@ export interface IAppData {
 
 export interface IJssDependencies {
   jss: JSS;
-  generateClassName: GenerateClassName<any>;
 }
 
 // tslint:disable-next-line: no-empty-interface

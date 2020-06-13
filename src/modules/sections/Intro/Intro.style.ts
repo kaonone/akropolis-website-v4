@@ -16,8 +16,8 @@ const styles = (theme: Theme) => {
       color: theme.extra.colors.rhino,
 
       [theme.breakpoints.up('sm')]: {
-        paddingLeft: theme.spacing.unit * 2.5,
-        paddingRight: theme.spacing.unit * 2.5,
+        paddingLeft: theme.spacing(2.5),
+        paddingRight: theme.spacing(2.5),
       },
 
       [theme.breakpoints.up('md')]: {
@@ -28,7 +28,7 @@ const styles = (theme: Theme) => {
       [theme.breakpoints.up('lg')]: {
         minHeight: `calc(100vh + ${theme.extra.spacing.layoutContentSkew.lgHeight}px)`,
         // tslint:disable-next-line:max-line-length
-        padding: `${theme.extra.spacing.headerHeight.lg}px ${theme.spacing.unit * 10}px calc(27vh + ${theme.extra.spacing.headerHeight.lg}px)`,
+        padding: `${theme.extra.spacing.headerHeight.lg}px ${theme.spacing(10)}px calc(27vh + ${theme.extra.spacing.headerHeight.lg}px)`,
       },
     }),
 
@@ -36,7 +36,7 @@ const styles = (theme: Theme) => {
       width: '100%',
       maxWidth: theme.extra.sizes.maxContentWidth,
       margin: `auto`,
-      paddingBottom: theme.spacing.unit,
+      paddingBottom: theme.spacing(1),
       fontFamily: theme.extra.typography.primaryFont,
       fontSize: 26,
       fontWeight: 'bold',
@@ -83,22 +83,22 @@ const styles = (theme: Theme) => {
       marginBottom: 'auto',
       minWidth: 150,
       alignSelf: 'center',
-      height: theme.spacing.unit * 5,
-      borderRadius: theme.spacing.unit * 2.5,
+      height: theme.spacing(5),
+      borderRadius: theme.spacing(2.5),
       background: 'linear-gradient(to bottom, #e66afd, #8238fc)',
 
       [theme.breakpoints.up('md')]: {
         minWidth: 200,
         fontSize: '1rem',
-        height: theme.spacing.unit * 6,
-        borderRadius: theme.spacing.unit * 3,
+        height: theme.spacing(6),
+        borderRadius: theme.spacing(3),
       },
 
       [theme.breakpoints.up('lg')]: {
         minWidth: 250,
         fontSize: '1.25rem',
-        height: theme.spacing.unit * 7,
-        borderRadius: theme.spacing.unit * 3.5,
+        height: theme.spacing(7),
+        borderRadius: theme.spacing(3.5),
       },
     }),
 

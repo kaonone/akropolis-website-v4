@@ -109,14 +109,10 @@ export const getTheme = (): Theme => {
       },
       palette,
       typography: {
-        useNextVariants: true, // https://material-ui.com/style/typography/#migration-to-typography-v2
         fontFamily: extraTheme.typography.primaryFont,
       },
       shape: {
         borderRadius: extraTheme.sizes.control.borderRadius,
-      },
-      spacing: {
-        unit: extraTheme.spacing.unit,
       },
       overrides: {
         MuiDrawer: {

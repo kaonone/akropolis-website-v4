@@ -14,7 +14,7 @@ function ProfMemberships() {
   return (
     <PageBlock xsVPadding={1} mdVPadding={8}>
       <Section title={t(tKeys.sections.profMemberships.title.getKey())}>
-        <Grid container spacing={32}>
+        <Grid container spacing={4}>
           {profMemberships.map(({ description, ...item }) => (
             <Grid item xs={12} key={item.membershipName}>
               <ProfMembership {...item} description={description[locale]} />

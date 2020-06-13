@@ -21,7 +21,7 @@ function LanguageSelector(props: StylesProps) {
   const { locale, changeLanguage } = useTranslate();
 
   const handleChangeLanguage = useCallback(
-    ({ target: { value } }: React.ChangeEvent<HTMLSelectElement>) => changeLanguage(value as Lang),
+    ({ target: { value } }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => changeLanguage(value as Lang),
     [changeLanguage],
   );
 
@@ -39,7 +39,9 @@ function LanguageSelector(props: StylesProps) {
       }}
     >
       {options.map(({ value, label }, i) => (
-        <MenuItem value={value} key={i}>{label}</MenuItem>
+        <MenuItem value={value} key={i}>
+          {label}
+        </MenuItem>
       ))}
     </TextInput>
   );

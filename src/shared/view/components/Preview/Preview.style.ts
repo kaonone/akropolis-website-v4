@@ -34,23 +34,23 @@ const styles = (theme: Theme) => ({
   titleIcon: rule({
     display: 'flex',
     fontSize: 56,
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing(2),
 
     [theme.breakpoints.up('lg')]: {
-      marginRight: theme.spacing.unit * 3,
+      marginRight: theme.spacing(3),
     },
   }),
 
   description: rule({
     margin: 0,
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 16,
     lineHeight: 1.63,
     whiteSpace: 'pre-wrap',
 
     [theme.breakpoints.up('lg')]: {
-      marginTop: theme.spacing.unit * 3,
+      marginTop: theme.spacing(3),
       fontSize: 18,
       lineHeight: 1.56,
     },
@@ -58,14 +58,14 @@ const styles = (theme: Theme) => ({
 
   footer: rule({
     marginTop: 'auto',
-    paddingTop: theme.spacing.unit * 2,
+    paddingTop: theme.spacing(2),
     alignSelf: 'flex-start',
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 16,
     lineHeight: 1.8,
 
     [theme.breakpoints.up('lg')]: {
-      paddingTop: theme.spacing.unit * 3,
+      paddingTop: theme.spacing(3),
       fontSize: 18,
     },
   }),
@@ -83,7 +83,7 @@ const styles = (theme: Theme) => ({
   }),
 
   moreLinkIcon: rule({
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing(1),
   }),
 });
 

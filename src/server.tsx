@@ -45,7 +45,7 @@ async function handleAppRequest(req: express.Request, res: express.Response, ass
 
 async function renderOnServer(appData: IAppData, assets: IAssets, location: string, context: object) {
   const sheets = new SheetsRegistry();
-  const appForBootstrap = <ServerApp {...appData} location={location} context={{}} disableStylesGeneration />;
+  const appForBootstrap = <ServerApp {...appData} location={location} context={{}} />;
   await bootstrapper(appForBootstrap);
   const app = <ServerApp {...appData} location={location} context={context} registry={sheets} />;
   const html = <Html assets={assets} component={app} store={appData.store} styleSheets={sheets} />;

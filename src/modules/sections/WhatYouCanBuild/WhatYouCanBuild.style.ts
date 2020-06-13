@@ -5,10 +5,10 @@ import youCanBg from './imgs/Sketch-Blue.png';
 
 const styles = (theme: Theme) => ({
   root: rule({
-    background: `url(${youCanBg}) no-repeat center ${theme.spacing.unit * 10}px/cover`,
+    background: `url(${youCanBg}) no-repeat center ${theme.spacing(10)}px/cover`,
 
     [theme.breakpoints.up('lg')]: {
-      backgroundPositionY: theme.spacing.unit * 12,
+      backgroundPositionY: theme.spacing(12),
     },
   }),
 

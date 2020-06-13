@@ -32,7 +32,7 @@ function CurrentEvents(props: IProps) {
   return (
     <PageBlock xsVPadding={1} mdVPadding={2} lgVPadding={12} anchorName="events">
       <Section title={t(tKeys.sections.events.title.getKey())}>
-        <Grid container direction="row-reverse" spacing={24}>
+        <Grid container direction="row-reverse" spacing={3}>
           <Grid item xs={12} md={8}>
             <EventPreview event={customEvent || selectedEvent} />
           </Grid>

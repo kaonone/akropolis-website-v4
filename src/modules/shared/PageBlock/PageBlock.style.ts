@@ -9,17 +9,17 @@ const styles = (theme: Theme) => ({
   root: rule({
     maxWidth: theme.extra.sizes.maxContentWidth,
     margin: `0 auto`,
-    paddingTop: theme.spacing.unit * 6,
+    paddingTop: theme.spacing(6),
 
     '&:last-child': {
-      paddingBottom: theme.spacing.unit * 6,
+      paddingBottom: theme.spacing(6),
     },
 
     [theme.breakpoints.up('lg')]: {
-      paddingTop: theme.spacing.unit * 8,
+      paddingTop: theme.spacing(8),
 
       '&:last-child': {
-        paddingBottom: theme.spacing.unit * 8,
+        paddingBottom: theme.spacing(8),
       },
     },
   }),
@@ -33,7 +33,7 @@ function generateHorizontalPadding(theme: Theme, breakpoint: Breakpoint): StyleR
   const result: StyleRules<string> = {};
   hPaddingMultipliers.forEach(size => {
     const key = `hPadding-${breakpoint}-${size}`;
-    const padding = size * theme.spacing.unit;
+    const padding = size * theme.spacing(1);
     const paddingRule = {
       paddingLeft: padding,
       paddingRight: padding,

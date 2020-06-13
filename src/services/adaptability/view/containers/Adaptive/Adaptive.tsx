@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Breakpoint, Breakpoints } from '@material-ui/core/styles/createBreakpoints';
 
 import { IAppReduxState } from 'shared/types/app';
@@ -62,8 +62,4 @@ function down(key: Breakpoint | number, breakpoints: Breakpoints): string {
 }
 
 export { IProps };
-export default (
-  connect(mapState)(
-    provideStyles(Adaptive),
-  )
-);
+export default connect(mapState)(provideStyles(Adaptive));

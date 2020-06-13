@@ -11,11 +11,11 @@ const styles = (theme: Theme) => ({
     maxWidth: theme.extra.sizes.maxContentWidth,
 
     [theme.breakpoints.up('md')]: {
-      padding: `${theme.spacing.unit * 3}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
+      padding: `${theme.spacing(3)}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
     },
 
     [theme.breakpoints.up('lg')]: {
-      padding: `${theme.spacing.unit * 4}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
+      padding: `${theme.spacing(4)}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
     },
   }),
 
@@ -32,7 +32,7 @@ const styles = (theme: Theme) => ({
 
   navInline: rule({
     display: 'none',
-    marginRight: theme.spacing.unit * 4,
+    marginRight: theme.spacing(4),
 
     [theme.breakpoints.up(1140)]: {
       display: 'block',
@@ -41,7 +41,7 @@ const styles = (theme: Theme) => ({
 
   navDrawer: rule({
     display: 'block',
-    marginLeft: theme.spacing.unit * 2,
+    marginLeft: theme.spacing(2),
 
     [theme.breakpoints.up(1140)]: {
       display: 'none',

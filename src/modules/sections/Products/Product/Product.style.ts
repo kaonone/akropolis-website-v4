@@ -4,7 +4,7 @@ import { rule } from 'shared/helpers/style';
 const radius = 6;
 
 const styles = (theme: Theme) => {
-  const headerHeight = theme.spacing.unit * 10;
+  const headerHeight = theme.spacing(10);
 
   return {
     root: rule({
@@ -21,7 +21,7 @@ const styles = (theme: Theme) => {
       flexDirection: 'column',
       alignItems: 'flex-start',
       justifyContent: 'space-between',
-      padding: `${theme.spacing.unit * 1.5}px ${theme.spacing.unit * 3}px`,
+      padding: `${theme.spacing(1.5)}px ${theme.spacing(3)}px`,
       height: headerHeight,
       borderTopLeftRadius: radius,
       borderTopRightRadius: radius,
@@ -29,7 +29,7 @@ const styles = (theme: Theme) => {
 
       '&$hackathon0x': {
         '& $title': {
-          height: theme.spacing.unit * 3.5,
+          height: theme.spacing(3.5),
         },
 
         '& $subtitle': {
@@ -44,8 +44,8 @@ const styles = (theme: Theme) => {
 
         '& $icon': {
           position: 'absolute',
-          top: theme.spacing.unit * 1.5,
-          right: theme.spacing.unit * 1.5,
+          top: theme.spacing(1.5),
+          right: theme.spacing(1.5),
           fontSize: 93,
         },
       },
@@ -66,7 +66,7 @@ const styles = (theme: Theme) => {
     preview: rule({
       display: 'flex',
       flexGrow: 1,
-      padding: theme.spacing.unit * 3,
+      padding: theme.spacing(3),
     }),
 
     title: {},

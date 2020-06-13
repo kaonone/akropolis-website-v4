@@ -24,17 +24,17 @@ const styles = (theme: Theme) => ({
     color: '#fff',
 
     [theme.breakpoints.up('md')]: {
-      padding: `${theme.spacing.unit * 3}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
+      padding: `${theme.spacing(3)}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
     },
 
     [theme.breakpoints.up('lg')]: {
-      paddingTop: `${theme.spacing.unit * 4}px`,
+      paddingTop: `${theme.spacing(4)}px`,
     },
   }),
 
   link: rule({
     display: 'block',
-    marginBottom: theme.spacing.unit * 5,
+    marginBottom: theme.spacing(5),
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     fontWeight: 600,

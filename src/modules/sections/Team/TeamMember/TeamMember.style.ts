@@ -10,7 +10,7 @@ const styles = (theme: Theme) => ({
   }),
 
   title: rule({
-    margin: `${theme.spacing.unit * 2.5}px 0 ${theme.spacing.unit * 1.5}px`,
+    margin: `${theme.spacing(2.5)}px 0 ${theme.spacing(1.5)}px`,
     display: 'block',
     textAlign: 'center',
     fontFamily: theme.extra.typography.primaryFont,
@@ -20,19 +20,19 @@ const styles = (theme: Theme) => ({
     color: theme.extra.colors.rhino,
 
     [theme.breakpoints.up('lg')]: {
-      marginTop: theme.spacing.unit * 2,
+      marginTop: theme.spacing(2),
       fontSize: 24,
       lineHeight: 1.5,
     },
   }),
 
   name: rule({
-    marginRight: theme.spacing.unit * 0.5,
+    marginRight: theme.spacing(0.5),
   }),
 
   socialLink: rule({
     fontSize: 'inherit',
-    padding: theme.spacing.unit * 0.5,
+    padding: theme.spacing(0.5),
     color: 'inherit',
     display: 'inline-flex',
     verticalAlign: 'top',
@@ -40,7 +40,7 @@ const styles = (theme: Theme) => ({
 
   position: rule({
     margin: 0,
-    marginBottom: theme.spacing.unit * 1.5,
+    marginBottom: theme.spacing(1.5),
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     color: theme.extra.colors.cornflowerBlue,
@@ -56,7 +56,7 @@ const styles = (theme: Theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'center',
     margin: 0,
-    marginBottom: theme.spacing.unit * 0.25,
+    marginBottom: theme.spacing(0.25),
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     webkitFontSmoothing: 'antialiased',

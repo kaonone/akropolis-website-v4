@@ -7,7 +7,7 @@ import 'normalize.css';
 import 'shared/styles/fonts/index.scss';
 
 import { hot } from 'react-hot-loader/root';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import { I18nProvider } from 'services/i18n';
 import { IAppData, IModule, IJssDependencies, IDependencies } from 'shared/types/app';
 import { BaseStyles, JssProvider, SheetsRegistry } from 'shared/styles';
@@ -22,7 +22,8 @@ browserHistory.listen(handleScrollToAnchor);
 
 function handleScrollToAnchor(location: Location<any>) {
   setTimeout(() => {
-    if (location.hash) { // scroll to anchor
+    if (location.hash) {
+      // scroll to anchor
       const element = document.getElementById(location.hash.slice(1));
       const offset = element && element.getBoundingClientRect().top;
       offset && animateScroll.scrollMore(offset);
@@ -34,19 +35,16 @@ function handleScrollToAnchor(location: Location<any>) {
 
 interface IAppProps {
   jssDeps: IJssDependencies;
-  disableStylesGeneration?: boolean;
 }
 
-function ClientApp({ modules, store, jssDeps, disableStylesGeneration, deps }: IAppData & IAppProps) {
+function ClientApp({ modules, store, jssDeps, deps }: IAppData & IAppProps) {
   useEffect(() => {
     handleScrollToAnchor(browserHistory.location);
   }, []);
 
   return (
     <Provider store={store}>
-      <Router history={browserHistory}>
-        {renderSharedPart({ modules, jssDeps, disableStylesGeneration, deps })}
-      </Router>
+      <Router history={browserHistory}>{renderSharedPart({ modules, jssDeps, deps })}</Router>
     </Provider>
   );
 }
@@ -56,18 +54,14 @@ export const App = hot(ClientApp);
 interface IServerAppProps {
   jssDeps: IJssDependencies;
   registry?: SheetsRegistry;
-  disableStylesGeneration?: boolean;
   deps: IDependencies;
-
 }
 
 export function ServerApp(props: IAppData & IServerAppProps & StaticRouter['props']) {
-  const { modules, store, registry, jssDeps, disableStylesGeneration, deps, ...routerProps } = props;
+  const { modules, store, registry, jssDeps, deps, ...routerProps } = props;
   return (
     <Provider store={store}>
-      <StaticRouter {...routerProps}>
-        {renderSharedPart({ modules, jssDeps, disableStylesGeneration, registry, deps })}
-      </StaticRouter>
+      <StaticRouter {...routerProps}>{renderSharedPart({ modules, jssDeps, registry, deps })}</StaticRouter>
     </Provider>
   );
 }
@@ -82,24 +76,15 @@ interface ISharedProps {
   registry?: SheetsRegistry;
 }
 
-function renderSharedPart(
-  { modules, jssDeps, disableStylesGeneration, registry, deps }: ISharedProps,
-) {
-  const { generateClassName, jss } = jssDeps;
+function renderSharedPart({ modules, jssDeps, registry, deps }: ISharedProps) {
+  const { jss } = jssDeps;
 
   return (
-    <JssProvider
-      jss={jss}
-      registry={registry}
-      generateClassName={generateClassName}
-      disableStylesGeneration={disableStylesGeneration}
-    >
-      <MuiThemeProvider disableStylesGeneration={disableStylesGeneration} theme={theme}>
+    <JssProvider jss={jss} registry={registry}>
+      <MuiThemeProvider theme={theme}>
         <DepsContext.Provider value={deps}>
           <I18nProvider>
-            <BaseStyles>
-              {createRoutes(modules)}
-            </BaseStyles>
+            <BaseStyles>{createRoutes(modules)}</BaseStyles>
           </I18nProvider>
         </DepsContext.Provider>
       </MuiThemeProvider>

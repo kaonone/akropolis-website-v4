@@ -4,7 +4,7 @@ import { rule } from 'shared/helpers/style';
 const styles = (theme: Theme) => ({
   root: rule({
     flexGrow: 1,
-    padding: theme.spacing.unit,
+    padding: theme.spacing(1),
     borderRadius: 6,
     boxShadow: '0 2px 8px 0 rgba(120, 120, 120, 0.2)',
     backgroundColor: '#fff',
@@ -12,7 +12,7 @@ const styles = (theme: Theme) => ({
     textDecoration: 'none',
 
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
     },
   }),
 
@@ -32,7 +32,7 @@ const styles = (theme: Theme) => ({
     position: 'relative',
     top: '0.1em',
     fontSize: 20,
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing(1),
 
     [theme.breakpoints.up('lg')]: {
       fontSize: 26,
@@ -54,14 +54,14 @@ const styles = (theme: Theme) => ({
 
   description: rule({
     margin: 0,
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 16,
     lineHeight: 1.63,
     whiteSpace: 'pre-wrap',
 
     [theme.breakpoints.up('lg')]: {
-      marginTop: theme.spacing.unit * 3,
+      marginTop: theme.spacing(3),
       fontSize: 18,
       lineHeight: 1.56,
     },

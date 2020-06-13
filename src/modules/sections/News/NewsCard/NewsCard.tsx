@@ -2,7 +2,7 @@ import * as React from 'react';
 import cn from 'classnames';
 
 import { useTranslatedDate } from 'services/i18n';
-import { IconButton } from 'shared/view/elements';
+import { IconButton, Link } from 'shared/view/elements';
 import { LaunchIcon, ChromeReaderMode, getSocialIconByLink } from 'shared/view/elements/Icons';
 import { StylesProps, provideStyles } from './NewsCard.style';
 
@@ -25,6 +25,7 @@ function NewsCard(props: IProps & StylesProps) {
         <SourceIcon className={classes.icon} />
         <div className={classes.date}>{translatedDate}</div>
         <IconButton
+          component={Link}
           href={url}
           className={cn(classes.linkIcon, { [classes.hidden]: !url })}
           target="_target"

@@ -10,8 +10,8 @@ const styles = (theme: Theme) => ({
       alignSelf: 'center',
       fontSize: '1rem',
 
-      minHeight: theme.spacing.unit * 6,
-      borderRadius: theme.spacing.unit * 3,
+      minHeight: theme.spacing(6),
+      borderRadius: theme.spacing(3),
       background: 'linear-gradient(to bottom, #e66afd, #8238fc)',
 
       '&$disabled': rule({

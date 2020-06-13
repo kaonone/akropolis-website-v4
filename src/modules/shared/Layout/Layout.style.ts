@@ -56,7 +56,7 @@ const styles = (theme: Theme) => ({
   socials: rule({
     position: 'fixed',
     display: 'none',
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing(2),
     top: '50%',
     right: 0,
     transform: 'translateY(-50%)',

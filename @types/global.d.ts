@@ -16,10 +16,6 @@ declare var __CLIENT__: boolean;
 declare var __LANG__: 'en' | 'he';
 declare var __HOST__: string;
 
-declare module 'theming/@externals' {
-  export { Theme } from 'shared/styles/theme';
-}
-
 declare module "*.svg" {
   const content: string;
   export default content;

@@ -1,5 +1,4 @@
-import { Theme as MaterialTheme, createMuiTheme } from '@material-ui/core/styles';
-import { Theme } from './jss';
+import { Theme, createMuiTheme } from '@material-ui/core/styles';
 
 // Find color name http://chir.ag/projects/name-that-color
 // https://github.com/insomnious0x01/ntc-js
@@ -19,6 +18,8 @@ const colors = {
   black: '#000',
   royalPurple: '#613AAF',
   woodSmoke: '#181b1f',
+  shark: '#191b1f',
+  athensGray: '#eff1f5',
 };
 
 const palette = {
@@ -34,11 +35,14 @@ const palette = {
     dark: colors.electricViolet,
     contrastText: colors.electricViolet,
   },
+  text: {
+    primary: colors.black,
+  },
   error: {
     main: colors.monza,
   },
-  link: {
-    hover: colors.royalBlue,
+  background: {
+    default: colors.white,
   },
 };
 
@@ -93,70 +97,117 @@ const baseThemeStyles = {
   defaultTransitionDuration: '0.4s',
 };
 
-export const getTheme = (): Theme => {
-  const extraTheme = baseThemeStyles;
+export const getTheme = (): Theme =>
+  createMuiTheme({
+    extra: baseThemeStyles,
+    colors,
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 375,
+        md: 768,
+        lg: 1024,
+        xl: 1920,
+        desktopMD: 1440,
+        desktopSM: 1360,
+        desktopXS: 1280,
+        tabletSM: 1024,
+        tabletXS: 768,
+        mobileSM: 414,
+        mobileXS: 0,
+      },
+    },
+    palette,
+    typography: {
+      fontFamily: baseThemeStyles.typography.primaryFont,
+    },
+    shape: {
+      borderRadius: baseThemeStyles.sizes.control.borderRadius,
+    },
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          html: {
+            fontSize: 16,
+            fontFamily: baseThemeStyles.typography.primaryFont,
+          },
+          'html, body, #root': {
+            height: '100%',
+          },
+          '*': {
+            boxSizing: 'border-box',
+          },
+        },
+      },
+      MuiDrawer: {
+        paper: {
+          width: '26.875rem',
+          maxWidth: '100vw',
+          backgroundColor: colors.blackCurrant,
+        },
+      },
+      MuiSnackbarContent: {
+        root: {
+          backgroundColor: '#fff',
+        },
+        message: {
+          color: colors.rhino,
+        },
+      },
+      MuiFormControlLabel: {
+        root: {
+          marginRight: 0,
+        },
+      },
+      MuiTypography: {
+        root: {
+          display: '',
+          color: colors.rhino,
+        },
+        h3: { fontSize: '3rem' },
+        h4: { fontSize: '2.25rem' },
+        h5: { fontSize: '1.75rem' },
+        h6: { fontSize: '1.25rem', fontWeight: 400 },
+        body1: {
+          fontSize: '1rem',
+          color: colors.rhino,
+        },
+        body2: { fontSize: '0.875rem' },
+        subtitle1: { fontSize: '0.75rem' },
+        caption: { fontSize: '0.625rem' },
+        overline: { fontSize: '0.625rem' },
+      },
+    },
+  });
 
-  return {
-    ...createMuiTheme({
-      breakpoints: {
-        values: {
-          xs: 0,
-          sm: 375,
-          md: 768,
-          lg: 1024,
-          xl: 1920,
-        },
-      },
-      palette,
-      typography: {
-        fontFamily: extraTheme.typography.primaryFont,
-      },
-      shape: {
-        borderRadius: extraTheme.sizes.control.borderRadius,
-      },
-      overrides: {
-        MuiDrawer: {
-          paper: {
-            width: '26.875rem',
-            maxWidth: '100vw',
-            backgroundColor: colors.blackCurrant,
-          },
-        },
-        MuiSnackbarContent: {
-          root: {
-            backgroundColor: '#fff',
-          },
-          message: {
-            color: colors.rhino,
-          },
-        },
-        MuiFormControlLabel: {
-          root: {
-            marginRight: 0,
-          },
-        },
-        MuiTypography: {
-          root: {
-            display: '',
-            color: colors.rhino,
-          },
-          h3: { fontSize: '3rem' },
-          h4: { fontSize: '2.25rem' },
-          h5: { fontSize: '1.75rem' },
-          h6: { fontSize: '1.25rem', fontWeight: 400 },
-          body1: {
-            fontSize: '1rem',
-            color: colors.rhino,
-          },
-          body2: { fontSize: '0.875rem' },
-          subtitle1: { fontSize: '0.75rem' },
-          caption: { fontSize: '0.625rem' },
-          overline: { fontSize: '0.625rem' },
-        },
-      },
-    }),
-    extra: extraTheme,
-  };
-};
+export { Theme };
 
-export type Theme = MaterialTheme & { extra: typeof baseThemeStyles };
+// tslint:disable: interface-name
+declare module '@material-ui/core/styles/createMuiTheme' {
+  interface Theme {
+    extra: typeof baseThemeStyles;
+    colors: typeof colors;
+  }
+
+  interface ThemeOptions {
+    extra: typeof baseThemeStyles;
+    colors: typeof colors;
+  }
+}
+
+declare module '@material-ui/core/styles/createBreakpoints' {
+  interface BreakpointOverrides {
+    // xs: false;
+    // sm: false;
+    // md: false;
+    // lg: false;
+    // xl: false;
+    desktopXS: true;
+    desktopSM: true;
+    desktopMD: true;
+    tabletXS: true;
+    tabletSM: true;
+    mobileSM: true;
+    mobileXS: true;
+  }
+}

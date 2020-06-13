@@ -2,18 +2,16 @@ import configureDeps from './configureDeps';
 import { TYPES, container } from './configureIoc';
 import configureStore, { createReducer } from './configureStore';
 
-import * as allModules from 'modules';
 import * as adaptabilityService from 'services/adaptability';
 import { configureJss } from 'core/configureJss';
 import { ReducersMap } from 'shared/types/redux';
-import { IAppData, IModule, RootSaga, IAppReduxState, IReduxEntry } from 'shared/types/app';
+import { IAppData, RootSaga, IAppReduxState, IReduxEntry } from 'shared/types/app';
 
 function configureApp(data?: IAppData): IAppData {
   /* Prepare main app elements */
-  const modules: IModule[] = Object.values(allModules);
 
   if (data) {
-    return { ...data, modules };
+    return data;
   }
 
   const sharedReduxEntries: IReduxEntry[] = [adaptabilityService.reduxEntry];
@@ -35,11 +33,6 @@ function configureApp(data?: IAppData): IAppData {
   const jssDeps = configureJss();
 
   sharedReduxEntries.forEach(connectEntryToStore);
-  modules.forEach((module: IModule) => {
-    if (module.getReduxEntry) {
-      connectEntryToStore(module.getReduxEntry());
-    }
-  });
 
   function connectEntryToStore({ reducers, sagas }: IReduxEntry) {
     if (!store) {
@@ -72,7 +65,7 @@ function configureApp(data?: IAppData): IAppData {
     }
   }
 
-  return { modules, store, jssDeps, deps: dependencies };
+  return { store, jssDeps, deps: dependencies };
 }
 
 export default configureApp;

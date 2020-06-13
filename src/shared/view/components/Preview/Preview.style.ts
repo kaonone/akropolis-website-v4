@@ -78,7 +78,7 @@ const styles = (theme: Theme) => ({
     transition: 'color .4s ease',
 
     '&:hover': {
-      color: theme.extra.palette.link.hover,
+      color: theme.palette.action.hover,
     },
   }),
 

@@ -3,7 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { App } from 'core/App';
+import { Root } from 'core/Root';
 import configureApp from 'core/configureApp';
 import getEnvParams from 'core/getEnvParams';
 import { actions as adaptabilityActions } from 'services/adaptability';
@@ -17,13 +17,13 @@ const appData = configureApp();
 document.domain = document.domain.includes('akropolis.io') ? 'akropolis.io' : document.domain;
 
 /* Start application */
-render(<App {...appData} />, appData);
+render(<Root {...appData} />, appData);
 
 /* Hot Module Replacement API */
 if ((module as any).hot && process.env.NODE_ENV !== 'production') {
-  (module as any).hot.accept(['./core/App', './core/configureApp'], () => {
+  (module as any).hot.accept(['./core/Root', './core/configureApp'], () => {
     const nextConfigureApp: typeof configureApp = require('./core/configureApp').default;
-    const NextApp: typeof App = require('./core/App').App;
+    const NextApp: typeof Root = require('./core/Root').App;
     const nextAppData = nextConfigureApp(appData);
     render(<NextApp {...nextAppData} jssDeps={appData.jssDeps} />, nextAppData);
   });

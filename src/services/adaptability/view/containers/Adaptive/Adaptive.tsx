@@ -4,6 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Breakpoint, Breakpoints } from '@material-ui/core/styles/createBreakpoints';
 
 import { IAppReduxState } from 'shared/types/app';
+import { useTheme } from 'shared/styles';
 
 import * as selectors from './../../../redux/selectors';
 import { StylesProps, provideStyles } from './Adaptive.style';
@@ -28,7 +29,8 @@ function mapState(state: IAppReduxState): IStateProps {
 }
 
 function Adaptive(props: IProps) {
-  const { theme, from = '', to = '', className, children } = props;
+  const { from = '', to = '', className, children } = props;
+  const theme = useTheme();
 
   const fromQuery = theme && from && up(from, theme.breakpoints).split(' ')[1];
   const toQuery = theme && to && down(to, theme.breakpoints).split(' ')[1];
@@ -50,15 +52,8 @@ function up(key: Breakpoint | number, breakpoints: Breakpoints) {
 }
 
 function down(key: Breakpoint | number, breakpoints: Breakpoints): string {
-  const endIndex = breakpoints.keys.indexOf(key as Breakpoint);
-  const upperbound = breakpoints.values[breakpoints.keys[endIndex]];
-
-  const value = typeof upperbound === 'number' && endIndex >= 0 ? upperbound : key;
-
-  if (typeof value === 'number') {
-    return `@media (max-width:${value - step / 100}${unit})`;
-  }
-  return value;
+  const value = typeof key === 'number' ? key : breakpoints.values[key];
+  return `@media (max-width:${value - step / 100}${unit})`;
 }
 
 export { IProps };

@@ -2,9 +2,9 @@ import { ReactElement } from 'react';
 import { RouteProps } from 'react-router';
 import { Store, Reducer, ActionCreator, Action } from 'redux';
 import { SagaIterator } from 'redux-saga';
+import { Jss } from 'jss';
 
 import * as adaptabilityService from 'services/adaptability';
-import { JSS } from 'shared/styles';
 
 export abstract class IModule {
   public getRoutes?(): ReactElement<RouteProps> | Array<ReactElement<RouteProps>>;
@@ -12,14 +12,13 @@ export abstract class IModule {
 }
 
 export interface IAppData {
-  modules: IModule[];
   store: Store<IAppReduxState>;
   jssDeps: IJssDependencies;
   deps: IDependencies;
 }
 
 export interface IJssDependencies {
-  jss: JSS;
+  jss: Jss;
 }
 
 // tslint:disable-next-line: no-empty-interface
@@ -37,8 +36,8 @@ export interface IReduxEntry {
 export interface IFeatureEntry<
   C extends IDictionary<React.ReactType<any>, keyof C> | void,
   A extends IDictionary<ActionCreator<Action>, keyof A> | void,
-  S extends IDictionary<(state: any, ...args: any[]) => any, keyof S> | void,
-  > extends IReduxEntry {
+  S extends IDictionary<(state: any, ...args: any[]) => any, keyof S> | void
+> extends IReduxEntry {
   actions?: A;
   selectors?: S;
   containers?: C;

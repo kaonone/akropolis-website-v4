@@ -13,3 +13,4 @@ export { default as Link } from '@material-ui/core/Link';
 export { default as Grid } from '@material-ui/core/Grid';
 export { default as ButtonBase } from '@material-ui/core/ButtonBase';
 export { default as Snackbar } from '@material-ui/core/Snackbar';
+export { default as Box } from '@material-ui/core/Box';

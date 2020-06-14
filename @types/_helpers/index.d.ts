@@ -1,4 +1,5 @@
 declare module '_helpers' {
+  export type TODO_ANY = any; // TODO
   /**
    * Remove properties `K` from `T`.
    *

@@ -3,48 +3,24 @@ import { rule } from 'shared/helpers/style';
 
 const styles = (theme: Theme) => ({
   root: rule({
-    padding: theme.extra.spacing.horizontalPagePaddings.xs.medium,
-    margin: '0 auto',
     display: 'flex',
     alignItems: 'center',
-    color: theme.extra.colors.rhino,
-    maxWidth: theme.extra.sizes.maxContentWidth,
-
-    [theme.breakpoints.up('md')]: {
-      padding: `${theme.spacing(3)}px ${theme.extra.spacing.horizontalPagePaddings.md.medium}px`,
-    },
-
-    [theme.breakpoints.up('lg')]: {
-      padding: `${theme.spacing(4)}px ${theme.extra.spacing.horizontalPagePaddings.lg.large}px`,
-    },
   }),
 
   logo: rule({
     display: 'flex',
     marginRight: 'auto',
-    fontSize: 36,
-    color: 'inherit',
 
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 48,
+    fontSize: theme.spacing(2.5),
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: theme.spacing(5),
     },
   }),
 
   navInline: rule({
-    display: 'none',
-    marginRight: theme.spacing(4),
-
-    [theme.breakpoints.up(1140)]: {
-      display: 'block',
-    },
-  }),
-
-  navDrawer: rule({
-    display: 'block',
-    marginLeft: theme.spacing(2),
-
-    [theme.breakpoints.up(1140)]: {
-      display: 'none',
+    marginLeft: theme.spacing(2.5),
+    [theme.breakpoints.up('tabletXS')]: {
+      marginLeft: theme.spacing(6),
     },
   }),
 });

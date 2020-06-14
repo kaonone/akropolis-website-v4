@@ -5,6 +5,8 @@ export default {
       products: 'Product',
       company: 'Company',
       wiki: 'Wiki',
+      app: 'App',
+      roadmap: 'Roadmap',
       whitepaper: 'Whitepaper',
       events: 'Events',
       blog: 'Blog',

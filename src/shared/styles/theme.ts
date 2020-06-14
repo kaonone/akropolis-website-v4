@@ -1,4 +1,5 @@
 import { Theme, createMuiTheme } from '@material-ui/core/styles';
+import { makeGradient } from './makeGradient';
 
 // Find color name http://chir.ag/projects/name-that-color
 // https://github.com/insomnious0x01/ntc-js
@@ -7,19 +8,33 @@ const colors = {
   cornflowerBlue: '#6c81e4',
   rhino: '#283e64',
   purpleHeart: '#6931b6',
-  heliotrope: '#c17bff',
   mediumPurple: '#8c4be6',
   electricViolet: '#9013FE',
   monza: '#d0021b',
-  royalBlue: '#5c73e3',
   silver: '#c9c9c9',
   blackCurrant: '#2E2639',
   white: '#fff',
   black: '#000',
   royalPurple: '#613AAF',
   woodSmoke: '#181b1f',
+
   shark: '#191b1f',
   athensGray: '#eff1f5',
+  royalBlue: '#544CF2',
+  heliotrope: '#D93CEF',
+};
+
+const gradients = {
+  main: makeGradient([
+    {
+      color: colors.heliotrope,
+      offset: '0%',
+    },
+    {
+      color: colors.royalBlue,
+      offset: '100%',
+    },
+  ]),
 };
 
 const palette = {
@@ -51,6 +66,7 @@ const unit = 8;
 const baseThemeStyles = {
   palette,
   colors,
+  gradients,
   sizes: {
     control: {
       borderRadius: 4,
@@ -101,6 +117,7 @@ export const getTheme = (): Theme =>
   createMuiTheme({
     extra: baseThemeStyles,
     colors,
+    gradients,
     breakpoints: {
       values: {
         xs: 0,
@@ -187,11 +204,13 @@ declare module '@material-ui/core/styles/createMuiTheme' {
   interface Theme {
     extra: typeof baseThemeStyles;
     colors: typeof colors;
+    gradients: typeof gradients;
   }
 
   interface ThemeOptions {
     extra: typeof baseThemeStyles;
     colors: typeof colors;
+    gradients: typeof gradients;
   }
 }
 

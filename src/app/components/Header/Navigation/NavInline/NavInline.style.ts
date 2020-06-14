@@ -1,38 +1,26 @@
-import { withStyles, Theme, WithStyles } from 'shared/styles';
-import { rule } from 'shared/helpers/style';
+import { makeStyles } from 'shared/styles';
 
-const styles = (theme: Theme) => ({
-  root: rule({
-    display: 'none',
-    transformOrigin: 'right',
+export const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'nowrap',
+    alignItems: 'center',
+  },
 
-    [theme.breakpoints.up('lg')]: {
-      display: 'flex',
+  item: {
+    '&:empty': {
+      display: 'none',
     },
-  }),
 
-  link: rule({
-    display: 'block',
-    marginRight: theme.extra.spacing.horizontalPagePaddings.md.medium,
-    fontFamily: theme.extra.typography.secondaryFont,
-    fontSize: 16,
-    fontWeight: 600,
-    color: 'inherit',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    whiteSpace: 'nowrap',
-    transition: 'color .4s ease',
+    fontSize: theme.spacing(1.5),
+    marginRight: theme.spacing(2.5),
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: theme.spacing(2),
+      marginRight: theme.spacing(6),
+    },
 
     '&:last-child': {
       marginRight: 0,
     },
-
-    '&:hover': {
-      color: theme.palette.action.hover,
-    },
-  }),
-});
-
-export const provideStyles = withStyles(styles);
-
-export type StylesProps = WithStyles<typeof styles>;
+  },
+}));

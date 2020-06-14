@@ -24,6 +24,13 @@ export default {
       subtitle: 'Akropolis Credit Pool is a powerful DeFi platform for tokenized lending and borrowing',
       tryButton: 'Try it now',
     },
+    buildWith: {
+      title: 'Built with the best',
+      labels: {
+        buildWith: 'Built with',
+        integrations: 'Integrations',
+      },
+    },
   },
   sections: {
     intro: {

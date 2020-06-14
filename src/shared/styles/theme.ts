@@ -18,10 +18,13 @@ const colors = {
   royalPurple: '#613AAF',
   woodSmoke: '#181b1f',
 
+  charade: '#292835',
   shark: '#191b1f',
   athensGray: '#eff1f5',
   royalBlue: '#544CF2',
   heliotrope: '#D93CEF',
+  zumthor: '#eaf1ff',
+  scarpaFlow: '#555466',
 };
 
 const gradients = {
@@ -37,7 +40,7 @@ const gradients = {
   ]),
 };
 
-const palette = {
+const lightPalette = {
   primary: {
     main: colors.purpleHeart,
     light: colors.heliotrope,
@@ -59,12 +62,38 @@ const palette = {
   background: {
     default: colors.white,
   },
+  type: 'light' as const,
+};
+
+export const darkPalette = {
+  primary: {
+    main: colors.purpleHeart,
+    light: colors.heliotrope,
+    dark: colors.mediumPurple,
+    contrastText: colors.white,
+  },
+  secondary: {
+    main: colors.electricViolet,
+    light: colors.electricViolet,
+    dark: colors.electricViolet,
+    contrastText: colors.electricViolet,
+  },
+  text: {
+    primary: colors.white,
+  },
+  error: {
+    main: colors.monza,
+  },
+  background: {
+    default: colors.charade,
+  },
+  type: 'dark' as const,
 };
 
 const unit = 8;
 
 const baseThemeStyles = {
-  palette,
+  palette: lightPalette,
   colors,
   gradients,
   sizes: {
@@ -118,11 +147,26 @@ export const getTheme = (): Theme =>
     extra: baseThemeStyles,
     colors,
     gradients,
+    palette: darkPalette,
     breakpoints: {
+      keys: [
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        'desktopXS',
+        'desktopSM',
+        'desktopMD',
+        'tabletXS',
+        'tabletSM',
+        'mobileSM',
+        'mobileXS',
+      ],
       values: {
         xs: 0,
         sm: 375,
-        md: 768,
+        md: 767,
         lg: 1024,
         xl: 1920,
         desktopMD: 1440,
@@ -134,7 +178,6 @@ export const getTheme = (): Theme =>
         mobileXS: 0,
       },
     },
-    palette,
     typography: {
       fontFamily: baseThemeStyles.typography.primaryFont,
     },
@@ -198,11 +241,6 @@ declare module '@material-ui/core/styles/createMuiTheme' {
 
 declare module '@material-ui/core/styles/createBreakpoints' {
   interface BreakpointOverrides {
-    // xs: false;
-    // sm: false;
-    // md: false;
-    // lg: false;
-    // xl: false;
     desktopXS: true;
     desktopSM: true;
     desktopMD: true;

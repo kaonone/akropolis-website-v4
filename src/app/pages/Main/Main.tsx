@@ -4,9 +4,12 @@ import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
 import { Intro } from 'app/sections/Intro/Intro';
-import { Box } from 'shared/view/elements';
+import { BuildWith } from 'app/sections/BuildWith/BuildWith';
+import { makeStyles } from 'shared/styles';
+import { Adaptive } from 'services/adaptability';
 
 export function Main() {
+  const classes = useStyles();
   return (
     <Layout>
       <Layout.WrapTopWave type="top">
@@ -15,12 +18,18 @@ export function Main() {
         </Layout.Header>
         <Layout.Container>
           <Intro />
+          <Adaptive to="tabletXS">
+            <BuildWith className={classes.buildWith} includes={['title', 'build-with']} />
+          </Adaptive>
+          <Adaptive from="tabletXS">
+            <BuildWith className={classes.buildWith} includes={['title', 'build-with', 'integrations']} />
+          </Adaptive>
         </Layout.Container>
       </Layout.WrapTopWave>
       <Layout.Container>
-        <Box bgcolor="rgba(0, 255, 0, 0.5)" p={2}>
-          Content
-        </Box>
+        <Adaptive to="tabletXS">
+          <BuildWith className={classes.buildWithUnderWave} includes={['integrations']} />
+        </Adaptive>
       </Layout.Container>
       <Layout.WrapTopWave type="bottom">
         <Layout.Footer>
@@ -30,3 +39,18 @@ export function Main() {
     </Layout>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  buildWith: {
+    marginTop: theme.spacing(5.25),
+    [theme.breakpoints.up('tabletXS')]: {
+      marginTop: theme.spacing(7.5),
+    },
+    [theme.breakpoints.up('tabletSM')]: {
+      marginTop: theme.spacing(8.75),
+    },
+  },
+  buildWithUnderWave: {
+    marginTop: theme.spacing(1.5),
+  },
+}));

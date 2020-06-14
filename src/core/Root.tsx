@@ -8,7 +8,7 @@ import 'normalize.css';
 import 'shared/styles/fonts/index.scss';
 
 import { hot } from 'react-hot-loader/root';
-import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider, StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 import { I18nProvider } from 'services/i18n';
 import { IAppData, IJssDependencies } from 'shared/types/app';
 import { getTheme } from 'shared/styles/theme';
@@ -44,12 +44,14 @@ function ClientRoot({ store, jssDeps, deps }: IAppData & IAppProps) {
     handleScrollToAnchor(browserHistory.location);
   }, []);
 
+  const generateClassName = createGenerateClassName();
+
   const { jss } = jssDeps;
 
   return (
     <Provider store={store}>
       <Router history={browserHistory}>
-        <StylesProvider jss={jss}>
+        <StylesProvider generateClassName={generateClassName} jss={jss}>
           <MuiThemeProvider theme={theme}>
             <DepsContext.Provider value={deps}>
               <I18nProvider>

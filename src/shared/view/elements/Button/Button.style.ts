@@ -26,6 +26,7 @@ export const useStyles = makeStyles((theme) => ({
 
       '&$sizeLarge': {
         minHeight: theme.spacing(4.5),
+        minWidth: theme.spacing(10),
         borderRadius: theme.spacing(2.25),
         [theme.breakpoints.up('tabletXS')]: {
           fontSize: theme.spacing(2.5),

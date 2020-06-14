@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
+import { Intro } from 'app/sections/Intro/Intro';
 import { Box } from 'shared/view/elements';
 
 export function Main() {
@@ -13,9 +14,7 @@ export function Main() {
           <Header />
         </Layout.Header>
         <Layout.Container>
-          <Box bgcolor="rgba(255, 0, 0, 0.5)" p={2}>
-            Content
-          </Box>
+          <Intro />
         </Layout.Container>
       </Layout.WrapTopWave>
       <Layout.Container>

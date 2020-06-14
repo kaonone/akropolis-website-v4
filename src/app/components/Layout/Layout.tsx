@@ -40,19 +40,24 @@ function WrapTopWave({ type, children }: { type: 'top' | 'bottom'; children: Rea
   );
 }
 
-function Header({ children }: { children: React.ReactNode }) {
-  const classes = useStyles();
-  return <div className={cn(classes.container, classes.header)}>{children}</div>;
+interface ContainerProps {
+  children: React.ReactNode;
+  className?: string;
 }
 
-function Container({ children }: { children: React.ReactNode }) {
+function Header({ children, className }: ContainerProps) {
   const classes = useStyles();
-  return <div className={cn(classes.container)}>{children}</div>;
+  return <div className={cn(className, classes.container, classes.header)}>{children}</div>;
 }
 
-function Footer({ children }: { children: React.ReactNode }) {
+function Container({ children, className }: ContainerProps) {
   const classes = useStyles();
-  return <div className={cn(classes.container, classes.footer)}>{children}</div>;
+  return <div className={cn(className, classes.container)}>{children}</div>;
+}
+
+function Footer({ children, className }: ContainerProps) {
+  const classes = useStyles();
+  return <div className={cn(className, classes.container, classes.footer)}>{children}</div>;
 }
 
 export const Layout = attachStaticFields(LayoutComponent, { Header, Container, Footer, WrapTopWave });

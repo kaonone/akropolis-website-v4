@@ -176,24 +176,6 @@ export const getTheme = (): Theme =>
           marginRight: 0,
         },
       },
-      MuiTypography: {
-        root: {
-          display: '',
-          color: colors.rhino,
-        },
-        h3: { fontSize: '3rem' },
-        h4: { fontSize: '2.25rem' },
-        h5: { fontSize: '1.75rem' },
-        h6: { fontSize: '1.25rem', fontWeight: 400 },
-        body1: {
-          fontSize: '1rem',
-          color: colors.rhino,
-        },
-        body2: { fontSize: '0.875rem' },
-        subtitle1: { fontSize: '0.75rem' },
-        caption: { fontSize: '0.625rem' },
-        overline: { fontSize: '0.625rem' },
-      },
     },
   });
 

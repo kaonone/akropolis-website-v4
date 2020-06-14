@@ -18,6 +18,13 @@ export default {
       pointSystem: 'Point System',
     },
   },
+  new: {
+    intro: {
+      title: 'Lend and borrow stablecoins',
+      subtitle: 'Akropolis Credit Pool is a powerful DeFi platform for tokenized lending and borrowing',
+      tryButton: 'Try it now',
+    },
+  },
   sections: {
     intro: {
       title: 'Decentralized and autonomous community economies',

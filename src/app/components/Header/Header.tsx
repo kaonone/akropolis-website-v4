@@ -5,6 +5,7 @@ import { LogoWithNameIcon } from 'shared/view/elements/Icons';
 import { Adaptive } from 'services/adaptability';
 import { NavInline } from './Navigation/NavInline/NavInline';
 import { useStyles } from './Header.style';
+import { Button } from 'shared/view/elements';
 
 export function Header() {
   const classes = useStyles();
@@ -18,7 +19,9 @@ export function Header() {
         className={classes.navInline}
         extraLeft={[
           <Adaptive key="0" from="tabletXS">
-            Theme Button
+            <Button color="gradient" disabled>
+              Theme button
+            </Button>
           </Adaptive>,
         ]}
       />

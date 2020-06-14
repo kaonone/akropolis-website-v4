@@ -29,6 +29,10 @@ export const useStyles = makeStyles((theme) => ({
 
   header: {
     paddingTop: theme.spacing(2.5),
+    paddingBottom: theme.spacing(3.5),
+    [theme.breakpoints.up('tabletXS')]: {
+      paddingBottom: theme.spacing(6),
+    },
     [theme.breakpoints.up('tabletSM')]: {
       paddingTop: theme.spacing(5),
     },

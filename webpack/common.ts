@@ -10,7 +10,7 @@ import threadLoaderLib from 'thread-loader';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import FileManagerWebpackPlugin from 'filemanager-webpack-plugin';
 import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-import PrerenderSPAPlugin from 'prerender-spa-plugin';
+// import PrerenderSPAPlugin from 'prerender-spa-plugin';
 
 import postcssReporter from 'postcss-reporter';
 import postcssSCSS from 'postcss-scss';
@@ -78,28 +78,28 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
       } : []),
     },
   }),
-  new PrerenderSPAPlugin({
-    staticDir: path.join(__dirname, '..', 'build'),
-    routes: [
-      '/',
-      '/forWiki/partners', '/forWiki/news',
-    ],
-    postProcess(renderedRoute: any) {
-      const styleRegExp = /<style.*?>[^<]*<\/style>/gi;
-      const styles = (renderedRoute.html.match(styleRegExp) || []).join('');
-      const wrappedStyles = `<div id="server-side-styles">${styles}</div>`;
-      renderedRoute.html = renderedRoute.html
-        .replace(styleRegExp, '')
-        .replace(/<\/head>/i, `${wrappedStyles}<\/head>`);
-      return renderedRoute;
-    },
-    renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
-      injectProperty: '__PRERENDER_INJECTED__',
-      inject: {
-        isServer: true,
-      },
-    }),
-  }),
+  // new PrerenderSPAPlugin({
+  //   staticDir: path.join(__dirname, '..', 'build'),
+  //   routes: [
+  //     '/',
+  //     '/forWiki/partners', '/forWiki/news',
+  //   ],
+  //   postProcess(renderedRoute: any) {
+  //     const styleRegExp = /<style.*?>[^<]*<\/style>/gi;
+  //     const styles = (renderedRoute.html.match(styleRegExp) || []).join('');
+  //     const wrappedStyles = `<div id="server-side-styles">${styles}</div>`;
+  //     renderedRoute.html = renderedRoute.html
+  //       .replace(styleRegExp, '')
+  //       .replace(/<\/head>/i, `${wrappedStyles}<\/head>`);
+  //     return renderedRoute;
+  //   },
+  //   renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
+  //     injectProperty: '__PRERENDER_INJECTED__',
+  //     inject: {
+  //       isServer: true,
+  //     },
+  //   }),
+  // }),
 ]
   .concat(isWatchMode && !withoutTypeChecking ? (
     new ForkTsCheckerWebpackPlugin({

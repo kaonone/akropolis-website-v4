@@ -31,6 +31,13 @@ export default {
         integrations: 'Integrations',
       },
     },
+    features: {
+      title: 'Benefits and Features',
+      labels: {
+        inProgress: 'In progress',
+        roadmap: 'Roadmap',
+      },
+    },
   },
   sections: {
     intro: {

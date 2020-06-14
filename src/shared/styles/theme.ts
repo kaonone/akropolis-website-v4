@@ -25,6 +25,10 @@ const colors = {
   heliotrope: '#D93CEF',
   zumthor: '#eaf1ff',
   scarpaFlow: '#555466',
+  scarpaFlow2: '#5a5466',
+  titanWhite: '#efedff',
+  foam: '#f0fafe',
+  comet: '#616884',
 };
 
 const gradients = {

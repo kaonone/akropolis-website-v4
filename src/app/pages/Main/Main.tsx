@@ -7,6 +7,7 @@ import { Intro } from 'app/sections/Intro/Intro';
 import { BuildWith } from 'app/sections/BuildWith/BuildWith';
 import { makeStyles } from 'shared/styles';
 import { Adaptive } from 'services/adaptability';
+import { Features } from 'app/sections/Features/Features';
 
 export function Main() {
   const classes = useStyles();
@@ -30,6 +31,7 @@ export function Main() {
         <Adaptive to="tabletXS">
           <BuildWith className={classes.buildWithUnderWave} includes={['integrations']} />
         </Adaptive>
+        <Features className={classes.features} />
       </Layout.Container>
       <Layout.WrapTopWave type="bottom">
         <Layout.Footer>
@@ -50,7 +52,15 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(8.75),
     },
   },
+
   buildWithUnderWave: {
     marginTop: theme.spacing(1.5),
+  },
+
+  features: {
+    marginTop: theme.spacing(5),
+    [theme.breakpoints.up('tabletSM')]: {
+      marginTop: theme.spacing(7.5),
+    },
   },
 }));

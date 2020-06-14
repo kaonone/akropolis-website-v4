@@ -4,17 +4,18 @@ import { makeStyles, rgba } from 'shared/styles';
 import { Typography } from 'shared/view/elements';
 
 interface CardProps {
+  className?: string;
   variant?: 'outlined' | 'contained';
   label?: string;
   children: React.ReactNode;
 }
 
 export function Card(props: CardProps) {
-  const { label, variant = 'outlined', children } = props;
+  const { label, variant = 'outlined', children, className } = props;
   const classes = useStyles();
   return (
     <div
-      className={cn(classes.root, {
+      className={cn(className, classes.root, {
         [classes.outlined]: variant === 'outlined',
         [classes.contained]: variant === 'contained',
       })}
@@ -22,9 +23,7 @@ export function Card(props: CardProps) {
       {children}
       {label && (
         <div className={classes.label}>
-          <Typography component="span">
-            {label}
-          </Typography>
+          <Typography component="span">{label}</Typography>
         </div>
       )}
     </div>

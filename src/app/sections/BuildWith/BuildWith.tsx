@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Section } from 'app/components/Section/Section';
-import { Card } from './Card';
+import { Card } from 'app/components/Card';
 import { Grid } from 'shared/view/elements';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
 import { TheGraph, OpenZeppelin, Compound, Fulcrum, Aave, Dydx, MakerDao, Staked } from './logos';

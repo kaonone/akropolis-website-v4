@@ -1,4 +1,5 @@
 import * as React from 'react';
+import cn from 'classnames';
 
 import { PRIVACY_POLICY_URL, T_AND_C_URL } from 'assets';
 import { tKeys, useTranslate } from 'services/i18n';
@@ -6,7 +7,7 @@ import { tKeys, useTranslate } from 'services/i18n';
 import { IMenuItem } from 'shared/types/common';
 import { NavMenuItem } from 'shared/view/components';
 
-import { StylesProps, provideStyles } from './FooterNavigation.style';
+import { useStyles } from './FooterNavigation.style';
 
 const menuItems: IMenuItem[] = [
   {
@@ -21,24 +22,20 @@ const menuItems: IMenuItem[] = [
   },
 ];
 
-function FooterNavigation(props: StylesProps) {
-  const { classes } = props;
-  const { t } = useTranslate();
-  const halfLength = Math.ceil(menuItems.length / 2);
-  return (
-    <div className={classes.root}>
-      <div className={classes.column}>
-        {menuItems.slice(0, halfLength).map(({ title, ...item }) => (
-          <NavMenuItem key={title} className={classes.link} title={t(title)} {...item} />
-        ))}
-      </div>
-      <div className={classes.column}>
-        {menuItems.slice(halfLength).map(({ title, ...item }) => (
-          <NavMenuItem key={title} className={classes.link} title={t(title)} {...item} />
-        ))}
-      </div>
-    </div>
-  );
+interface Props {
+  className?: string;
 }
 
-export default provideStyles(FooterNavigation);
+export function FooterNavigation({ className }: Props) {
+  const classes = useStyles();
+  const { t } = useTranslate();
+  return (
+    <nav className={cn(className, classes.root)}>
+      {menuItems.map(({ title, ...item }) => (
+        <div className={classes.item} key={title}>
+          <NavMenuItem title={t(title)} color="textPrimary" {...item} />
+        </div>
+      ))}
+    </nav>
+  );
+}

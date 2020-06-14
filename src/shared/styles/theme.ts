@@ -104,8 +104,8 @@ const baseThemeStyles = {
     },
   },
   typography: {
-    primaryFont: ['BrandonGrotesque', 'Arial', 'sans-serif'].join(','),
-    secondaryFont: ['OpenSans', 'Arial', 'sans-serif'].join(','),
+    primaryFont: ['Helvetica Neue', 'Arial', 'sans-serif'].join(','),
+    secondaryFont: ['Helvetica Neue', 'Arial', 'sans-serif'].join(','), // TODO remove
   },
   zIndex: {
     tooltip: 1500,

@@ -1,15 +1,10 @@
 import React from 'react';
-import cn from 'classnames';
 
-import { StylesProps, provideStyles } from './Footer.style';
-import FooterNavigation from './FooterNavigation/FooterNavigation';
+import { useStyles } from './Footer.style';
+import { FooterNavigation } from './FooterNavigation/FooterNavigation';
 
-interface IProps {
-  className?: string;
-}
-
-function Footer(props: IProps & StylesProps) {
-  const { classes } = props;
+export function Footer() {
+  const classes = useStyles();
 
   const startYear = 2017;
   const yearNow = new Date().getFullYear();
@@ -24,11 +19,7 @@ function Footer(props: IProps & StylesProps) {
           `${startYear}${yearNow > startYear ? '-' + yearNow : ''}, All right reserved`,
         ].join(' | ')}
       </small>
-      <div className={cn(classes.column, classes.right)}>
-        <FooterNavigation />
-      </div>
+      <FooterNavigation className={classes.nav} />
     </footer>
   );
 }
-
-export default provideStyles(Footer);

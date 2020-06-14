@@ -1,13 +1,12 @@
-import { withStyles, Theme, WithStyles } from 'shared/styles';
-import { rule } from 'shared/helpers/style';
+import { makeStyles } from 'shared/styles';
 
-const styles = (theme: Theme) => ({
-  root: rule({
+export const useStyles = makeStyles((theme) => ({
+  root: {
     display: 'flex',
     alignItems: 'center',
-  }),
+  },
 
-  logo: rule({
+  logo: {
     display: 'flex',
     marginRight: 'auto',
 
@@ -15,16 +14,12 @@ const styles = (theme: Theme) => ({
     [theme.breakpoints.up('tabletXS')]: {
       fontSize: theme.spacing(5),
     },
-  }),
+  },
 
-  navInline: rule({
+  navInline: {
     marginLeft: theme.spacing(2.5),
     [theme.breakpoints.up('tabletXS')]: {
       marginLeft: theme.spacing(6),
     },
-  }),
-});
-
-export const provideStyles = withStyles(styles);
-
-export type StylesProps = WithStyles<typeof styles>;
+  },
+}));

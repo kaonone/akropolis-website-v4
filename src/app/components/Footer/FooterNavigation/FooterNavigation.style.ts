@@ -1,53 +1,26 @@
-import { withStyles, Theme, WithStyles } from 'shared/styles';
-import { rule } from 'shared/helpers/style';
+import { makeStyles } from 'shared/styles';
 
-const styles = (theme: Theme) => ({
-  root: rule({
+export const useStyles = makeStyles((theme) => ({
+  root: {
     display: 'flex',
-    flexDirection: 'column',
+    flexWrap: 'nowrap',
     alignItems: 'center',
-    flexGrow: 1,
-    margin: `0 -${theme.extra.spacing.horizontalPagePaddings.xs.medium / 2}px`,
+  },
 
-    [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-      margin: `0 -${theme.extra.spacing.horizontalPagePaddings.md.large / 2}px`,
+  item: {
+    marginRight: 'auto',
+
+    fontSize: theme.spacing(1.25),
+    marginLeft: theme.spacing(2.5),
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: theme.spacing(1.5),
     },
-  }),
-
-  column: rule({
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    margin: `0 ${theme.extra.spacing.horizontalPagePaddings.xs.medium / 2}px`,
-
-    [theme.breakpoints.up('md')]: {
-      alignItems: 'flex-start',
-      margin: `0 ${theme.extra.spacing.horizontalPagePaddings.md.large / 2}px`,
-    },
-  }),
-
-  link: rule({
-    margin: `${theme.spacing(1.5)}px 0`,
-    display: 'block',
-    fontFamily: theme.extra.typography.secondaryFont,
-    fontSize: 14,
-    color: 'inherit',
-    textDecoration: 'none',
-    whiteSpace: 'nowrap',
-    transition: 'color .4s ease',
-
-    '&:hover': {
-      color: theme.palette.action.hover,
+    [theme.breakpoints.up('desktopSM')]: {
+      marginLeft: theme.spacing(6),
     },
 
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 16,
+    '&:first-child': {
+      marginLeft: 0,
     },
-  }),
-});
-
-export const provideStyles = withStyles(styles);
-
-export type StylesProps = WithStyles<typeof styles>;
+  },
+}));

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import { Layout } from 'app/components/Layout/Layout';
-import Header from 'app/components/Header/Header';
-import Footer from 'app/components/Footer/Footer';
+import { Header } from 'app/components/Header/Header';
+import { Footer } from 'app/components/Footer/Footer';
 import { Box } from 'shared/view/elements';
 
 export function Main() {

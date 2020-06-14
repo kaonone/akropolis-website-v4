@@ -1,81 +1,41 @@
-import { withStyles, Theme, WithStyles } from 'shared/styles';
-import { rule } from 'shared/helpers/style';
+import { makeStyles } from 'shared/styles';
 
-const styles = (theme: Theme) => ({
-  root: rule({
+export const useStyles = makeStyles((theme) => ({
+  root: {
     display: 'flex',
+
     flexWrap: 'wrap',
-  }),
+    [theme.breakpoints.up('tabletXS')]: {
+      flexWrap: 'nowrap',
+      justifyContent: 'space-between',
+    },
+  },
 
-  column: rule({
+  address: {
     width: '100%',
-    flexGrow: 1,
-    display: 'flex',
+    opacity: 0.3,
 
-    [theme.breakpoints.up('md')]: {
-      width: 0,
+    marginBottom: theme.spacing(3.75),
+    lineHeight: 1.6,
+    fontSize: theme.spacing(1.25),
+    [theme.breakpoints.up('tabletXS')]: {
+      width: 'unset',
+      maxWidth: theme.spacing(62),
+      marginBottom: 0,
+      lineHeight: 1.33,
+      fontSize: theme.spacing(1.5),
     },
-
-    '&$left': {
-      flexDirection: 'column',
-      alignItems: 'center',
-      marginBottom: theme.spacing(3.5),
-
-      [theme.breakpoints.up('md')]: {
-        marginBottom: 0,
-        marginRight: theme.extra.spacing.horizontalPagePaddings.md.large,
-      },
-
-      [theme.breakpoints.up('lg')]: {
-        marginRight: theme.extra.spacing.horizontalPagePaddings.lg.large,
-      },
+    [theme.breakpoints.up('desktopXS')]: {
+      lineHeight: 'unset',
+      maxWidth: 'unset',
     },
-  }),
+  },
 
-  left: {},
-  right: {},
-
-  logo: rule({
-    display: 'flex',
-    marginBottom: theme.spacing(3.5),
-    fontSize: 40,
-    color: 'inherit',
-
-    [theme.breakpoints.up('md')]: {
-      alignSelf: 'flex-start',
-      marginBottom: theme.spacing(5),
+  nav: {
+    width: '100%',
+    [theme.breakpoints.up('tabletXS')]: {
+      width: 'unset',
+      marginLeft: theme.spacing(2),
     },
-  }),
-
-  description: rule({
-    fontFamily: theme.extra.typography.secondaryFont,
-    fontSize: 12,
-    lineHeight: 2,
-    textAlign: 'center',
-    color: '#d6d6d6',
-
-    [theme.breakpoints.up('md')]: {
-      alignSelf: 'flex-start',
-      textAlign: 'left',
-    },
-
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 14,
-      lineHeight: 1.71,
-    },
-  }),
-
-  address: rule({
-    display: 'block',
-    padding: `${theme.spacing(3)}px ${theme.extra.spacing.horizontalPagePaddings.xs.small}px`,
-    backgroundColor: '#000',
-    fontFamily: theme.extra.typography.secondaryFont,
-    fontSize: 12,
-    textAlign: 'center',
-    color: '#9b9b9b',
-  }),
-});
-
-export const provideStyles = withStyles(styles);
-
-export type StylesProps = WithStyles<typeof styles>;
+  },
+}));

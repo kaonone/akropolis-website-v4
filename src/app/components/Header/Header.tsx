@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { LogoWithNameIcon } from 'shared/view/elements/Icons';
-import { StylesProps, provideStyles } from './Header.style';
-import { NavInline } from './Navigation/NavInline/NavInline';
 import { Adaptive } from 'services/adaptability';
+import { NavInline } from './Navigation/NavInline/NavInline';
+import { useStyles } from './Header.style';
 
-function Header(props: StylesProps) {
-  const { classes } = props;
+export function Header() {
+  const classes = useStyles();
 
   return (
     <header className={classes.root}>
@@ -25,5 +25,3 @@ function Header(props: StylesProps) {
     </header>
   );
 }
-
-export default provideStyles(Header);

@@ -38,6 +38,9 @@ export default {
         roadmap: 'Roadmap',
       },
     },
+    useCases: {
+      title: 'Use Cases',
+    },
   },
   sections: {
     intro: {

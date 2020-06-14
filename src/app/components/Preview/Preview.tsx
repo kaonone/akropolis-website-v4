@@ -5,7 +5,7 @@ import { Typography } from 'shared/view/elements';
 
 interface IProps {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   description: string;
 }
 

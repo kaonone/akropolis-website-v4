@@ -20,7 +20,7 @@ const styles = (_theme: Theme) => ({
   }),
 
   fillPath: rule({
-    '& path': {
+    '& path, & circle': {
       fill: `url(#${MainSvgGradient.ID})`,
     },
   }),

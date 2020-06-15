@@ -8,7 +8,7 @@ import { makeStyles, getGrid } from 'shared/styles';
 import { Preview } from 'app/components/Preview/Preview';
 import { Link } from 'shared/view/elements';
 
-const tKeys = tKeysAll.new.features;
+const tKeys = tKeysAll.new.useCases;
 
 interface UseCase {
   title: string;

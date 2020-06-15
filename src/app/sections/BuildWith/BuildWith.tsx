@@ -32,9 +32,9 @@ export function BuildWith(props: IProps) {
 
   return (
     <Section className={className} title={includes.includes('title') ? t(tKeys.title.getKey()) : undefined}>
-      <Grid container spacing={2} justify="space-between">
+      <Grid container justify="space-between">
         {includes.includes('build-with') && (
-          <Grid item xs={12} md={4}>
+          <div className={classes.buildWith}>
             <Card label={t(tKeys.labels.buildWith.getKey())}>
               <div className={classes.content}>
                 <Grid container spacing={2} alignItems="center" justify="space-around">
@@ -44,10 +44,10 @@ export function BuildWith(props: IProps) {
                 </Grid>
               </div>
             </Card>
-          </Grid>
+          </div>
         )}
         {includes.includes('integrations') && (
-          <Grid item xs={12} md={6}>
+          <div className={classes.integrations}>
             <Card label={t(tKeys.labels.integrations.getKey())}>
               <div className={classes.content}>
                 <Grid container spacing={2} alignItems="center" justify="space-around">
@@ -59,37 +59,79 @@ export function BuildWith(props: IProps) {
                 </Grid>
               </div>
             </Card>
-          </Grid>
+          </div>
         )}
       </Grid>
     </Section>
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  content: {
-    minHeight: theme.spacing(9.5),
+function getGridItemWidth(percent: number) {
+  return {
+    maxWidth: `${percent}%`,
+    flexBasis: `${percent}%`,
+  };
+}
 
-    padding: theme.spacing(3, 2.5),
-    [theme.breakpoints.up('tabletXS')]: {
-      padding: theme.spacing(3.75, 6),
+const useStyles = makeStyles((theme) => {
+  return {
+    buildWith: {
+      ...getGridItemWidth(100),
+      [theme.breakpoints.up('tabletXS')]: {
+        ...getGridItemWidth(33),
+      },
+      [theme.breakpoints.up('tabletSM')]: {
+        ...getGridItemWidth(36),
+      },
+      [theme.breakpoints.up('desktopMD')]: {
+        ...getGridItemWidth(35),
+      },
+      [theme.breakpoints.up('desktopLG')]: {
+        ...getGridItemWidth(29),
+      },
     },
-    [theme.breakpoints.up('tabletSM')]: {
-      padding: theme.spacing(3, 2),
+    integrations: {
+      ...getGridItemWidth(100),
+      [theme.breakpoints.up('tabletXS')]: {
+        ...getGridItemWidth(47),
+      },
+      [theme.breakpoints.up('tabletSM')]: {
+        ...getGridItemWidth(54),
+      },
+      [theme.breakpoints.up('desktopXS')]: {
+        ...getGridItemWidth(53),
+      },
+      [theme.breakpoints.up('desktopMD')]: {
+        ...getGridItemWidth(52),
+      },
+      [theme.breakpoints.up('desktopLG')]: {
+        ...getGridItemWidth(48),
+      },
     },
-    [theme.breakpoints.up('desktopXS')]: {
-      padding: theme.spacing(3, 3.5),
-    },
-  },
+    content: {
+      minHeight: theme.spacing(9.5),
 
-  logo: {
-    display: 'block',
-    fontSize: theme.spacing(2.5),
-    [theme.breakpoints.up('desktopXS')]: {
-      fontSize: theme.spacing(3),
+      padding: theme.spacing(3, 2.5),
+      [theme.breakpoints.up('tabletXS')]: {
+        padding: theme.spacing(3.75, 6),
+      },
+      [theme.breakpoints.up('tabletSM')]: {
+        padding: theme.spacing(3, 1.5),
+      },
+      [theme.breakpoints.up('desktopXS')]: {
+        padding: theme.spacing(3, 3.5),
+      },
     },
-    [theme.breakpoints.up('desktopSM')]: {
-      fontSize: theme.spacing(3.25),
+
+    logo: {
+      display: 'block',
+      fontSize: theme.spacing(2.5),
+      [theme.breakpoints.up('desktopXS')]: {
+        fontSize: theme.spacing(3),
+      },
+      [theme.breakpoints.up('desktopSM')]: {
+        fontSize: theme.spacing(3.25),
+      },
     },
-  },
-}));
+  };
+});

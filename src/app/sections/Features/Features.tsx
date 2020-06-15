@@ -133,6 +133,18 @@ const useStyles = makeStyles((theme) => ({
         hPadding: theme.spacing(5),
         vPadding: theme.spacing(5),
       },
+      {
+        breakpoint: 'desktopLG',
+        count: 5,
+        hPadding: theme.spacing(8),
+        vPadding: theme.spacing(6),
+      },
+      {
+        breakpoint: 'desktopXL',
+        count: 5,
+        hPadding: theme.spacing(12.5),
+        vPadding: theme.spacing(7.5),
+      },
     ],
     {
       container: {

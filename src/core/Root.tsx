@@ -4,14 +4,14 @@ import { createBrowserHistory, Location } from 'history';
 import { Router } from 'react-router-dom';
 import animateScroll from 'react-scroll/modules/mixins/animate-scroll';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { StylesProvider } from '@material-ui/core/styles';
 import 'normalize.css';
 import 'shared/styles/fonts/index.scss';
 
 import { hot } from 'react-hot-loader/root';
-import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles';
 import { I18nProvider } from 'services/i18n';
+import { ThemeProvider } from 'services/theme';
 import { IAppData, IJssDependencies } from 'shared/types/app';
-import { getTheme } from 'shared/styles/theme';
 
 import { DepsContext } from './DepsReactContext';
 import { App } from 'app/App';
@@ -37,8 +37,6 @@ interface IAppProps {
   jssDeps: IJssDependencies;
 }
 
-const theme = getTheme();
-
 function ClientRoot({ store, jssDeps, deps }: IAppData & IAppProps) {
   useEffect(() => {
     handleScrollToAnchor(browserHistory.location);
@@ -50,14 +48,14 @@ function ClientRoot({ store, jssDeps, deps }: IAppData & IAppProps) {
     <Provider store={store}>
       <Router history={browserHistory}>
         <StylesProvider jss={jss}>
-          <MuiThemeProvider theme={theme}>
+          <ThemeProvider>
             <DepsContext.Provider value={deps}>
               <I18nProvider>
                 <CssBaseline />
                 <App />
               </I18nProvider>
             </DepsContext.Provider>
-          </MuiThemeProvider>
+          </ThemeProvider>
         </StylesProvider>
       </Router>
     </Provider>

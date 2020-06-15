@@ -3,6 +3,7 @@ import { makeStyles } from 'shared/styles';
 import { Typography, Button, Link, LinkProps } from 'shared/view/elements';
 import { Adaptive } from 'services/adaptability';
 import { useTranslate, tKeys } from 'services/i18n';
+import { ThemeButton } from 'services/theme';
 
 export function Intro() {
   const classes = useStyles();
@@ -25,9 +26,7 @@ export function Intro() {
           {t(tKeys.new.intro.tryButton.getKey())}
         </Button>
         <Adaptive to="tabletXS">
-          <Button color="gradient" disabled>
-            Theme button
-          </Button>
+          <ThemeButton size="small" />
         </Adaptive>
       </div>
     </div>

@@ -29,6 +29,7 @@ const colors = {
   titanWhite: '#efedff',
   foam: '#f0fafe',
   comet: '#616884',
+  alto: '#D8D8D8',
 };
 
 const gradients = {
@@ -146,12 +147,15 @@ const baseThemeStyles = {
   defaultTransitionDuration: '0.4s',
 };
 
-export const getTheme = (): Theme =>
-  createMuiTheme({
+export const lightTheme = getTheme('light');
+export const darkTheme = getTheme('dark');
+
+function getTheme(type: 'light' | 'dark'): Theme {
+  return createMuiTheme({
     extra: baseThemeStyles,
     colors,
     gradients,
-    palette: darkPalette,
+    palette: type === 'light' ? lightPalette : darkPalette,
     breakpoints: {
       keys: [
         'xs',
@@ -229,6 +233,7 @@ export const getTheme = (): Theme =>
       },
     },
   });
+}
 
 export { Theme };
 

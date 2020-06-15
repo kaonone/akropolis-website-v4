@@ -22,9 +22,9 @@ export function Card(props: CardProps) {
     >
       {children}
       {label && (
-        <div className={classes.label}>
-          <Typography component="span">{label}</Typography>
-        </div>
+        <Typography component="div" className={classes.label}>
+          <span>{label}</span>
+        </Typography>
       )}
     </div>
   );
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.colors.white,
     background: theme.gradients.main.linear('to right'),
 
-    padding: theme.spacing(0.25, 0.75),
+    padding: theme.spacing(0.125, 0.75, 0.375),
     fontSize: theme.spacing(1.25),
     [theme.breakpoints.up('tabletXS')]: {
       padding: theme.spacing(0.25, 1.25),

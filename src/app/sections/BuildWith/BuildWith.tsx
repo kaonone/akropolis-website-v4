@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Section } from 'app/components/Section/Section';
 import { Card } from 'app/components/Card';
-import { Grid } from 'shared/view/elements';
+import { Grid, Link } from 'shared/view/elements';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
 import { TheGraph, OpenZeppelin, Compound, Fulcrum, Aave, Dydx, MakerDao, Staked } from './logos';
 import { makeStyles } from 'shared/styles';
@@ -21,6 +21,15 @@ export function BuildWith(props: IProps) {
   const { t } = useTranslate();
   const classes = useStyles();
 
+  const withLink = React.useCallback(
+    (href: string, children: React.ReactNode) => (
+      <Link href={href} color="textPrimary" target="_blank" rel="noopener noreferrer">
+        {children}
+      </Link>
+    ),
+    [],
+  );
+
   return (
     <Section className={className} title={includes.includes('title') ? t(tKeys.title.getKey()) : undefined}>
       <Grid container spacing={2} justify="space-between">
@@ -29,15 +38,9 @@ export function BuildWith(props: IProps) {
             <Card label={t(tKeys.labels.buildWith.getKey())}>
               <div className={classes.content}>
                 <Grid container spacing={2} alignItems="center" justify="space-around">
-                  <Grid item>
-                    <Staked className={classes.logo} />
-                  </Grid>
-                  <Grid item>
-                    <TheGraph className={classes.logo} />
-                  </Grid>
-                  <Grid item>
-                    <OpenZeppelin className={classes.logo} />
-                  </Grid>
+                  <Grid item>{withLink('https://staked.us', <Staked className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://thegraph.com', <TheGraph className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://openzeppelin.com', <OpenZeppelin className={classes.logo} />)}</Grid>
                 </Grid>
               </div>
             </Card>
@@ -48,21 +51,11 @@ export function BuildWith(props: IProps) {
             <Card label={t(tKeys.labels.integrations.getKey())}>
               <div className={classes.content}>
                 <Grid container spacing={2} alignItems="center" justify="space-around">
-                  <Grid item>
-                    <Compound className={classes.logo} />
-                  </Grid>
-                  <Grid item>
-                    <Fulcrum className={classes.logo} />
-                  </Grid>
-                  <Grid item>
-                    <Aave className={classes.logo} />
-                  </Grid>
-                  <Grid item>
-                    <Dydx className={classes.logo} />
-                  </Grid>
-                  <Grid item>
-                    <MakerDao className={classes.logo} />
-                  </Grid>
+                  <Grid item>{withLink('https://compound.finance', <Compound className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://fulcrum.trade', <Fulcrum className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://aave.com', <Aave className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://dydx.exchange', <Dydx className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://makerdao.com', <MakerDao className={classes.logo} />)}</Grid>
                 </Grid>
               </div>
             </Card>

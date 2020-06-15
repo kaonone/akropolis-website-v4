@@ -17,6 +17,7 @@ export function Intro() {
       <div className={classes.actions}>
         <Button
           component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+          underline="none"
           size="large"
           color="gradient"
           href="https://pool.akropolis.io"

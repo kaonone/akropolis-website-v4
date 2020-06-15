@@ -17,9 +17,7 @@ export const useStyles = makeStyles((theme) => ({
 
     '&:hover, &$focusVisible': {
       zIndex: 1,
-      '& $backdrop': {
-        opacity: 0.7,
-      },
+      color: theme.colors.royalBlue2,
     },
   },
 
@@ -55,7 +53,12 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     marginRight: theme.spacing(1.25),
     fontSize: theme.spacing(3),
+    transition: theme.transitions.create('color'),
     color: theme.palette.type === 'light' ? theme.colors.shark : theme.colors.alto,
+
+    '$root:hover &, $root$focusVisible &': {
+      color: theme.colors.royalBlue2,
+    },
 
     '$root$sizeSmall &': {
       fontSize: theme.spacing(2),

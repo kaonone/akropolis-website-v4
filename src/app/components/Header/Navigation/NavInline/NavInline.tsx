@@ -24,12 +24,13 @@ export function NavInline({ extraLeft = [], className }: Props) {
       ))}
       {menuItems.map(({ title, ...item }) => (
         <div className={classes.item} key={title}>
-          <NavMenuItem title={t(title)} color="textPrimary" {...item} />
+          <NavMenuItem className={classes.navLink} underline="none" title={t(title)} color="textPrimary" {...item} />
         </div>
       ))}
       <div className={classes.item}>
         <Button
           component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+          underline="none"
           color="gradient"
           href="https://pool.akropolis.io"
           target="_blank"

@@ -23,4 +23,12 @@ export const useStyles = makeStyles((theme) => ({
       marginRight: 0,
     },
   },
+
+  navLink: {
+    transition: theme.transitions.create('color'),
+
+    '&:hover': {
+      color: theme.colors.heliotrope,
+    },
+  },
 }));

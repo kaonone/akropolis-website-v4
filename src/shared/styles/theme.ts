@@ -22,6 +22,7 @@ const colors = {
   shark: '#191b1f',
   athensGray: '#eff1f5',
   royalBlue: '#544CF2',
+  royalBlue2: '#594cf2',
   heliotrope: '#D93CEF',
   zumthor: '#eaf1ff',
   scarpaFlow: '#555466',

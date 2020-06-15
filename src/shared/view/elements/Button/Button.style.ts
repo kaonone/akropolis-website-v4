@@ -9,8 +9,8 @@ export const useStyles = makeStyles((theme) => ({
       textTransform: 'none',
       fontWeight: 400,
       background: theme.gradients.main.linear('to right'),
-
       lineHeight: 1,
+
       padding: theme.spacing(0.5, 1.25),
       fontSize: theme.spacing(1.5),
       minWidth: theme.spacing(5.5),
@@ -36,6 +36,10 @@ export const useStyles = makeStyles((theme) => ({
         },
       },
 
+      '&:hover, &$focusVisible': {
+        boxShadow: '0 0 20px 0 rgba(217, 60, 239, 0.7)',
+      },
+
       '&$disabled': {
         background: `rgba(0, 0, 0, 0.12)`,
       },
@@ -43,6 +47,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   gradient: {},
-  disabled: {},
   sizeLarge: {},
+  disabled: {},
+  focusVisible: {},
 }));

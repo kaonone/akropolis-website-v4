@@ -39,6 +39,7 @@ const Button: OverridableComponent<ButtonTypeMap> = function ButtonFunc<P = {}, 
         root: cn(classes.root, className, { [classes.gradient]: color === 'gradient' }),
         disabled: classes.disabled,
         sizeLarge: classes.sizeLarge,
+        focusVisible: classes.focusVisible,
         ...rest.classes,
       }}
       color={buttonColor}

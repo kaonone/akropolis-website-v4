@@ -30,9 +30,8 @@ export function Features(props: IProps) {
     <Section className={className} title={t(tKeys.title.getKey())}>
       <div className={classes.container}>
         {features.map(({ description, status, title }, index) => (
-          <div className={classes.item}>
+          <div key={index} className={classes.item}>
             <Card
-              key={index}
               className={cn(classes.card, {
                 [classes.inProgress]: status === 'inProgress',
                 [classes.roadmap]: status === 'roadmap',

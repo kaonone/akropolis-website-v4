@@ -1,7 +1,9 @@
 import * as React from 'react';
 import cn from 'classnames';
 
+import SvgIcon from '@material-ui/core/SvgIcon';
 import { SocialLink } from 'shared/view/elements';
+import { MainSvgGradient } from 'shared/view/elements/Icons';
 import { StylesProps, provideStyles } from './AkropolisSocialLinks.style';
 
 interface IProps {
@@ -21,6 +23,11 @@ function AkropolisSocialLinks(props: IProps & StylesProps) {
   const { classes, direction = 'row' } = props;
   return (
     <div className={cn(classes.root, { [classes[direction]]: true })}>
+      <div className={classes.hidden}>
+        <SvgIcon>
+          <MainSvgGradient />
+        </SvgIcon>
+      </div>
       {links.map(([link, needToFill]) => (
         <SocialLink key={link} className={cn(classes.link, { [classes.fillPath]: needToFill })} href={link} />
       ))}

@@ -15,10 +15,10 @@ export function Fulcrum(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
   return (
     <SvgIcon {...props} classes={classes} viewBox="0 0 89 20" preserveAspectRatio="none">
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path
           fill="currentColor"
-          fill-rule="nonzero"
+          fillRule="nonzero"
           d="M0 3.85A3.87 3.87 0 0 1 3.9 0h11.69c2.15 0 3.9 1.73 3.9 3.85v11.56a3.87 3.87 0 0 1-3.9 3.85H3.88A3.87 3.87 0 0 1 0 15.4V3.85z"
         />
         <path
@@ -27,12 +27,12 @@ export function Fulcrum(props: GetProps<typeof SvgIcon>) {
         />
         <path
           fill={theme.palette.background.default}
-          fill-rule="nonzero"
+          fillRule="nonzero"
           d="M9.17 8.7a.85.85 0 0 0-.52 1.1l.15.4c.17.44.65.67 1.1.51l.6-.21 1.53-.53c.45-.16.69-.64.52-1.07l-.15-.4a.87.87 0 0 0-1.1-.52l-1.7.59-.38.13h-.05z"
         />
         <path
           fill={theme.palette.background.default}
-          fill-rule="nonzero"
+          fillRule="nonzero"
           d="M11 13.76c-.11.04-.22.1-.34.12-1.06.36-2.06.3-3.08-.18a4.6 4.6 0 0 1-1.28-.92 4.85 4.85 0 0 1-.46-.59c-.14-.23-.27-.5-.37-.75a3.63 3.63 0 0 1 .19-3.05 3.95 3.95 0 0 1 2.63-2.16l.3-.08-.8-2.18-.26.08-.37.1c-.85.3-1.57.72-2.19 1.27l-.14.12a6.43 6.43 0 0 0-1.32 1.83A6.07 6.07 0 0 0 3.17 12l.07.2a6.12 6.12 0 0 0 3.3 3.6 11.9 11.9 0 0 0 1.03.4 6.22 6.22 0 0 0 3.85-.16l.36-.14.25-.11-.61-1.72-.17-.45-.25.14zm.82-11.55l-.54.2-1.02.38-.89.33-.78.28.77 2.26.04-.01.47-.17 3.04-1.13 1.02-.38.56-.22.66-.24 2.21-.83 1.55-.58A3.53 3.53 0 0 0 17.69 0l-1.1.42-4.77 1.79z"
         />
       </g>

@@ -29,8 +29,8 @@ export function UseCases(props: IProps) {
     <Section className={className} title={t(tKeys.title.getKey())}>
       <div className={classes.container}>
         {useCases.map(({ description, subtitle, title }, index) => (
-          <div className={classes.item}>
-            <Card key={index} className={cn(classes.card)} variant="contained">
+          <div key={index} className={classes.item}>
+            <Card className={cn(classes.card)} variant="contained">
               <Preview title={title} subtitle={subtitle} description={description} />
             </Card>
           </div>

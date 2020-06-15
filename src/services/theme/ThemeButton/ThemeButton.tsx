@@ -2,8 +2,8 @@ import React, { useCallback } from 'react';
 import cn from 'classnames';
 
 import { ButtonBase } from 'shared/view/elements';
+import { Sun, Moon } from 'shared/view/elements/Icons';
 import { useThemeContext } from '../ThemeContext';
-import { Sun, Moon } from './icons';
 import { useStyles } from './ThemeButton.style';
 
 interface Props {

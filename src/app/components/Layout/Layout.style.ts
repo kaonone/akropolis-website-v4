@@ -108,10 +108,8 @@ export const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     display: 'none',
     marginRight: theme.spacing(2),
-    top: '50%',
+    top: '13%',
     right: 0,
-    transform: 'translateY(-50%)',
-    color: theme.extra.colors.amethystSmoke,
 
     [theme.breakpoints.up('lg')]: {
       display: 'block',

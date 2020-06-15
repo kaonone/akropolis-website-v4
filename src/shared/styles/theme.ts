@@ -159,11 +159,13 @@ export const getTheme = (): Theme =>
         'md',
         'lg',
         'xl',
-        'desktopXS',
-        'desktopSM',
+        'desktopXL',
+        'desktopLG',
         'desktopMD',
-        'tabletXS',
+        'desktopSM',
+        'desktopXS',
         'tabletSM',
+        'tabletXS',
         'mobileSM',
         'mobileXS',
       ],
@@ -173,6 +175,8 @@ export const getTheme = (): Theme =>
         md: 767,
         lg: 1024,
         xl: 1920,
+        desktopXL: 2560,
+        desktopLG: 1920,
         desktopMD: 1440,
         desktopSM: 1360,
         desktopXS: 1280,
@@ -245,11 +249,13 @@ declare module '@material-ui/core/styles/createMuiTheme' {
 
 declare module '@material-ui/core/styles/createBreakpoints' {
   interface BreakpointOverrides {
-    desktopXS: true;
-    desktopSM: true;
+    desktopXL: true;
+    desktopLG: true;
     desktopMD: true;
-    tabletXS: true;
+    desktopSM: true;
+    desktopXS: true;
     tabletSM: true;
+    tabletXS: true;
     mobileSM: true;
     mobileXS: true;
   }

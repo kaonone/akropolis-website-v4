@@ -3,7 +3,7 @@ import { makeStyles } from 'shared/styles';
 export const useStyles = makeStyles((theme) => ({
   root: {
     margin: '0 auto',
-    maxWidth: theme.breakpoints.values.desktopMD,
+    maxWidth: theme.breakpoints.values.desktopXL,
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -24,6 +24,18 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('desktopXS')]: {
       paddingLeft: theme.spacing(14),
       paddingRight: theme.spacing(14),
+    },
+    [theme.breakpoints.up('desktopMD')]: {
+      paddingLeft: theme.spacing(18),
+      paddingRight: theme.spacing(18),
+    },
+    [theme.breakpoints.up('desktopLG')]: {
+      paddingLeft: theme.spacing(30),
+      paddingRight: theme.spacing(30),
+    },
+    [theme.breakpoints.up('desktopXL')]: {
+      paddingLeft: theme.spacing(37),
+      paddingRight: theme.spacing(37),
     },
   },
 

@@ -26,7 +26,7 @@ export function Intro() {
           {t(tKeys.new.intro.tryButton.getKey())}
         </Button>
         <Adaptive to="tabletXS">
-          <ThemeButton size="small" />
+          <ThemeButton />
         </Adaptive>
       </div>
     </div>
@@ -36,7 +36,7 @@ export function Intro() {
 const useStyles = makeStyles((theme) => ({
   root: {},
   title: {
-    fontWeight: 300,
+    fontWeight: 200,
 
     fontSize: theme.spacing(2.75),
     marginBottom: theme.spacing(1),

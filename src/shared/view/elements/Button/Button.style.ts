@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme) => ({
       marginBottom: 'auto',
       alignSelf: 'center',
       textTransform: 'none',
+      fontWeight: 400,
       background: theme.gradients.main.linear('to right'),
 
       lineHeight: 1,

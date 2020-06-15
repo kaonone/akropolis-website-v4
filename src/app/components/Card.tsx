@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
     borderRadius: theme.spacing(0.5),
+    transition: theme.transitions.create(['border-color', 'background-color']),
 
     '&$outlined': {
       border: `1px solid ${rgba(

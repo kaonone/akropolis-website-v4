@@ -28,9 +28,9 @@ export const useStyles = makeStyles((theme) => ({
     bottom: 2,
     left: 2,
     borderRadius: theme.spacing(2),
-    background: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
     opacity: 1,
-    transition: theme.transitions.create('opacity'),
+    transition: theme.transitions.create(['opacity', 'background-color']),
 
     '$root$sizeSmall &': {
       top: 1,

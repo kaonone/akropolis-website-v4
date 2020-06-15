@@ -98,6 +98,7 @@ export const useStyles = makeStyles((theme) => ({
     left: 0,
     width: '100%',
     height: '100%',
+    transition: theme.transitions.create('color'),
     color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
   },
 

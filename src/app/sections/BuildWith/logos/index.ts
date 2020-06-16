@@ -5,4 +5,4 @@ export * from './Fulcrum';
 export * from './MakerDao';
 export * from './OpenZeppelin';
 export * from './TheGraph';
-export * from './Staked/Staked';
+export * from './Staked';

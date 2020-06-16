@@ -24,6 +24,7 @@ const colors = {
   royalBlue: '#544CF2',
   royalBlue2: '#594cf2',
   heliotrope: '#D93CEF',
+  heliotrope2: '#E965FF',
   zumthor: '#eaf1ff',
   scarpaFlow: '#555466',
   scarpaFlow2: '#5a5466',
@@ -42,6 +43,20 @@ const gradients = {
     {
       color: colors.royalBlue,
       offset: '100%',
+    },
+  ]),
+  button: makeGradient([
+    {
+      color: colors.heliotrope,
+    },
+    {
+      color: colors.royalBlue,
+    },
+    {
+      color: colors.heliotrope2,
+    },
+    {
+      color: colors.heliotrope,
     },
   ]),
 };
@@ -204,7 +219,7 @@ function getTheme(type: 'light' | 'dark'): Theme {
             fontSize: 16,
             fontFamily: baseThemeStyles.typography.primaryFont,
           },
-          'body': {
+          body: {
             transition: 'background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
           },
           'html, body, #root': {

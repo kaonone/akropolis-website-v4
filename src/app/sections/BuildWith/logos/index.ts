@@ -6,3 +6,4 @@ export * from './MakerDao';
 export * from './OpenZeppelin';
 export * from './TheGraph';
 export * from './Staked';
+export * from './Curve';

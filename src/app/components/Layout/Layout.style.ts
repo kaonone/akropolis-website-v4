@@ -22,12 +22,12 @@ export const useStyles = makeStyles((theme) => ({
       paddingRight: theme.spacing(10),
     },
     [theme.breakpoints.up('desktopXS')]: {
-      paddingLeft: theme.spacing(14),
-      paddingRight: theme.spacing(14),
+      paddingLeft: theme.spacing(11),
+      paddingRight: theme.spacing(11),
     },
     [theme.breakpoints.up('desktopMD')]: {
-      paddingLeft: theme.spacing(18),
-      paddingRight: theme.spacing(18),
+      paddingLeft: theme.spacing(13.5),
+      paddingRight: theme.spacing(13.5),
     },
     [theme.breakpoints.up('desktopLG')]: {
       paddingLeft: theme.spacing(30),
@@ -100,6 +100,16 @@ export const useStyles = makeStyles((theme) => ({
     height: '100%',
     transition: theme.transitions.create('color'),
     color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    transformOrigin: 'right',
+
+    '&$top': {
+      [theme.breakpoints.up('tabletSM')]: {
+        transform: 'scaleX(1.06)',
+      },
+      [theme.breakpoints.up('desktopMD')]: {
+        transform: 'scaleX(1.03)',
+      },
+    },
   },
 
   top: {},

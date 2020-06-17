@@ -4,7 +4,7 @@ import { Section } from 'app/components/Section/Section';
 import { Card } from 'app/components/Card';
 import { Grid, Link } from 'shared/view/elements';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
-import { TheGraph, OpenZeppelin, Compound, Fulcrum, Aave, Dydx, MakerDao, Staked } from './logos';
+import { TheGraph, OpenZeppelin, Compound, Fulcrum, Aave, Dydx, MakerDao, Staked, Curve } from './logos';
 import { makeStyles } from 'shared/styles';
 
 const tKeys = tKeysAll.new.buildWith;
@@ -56,6 +56,7 @@ export function BuildWith(props: IProps) {
                   <Grid item>{withLink('https://aave.com', <Aave className={classes.logo} />)}</Grid>
                   <Grid item>{withLink('https://dydx.exchange', <Dydx className={classes.logo} />)}</Grid>
                   <Grid item>{withLink('https://makerdao.com', <MakerDao className={classes.logo} />)}</Grid>
+                  <Grid item>{withLink('https://curve.fi', <Curve className={classes.logo} />)}</Grid>
                 </Grid>
               </div>
             </Card>
@@ -78,10 +79,13 @@ const useStyles = makeStyles((theme) => {
     buildWith: {
       ...getGridItemWidth(100),
       [theme.breakpoints.up('tabletXS')]: {
-        ...getGridItemWidth(33),
+        ...getGridItemWidth(32),
       },
       [theme.breakpoints.up('tabletSM')]: {
-        ...getGridItemWidth(36),
+        ...getGridItemWidth(33),
+      },
+      [theme.breakpoints.up('desktopXS')]: {
+        ...getGridItemWidth(33),
       },
       [theme.breakpoints.up('desktopMD')]: {
         ...getGridItemWidth(35),
@@ -93,16 +97,19 @@ const useStyles = makeStyles((theme) => {
     integrations: {
       ...getGridItemWidth(100),
       [theme.breakpoints.up('tabletXS')]: {
-        ...getGridItemWidth(47),
+        ...getGridItemWidth(48),
       },
       [theme.breakpoints.up('tabletSM')]: {
-        ...getGridItemWidth(54),
+        ...getGridItemWidth(59),
       },
       [theme.breakpoints.up('desktopXS')]: {
-        ...getGridItemWidth(53),
+        ...getGridItemWidth(57),
+      },
+      [theme.breakpoints.up('desktopSM')]: {
+        ...getGridItemWidth(56),
       },
       [theme.breakpoints.up('desktopMD')]: {
-        ...getGridItemWidth(52),
+        ...getGridItemWidth(55),
       },
       [theme.breakpoints.up('desktopLG')]: {
         ...getGridItemWidth(48),
@@ -113,7 +120,7 @@ const useStyles = makeStyles((theme) => {
 
       padding: theme.spacing(3, 2.5),
       [theme.breakpoints.up('tabletXS')]: {
-        padding: theme.spacing(3.75, 6),
+        padding: theme.spacing(3, 3),
       },
       [theme.breakpoints.up('tabletSM')]: {
         padding: theme.spacing(3, 1.5),

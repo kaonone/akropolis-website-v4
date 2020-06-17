@@ -28,8 +28,8 @@ function LayoutComponent({ children }: IProps) {
 function WrapTopWave({ type, children }: { type: 'top' | 'bottom'; children: React.ReactNode }) {
   const classes = useStyles();
   const wave = {
-    top: <TopWave className={classes.wave} />,
-    bottom: <BottomWave className={classes.wave} />,
+    top: <TopWave className={cn(classes.wave, classes[type])} />,
+    bottom: <BottomWave className={cn(classes.wave, classes[type])} />,
   }[type];
 
   return (

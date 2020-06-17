@@ -7,6 +7,7 @@ import { makeStyles } from 'shared/styles';
 const useStyles = makeStyles({
   root: {
     width: 'unset',
+    height: '0.8em',
   },
 });
 

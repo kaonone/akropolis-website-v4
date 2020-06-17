@@ -29,7 +29,7 @@ function mapState(state: IAppReduxState): IStateProps {
 }
 
 function Adaptive(props: IProps) {
-  const { from = '', to = '', className, children } = props;
+  const { from = '', to = '', className, children, hydrated } = props;
   const theme = useTheme();
 
   const fromQuery = theme && from && up(from, theme.breakpoints).split(' ')[1];
@@ -40,7 +40,7 @@ function Adaptive(props: IProps) {
 
   const wrappedChildren = <div className={className}>{children}</div>;
 
-  return matched ? wrappedChildren : null;
+  return !hydrated || matched ? wrappedChildren : null;
 }
 
 const unit = 'px';

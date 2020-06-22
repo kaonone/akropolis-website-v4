@@ -15,6 +15,7 @@ import { IAppData, IJssDependencies } from 'shared/types/app';
 
 import { DepsContext } from './DepsReactContext';
 import { App } from 'app/App';
+import { AdaptabilityProvider } from 'services/adaptability';
 
 const browserHistory = createBrowserHistory();
 
@@ -49,12 +50,14 @@ function ClientRoot({ store, jssDeps, deps }: IAppData & IAppProps) {
       <Router history={browserHistory}>
         <StylesProvider jss={jss}>
           <ThemeProvider>
-            <DepsContext.Provider value={deps}>
-              <I18nProvider>
-                <CssBaseline />
-                <App />
-              </I18nProvider>
-            </DepsContext.Provider>
+            <AdaptabilityProvider>
+              <DepsContext.Provider value={deps}>
+                <I18nProvider>
+                  <CssBaseline />
+                  <App />
+                </I18nProvider>
+              </DepsContext.Provider>
+            </AdaptabilityProvider>
           </ThemeProvider>
         </StylesProvider>
       </Router>

@@ -4,8 +4,6 @@ import { Store, Reducer, ActionCreator, Action } from 'redux';
 import { SagaIterator } from 'redux-saga';
 import { Jss } from 'jss';
 
-import * as adaptabilityService from 'services/adaptability';
-
 export abstract class IModule {
   public getRoutes?(): ReactElement<RouteProps> | Array<ReactElement<RouteProps>>;
   public getReduxEntry?(): IReduxEntry;
@@ -46,7 +44,6 @@ export interface IFeatureEntry<
 // tslint:disable-next-line:no-empty-interface
 export interface IAppReduxState {
   // services
-  adaptability: adaptabilityService.namespace.IReduxState;
   // features
 }
 

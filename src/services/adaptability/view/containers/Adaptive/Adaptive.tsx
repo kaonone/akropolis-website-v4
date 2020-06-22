@@ -51,10 +51,11 @@ function Adaptive(props: IProps) {
   const classes = useStyles();
 
   const matched = useMediaQuery(query || '');
+  const isServer = window.__PRERENDER_INJECTED__ ? window.__PRERENDER_INJECTED__.isServer : false;
 
   const wrappedChildren = <div className={cn(hydrated ? classes.root : undefined, className)}>{children}</div>;
 
-  return !query || !hydrated || matched ? wrappedChildren : null;
+  return isServer || !query || !hydrated || matched ? wrappedChildren : null;
 }
 
 function down(key: Breakpoint | number, theme: Theme) {

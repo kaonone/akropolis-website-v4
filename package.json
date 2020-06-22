@@ -26,16 +26,9 @@
     "build:gh-pages:staging": "better-npm-run build:gh-pages:staging",
     "analyze:dev": "better-npm-run analyze:dev",
     "analyze:prod": "better-npm-run analyze:prod",
-    "yeoman": "better-npm-run initial:yeoman",
     "stylelint-autofix": "./node_modules/.bin/stylelint \"./src/**/*.scss\" --fix"
   },
   "betterScripts": {
-    "initial:yeoman": {
-      "command": "sh ./generators/initializationGenerator.sh",
-      "env": {
-        "NODE_ENV": "development"
-      }
-    },
     "server:dev": {
       "command": "node -r ts-node/register ./server/index.ts",
       "env": {
@@ -168,19 +161,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullstack-development/react-redux-starter-kit.git"
+    "url": "git+https://github.com/akropolisio/akropolis-website-v4.git"
   },
   "keywords": [
     "starter-kit",
-    "react",
-    "redux"
+    "react"
   ],
-  "author": "Fullstack-development",
+  "author": "Akropolis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fullstack-development/react-redux-starter-kit/issues"
+    "url": "https://github.com/akropolisio/akropolis-website-v4/issues"
   },
-  "homepage": "https://github.com/fullstack-development/react-redux-starter-kit#readme",
+  "homepage": "https://github.com/akropolisio/akropolis-website-v4#readme",
   "devDependencies": {
     "@types/clean-webpack-plugin": "^0.1.2",
     "@types/enzyme": "^3.1.10",
@@ -209,7 +201,6 @@
     "mini-css-extract-plugin": "^0.4.5",
     "prerender-spa-plugin": "^3.4.0",
     "react-hot-loader": "^4.8.0",
-    "redux-devtools-extension": "^2.13.5",
     "sinon": "^7.1.1",
     "style-loader": "^0.21.0",
     "stylelint": "^9.6.0",
@@ -245,7 +236,6 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^5.0.7",
     "@types/react-hot-loader": "^4.1.0",
-    "@types/react-redux": "^7.1.1",
     "@types/react-router": "^4.4.1",
     "@types/react-router-dom": "^4.3.1",
     "@types/serialize-javascript": "^1.5.0",
@@ -272,8 +262,6 @@
     "favicons-webpack-plugin": "0.0.9",
     "file-loader": "^2.0.0",
     "filemanager-webpack-plugin": "^2.0.5",
-    "inversify": "^5.0.1",
-    "inversify-inject-decorators": "^3.1.0",
     "jss": "^10.3.0",
     "jss-plugin-compose": "^10.3.0",
     "node-polyglot": "^2.3.0",
@@ -289,13 +277,10 @@
     "react-dom": "^16.13.1",
     "react-dotdotdot": "^1.2.3",
     "react-helmet": "^5.2.1",
-    "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scroll": "^1.7.11",
     "react-swipeable-views": "^0.13.1",
-    "redux": "^4.0.1",
-    "redux-saga": "^0.16.2",
     "reflect-metadata": "^0.1.10",
     "sass-loader": "^7.1.0",
     "serialize-javascript": "^1.5.0",

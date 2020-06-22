@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Provider } from 'react-redux';
 import { createBrowserHistory, Location } from 'history';
 import { Router } from 'react-router-dom';
 import animateScroll from 'react-scroll/modules/mixins/animate-scroll';
@@ -13,7 +12,6 @@ import { I18nProvider } from 'services/i18n';
 import { ThemeProvider } from 'services/theme';
 import { IAppData, IJssDependencies } from 'shared/types/app';
 
-import { DepsContext } from './DepsReactContext';
 import { App } from 'app/App';
 import { AdaptabilityProvider } from 'services/adaptability';
 
@@ -38,7 +36,7 @@ interface IAppProps {
   jssDeps: IJssDependencies;
 }
 
-function ClientRoot({ store, jssDeps, deps }: IAppData & IAppProps) {
+function ClientRoot({ jssDeps }: IAppData & IAppProps) {
   useEffect(() => {
     handleScrollToAnchor(browserHistory.location);
   }, []);
@@ -46,22 +44,18 @@ function ClientRoot({ store, jssDeps, deps }: IAppData & IAppProps) {
   const { jss } = jssDeps;
 
   return (
-    <Provider store={store}>
-      <Router history={browserHistory}>
-        <StylesProvider jss={jss}>
-          <ThemeProvider>
-            <AdaptabilityProvider>
-              <DepsContext.Provider value={deps}>
-                <I18nProvider>
-                  <CssBaseline />
-                  <App />
-                </I18nProvider>
-              </DepsContext.Provider>
-            </AdaptabilityProvider>
-          </ThemeProvider>
-        </StylesProvider>
-      </Router>
-    </Provider>
+    <Router history={browserHistory}>
+      <StylesProvider jss={jss}>
+        <ThemeProvider>
+          <AdaptabilityProvider>
+            <I18nProvider>
+              <CssBaseline />
+              <App />
+            </I18nProvider>
+          </AdaptabilityProvider>
+        </ThemeProvider>
+      </StylesProvider>
+    </Router>
   );
 }
 

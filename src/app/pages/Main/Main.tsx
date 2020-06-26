@@ -9,6 +9,7 @@ import { makeStyles } from 'shared/styles';
 import { Adaptive } from 'services/adaptability';
 import { Features } from 'app/sections/Features/Features';
 import { UseCases } from 'app/sections/UseCases/UseCases';
+import { DevActivitySync } from 'app/components/DevActivity/DevActivity';
 
 export function Main() {
   const classes = useStyles();
@@ -32,6 +33,7 @@ export function Main() {
         <Adaptive to="tabletXS">
           <BuildWith className={classes.buildWithUnderWave} includes={['integrations']} />
         </Adaptive>
+        <DevActivitySync />
         <Features className={classes.features} />
         <UseCases className={classes.useCases} />
       </Layout.Container>

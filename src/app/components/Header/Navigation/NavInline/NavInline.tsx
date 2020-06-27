@@ -5,16 +5,17 @@ import { useTranslate } from 'services/i18n';
 import { NavMenuItem } from 'shared/view/components';
 import { menuItems } from '../constants';
 import { useStyles } from './NavInline.style';
-import { Link, Button, LinkProps } from 'shared/view/elements';
 
 interface Props {
   className?: string;
   extraLeft?: React.ReactElement[];
+  extraRight?: React.ReactElement[];
 }
 
-export function NavInline({ extraLeft = [], className }: Props) {
+export function NavInline({ extraLeft = [], extraRight = [], className }: Props) {
   const classes = useStyles();
-  const { t, tKeys } = useTranslate();
+  const { t } = useTranslate();
+
   return (
     <nav className={cn(className, classes.root)}>
       {extraLeft.map((item, index) => (
@@ -27,18 +28,11 @@ export function NavInline({ extraLeft = [], className }: Props) {
           <NavMenuItem className={classes.navLink} underline="none" title={t(title)} color="textPrimary" {...item} />
         </div>
       ))}
-      <div className={classes.item}>
-        <Button
-          component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
-          underline="none"
-          color="gradient"
-          href="https://pool.akropolis.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t(tKeys.modules.navigation.app.getKey())}
-        </Button>
-      </div>
+      {extraRight.map((item, index) => (
+        <div className={classes.item} key={index}>
+          {item}
+        </div>
+      ))}
     </nav>
   );
 }

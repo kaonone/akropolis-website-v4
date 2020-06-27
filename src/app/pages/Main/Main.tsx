@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
-import { Intro } from 'app/sections/Intro/Intro';
+import { MainIntro } from 'app/sections/MainIntro/MainIntro';
 import { BuildWith } from 'app/sections/BuildWith/BuildWith';
 import { makeStyles } from 'shared/styles';
 import { Adaptive } from 'services/adaptability';
@@ -20,7 +20,7 @@ export function Main() {
           <Header />
         </Layout.Header>
         <Layout.Container>
-          <Intro />
+          <MainIntro />
           <Adaptive to="tabletXS">
             <BuildWith className={classes.buildWith} includes={['title', 'build-with']} />
           </Adaptive>

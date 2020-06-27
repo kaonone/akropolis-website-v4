@@ -18,9 +18,18 @@ export function Header() {
       <NavInline
         className={classes.navInline}
         extraLeft={[
-          <Adaptive key="0" from="tabletXS">
-            <ThemeButton />
-          </Adaptive>,
+          <React.Fragment key="0">
+            <Adaptive from="tabletXS">
+              <ThemeButton />
+            </Adaptive>
+          </React.Fragment>,
+        ]}
+        extraRight={[
+          <React.Fragment key="0">
+            <Adaptive to="tabletXS">
+              <ThemeButton size="small" />
+            </Adaptive>
+          </React.Fragment>,
         ]}
       />
     </header>

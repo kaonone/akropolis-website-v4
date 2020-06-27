@@ -47,5 +47,5 @@ function getQuery() {
   // tslint:disable: max-line-length
   return `{"query":"{\\n  getMetric(metric: \\"dev_activity\\"){\\n    timeseriesData(\\n      slug: \\"akropolis\\"\\n      from: \\"2020-02-10T07:00:00Z\\"\\n      to: \\"${new Date(
     Date.now() - 24 * 60 * 60 * 1000,
-  ).toISOString()}\\"\\n      interval: \\"1w\\"){\\n        datetime\\n        value\\n      }\\n  }\\n}","variables":{},"operationName":null}`;
+  ).toISOString()}\\"\\n      interval: \\"3d\\"){\\n        datetime\\n        value\\n      }\\n  }\\n}","variables":{},"operationName":null}`;
 }

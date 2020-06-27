@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(5),
   },
   title: {
+    maxWidth: 1050,
     fontWeight: 200,
 
     fontSize: theme.spacing(2.75),

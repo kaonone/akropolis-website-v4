@@ -8,7 +8,6 @@ import { BuildWith } from 'app/sections/BuildWith/BuildWith';
 import { makeStyles } from 'shared/styles';
 import { Adaptive } from 'services/adaptability';
 import { Features } from 'app/sections/Features/Features';
-import { DevActivitySync } from 'app/components/DevActivity/DevActivity';
 import { Products } from 'app/sections/Products/Products';
 import { OpenSource } from 'app/sections/OpenSource/OpenSource';
 
@@ -35,7 +34,6 @@ export function Main() {
         <Adaptive to="tabletXS">
           <BuildWith className={classes.buildWithUnderWave} includes={['integrations']} />
         </Adaptive>
-        <DevActivitySync />
         <Features className={classes.section} />
         <OpenSource className={classes.section} />
       </Layout.Container>

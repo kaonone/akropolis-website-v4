@@ -112,13 +112,13 @@ const useStyles = makeStyles((theme) => ({
       },
       {
         breakpoint: 'tabletXS',
-        count: 3,
+        count: 2,
         hPadding: theme.spacing(2.5),
         vPadding: theme.spacing(2.5),
       },
       {
         breakpoint: 'tabletSM',
-        count: 3,
+        count: 2,
         hPadding: theme.spacing(3.75),
         vPadding: theme.spacing(3.75),
       },

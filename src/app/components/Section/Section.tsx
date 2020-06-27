@@ -6,12 +6,13 @@ import { Typography } from 'shared/view/elements';
 
 interface IProps {
   title?: string;
+  description?: string;
   className?: string;
   children: React.ReactNode;
 }
 
 export function Section(props: IProps) {
-  const { title, children, className } = props;
+  const { title, description, children, className } = props;
   const classes = useStyles();
   return (
     <section className={cn(className, classes.root)}>
@@ -20,6 +21,7 @@ export function Section(props: IProps) {
           {title}
         </Typography>
       )}
+      {title && <Typography className={classes.description}>{description}</Typography>}
       {children}
     </section>
   );

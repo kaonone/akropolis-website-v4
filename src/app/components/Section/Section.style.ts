@@ -5,11 +5,21 @@ export const useStyles = makeStyles((theme) => ({
 
   title: {
     fontWeight: 300,
+    marginBottom: theme.spacing(2.5),
 
     fontSize: theme.spacing(2.25),
-    marginBottom: theme.spacing(2.5),
     [theme.breakpoints.up('tabletXS')]: {
       fontSize: theme.spacing(3.75),
+    },
+  },
+
+  description: {
+    lineHeight: 1.5,
+    marginBottom: theme.spacing(5),
+
+    fontSize: theme.spacing(1.5),
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: theme.spacing(2),
     },
   },
 }));

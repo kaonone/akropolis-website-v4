@@ -1,7 +1,7 @@
 type Color = string;
 
 interface GradientPoint {
-  offset?: string;
+  offset: string;
   color: Color;
 }
 
@@ -19,13 +19,19 @@ export function makeGradient(points: Array<GradientPoint | Color>): Gradient {
 
 function getLinearGradient(points: Array<GradientPoint | Color>, sideOrCorner: string = 'to bottom') {
   return `linear-gradient(${sideOrCorner}, ${points
-    .map((point) => {
-      const { color, offset } = toGradientPoint(point);
+    .map((point, index) => {
+      const { color, offset } = toGradientPoint(point, index, points);
       return [color, offset].filter(Boolean).join(' ');
     })
     .join(', ')})`;
 }
 
-function toGradientPoint(point: GradientPoint | Color): GradientPoint {
-  return typeof point === 'string' ? { color: point, offset: undefined } : point;
+function toGradientPoint(
+  point: GradientPoint | Color,
+  index: number,
+  points: Array<GradientPoint | Color>,
+): GradientPoint {
+  const multiplier = 100 / (points.length - 1);
+  const offset = `${Math.round(index * multiplier * 100) / 100}%`;
+  return typeof point === 'string' ? { color: point, offset } : point;
 }

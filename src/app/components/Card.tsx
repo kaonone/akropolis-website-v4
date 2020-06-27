@@ -10,10 +10,11 @@ interface CardProps {
   children: React.ReactNode;
   extraTop?: React.ReactNode;
   extraBottom?: React.ReactNode;
+  icons?: React.ReactNode[];
 }
 
 export function Card(props: CardProps) {
-  const { label, variant = 'outlined', children, extraTop, extraBottom, className } = props;
+  const { label, variant = 'outlined', children, extraTop, extraBottom, icons, className } = props;
   const classes = useStyles();
   return (
     <div
@@ -24,12 +25,21 @@ export function Card(props: CardProps) {
     >
       {extraTop && <div className={cn(classes.extra, classes.top)}>{extraTop}</div>}
       {children}
+      {extraBottom && <div className={cn(classes.extra, classes.bottom)}>{extraBottom}</div>}
       {label && (
         <Typography component="div" className={classes.label}>
           <span>{label}</span>
         </Typography>
       )}
-      {extraBottom && <div className={cn(classes.extra, classes.bottom)}>{extraBottom}</div>}
+      {icons && (
+        <div className={classes.icons}>
+          {icons.map((icon, index) => (
+            <div className={classes.icon} key={index}>
+              {icon}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -83,6 +93,24 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('tabletXS')]: {
       padding: theme.spacing(0.25, 1.25),
       fontSize: theme.spacing(1.5),
+    },
+  },
+
+  icons: {
+    position: 'absolute',
+    top: 0,
+    right: theme.spacing(1.5),
+    transform: 'translateY(-50%)',
+    display: 'flex',
+    fontSize: theme.spacing(3.75),
+  },
+
+  icon: {
+    display: 'flex',
+    marginRight: theme.spacing(1.5),
+
+    '&:last-child': {
+      marginRight: 0,
     },
   },
 

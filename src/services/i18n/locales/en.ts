@@ -24,6 +24,11 @@ export default {
       subtitle: 'We build products that help people save, grow and scale',
       tryButton: 'Try it now',
     },
+    openSource: {
+      title: 'Open source development',
+      description:
+        'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',
+    },
     buildWith: {
       title: 'Built with the best',
       labels: {

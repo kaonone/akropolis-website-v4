@@ -4,6 +4,7 @@ export default {
     navigation: {
       products: 'Product',
       company: 'Company',
+      tutorials: 'Tutorials',
       wiki: 'Wiki',
       app: 'App',
       roadmap: 'Roadmap',
@@ -22,7 +23,6 @@ export default {
     mainIntro: {
       title: 'Decentralized and autonomous community economies',
       subtitle: 'We build products that help people save, grow and scale',
-      tryButton: 'Try it now',
     },
     openSource: {
       title: 'Open source development',

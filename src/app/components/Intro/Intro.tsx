@@ -3,16 +3,18 @@ import { makeStyles } from 'shared/styles';
 import { Typography } from 'shared/view/elements';
 
 interface Props {
-  title: string;
+  title: React.ReactNode;
   description: string;
+  icon?: React.ReactNode;
   children?: React.ReactNode;
 }
 
 export function Intro(props: Props) {
-  const { children, description, title } = props;
+  const { children, description, icon, title } = props;
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      {icon && <div className={classes.icon}>{icon}</div>}
       <Typography variant="h1" className={classes.title}>
         {title}
       </Typography>
@@ -24,6 +26,11 @@ export function Intro(props: Props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {},
+  icon: {
+    display: 'flex',
+    fontSize: theme.spacing(8.25),
+    marginBottom: theme.spacing(5),
+  },
   title: {
     fontWeight: 200,
 

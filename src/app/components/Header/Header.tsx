@@ -2,12 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { LogoWithNameIcon } from 'shared/view/elements/Icons';
+import { IMenuItem } from 'shared/types/common';
 import { Adaptive } from 'services/adaptability';
 import { ThemeButton } from 'services/theme';
-import { NavInline } from './Navigation/NavInline/NavInline';
+import { NavInline } from 'app/components/NavInline/NavInline';
+import { menuItems } from './constants';
 import { useStyles } from './Header.style';
 
-export function Header() {
+interface Props {
+  customNavItems?: IMenuItem[];
+}
+
+export function Header({ customNavItems }: Props) {
   const classes = useStyles();
 
   return (
@@ -16,6 +22,7 @@ export function Header() {
         <LogoWithNameIcon fontSize="inherit" />
       </Link>
       <NavInline
+        items={customNavItems || menuItems}
         className={classes.navInline}
         extraLeft={[
           <React.Fragment key="0">

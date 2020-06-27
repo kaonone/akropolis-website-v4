@@ -3,16 +3,17 @@ import cn from 'classnames';
 
 import { useTranslate } from 'services/i18n';
 import { NavMenuItem } from 'shared/view/components';
-import { menuItems } from '../constants';
+import { IMenuItem } from 'shared/types/common';
 import { useStyles } from './NavInline.style';
 
 interface Props {
   className?: string;
+  items: IMenuItem[];
   extraLeft?: React.ReactElement[];
   extraRight?: React.ReactElement[];
 }
 
-export function NavInline({ extraLeft = [], extraRight = [], className }: Props) {
+export function NavInline({ extraLeft = [], extraRight = [], items, className }: Props) {
   const classes = useStyles();
   const { t } = useTranslate();
 
@@ -23,7 +24,7 @@ export function NavInline({ extraLeft = [], extraRight = [], className }: Props)
           {item}
         </div>
       ))}
-      {menuItems.map(({ title, ...item }) => (
+      {items.map(({ title, ...item }) => (
         <div className={classes.item} key={title}>
           <NavMenuItem className={classes.navLink} underline="none" title={t(title)} color="textPrimary" {...item} />
         </div>

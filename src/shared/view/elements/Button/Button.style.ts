@@ -24,14 +24,14 @@ export const useStyles = makeStyles((theme) => ({
     lineHeight: 1,
     opacity: 0.99,
 
-    padding: theme.spacing(0.5, 1.25),
+    padding: theme.spacing(0.5, 2),
     fontSize: theme.spacing(1.5),
     minWidth: theme.spacing(5.5),
     minHeight: theme.spacing(height),
     borderRadius: theme.spacing(height / 2),
 
     [theme.breakpoints.up('tabletXS')]: {
-      padding: theme.spacing(1.25, 2.25),
+      padding: theme.spacing(1.25, 4),
       fontSize: theme.spacing(2),
       minWidth: theme.spacing(8.25),
       minHeight: theme.spacing(heightTabletXS),

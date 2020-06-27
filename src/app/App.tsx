@@ -7,12 +7,14 @@ import { Partners, News } from 'modules/sections';
 import { lightTheme } from 'shared/styles/theme';
 
 import { Main } from './pages/Main/Main';
+import { CreditPool } from './pages/CreditPool/CreditPool';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 export function App() {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
+      <Route exact path={routes['credit-pool'].getRoutePath()} component={CreditPool} />
       <Route exact key="ForWikiPartners" path={routes.forWiki.partners.getRoutePath()}>
         <MuiThemeProvider theme={lightTheme}>
           <CssBaseline />

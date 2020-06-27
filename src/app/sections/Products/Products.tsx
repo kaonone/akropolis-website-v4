@@ -7,7 +7,7 @@ import { Card } from 'app/components/Card';
 import { makeStyles, getGrid } from 'shared/styles';
 import { Preview } from 'app/components/Preview/Preview';
 import { Link, Button, LinkProps } from 'shared/view/elements';
-import { Build, CreditPool, DcaPool } from './icons';
+import { Build, CreditPool, DcaPool, Colab } from './icons';
 import routes from 'modules/routes';
 
 interface Product {
@@ -15,6 +15,7 @@ interface Product {
   description: string;
   label: string;
   icon: React.ReactElement;
+  extraIcon?: React.ReactElement;
   action: React.ReactElement;
 }
 
@@ -29,7 +30,7 @@ export function Products(props: IProps) {
   return (
     <Section className={className}>
       <div className={classes.container}>
-        {useCases.map(({ title, description, icon, action, label }, index) => (
+        {useCases.map(({ title, description, icon, extraIcon, action, label }, index) => (
           <div key={index} className={classes.item}>
             <Card
               className={cn(classes.card)}
@@ -39,6 +40,7 @@ export function Products(props: IProps) {
               extraBottom={<div className={classes.action}>{action}</div>}
             >
               <Preview title={title} titleSize="large" description={description} />
+              {extraIcon && <div className={classes.extraIcon}>{extraIcon}</div>}
             </Card>
           </div>
         ))}
@@ -102,6 +104,7 @@ const useCases: Product[] = [
       </Button>
     ),
     icon: <DcaPool fontSize="inherit" />,
+    extraIcon: <Colab />,
   },
 ];
 
@@ -113,6 +116,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('tabletSM')]: {
       padding: theme.spacing(3.75, 5),
     },
+  },
+
+  extraIcon: {
+    position: 'absolute',
+    top: 12,
+    right: 16,
+    fontSize: 70,
   },
 
   icon: {

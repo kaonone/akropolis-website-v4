@@ -8,7 +8,6 @@ import { BuildWith } from 'app/sections/BuildWith/BuildWith';
 import { makeStyles } from 'shared/styles';
 import { Adaptive } from 'services/adaptability';
 import { Features } from 'app/sections/Features/Features';
-import { UseCases } from 'app/sections/UseCases/UseCases';
 import { DevActivitySync } from 'app/components/DevActivity/DevActivity';
 import { Products } from 'app/sections/Products/Products';
 import { OpenSource } from 'app/sections/OpenSource/OpenSource';
@@ -39,7 +38,6 @@ export function Main() {
         <DevActivitySync />
         <Features className={classes.section} />
         <OpenSource className={classes.section} />
-        <UseCases className={classes.section} />
       </Layout.Container>
       <Layout.WrapTopWave type="bottom">
         <Layout.Footer>

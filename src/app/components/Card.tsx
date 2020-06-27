@@ -8,10 +8,12 @@ interface CardProps {
   variant?: 'outlined' | 'contained';
   label?: string;
   children: React.ReactNode;
+  extraTop?: React.ReactNode;
+  extraBottom?: React.ReactNode;
 }
 
 export function Card(props: CardProps) {
-  const { label, variant = 'outlined', children, className } = props;
+  const { label, variant = 'outlined', children, extraTop, extraBottom, className } = props;
   const classes = useStyles();
   return (
     <div
@@ -20,18 +22,22 @@ export function Card(props: CardProps) {
         [classes.contained]: variant === 'contained',
       })}
     >
+      {extraTop && <div className={cn(classes.extra, classes.top)}>{extraTop}</div>}
       {children}
       {label && (
         <Typography component="div" className={classes.label}>
           <span>{label}</span>
         </Typography>
       )}
+      {extraBottom && <div className={cn(classes.extra, classes.bottom)}>{extraBottom}</div>}
     </div>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
     position: 'relative',
     borderRadius: theme.spacing(0.5),
     transition: theme.transitions.create(['border-color', 'background-color']),
@@ -46,6 +52,16 @@ const useStyles = makeStyles((theme) => ({
     },
     '&$contained': {
       backgroundColor: theme.palette.type === 'light' ? theme.colors.zumthor : theme.colors.scarpaFlow,
+    },
+  },
+
+  extra: {
+    '&$top': {
+      marginBottom: theme.spacing(1.5),
+    },
+    '&$bottom': {
+      paddingTop: theme.spacing(2.5),
+      marginTop: 'auto',
     },
   },
 
@@ -70,6 +86,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+  top: {},
+  bottom: {},
   outlined: {},
   contained: {},
 }));

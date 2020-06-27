@@ -1,14 +1,38 @@
 import * as React from 'react';
+import cn from 'classnames';
 import { GetProps } from '_helpers';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import { Adaptive } from 'services/adaptability';
+import { makeStyles } from 'shared/styles';
 
-export function TopWave(props: GetProps<typeof SvgIcon>) {
+const useStyles = makeStyles({
+  root: {
+    display: 'block',
+  },
+  mobile: {
+    height: 415,
+  },
+  tabletXS: {
+    height: 550,
+  },
+  tabletSM: {
+    height: 600,
+  },
+});
+
+export function TopWave({ className, ...props }: GetProps<typeof SvgIcon>) {
+  const classes = useStyles();
   return (
     <>
-      <Adaptive from="mobileXS" to="tabletXS"><MobileTop {...props}/></Adaptive>
-      <Adaptive from="tabletXS" to="tabletSM"><TabletXSTop {...props}/></Adaptive>
-      <Adaptive from="tabletSM"><TabletSMTop {...props}/></Adaptive>
+      <Adaptive from="mobileXS" to="tabletXS">
+        <MobileTop {...props} className={cn(className, classes.root, classes.mobile)} />
+      </Adaptive>
+      <Adaptive from="tabletXS" to="tabletSM">
+        <TabletXSTop {...props} className={cn(className, classes.root, classes.tabletXS)} />
+      </Adaptive>
+      <Adaptive from="tabletSM">
+        <TabletSMTop {...props} className={cn(className, classes.root, classes.tabletSM)} />
+      </Adaptive>
     </>
   );
 }

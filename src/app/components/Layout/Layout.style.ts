@@ -62,7 +62,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
-  waveContainer: {
+  withWave: {
     position: 'relative',
 
     '&$top': {
@@ -91,13 +91,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
-  wave: {
+  waveContainer: {
     position: 'absolute',
     zIndex: -1,
     top: 0,
     left: 0,
     width: '100%',
     height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+
+  waveStrut: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+  },
+
+  wave: {
+    maxHeight: '100%',
+    width: '100%',
     transition: theme.transitions.create('color'),
     color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
     transformOrigin: 'right',

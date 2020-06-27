@@ -32,33 +32,22 @@ const colors = {
   foam: '#f0fafe',
   comet: '#616884',
   alto: '#D8D8D8',
+  jacarta: '#342c66',
+  jacarta2: '#422c66',
+  blueZodiac: '#13254a',
+  bunting: '#1d134a',
+  bossanova: '#4d2c66',
+  valhalla: '#2a134a',
 };
 
 const gradients = {
-  main: makeGradient([
-    {
-      color: colors.heliotrope,
-      offset: '0%',
-    },
-    {
-      color: colors.royalBlue,
-      offset: '100%',
-    },
-  ]),
-  button: makeGradient([
-    {
-      color: colors.heliotrope,
-    },
-    {
-      color: colors.royalBlue,
-    },
-    {
-      color: colors.heliotrope2,
-    },
-    {
-      color: colors.heliotrope,
-    },
-  ]),
+  main: makeGradient([colors.heliotrope, colors.royalBlue]),
+  products: [
+    makeGradient([colors.jacarta, colors.blueZodiac]),
+    makeGradient([colors.jacarta2, colors.bunting]),
+    makeGradient([colors.bossanova, colors.valhalla]),
+  ] as const,
+  button: makeGradient([colors.heliotrope, colors.royalBlue, colors.heliotrope2, colors.heliotrope]),
 };
 
 const lightPalette = {

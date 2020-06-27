@@ -33,8 +33,12 @@ function WrapTopWave({ type, children }: { type: 'top' | 'bottom'; children: Rea
   }[type];
 
   return (
-    <div className={cn(classes.waveContainer, classes[type])}>
-      {wave}
+    <div className={cn(classes.withWave, classes[type])}>
+      <div className={classes.waveContainer}>
+        {type === 'top' && <div className={classes.waveStrut} />}
+        {wave}
+        {type === 'bottom' && <div className={classes.waveStrut} />}
+      </div>
       {children}
     </div>
   );

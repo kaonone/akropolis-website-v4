@@ -22,6 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     background: theme.gradients.button.linear('to right'),
     backgroundSize: backgroundGradientSize,
     lineHeight: 1,
+    opacity: 0.99,
 
     padding: theme.spacing(0.5, 1.25),
     fontSize: theme.spacing(1.5),

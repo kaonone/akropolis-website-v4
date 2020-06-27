@@ -10,6 +10,7 @@ import { Adaptive } from 'services/adaptability';
 import { Features } from 'app/sections/Features/Features';
 import { UseCases } from 'app/sections/UseCases/UseCases';
 import { DevActivitySync } from 'app/components/DevActivity/DevActivity';
+import { Products } from 'app/sections/Products/Products';
 
 export function Main() {
   const classes = useStyles();
@@ -21,6 +22,7 @@ export function Main() {
         </Layout.Header>
         <Layout.Container>
           <MainIntro />
+          <Products className={classes.products} />
           <Adaptive to="tabletXS">
             <BuildWith className={classes.buildWith} includes={['title', 'build-with']} />
           </Adaptive>
@@ -59,6 +61,13 @@ const useStyles = makeStyles((theme) => ({
 
   buildWithUnderWave: {
     marginTop: theme.spacing(1.5),
+  },
+
+  products: {
+    marginTop: theme.spacing(5),
+    [theme.breakpoints.up('tabletSM')]: {
+      marginTop: theme.spacing(7.5),
+    },
   },
 
   features: {

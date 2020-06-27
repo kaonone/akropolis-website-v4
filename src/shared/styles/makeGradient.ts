@@ -1,6 +1,8 @@
+type Color = string;
+
 interface GradientPoint {
   offset?: string;
-  color: string;
+  color: Color;
 }
 
 interface Gradient {
@@ -8,15 +10,22 @@ interface Gradient {
   linear(sideOrCorner?: string): string;
 }
 
-export function makeGradient(points: GradientPoint[]): Gradient {
+export function makeGradient(points: Array<GradientPoint | Color>): Gradient {
   return {
-    points,
+    points: points.map(toGradientPoint),
     linear: (sideOrCorner) => getLinearGradient(points, sideOrCorner),
   };
 }
 
-function getLinearGradient(points: GradientPoint[], sideOrCorner: string = 'to bottom') {
+function getLinearGradient(points: Array<GradientPoint | Color>, sideOrCorner: string = 'to bottom') {
   return `linear-gradient(${sideOrCorner}, ${points
-    .map(({ color, offset }) => [color, offset].filter(Boolean).join(' '))
+    .map((point) => {
+      const { color, offset } = toGradientPoint(point);
+      return [color, offset].filter(Boolean).join(' ');
+    })
     .join(', ')})`;
+}
+
+function toGradientPoint(point: GradientPoint | Color): GradientPoint {
+  return typeof point === 'string' ? { color: point, offset: undefined } : point;
 }

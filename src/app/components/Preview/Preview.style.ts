@@ -8,17 +8,29 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    fontWeight: 500,
-
-    fontSize: theme.spacing(1.5),
     lineHeight: 1.25,
-    [theme.breakpoints.up('tabletXS')]: {
-      fontSize: theme.spacing(1.75),
-      lineHeight: 1.25,
+    '&$medium': {
+      fontWeight: 500,
+
+      fontSize: theme.spacing(1.5),
+      [theme.breakpoints.up('tabletXS')]: {
+        fontSize: theme.spacing(1.75),
+      },
+      [theme.breakpoints.up('desktopXS')]: {
+        fontSize: theme.spacing(2),
+      },
     },
-    [theme.breakpoints.up('desktopXS')]: {
-      fontSize: theme.spacing(2),
-      lineHeight: 1.25,
+
+    '&$large': {
+      fontWeight: 300,
+
+      fontSize: theme.spacing(2.5),
+      [theme.breakpoints.up('tabletXS')]: {
+        fontSize: theme.spacing(3),
+      },
+      [theme.breakpoints.up('desktopXS')]: {
+        fontSize: theme.spacing(3.75),
+      },
     },
   },
 
@@ -39,4 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: theme.spacing(1.5),
     lineHeight: 1.33,
   },
+
+  medium: {},
+  large: {},
 }));

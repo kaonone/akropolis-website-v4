@@ -5,7 +5,7 @@ import { Section } from 'app/components/Section/Section';
 import { Card } from 'app/components/Card';
 import { makeStyles, getGrid } from 'shared/styles';
 import { Preview } from 'app/components/Preview/Preview';
-import { Ethereum, Polkadot, Web3, Zrx, Coinlist } from './icons';
+import { Ethereum, Polkadot, Web3, Zrx, Coinlist, Portis, EthGlobal } from './icons';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
 
 interface Product {
@@ -65,7 +65,7 @@ const useCases: Product[] = [
     title: 'Pensify',
     description: 'Pensify is a non-custodial and risk-minimised Pension Fund built on Ethereum blockchain',
     label: 'Hack Money Hackaton Special Prize',
-    icons: [<Ethereum fontSize="inherit" />],
+    icons: [<Portis fontSize="inherit" />, <EthGlobal fontSize="inherit" />, <Ethereum fontSize="inherit" />],
   },
   {
     title: 'WEB3 Wallets Kit',

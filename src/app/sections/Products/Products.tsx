@@ -123,6 +123,7 @@ const useStyles = makeStyles((theme) => ({
     top: 12,
     right: 16,
     fontSize: 70,
+    color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.heliotrope3,
   },
 
   icon: {
@@ -203,6 +204,15 @@ const useStyles = makeStyles((theme) => ({
         },
         '&:nth-child(3) $card': {
           background: theme.gradients.products[2].linear(),
+        },
+        '&:nth-child(1) $icon': {
+          color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.anakiwa,
+        },
+        '&:nth-child(2) $icon': {
+          color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.melrose,
+        },
+        '&:nth-child(3) $icon': {
+          color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.blushPink,
         },
       },
     },

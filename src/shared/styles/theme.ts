@@ -38,17 +38,29 @@ const colors = {
   bunting: '#1d134a',
   bossanova: '#4d2c66',
   valhalla: '#2a134a',
+  zumthor2: '#e6eeff',
+  linkWater: '#d6eaf3',
+  whisper: '#e9e7f2',
+  blueChalk: '#e7e3fe',
+  snuff: '#f0ddf1',
+  amour: '#f8e6f2',
+  anakiwa: '#7cd7ff',
+  melrose: '#a38cff',
+  blushPink: '#ff79ff',
+  heliotrope3: '#d93cef',
 };
 
-const gradients = {
-  main: makeGradient([colors.heliotrope, colors.royalBlue]),
-  products: [
-    makeGradient([colors.jacarta, colors.blueZodiac]),
-    makeGradient([colors.jacarta2, colors.bunting]),
-    makeGradient([colors.bossanova, colors.valhalla]),
-  ] as const,
-  button: makeGradient([colors.heliotrope, colors.royalBlue, colors.heliotrope2, colors.heliotrope]),
-};
+function getGradients(type: 'dark' | 'light') {
+  return {
+    main: makeGradient([colors.heliotrope, colors.royalBlue]),
+    products: [
+      makeGradient(type === 'dark' ? [colors.jacarta, colors.blueZodiac] : [colors.zumthor2, colors.linkWater]),
+      makeGradient(type === 'dark' ? [colors.jacarta2, colors.bunting] : [colors.whisper, colors.blueChalk]),
+      makeGradient(type === 'dark' ? [colors.bossanova, colors.valhalla] : [colors.snuff, colors.amour]),
+    ] as const,
+    button: makeGradient([colors.heliotrope, colors.royalBlue, colors.heliotrope2, colors.heliotrope]),
+  };
+}
 
 const lightPalette = {
   primary: {
@@ -105,7 +117,7 @@ const unit = 8;
 const baseThemeStyles = {
   palette: lightPalette,
   colors,
-  gradients,
+  gradients: getGradients('light'),
   sizes: {
     control: {
       borderRadius: 4,
@@ -159,7 +171,7 @@ function getTheme(type: 'light' | 'dark'): Theme {
   return createMuiTheme({
     extra: baseThemeStyles,
     colors,
-    gradients,
+    gradients: getGradients(type),
     palette: type === 'light' ? lightPalette : darkPalette,
     breakpoints: {
       keys: [
@@ -250,13 +262,13 @@ declare module '@material-ui/core/styles/createMuiTheme' {
   interface Theme {
     extra: typeof baseThemeStyles;
     colors: typeof colors;
-    gradients: typeof gradients;
+    gradients: ReturnType<typeof getGradients>;
   }
 
   interface ThemeOptions {
     extra: typeof baseThemeStyles;
     colors: typeof colors;
-    gradients: typeof gradients;
+    gradients: ReturnType<typeof getGradients>;
   }
 }
 

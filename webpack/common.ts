@@ -81,7 +81,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   new PrerenderSPAPlugin({
     staticDir: path.join(__dirname, '..', 'build'),
     routes: [
-      '/',
+      '/', '/credit-pool', '/dca-pool',
       '/forWiki/partners', '/forWiki/news',
     ],
     postProcess(renderedRoute: any) {

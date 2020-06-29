@@ -24,7 +24,14 @@ export function Repos() {
           <Card variant="contained" className={classes.card}>
             <Grid container direction="column" justify="space-between" className={classes.cardContent}>
               <Grid item>
-                <Typography<typeof Link> className={classes.title} component={Link} color="textPrimary">
+                <Typography<typeof Link>
+                  className={classes.title}
+                  component={Link}
+                  color="textPrimary"
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {repo.name} →
                 </Typography>
                 <Typography className={classes.description} color="textPrimary">
@@ -68,7 +75,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12,
     fontWeight: 500,
     marginBottom: theme.spacing(1),
-    cursor: 'pointer',
 
     [theme.breakpoints.up('tabletXS')]: {
       fontSize: 16,

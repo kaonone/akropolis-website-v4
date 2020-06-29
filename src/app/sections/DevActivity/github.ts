@@ -27,7 +27,7 @@ interface InternalGithubRepo {
     site_admin: false;
   };
   html_url: string;
-  description: string;
+  description: string | null;
   fork: boolean;
   url: string;
   forks_url: string;
@@ -127,12 +127,14 @@ export function useRepos(orgName: string) {
     ...other,
     data:
       data &&
-      data.map((repo) => ({
-        ...repo,
-        created_at: new Date(repo.created_at).getTime(),
-        updated_at: new Date(repo.updated_at).getTime(),
-        pushed_at: new Date(repo.pushed_at).getTime(),
-      })),
+      data
+        .filter((repo) => !repo.description || !repo.description.toLowerCase().includes('[hidden]'))
+        .map((repo) => ({
+          ...repo,
+          created_at: new Date(repo.created_at).getTime(),
+          updated_at: new Date(repo.updated_at).getTime(),
+          pushed_at: new Date(repo.pushed_at).getTime(),
+        })),
   };
 }
 

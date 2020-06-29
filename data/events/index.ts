@@ -3,7 +3,22 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
-    eventName: 'Messari’s Mainnet ',
+    eventName: 'IDEO’s Product Validation Day',
+    link: 'https://medium.com/ideo-colab/announcing-ideos-product-validation-day-for-defi-founders-79e5668f9e3c',
+    location: 'Online Conference',
+    description: {
+      en: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
+      vi: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
+      zh: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
+      ko: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
+    },
+    startDate: '06.18.2020',
+    finishDate: '06.19.2020',
+    image1x: require('./imgs/ideo@590w.jpg'),
+    image2x: require('./imgs/ideo@1180w.jpg'),
+  },
+  {
+    eventName: 'Messari’s Mainnet',
     link: 'https://mainnet.events',
     location: 'Online Conference', 
     description: {
@@ -62,21 +77,21 @@ const events: IEvent[] = [
     image1x: require('./imgs/polkahub@589w.jpg'),
     image2x: require('./imgs/polkahub@1178w.jpg'),
   },
-  {
-    eventName: 'ETHCC [3]',
-    link: 'https://ethcc.io',
-    location: 'Paris', 
-    description: {
-      en: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
-      vi: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
-      zh: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
-      ko: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
-    },
-    startDate: '03.03.2020',
-    finishDate: '03.05.2020',
-    image1x: require('./imgs/ethcc3@660w.png'),
-    image2x: require('./imgs/ethcc3@1320w.png'),
-  },
+  // {
+  //   eventName: 'ETHCC [3]',
+  //   link: 'https://ethcc.io',
+  //   location: 'Paris', 
+  //   description: {
+  //     en: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
+  //     vi: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
+  //     zh: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
+  //     ko: 'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning. Anastasia Andrianove will give a talk about "Uncollateralized loans + DAOs: how to combine these"',
+  //   },
+  //   startDate: '03.03.2020',
+  //   finishDate: '03.05.2020',
+  //   image1x: require('./imgs/ethcc3@660w.png'),
+  //   image2x: require('./imgs/ethcc3@1320w.png'),
+  // },
   {
     eventName: 'ETHDenver | Polkadot – Colorado "Buidl" Week Meetup',
     link: 'https://www.ethdenver.com',

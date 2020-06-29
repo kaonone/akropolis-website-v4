@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { IEvent } from 'shared/types/models';
-import { Grid, Link } from 'shared/view/elements';
+import { Grid, Typography, Dotdotdot, NoSsr } from 'shared/view/elements';
 import { getEventTense } from 'shared/helpers/model';
 import { useTranslate } from 'services/i18n';
 
@@ -19,27 +19,23 @@ function EventSelector(props: IProps & StylesProps) {
   const { t, tKeys } = useTranslate();
 
   return (
-    <Grid container spacing={5}>
+    <Grid container spacing={4}>
       {events.map((event, index) => (
-        <Grid
-          item
-          container
-          className={classes.item}
-          xs={6}
-          key={index}
-        >
-          <Grid item xs={4}>
+        <Grid container spacing={4} wrap="nowrap" item className={classes.item} xs={12} md={6} key={index}>
+          <Grid item>
             <DateButton date={event.startDate} selected={event === selectedEvent} onClick={onSelect.bind(null, event)}>
               {event.eventName}
             </DateButton>
           </Grid>
-          <Grid item xs={8}>
-            <Link className={classes.title} onClick={onSelect.bind(null, event)}>
-              {event.eventName}
-            </Link>
-            <div className={classes.subtitle}>
+          <Grid item xs>
+            <Typography className={classes.title} onClick={onSelect.bind(null, event)}>
+              <NoSsr>
+                <Dotdotdot clamp={2}>{event.eventName}</Dotdotdot>
+              </NoSsr>
+            </Typography>
+            <Typography className={classes.subtitle}>
               {t(tKeys.shared.eventTenses[getEventTense(event.startDate, event.finishDate)].getKey())}
-            </div>
+            </Typography>
           </Grid>
         </Grid>
       ))}

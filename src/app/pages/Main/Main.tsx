@@ -38,8 +38,8 @@ export function Main() {
         </Adaptive>
         <Features className={classes.section} />
         <OpenSource className={classes.section} />
-        <CurrentEvents className={classes.section} />
         <DevActivity className={classes.section} />
+        <CurrentEvents className={classes.section} />
       </Layout.Container>
       <Layout.WrapTopWave type="bottom">
         <Layout.Footer>

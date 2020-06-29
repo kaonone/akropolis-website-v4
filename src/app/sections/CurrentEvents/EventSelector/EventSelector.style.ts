@@ -3,24 +3,24 @@ import { withStyles, Theme, WithStyles } from 'shared/styles';
 
 const styles = (theme: Theme) => ({
   item: rule({
-    fontFamily: theme.extra.typography.primaryFont,
+    fontFamily: theme.palette.text.primary,
   }),
 
   title: rule({
-    fontSize: '16px',
+    fontSize: 16,
     fontWeight: 500,
-    color: '#090909',
     cursor: 'pointer',
-    
+    lineHeight: 1.2,
+    marginBottom: 10,
+
     '&:hover': {
       textDecoration: 'none',
-    }
+    },
   }),
 
   subtitle: rule({
     fontSize: 12,
-    lineHeight: 2,
-    color: '#9b9b9b',
+    opacity: 0.5,
 
     [theme.breakpoints.up('md')]: {
       fontSize: 14,

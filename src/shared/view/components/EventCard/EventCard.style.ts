@@ -1,7 +1,7 @@
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
-const borderRadius = 5;
+const borderRadius = 8;
 
 const styles = (theme: Theme) => ({
   root: rule({

@@ -1,16 +1,16 @@
-import { withStyles, WithStyles } from 'shared/styles';
+import { withStyles, WithStyles, Theme } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
-const styles = () => ({
+const styles = (theme: Theme) => ({
   root: rule({
     flexDirection: 'column',
     width: '66px',
     height: '70px',
     borderRadius: '6px',
-    backgroundColor: '#eff1f5',
+    backgroundColor: theme.palette.type === 'dark' ? '#3f3d4c' : '#eff1f5',
 
     '&:hover, &$focusVisible': {
-      backgroundColor: '#e7eefd',
+      backgroundColor: theme.palette.type === 'dark' ? '#5C5973' : '#e7eefd',
     },
 
     '&$selected': {
@@ -31,14 +31,14 @@ const styles = () => ({
     fontWeight: 300,
     fontSize: 30,
     lineHeight: '30px',
-    color: '#090909',
+    color: theme.palette.text.primary,
   }),
 
   month: rule({
     marginTop: '4px',
     fontSize: 12,
     lineHeight: '16px',
-    color: '#97979A',
+    color: theme.palette.text.secondary,
   }),
 
   focusVisible: {},

@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import { Section } from 'app/components/Section/Section';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
-import { Tab, TabContext, TabList, TabPanel, Grid, NoSsr } from 'shared/view/elements';
+import { NoSsr } from 'services/adaptability';
+import { Tab, TabContext, TabList, TabPanel, Grid } from 'shared/view/elements';
 import { makeStyles, getGrid } from 'shared/styles';
 
 import { DevActivityChartSync } from './DevActivityChart/DevActivityChart';

@@ -16,7 +16,6 @@ export { default as Snackbar } from '@material-ui/core/Snackbar';
 export { default as Box } from '@material-ui/core/Box';
 export { default as Typography, TypographyProps } from '@material-ui/core/Typography';
 export { default as Tab } from '@material-ui/core/Tab';
-export { default as NoSsr } from '@material-ui/core/NoSsr';
 
 export { default as TabContext } from '@material-ui/lab/TabContext';
 export { default as TabList } from '@material-ui/lab/TabList';

@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 import { IEvent } from 'shared/types/models';
-import { Grid, Typography, Dotdotdot, NoSsr } from 'shared/view/elements';
+import { Grid, Typography, Dotdotdot } from 'shared/view/elements';
 import { getEventTense } from 'shared/helpers/model';
 import { useTranslate } from 'services/i18n';
 
 import DateButton from './DateButton/DateButton';
 import { StylesProps, provideStyles } from './EventSelector.style';
+import { NoSsr } from 'services/adaptability';
 
 interface IProps {
   events: IEvent[];

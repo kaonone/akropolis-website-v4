@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Section } from 'app/components/Section/Section';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
-import { Tab, TabContext, TabList, TabPanel, Grid } from 'shared/view/elements';
+import { Tab, TabContext, TabList, TabPanel, Grid, NoSsr } from 'shared/view/elements';
 import { makeStyles, getGrid } from 'shared/styles';
 
 import { DevActivityChartSync } from './DevActivityChart/DevActivityChart';
@@ -27,32 +27,34 @@ export function DevActivity(props: IProps) {
   }, []);
 
   return (
-    <Section className={className} title={t(tKeys.title.getKey())}>
-      <TabContext value={currentTab}>
-        <TabList onChange={handleTabChange} aria-label="simple tabs example">
-          <Tab label={t(tKeys.overview.getKey())} value="overview" />
-          <Tab label={t(tKeys.topRepos.getKey())} value="topRepos" />
-        </TabList>
-        <TabPanel value="overview" className={classes.tabPanel}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={8} xl={9}>
-              <DevActivityChartSync />
-            </Grid>
-            <Grid container spacing={3} item xs={12} lg={4} xl={3}>
-              <Grid item xs={12} md={4} lg={12}>
-                <LastCommit />
+    <NoSsr>
+      <Section className={className} title={t(tKeys.title.getKey())}>
+        <TabContext value={currentTab}>
+          <TabList onChange={handleTabChange} aria-label="simple tabs example">
+            <Tab label={t(tKeys.overview.getKey())} value="overview" />
+            <Tab label={t(tKeys.topRepos.getKey())} value="topRepos" />
+          </TabList>
+          <TabPanel value="overview" className={classes.tabPanel}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} lg={8} xl={9}>
+                <DevActivityChartSync />
               </Grid>
-              <Grid item xs={12} md={8} lg={12}>
-                <Languages />
+              <Grid container spacing={3} item xs={12} lg={4} xl={3}>
+                <Grid item xs={12} md={4} lg={12}>
+                  <LastCommit />
+                </Grid>
+                <Grid item xs={12} md={8} lg={12}>
+                  <Languages />
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-        </TabPanel>
-        <TabPanel value="topRepos" className={classes.tabPanel}>
-          <Repos />
-        </TabPanel>
-      </TabContext>
-    </Section>
+          </TabPanel>
+          <TabPanel value="topRepos" className={classes.tabPanel}>
+            <Repos />
+          </TabPanel>
+        </TabContext>
+      </Section>
+    </NoSsr>
   );
 }
 

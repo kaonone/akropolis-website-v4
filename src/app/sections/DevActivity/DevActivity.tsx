@@ -30,9 +30,19 @@ export function DevActivity(props: IProps) {
     <NoSsr>
       <Section className={className} title={t(tKeys.title.getKey())}>
         <TabContext value={currentTab}>
-          <TabList onChange={handleTabChange} aria-label="simple tabs example">
-            <Tab label={t(tKeys.overview.getKey())} value="overview" />
-            <Tab label={t(tKeys.topRepos.getKey())} value="topRepos" />
+          <TabList
+            classes={{ root: classes.tabsRoot, indicator: classes.indicator, scroller: classes.tabsScroller }}
+            onChange={handleTabChange}
+            TabIndicatorProps={{}}
+            aria-label="simple tabs example"
+          >
+            <Tab label={t(tKeys.overview.getKey())} value="overview" classes={{ root: classes.tabRoot }} />
+            <Tab
+              label={t(tKeys.topRepos.getKey())}
+              value="topRepos"
+              classes={{ root: classes.tabRoot }}
+              TouchRippleProps={{ className: classes.touchRipple }}
+            />
           </TabList>
           <TabPanel value="overview" className={classes.tabPanel}>
             <Grid container spacing={3}>
@@ -58,10 +68,46 @@ export function DevActivity(props: IProps) {
   );
 }
 
+const tabsHeight = 36;
+const indicatorSpace = 2;
+const borderWidth = 1;
+
 const useStyles = makeStyles((theme) => ({
   tabPanel: {
     paddingLeft: 0,
     paddingRight: 0,
+  },
+
+  tabsRoot: {
+    display: 'inline-flex',
+    overflow: 'hidden',
+    minHeight: tabsHeight,
+    borderRadius: tabsHeight / 2,
+    padding: indicatorSpace,
+    border: `${borderWidth}px solid ${theme.colors.heliotrope}`,
+  },
+
+  tabsScroller: {
+    overflow: 'hidden',
+    borderRadius: tabsHeight / 2 - indicatorSpace - borderWidth,
+  },
+
+  touchRipple: {
+    borderRadius: tabsHeight / 2 - indicatorSpace - borderWidth,
+  },
+
+  tabRoot: {
+    minHeight: 'unset',
+    padding: theme.spacing(0.375, 1.5),
+    textTransform: 'unset',
+  },
+
+  indicator: {
+    top: 0,
+    height: tabsHeight - indicatorSpace * 2 - borderWidth * 2,
+    borderRadius: tabsHeight / 2 - indicatorSpace - borderWidth,
+    zIndex: -1,
+    background: 'linear-gradient(to left, #544cf2, #d93cef)',
   },
 
   ...getGrid(

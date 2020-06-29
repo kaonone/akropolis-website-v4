@@ -119,10 +119,10 @@ export interface GithubActivity {
   owner: number[];
 }
 
-const GITHUB_TOKEN = 'adacc18798577e139108d4439dbec4416330503b';
-
 export function useRepos(orgName: string) {
-  const { data, ...other } = useGithubSwr<InternalGithubRepo[]>(`https://api.github.com/orgs/${orgName}/repos`);
+  const { data, ...other } = useGithubSwr<InternalGithubRepo[]>(
+    `https://api.github.com/orgs/${orgName}/repos?sort=updated&per_page=1000`,
+  );
   return {
     ...other,
     data:
@@ -142,11 +142,13 @@ function useGithubSwr<T>(url: string) {
 
 const ghGet = async <T>(url: string): Promise<T> => {
   return fetch(url, {
-    headers: { Authorization: `token ${GITHUB_TOKEN}`, 'content-type': 'application/json' },
+    headers: {
+      'content-type': 'application/json',
+    },
   }).then((response) => response.json());
 };
 
-export const calculateStats = (repos: GithubRepo[], lastReposCount: number = 6): GithubStatistics => {
+export const calculateStats = (repos: GithubRepo[], lastReposCount: number = 4): GithubStatistics => {
   const sortedByLastUpdate = [...repos].sort((a, b) => b.updated_at - a.updated_at);
   const lastUpdated = sortedByLastUpdate[0].updated_at;
   let totalStars = 0;

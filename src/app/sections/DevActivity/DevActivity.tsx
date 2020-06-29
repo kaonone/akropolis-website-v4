@@ -8,6 +8,7 @@ import { makeStyles, getGrid } from 'shared/styles';
 import { DevActivityChartSync } from './DevActivityChart/DevActivityChart';
 import { Languages } from './Languages';
 import { LastCommit } from './LastCommit';
+import { Repos } from './Repos';
 
 interface IProps {
   className?: string;
@@ -47,7 +48,9 @@ export function DevActivity(props: IProps) {
             </Grid>
           </Grid>
         </TabPanel>
-        <TabPanel value="topRepos">Top Repos</TabPanel>
+        <TabPanel value="topRepos" className={classes.tabPanel}>
+          <Repos />
+        </TabPanel>
       </TabContext>
     </Section>
   );

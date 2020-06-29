@@ -1,8 +1,8 @@
 import React from 'react';
 import { Section } from 'app/components/Section/Section';
-import { Typography } from 'shared/view/elements';
-import { useRepos, calculateStats } from './github';
 import { makeStyles, getGrid } from 'shared/styles';
+import { useRepos, calculateStats } from './github';
+import { Language } from './Language';
 
 export function Languages() {
   const classes = useStyles();
@@ -20,10 +20,7 @@ export function Languages() {
         <div className={classes.container}>
           {languages.map((language) => (
             <div key={language} className={classes.item}>
-              <Typography key={language} variant="body2" color="textSecondary">
-                <span className={classes.point} />
-                {language}
-              </Typography>
+              <Language language={language} variant="body2" color="textSecondary" />
             </div>
           ))}
         </div>
@@ -35,28 +32,6 @@ export function Languages() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  point: {
-    display: 'inline-block',
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: theme.palette.text.secondary,
-    marginRight: 6,
-
-    '$item:nth-child(1) &': {
-      backgroundColor: theme.colors.heliotrope3,
-    },
-    '$item:nth-child(2) &': {
-      backgroundColor: theme.colors.pictonBlue,
-    },
-    '$item:nth-child(3) &': {
-      backgroundColor: theme.colors.royalBlue2,
-    },
-    '$item:nth-child(4) &': {
-      backgroundColor: theme.colors.turquoise,
-    },
-  },
-
   ...getGrid(
     theme,
     [

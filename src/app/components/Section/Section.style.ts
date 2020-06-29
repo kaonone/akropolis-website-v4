@@ -11,6 +11,12 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('tabletXS')]: {
       fontSize: theme.spacing(3.75),
     },
+
+    '&$h3': {
+      fontSize: theme.spacing(2),
+      fontWeight: 500,
+      marginBottom: theme.spacing(1.25),
+    },
   },
 
   description: {
@@ -22,4 +28,7 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: theme.spacing(2),
     },
   },
+
+  h2: {},
+  h3: {},
 }));

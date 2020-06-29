@@ -29,6 +29,11 @@ export default {
       description:
         'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',
     },
+    devActivity: {
+      title: 'Development activity',
+      overview: 'Overview',
+      topRepos: 'Top Repos',
+    },
     buildWith: {
       title: 'Built with the best',
       labels: {

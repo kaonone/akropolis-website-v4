@@ -10,6 +10,7 @@ import { Adaptive } from 'services/adaptability';
 import { Features } from 'app/sections/Features/Features';
 import { Products } from 'app/sections/Products/Products';
 import { OpenSource } from 'app/sections/OpenSource/OpenSource';
+import { DevActivity } from 'app/sections/DevActivity/DevActivity';
 
 export function Main() {
   const classes = useStyles();
@@ -36,6 +37,7 @@ export function Main() {
         </Adaptive>
         <Features className={classes.section} />
         <OpenSource className={classes.section} />
+        <DevActivity className={classes.section} />
       </Layout.Container>
       <Layout.WrapTopWave type="bottom">
         <Layout.Footer>

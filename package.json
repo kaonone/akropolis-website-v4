@@ -225,6 +225,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@types/autoprefixer": "^9.1.1",
     "@types/classnames": "^2.2.6",
     "@types/compression": "0.0.36",

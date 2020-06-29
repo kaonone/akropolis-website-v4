@@ -48,6 +48,8 @@ const colors = {
   melrose: '#a38cff',
   blushPink: '#ff79ff',
   heliotrope3: '#d93cef',
+  pictonBlue: '#4cadf2',
+  turquoise: '#3cefaf',
 };
 
 function getGradients(type: 'dark' | 'light') {
@@ -194,8 +196,8 @@ function getTheme(type: 'light' | 'dark'): Theme {
         xs: 0,
         sm: 375,
         md: 767,
-        lg: 1024,
-        xl: 1920,
+        lg: 1023,
+        xl: 1919,
         desktopXL: 2560,
         desktopLG: 1920,
         desktopMD: 1440,

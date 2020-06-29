@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import useSWR from 'swr';
-import { Chart, Point } from './Chart/Chart';
+import { Chart, Point } from 'app/components/Chart/Chart';
 
-export function DevActivitySync() {
+export function DevActivityChartSync() {
   const query = useMemo(() => getQuery(), []);
   const { data, error } = useSWR<Point[]>(query, (body) =>
     fetch('https://api.santiment.net/graphql', {

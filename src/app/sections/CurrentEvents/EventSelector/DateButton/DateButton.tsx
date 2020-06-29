@@ -27,11 +27,8 @@ function DateButton(props: IProps & StylesProps & ExtraProps) {
       focusVisibleClassName={classes.focusVisible}
       {...rest}
     >
-      <span className={classes.backdrop} />
-      <div className={classes.content}>
-        <span className={classes.day}>{Number(day)}</span>
-        <span className={classes.month}>{t(tKeys.shared.date.months[monthKey].getKey())}</span>
-      </div>
+      <div className={classes.day}>{Number(day)}</div>
+      <div className={classes.month}>{t(tKeys.shared.date.months[monthKey].getKey())}</div>
     </ButtonBase>
   );
 }

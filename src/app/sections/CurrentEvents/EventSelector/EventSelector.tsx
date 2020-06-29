@@ -1,5 +1,4 @@
 import * as React from 'react';
-import cn from 'classnames';
 
 import { IEvent } from 'shared/types/models';
 import { Grid, Link } from 'shared/view/elements';
@@ -25,16 +24,16 @@ function EventSelector(props: IProps & StylesProps) {
         <Grid
           item
           container
-          className={cn(classes.event, { [classes.selected]: event === selectedEvent })}
+          className={classes.item}
           xs={6}
           key={index}
         >
-          <Grid item md={6}>
+          <Grid item xs={4}>
             <DateButton date={event.startDate} selected={event === selectedEvent} onClick={onSelect.bind(null, event)}>
               {event.eventName}
             </DateButton>
           </Grid>
-          <Grid item md={6}>
+          <Grid item xs={8}>
             <Link className={classes.title} onClick={onSelect.bind(null, event)}>
               {event.eventName}
             </Link>

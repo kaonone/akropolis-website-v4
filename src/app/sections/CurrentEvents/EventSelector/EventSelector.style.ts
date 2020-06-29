@@ -2,20 +2,14 @@ import { rule } from 'shared/helpers/style';
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 
 const styles = (theme: Theme) => ({
-  event: rule({
-    opacity: 0.5,
-    transition: theme.transitions.create('opacity'),
-
-    '&$selected': {
-      opacity: 1,
-    },
+  item: rule({
+    fontFamily: theme.extra.typography.primaryFont,
   }),
 
   title: rule({
-    fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     lineHeight: 1.71,
-    color: '#000',
+    color: '#090909',
     cursor: 'pointer',
 
     [theme.breakpoints.up('md')]: {

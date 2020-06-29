@@ -7,15 +7,14 @@ const styles = (theme: Theme) => ({
   }),
 
   title: rule({
-    fontSize: 14,
-    lineHeight: 1.71,
+    fontSize: '16px',
+    fontWeight: 500,
     color: '#090909',
     cursor: 'pointer',
-
-    [theme.breakpoints.up('md')]: {
-      fontSize: 18,
-      lineHeight: 1.56,
-    },
+    
+    '&:hover': {
+      textDecoration: 'none',
+    }
   }),
 
   subtitle: rule({

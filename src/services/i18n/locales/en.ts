@@ -35,7 +35,7 @@ export default {
       topRepos: 'Top Repos',
     },
     buildWith: {
-      title: 'Built with the best',
+      title: 'Built with',
       labels: {
         buildWith: 'Built with',
         integrations: 'Integrations',

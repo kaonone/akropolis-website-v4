@@ -59,9 +59,10 @@ const useCases: Product[] = [
     action: (
       <Button
         fullWidth
-        component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+        component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
         underline="none"
         color="gradient"
+        variant="contained"
         href="https://github.com/akropolisio/akropolisOS"
         target="_blank"
         rel="noopener noreferrer"
@@ -82,6 +83,7 @@ const useCases: Product[] = [
         component={RouterLink}
         to={routes['credit-pool'].getRedirectPath()}
         color="gradient"
+        variant="contained"
       >
         Borrow
       </Button>
@@ -99,6 +101,7 @@ const useCases: Product[] = [
         component={RouterLink}
         to={routes['dca-pool'].getRedirectPath()}
         color="gradient"
+        variant="contained"
       >
         Start Earning
       </Button>

@@ -39,7 +39,7 @@ export function Products(props: IProps) {
               extraTop={<div className={classes.icon}>{icon}</div>}
               extraBottom={<div className={classes.action}>{action}</div>}
             >
-              <Preview title={title} titleTheme="large" description={description} />
+              <Preview title={title} titleSize="large" description={description} />
               {extraIcon && <div className={classes.extraIcon}>{extraIcon}</div>}
             </Card>
           </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { LogoWithNameIcon } from 'shared/view/elements/Icons';

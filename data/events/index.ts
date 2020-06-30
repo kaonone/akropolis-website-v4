@@ -2,21 +2,6 @@ import { IEvent } from 'shared/types/models';
 
 // tslint:disable
 const events: IEvent[] = [
-   {
-    eventName: 'IDEO’s Product Validation Day',
-    link: 'https://medium.com/ideo-colab/announcing-ideos-product-validation-day-for-defi-founders-79e5668f9e3c',
-    location: 'Online Conference', 
-    description: {
-      en: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
-      vi: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
-      zh: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
-      ko: 'On June 18–19th, 2020, IDEO CoLab Ventures will be hosting a virtual Product Validation Day to help DeFi founders from around the world determine whether to pursue, pivot, or kill new product concepts.',
-    },
-    startDate: '06.18.2020',
-    finishDate: '06.19.2020',
-    image1x: require('./imgs/ideo@660w.png'),
-    image2x: require('./imgs/ideo@1320w.png'),
-  },
   {
     eventName: 'IDEO’s Product Validation Day',
     link: 'https://medium.com/ideo-colab/announcing-ideos-product-validation-day-for-defi-founders-79e5668f9e3c',

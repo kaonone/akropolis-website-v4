@@ -123,7 +123,17 @@ const useCases: Product[] = [
       </Button>
     ),
     icon: <DcaPool fontSize="inherit" />,
-    extraIcon: <Colab />,
+    extraIcon: (
+      <Link
+        underline="none"
+        href="https://medium.com/ideo-colab/announcing-ideos-product-validation-day-for-defi-founders-79e5668f9e3c"
+        target="_blank"
+        rel="noopener noreferrer"
+        color="inherit"
+      >
+        <Colab />
+      </Link>
+    ),
   },
 ];
 

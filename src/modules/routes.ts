@@ -1,8 +1,8 @@
 import build from 'build-route-tree';
 
 const rawTree = {
-  'credit-pool': null,
-  'dca-pool': null,
+  sparta: null,
+  delphi: null,
   company: null,
   events: null,
   forWiki: {

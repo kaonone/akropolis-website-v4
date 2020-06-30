@@ -81,7 +81,7 @@ const useCases: Product[] = [
       <Button<typeof RouterLink>
         fullWidth
         component={RouterLink}
-        to={routes['credit-pool'].getRedirectPath()}
+        to={routes.sparta.getRedirectPath()}
         color="gradient"
         variant="contained"
       >
@@ -99,7 +99,7 @@ const useCases: Product[] = [
       <Button<typeof RouterLink>
         fullWidth
         component={RouterLink}
-        to={routes['dca-pool'].getRedirectPath()}
+        to={routes.delphi.getRedirectPath()}
         color="gradient"
         variant="contained"
       >

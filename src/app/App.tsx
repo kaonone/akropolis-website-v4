@@ -15,8 +15,8 @@ export function App() {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
-      <Route exact path={routes['credit-pool'].getRoutePath()} component={CreditPool} />
-      <Route exact path={routes['dca-pool'].getRoutePath()} component={DcaPool} />
+      <Route exact path={routes.sparta.getRoutePath()} component={CreditPool} />
+      <Route exact path={routes.delphi.getRoutePath()} component={DcaPool} />
       <Route exact key="ForWikiPartners" path={routes.forWiki.partners.getRoutePath()}>
         <MuiThemeProvider theme={lightTheme}>
           <CssBaseline />

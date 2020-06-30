@@ -2,7 +2,6 @@ import React, { useState, useCallback, useMemo } from 'react';
 // tslint:disable-next-line: import-blacklist
 import { PaletteType } from '@material-ui/core';
 import { Theme, MuiThemeProvider } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { darkTheme, lightTheme } from 'shared/styles/theme';
 import { ThemeContext } from './ThemeContext';
@@ -13,8 +12,7 @@ const themeByType: Record<PaletteType, Theme> = {
 };
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const defaultTheme: PaletteType = prefersDarkMode ? 'dark' : 'light';
+  const defaultTheme: PaletteType = 'dark';
   const [currentTheme, setCurrentTheme] = useState(() => getSavedTheme() || defaultTheme);
 
   const changeTheme = useCallback((type: PaletteType) => {

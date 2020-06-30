@@ -1,41 +1,95 @@
 import { makeStyles } from 'shared/styles';
 
-export const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexDirection: 'column',
 
-    flexWrap: 'wrap',
     [theme.breakpoints.up('tabletXS')]: {
-      flexWrap: 'nowrap',
+      flexDirection: 'row',
       justifyContent: 'space-between',
     },
   },
 
-  address: {
-    width: '100%',
-    opacity: 0.3,
+  copyright: {
+    marginBottom: 30,
 
-    marginBottom: theme.spacing(3.75),
-    lineHeight: 1.6,
-    fontSize: theme.spacing(1.25),
     [theme.breakpoints.up('tabletXS')]: {
-      width: 'unset',
-      maxWidth: theme.spacing(62),
       marginBottom: 0,
-      lineHeight: 1.33,
-      fontSize: theme.spacing(1.5),
-    },
-    [theme.breakpoints.up('desktopXS')]: {
-      lineHeight: 'unset',
-      maxWidth: 'unset',
     },
   },
 
   nav: {
-    width: '100%',
+    marginBottom: 30,
+
     [theme.breakpoints.up('tabletXS')]: {
-      width: 'unset',
-      marginLeft: theme.spacing(2),
+      marginBottom: 20,
+    },
+
+    [theme.breakpoints.up('desktopMD')]: {
+      marginBottom: 12,
+    },
+  },
+
+  text: {
+    fontSize: 10,
+    lineHeight: 1.6,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: 12,
+      lineHeight: 1.33,
+    },
+
+    [theme.breakpoints.up('desktopMD')]: {
+      lineHeight: 'normal',
+    },
+  },
+
+  partners: {
+    display: 'flex',
+
+    [theme.breakpoints.up('tabletXS')]: {
+      marginLeft: 32,
+    },
+  },
+
+  partnerLink: {
+    '& + $partnerLink': {
+      marginLeft: 43,
+
+      [theme.breakpoints.up('tabletXS')]: {
+        marginLeft: 50,
+      },
+    },
+  },
+
+  partnerIcon: {
+    fontSize: 34,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: 40,
+    },
+  },
+
+  link: {
+    fontSize: 10,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      fontSize: 12,
+    },
+
+    '& + $link': {
+      marginLeft: 53,
+
+      [theme.breakpoints.up('tabletXS')]: {
+        marginLeft: 20,
+      },
+
+      [theme.breakpoints.up('desktopMD')]: {
+        marginLeft: 50,
+      },
     },
   },
 }));
+
+export { useStyles };

@@ -7,6 +7,7 @@ import { makeStyles, getGrid } from 'shared/styles';
 import { Preview } from 'app/components/Preview/Preview';
 import { Ethereum, Polkadot, Web3, Zrx, Coinlist, Portis, EthGlobal } from './icons';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
+import { Link } from 'shared/view/elements';
 
 interface Product {
   title: string;
@@ -14,6 +15,7 @@ interface Product {
   label?: string;
   icons: React.ReactElement[];
   extraIcon?: React.ReactElement;
+  link: string;
 }
 
 interface IProps {
@@ -30,10 +32,16 @@ export function OpenSource(props: IProps) {
   return (
     <Section className={className} title={t(tKeys.title.getKey())} description={t(tKeys.description.getKey())}>
       <div className={classes.container}>
-        {useCases.map(({ title, description, icons, extraIcon, label }, index) => (
+        {useCases.map(({ title, description, icons, extraIcon, label, link }, index) => (
           <div key={index} className={classes.item}>
             <Card className={cn(classes.card)} variant="contained" label={label} icons={icons}>
-              <Preview title={title} description={description} />
+              <Preview
+                title={
+                  <Link href={link} target="_blank" rel="noopener noreferre" color="inherit">
+                    {title}
+                  </Link>}
+                description={description}
+              />
               {extraIcon && <div className={classes.extraIcon}>{extraIcon}</div>}
             </Card>
           </div>
@@ -52,6 +60,7 @@ const useCases: Product[] = [
     description: 'Platform-as-a-Service for Substrate Nodes',
     label: 'WEB3 Foundation Grant',
     icons: [<Web3 fontSize="inherit" />, <Polkadot fontSize="inherit" />],
+    link: 'https://github.com/akropolisio/polkahub-monorepo',
   },
   {
     title: 'Cashflow relay',
@@ -60,27 +69,32 @@ const useCases: Product[] = [
     label: '0x+Coinlist Global Hackathon Winner',
     icons: [<Zrx fontSize="inherit" />, <Ethereum fontSize="inherit" />],
     extraIcon: <Coinlist fontSize="inherit" />,
+    link: 'https://www.cashflowrelay.com',
   },
   {
     title: 'Pensify',
     description: 'Pensify is a non-custodial and risk-minimised Pension Fund built on Ethereum blockchain',
     label: 'Hack Money Hackaton Special Prize',
     icons: [<Portis fontSize="inherit" />, <EthGlobal fontSize="inherit" />, <Ethereum fontSize="inherit" />],
+    link: 'https://pensionfund.fi',
   },
   {
     title: 'WEB3 Wallets Kit',
     description: 'Package for connecting different Ethereum wallets for dApp',
     icons: [<Ethereum fontSize="inherit" />],
+    link: 'https://github.com/akropolisio/web3-wallets-kit',
   },
   {
     title: 'Polkahub Bridge',
     description: 'Вridge for self transfers of DAI Token (ERC20) to sDAI (ERC20 representation)',
     icons: [<Polkadot fontSize="inherit" />],
+    link: 'https://github.com/akropolisio/erc20-substrate-bridge',
   },
   {
     title: 'Staking portal',
     description: 'Frontend for Polkadot chain',
     icons: [<Polkadot fontSize="inherit" />],
+    link: 'https://github.com/akropolisio/staking-portal',
   },
 ];
 

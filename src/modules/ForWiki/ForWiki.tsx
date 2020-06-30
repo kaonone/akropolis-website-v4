@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Route } from 'react-router-dom';
 
 import { IModule } from 'shared/types/app';
-import { Partners, News } from '../sections';
 import routes from 'modules/routes';
+import { Partners, News } from '../sections';
 
 const ForWikiModule: IModule = {
   getRoutes() {

@@ -1,69 +1,93 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
-import { Breakpoint, Breakpoints } from '@material-ui/core/styles/createBreakpoints';
+import cn from 'classnames';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
 
-import { IAppReduxState } from 'shared/types/app';
+import { useTheme, makeStyles, Theme } from 'shared/styles';
 
-import * as selectors from './../../../redux/selectors';
-import { StylesProps, provideStyles } from './Adaptive.style';
+import { useAdaptabilityContext } from 'services/adaptability/AdaptabilityContext';
 
-interface IOwnProps {
+interface IProps {
   from?: Breakpoint | number;
   to?: Breakpoint | number;
   className?: string;
   children: React.ReactNode;
 }
 
-interface IStateProps {
-  hydrated: boolean;
-}
-
-type IProps = IStateProps & IOwnProps & StylesProps;
-
-function mapState(state: IAppReduxState): IStateProps {
-  return {
-    hydrated: selectors.selectHydrated(state),
-  };
+function isUndefined<T>(value: T | undefined): value is undefined {
+  return typeof value === 'undefined';
 }
 
 function Adaptive(props: IProps) {
-  const { theme, from = '', to = '', className, children } = props;
+  const { from, to, className, children } = props;
+  const theme = useTheme();
+  const { hydrated } = useAdaptabilityContext();
 
-  const fromQuery = theme && from && up(from, theme.breakpoints).split(' ')[1];
-  const toQuery = theme && to && down(to, theme.breakpoints).split(' ')[1];
-  const query = [fromQuery, toQuery].filter(Boolean).join(' and ');
+  const fromQuery = !isUndefined(from) && theme.breakpoints.up(from);
+  const toQuery = !isUndefined(to) && down(to, theme);
+  const betweenQuery = !isUndefined(from) && !isUndefined(to) && between(from, to, theme);
+  const query = betweenQuery || fromQuery || toQuery;
 
-  const matched = useMediaQuery(query);
+  React.useDebugValue({
+    from,
+    to,
+    fromQuery,
+    toQuery,
+    betweenQuery,
+  });
 
-  const wrappedChildren = <div className={className}>{children}</div>;
+  const useStyles = React.useMemo(
+    () =>
+      makeStyles({
+        root: {
+          display: 'none',
+          [query || '&']: {
+            display: 'unset',
+          },
+        },
+      }),
+    [query],
+  );
+  const classes = useStyles();
 
-  return matched ? wrappedChildren : null;
+  const matched = useMediaQuery(query || '');
+  const isServer = window.__PRERENDER_INJECTED__ ? window.__PRERENDER_INJECTED__.isServer : false;
+
+  const wrappedChildren = <div className={cn(hydrated ? classes.root : undefined, className)}>{children}</div>;
+
+  return isServer || !query || !hydrated || matched ? wrappedChildren : null;
 }
 
-const unit = 'px';
-const step = 5;
+function down(key: Breakpoint | number, theme: Theme) {
+  const maxBreakpoint: Breakpoint = Object.entries(theme.breakpoints.values).reduce((acc, cur) =>
+    acc[1] > cur[1] ? cur : acc,
+  )[0] as Breakpoint;
 
-function up(key: Breakpoint | number, breakpoints: Breakpoints) {
-  const value = typeof key === 'number' ? key : breakpoints.values[key];
-  return `@media (min-width:${value}${unit})`;
-}
-
-function down(key: Breakpoint | number, breakpoints: Breakpoints): string {
-  const endIndex = breakpoints.keys.indexOf(key as Breakpoint);
-  const upperbound = breakpoints.values[breakpoints.keys[endIndex]];
-
-  const value = typeof upperbound === 'number' && endIndex >= 0 ? upperbound : key;
-
-  if (typeof value === 'number') {
-    return `@media (max-width:${value - step / 100}${unit})`;
+  if (key === maxBreakpoint) {
+    // maxBreakpoint down applies to all sizes
+    return theme.breakpoints.up('xs');
   }
-  return value;
+
+  const value = typeof key === 'number' ? key : theme.breakpoints.values[key];
+
+  return `@media (max-width:${value - 5 / 100}px)`;
+}
+
+function between(start: Breakpoint | number, end: Breakpoint | number, theme: Theme) {
+  const maxBreakpoint: Breakpoint = Object.entries(theme.breakpoints.values).reduce((acc, cur) =>
+    acc[1] > cur[1] ? cur : acc,
+  )[0] as Breakpoint;
+
+  if (end === maxBreakpoint) {
+    // maxBreakpoint down applies to all sizes
+    return theme.breakpoints.up(start);
+  }
+
+  const startValue = typeof start === 'number' ? start : theme.breakpoints.values[start];
+  const endValue = typeof end === 'number' ? end : theme.breakpoints.values[end];
+
+  return `@media (min-width:${startValue}px) and (max-width:${endValue}px)`;
 }
 
 export { IProps };
-export default (
-  connect(mapState)(
-    provideStyles(Adaptive),
-  )
-);
+export default Adaptive;

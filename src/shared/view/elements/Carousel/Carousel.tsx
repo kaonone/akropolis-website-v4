@@ -5,6 +5,7 @@ import SwipeableViews, { SwipeableViewsProps } from 'react-swipeable-views';
 import { ChevronRightIcon } from '../Icons';
 import { StylesProps, provideStyles } from './Carousel.style';
 import { Omit } from '_helpers';
+import { useTheme } from 'shared/styles';
 
 interface IProps {
   pagination?: 'dots' | 'arrows';
@@ -14,20 +15,21 @@ interface IProps {
 type AdditionalProps = Omit<SwipeableViewsProps, 'onChangeIndex' | 'ref'>;
 
 function Carousel(props: AdditionalProps & IProps & StylesProps) {
-  const { classes, children, theme, pagination, style, slideStyle, containerStyle, ...rest } = props;
+  const { classes, children, pagination, style, slideStyle, containerStyle, ...rest } = props;
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const theme = useTheme();
 
   // it's need for viewing slide shadows
   const rootStyle = React.useMemo(
-    () => theme && { margin: -theme.spacing.unit, padding: theme.spacing.unit, ...style },
+    () => theme && { margin: -theme.spacing(1), padding: theme.spacing(1), ...style },
     [theme],
   );
   const customContainerStyle = React.useMemo(
-    () => theme && { margin: -theme.spacing.unit, ...containerStyle },
+    () => theme && { margin: -theme.spacing(1), ...containerStyle },
     [theme],
   );
   const customSlideStyle = React.useMemo(
-    () => theme && { padding: theme.spacing.unit, ...slideStyle },
+    () => theme && { padding: theme.spacing(1), ...slideStyle },
     [theme],
   );
 

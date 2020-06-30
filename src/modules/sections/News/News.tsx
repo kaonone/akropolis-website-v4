@@ -48,7 +48,7 @@ function News({ withTitle = true, withPagination = true }: IProps) {
 
 function renderGroupedNews(groupedNews: ReturnType<typeof getNewsGroups>, itemGridSize: GridSize) {
   return groupedNews.map((group, groupIndex) => (
-    <Grid key={groupIndex} container spacing={16}>
+    <Grid key={groupIndex} container spacing={2}>
       {group.map((item, itemIndex) => (
         <Grid key={itemIndex} item container xs={itemGridSize}><NewsCard {...item} /></Grid>
       ))}

@@ -39,7 +39,7 @@ function WhatYouCanBuild({ classes }: StylesProps) {
           </Carousel>
         </Adaptive>
         <Adaptive from="md">
-          <Grid container spacing={24}>
+          <Grid container spacing={3}>
             {previews.map((preview, index) => (
               <Grid key={index} item xs={12} md={6} >
                 {preview}

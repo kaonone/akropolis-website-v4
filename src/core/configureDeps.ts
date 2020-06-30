@@ -1,7 +1,5 @@
-import { Store } from 'redux';
+import { IDependencies } from 'shared/types/app';
 
-import { IDependencies, IAppReduxState } from 'shared/types/app';
-
-export default function configureDeps(_store: Store<IAppReduxState>): IDependencies {
+export default function configureDeps(): IDependencies {
   return {};
 }

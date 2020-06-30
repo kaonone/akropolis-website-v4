@@ -10,14 +10,14 @@ const styles = (theme: Theme) => ({
     position: 'absolute',
     top: 0,
     bottom: 0,
-    padding: theme.spacing.unit * 1.5,
+    padding: theme.spacing(1.5),
     display: 'flex',
     alignItems: 'center',
     justifyItems: 'center',
     cursor: 'pointer',
 
     [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing.unit * 3,
+      padding: theme.spacing(3),
     },
 
     '&$left': {
@@ -38,17 +38,17 @@ const styles = (theme: Theme) => ({
   dotsPagination: rule({
     display: 'flex',
     justifyContent: 'center',
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
   }),
 
   dotWrapper: rule({
-    padding: theme.spacing.unit * 0.75,
+    padding: theme.spacing(0.75),
     cursor: 'pointer',
   }),
 
   dot: rule({
-    width: theme.spacing.unit,
-    height: theme.spacing.unit,
+    width: theme.spacing(1),
+    height: theme.spacing(1),
     borderRadius: '50%',
     backgroundColor: '#d8d8d8',
 

@@ -17,7 +17,7 @@ function Team() {
         title={t(tKeys.sections.team.title.getKey())}
         subtitle={t(tKeys.sections.team.subtitle.getKey())}
       >
-        <Grid container spacing={24} justify="center">
+        <Grid container spacing={3} justify="center">
           {teamMembers.map(({ position, tags, background, ...member }, index) => (
             <Grid key={index} item xs={6} md={4}>
               <TeamMember

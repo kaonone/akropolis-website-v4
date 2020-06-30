@@ -1,7 +1,7 @@
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 
-const borderRadius = 5;
+const borderRadius = 8;
 
 const styles = (theme: Theme) => ({
   root: rule({
@@ -37,7 +37,7 @@ const styles = (theme: Theme) => ({
     left: 0,
     display: 'flex',
     flexDirection: 'column',
-    padding: theme.spacing.unit * 2.5,
+    padding: theme.spacing(2.5),
     width: '50%',
     color: '#fff',
   }),

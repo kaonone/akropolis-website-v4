@@ -24,7 +24,7 @@ function PastEvents(props: StylesProps & IProps) {
   return (
     <PageBlock xsVPadding={1} mdVPadding={2} lgVPadding={12}>
       <Section title={t(tKeys.sections.pastEvents.title.getKey())}>
-        <Grid container spacing={24}>
+        <Grid container spacing={3}>
           {pastEvents.map((event, index) => (
             <Grid key={index} item xs={12} md={6} className={classes.event} onClick={onEventClick.bind(null, event)}>
               <EventCard event={event} />

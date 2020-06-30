@@ -16,10 +16,6 @@ declare var __CLIENT__: boolean;
 declare var __LANG__: 'en' | 'he';
 declare var __HOST__: string;
 
-declare module 'theming/@externals' {
-  export { Theme } from 'shared/styles/theme';
-}
-
 declare module "*.svg" {
   const content: string;
   export default content;
@@ -52,7 +48,6 @@ declare module 'favicons-webpack-plugin';
 declare module 'circular-dependency-plugin';
 declare module 'filemanager-webpack-plugin';
 declare module 'prerender-spa-plugin';
-declare module 'react-dotdotdot';
 
 declare module '*.pdf' {
   const URL: string;

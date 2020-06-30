@@ -28,7 +28,7 @@ const styles = (theme: Theme) => ({
     },
 
     '&:hover': {
-      color: theme.extra.palette.link.hover,
+      color: theme.palette.action.hover,
     },
   }),
 });

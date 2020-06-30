@@ -1,5 +1,6 @@
 import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
+import { MainSvgGradient } from 'shared/view/elements/Icons';
 
 const styles = (_theme: Theme) => ({
   root: rule({
@@ -19,10 +20,16 @@ const styles = (_theme: Theme) => ({
   }),
 
   fillPath: rule({
-    '& path': {
-      fill: 'currentColor',
+    '& path, & circle': {
+      fill: `url(#${MainSvgGradient.ID})`,
     },
   }),
+
+  hidden: {
+    opacity: 1,
+    width: 0,
+    height: 0,
+  },
 
   row: {},
   column: {},

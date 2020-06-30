@@ -16,7 +16,7 @@ function EventPreview(props: IProps) {
   const { eventName, description, link, startDate, finishDate } = event;
   const { t, tKeys, locale } = useTranslate();
   return (
-    <Grid container spacing={24}>
+    <Grid container spacing={3}>
       <Grid item xs={12}>
         <EventCard event={event} />
       </Grid>

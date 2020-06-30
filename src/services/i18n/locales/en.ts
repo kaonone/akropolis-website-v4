@@ -4,7 +4,10 @@ export default {
     navigation: {
       products: 'Product',
       company: 'Company',
+      tutorials: 'Tutorials',
       wiki: 'Wiki',
+      app: 'App',
+      roadmap: 'Roadmap',
       whitepaper: 'Whitepaper',
       events: 'Events',
       blog: 'Blog',
@@ -14,6 +17,36 @@ export default {
       privacyPolicy: 'Privacy Policy',
       termsConditions: 'Terms & Conditions',
       pointSystem: 'Point System',
+    },
+  },
+  new: {
+    mainIntro: {
+      title: 'Decentralized and autonomous community economies',
+      subtitle: 'We build products that help people save, grow and scale',
+    },
+    openSource: {
+      title: 'Open source development',
+      description:
+        'During the course of our development, in the absence of developer‑friendly tooling, it became apparent that some of our code and solutions can be productized. We open‑source them as our contribution to the ecosystem.',
+    },
+    devActivity: {
+      title: 'Development activity',
+      overview: 'Overview',
+      topRepos: 'Top Repos',
+    },
+    buildWith: {
+      title: 'Built with',
+      labels: {
+        buildWith: 'Built with',
+        integrations: 'Integrations',
+      },
+    },
+    features: {
+      title: 'Benefits and Features',
+      labels: {
+        inProgress: 'In progress',
+        roadmap: 'Roadmap',
+      },
     },
   },
   sections: {
@@ -33,7 +66,7 @@ export default {
       chamaNetwork: {
         title: 'Akropolis Network',
         description:
-          'Akropolis tokenizes credit unions and allows user groups to get uncollateralized loans, provide capital to pools and earn interest.',
+          'Akropolis tokenizes credit unions and allows user groups to get uncollateralised loans, provide capital to pools and earn interest.',
       },
     },
     whatYouCanBuild: {

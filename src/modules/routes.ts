@@ -1,6 +1,8 @@
 import build from 'build-route-tree';
 
 const rawTree = {
+  sparta: null,
+  delphi: null,
   company: null,
   events: null,
   forWiki: {

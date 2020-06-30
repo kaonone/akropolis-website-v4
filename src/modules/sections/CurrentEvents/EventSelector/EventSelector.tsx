@@ -20,14 +20,14 @@ function EventSelector(props: IProps & StylesProps) {
   const { t, tKeys } = useTranslate();
 
   return (
-    <Grid container spacing={16}>
+    <Grid container spacing={2}>
       {events.map((event, index) => (
         <Grid
           item
           container
           wrap="nowrap"
           key={index}
-          spacing={16}
+          spacing={2}
           className={cn(classes.item, { [classes.selected]: event === selectedEvent })}
         >
           <Grid item>

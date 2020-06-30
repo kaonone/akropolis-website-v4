@@ -1,31 +1,53 @@
 import * as React from 'react';
 import cn from 'classnames';
-import { SubSet, MergeRight } from '_helpers';
-import MuiButton, { ButtonProps } from '@material-ui/core/Button';
+import { SubSet } from '_helpers';
+import MuiButton, { ButtonTypeMap as MuiButtonTypeMap } from '@material-ui/core/Button';
 
-import { StylesProps, provideStyles } from './Button.style';
+import { useStyles } from './Button.style';
+import { OverridableComponent, OverrideProps } from '@material-ui/core/OverridableComponent';
 
-type MuiColor = 'primary' | 'default' | 'secondary';
-const muiColors: MuiColor[] = ['primary', 'default', 'secondary'];
+const muiColors = ['primary', 'default', 'secondary', 'inherit'] as const;
+type MuiColor = SubSet<MuiButtonTypeMap['props']['color'], typeof muiColors[number]>;
 
-type IProps = StylesProps & MergeRight<ButtonProps, {
-  color?: SubSet<ButtonProps['color'], MuiColor> | 'gradient';
-}>;
+type ButtonClassKey = keyof ReturnType<typeof useStyles>;
 
-function Button(props: IProps) {
-  const { classes, color, className, ...rest } = props;
+interface ButtonTypeMap<P = {}, D extends React.ElementType = 'button'> {
+  props: P &
+    Omit<MuiButtonTypeMap['props'], 'classes' | 'color'> & {
+      color: 'gradient' | MuiColor;
+    };
+  defaultComponent: D;
+  classKey: ButtonClassKey;
+}
 
-  const buttonColor = color && muiColors.includes(color as MuiColor) ? color as MuiColor : undefined;
+export type ButtonProps<D extends React.ElementType = ButtonTypeMap['defaultComponent'], P = {}> = OverrideProps<
+  ButtonTypeMap<P, D>,
+  D
+>;
+
+const Button: OverridableComponent<ButtonTypeMap> = function ButtonFunc<P = {}, D extends React.ElementType = 'button'>(
+  props: ButtonProps<D, P>,
+) {
+  const classes = useStyles();
+  const { color, className, ...rest } = props;
+
+  const buttonColor = color && muiColors.includes(color as MuiColor) ? (color as MuiColor) : undefined;
   return (
     <MuiButton
       {...rest}
       classes={{
-        root: cn(classes.root, className, { [classes.gradient]: color === 'gradient' }),
+        root: cn(classes.root, className, { [classes.colorGradient]: color === 'gradient' }),
         disabled: classes.disabled,
+        sizeLarge: classes.sizeLarge,
+        sizeSmall: classes.sizeSmall,
+        focusVisible: classes.focusVisible,
+        outlined: classes.outlined,
+        contained: classes.contained,
+        ...rest.classes,
       }}
       color={buttonColor}
     />
   );
-}
+};
 
-export default provideStyles(Button);
+export default Button;

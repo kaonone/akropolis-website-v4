@@ -29,7 +29,7 @@ const styles = (theme: Theme) => ({
   }),
 
   link: rule({
-    margin: `${theme.spacing.unit * 1.5}px 0`,
+    margin: `${theme.spacing(1.5)}px 0`,
     display: 'block',
     fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
@@ -39,7 +39,7 @@ const styles = (theme: Theme) => ({
     transition: 'color .4s ease',
 
     '&:hover': {
-      color: theme.extra.palette.link.hover,
+      color: theme.palette.action.hover,
     },
 
     [theme.breakpoints.up('lg')]: {

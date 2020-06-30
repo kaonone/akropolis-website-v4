@@ -18,7 +18,7 @@ function OpenSourceDevelopment() {
   return (
     <PageBlock xsVPadding={1} mdVPadding={2}>
       <Section title={translates.title} subtitle={translates.description}>
-        <Grid container spacing={16} justify="center">
+        <Grid container spacing={2} justify="center">
           {openSourceProducts.map(item => (
             <Grid key={item.url} item container xs={12} md={6}>
               <OpenSourceDevelopmentCard {...item} />

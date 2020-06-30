@@ -5,7 +5,7 @@ import { useStyles } from './Preview.style';
 import { Typography } from 'shared/view/elements';
 
 interface IProps {
-  title: string;
+  title: React.ReactNode;
   titleSize?: 'medium' | 'large';
   subtitle?: React.ReactNode;
   description: string;

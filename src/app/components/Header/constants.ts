@@ -8,7 +8,7 @@ export const menuItems: IMenuItem[] = [
     isExternal: true,
   },
   {
-    path: 'https://wiki.akropolis.io/roadmap/',
+    path: 'https://www.notion.so/576a82c59fe74b9d9a9df5a7f47cc11d',
     title: tKeys.modules.navigation.roadmap.getKey(),
     isExternal: true,
   },

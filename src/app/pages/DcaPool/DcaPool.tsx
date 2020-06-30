@@ -4,21 +4,23 @@ import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
 import { Benefits } from 'app/components/Benefits/Benefits';
-import { makeStyles } from 'shared/styles';
 
 import { DcaPoolIntro } from './Intro/Intro';
-import { benefits } from './constants';
+import { DcaPoolLogo } from './Icons';
+import { benefits, menuItems } from './constants';
+import { useStyles } from './DcaPool.styles';
 
-export function DcaPool() {
+function DcaPool() {
   const classes = useStyles();
+
   return (
     <Layout>
       <Layout.Header>
-        <Header customNavItems={[]} />
+        <Header CustomLogo={DcaPoolLogo} customNavItems={menuItems} />
       </Layout.Header>
-      <Layout.Container>
+      <Layout.Container className={classes.main}>
         <DcaPoolIntro />
-        <Benefits benefits={benefits} className={classes.section} />
+        <Benefits className={classes.benefits} benefits={benefits} />
       </Layout.Container>
       <Layout.Footer>
         <Footer />
@@ -27,24 +29,4 @@ export function DcaPool() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  '@global': {
-    body: {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
-    },
-  },
-
-  section: {
-    marginTop: theme.spacing(5),
-    [theme.breakpoints.up('tabletSM')]: {
-      marginTop: theme.spacing(7.5),
-    },
-
-    '&:last-child': {
-      marginBottom: theme.spacing(3.75),
-      [theme.breakpoints.up('tabletSM')]: {
-        marginBottom: theme.spacing(7.5),
-      },
-    },
-  },
-}));
+export { DcaPool };

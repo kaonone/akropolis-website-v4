@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
 });
 
-export function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
+function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
   return (
     <SvgIcon {...props} classes={classes} viewBox="0 0 113 66">
@@ -61,3 +61,5 @@ export function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
     </SvgIcon>
   );
 }
+
+export { DcaPoolIcon };

@@ -1,13 +1,8 @@
-import { tKeys } from 'services/i18n';
-import { IMenuItem } from 'shared/types/common';
 import { Benefit } from 'app/components/Benefits/Benefits';
+import { IMenuItem } from 'shared/types/common';
+import { tKeys } from 'services/i18n';
 
-export const menuItems: IMenuItem[] = [
-  {
-    path: '#',
-    title: tKeys.modules.navigation.tutorials.getKey(),
-    isExternal: true,
-  },
+const menuItems: IMenuItem[] = [
   {
     path: 'https://wiki.akropolis.io',
     title: tKeys.modules.navigation.wiki.getKey(),
@@ -15,10 +10,11 @@ export const menuItems: IMenuItem[] = [
   },
 ];
 
-export const benefits: Benefit[] = [
+const benefits: Benefit[] = [
   {
-    title: 'Lower costs',
-    description: 'gas optimization & using pooled funds to get exposure to BTC&ETH',
+    title: 'Combine DeFi Yields with Capital Gains',
+    description:
+      'Farm COMP, BAL, MTA and others cheaper while passively investing into BTC and ETH, all from one convenient interface',
   },
   {
     title: 'Passive savings',
@@ -29,3 +25,5 @@ export const benefits: Benefit[] = [
     description: 'Crypto Billionaires',
   },
 ];
+
+export { menuItems, benefits };

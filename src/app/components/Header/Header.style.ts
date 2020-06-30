@@ -14,6 +14,11 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('tabletXS')]: {
       fontSize: theme.spacing(5),
     },
+
+    '& svg': {
+      fontSize: 'inherit',
+      width: 'unset',
+    },
   },
 
   navInline: {

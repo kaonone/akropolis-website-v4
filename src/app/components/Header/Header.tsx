@@ -11,30 +11,27 @@ import { useStyles } from './Header.style';
 
 interface Props {
   customNavItems?: IMenuItem[];
+  CustomLogo?: React.FC;
 }
 
-export function Header({ customNavItems }: Props) {
+export function Header({ customNavItems, CustomLogo }: Props) {
   const classes = useStyles();
 
   return (
     <header className={classes.root}>
       <Link to="/" className={classes.logo}>
-        <LogoWithNameIcon fontSize="inherit" />
+        {CustomLogo ? <CustomLogo /> : <LogoWithNameIcon />}
       </Link>
       <NavInline
         items={customNavItems || menuItems}
         className={classes.navInline}
-        extraLeft={[
-          <React.Fragment key="0">
-            <Adaptive from="tabletXS">
-              <ThemeButton />
-            </Adaptive>
-          </React.Fragment>,
-        ]}
         extraRight={[
           <React.Fragment key="0">
             <Adaptive to="tabletXS">
               <ThemeButton size="small" />
+            </Adaptive>
+            <Adaptive from="tabletXS">
+              <ThemeButton />
             </Adaptive>
           </React.Fragment>,
         ]}

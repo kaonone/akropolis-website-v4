@@ -3,31 +3,30 @@ import { Section } from 'app/components/Section/Section';
 import { makeStyles, getGrid } from 'shared/styles';
 import { useRepos, calculateStats } from './github';
 import { Language } from './Language';
+import { Loading } from 'app/components/Loading/Loading';
 
 export function Languages() {
   const classes = useStyles();
-  const { data, error } = useRepos('akropolisio');
+  const response = useRepos('akropolisio');
+  const { data } = response;
   const languages = React.useMemo(() => data && calculateStats(data).languages.slice(0, 4), [data]);
-  if (error) {
-    return <div>failed to load {error}</div>;
-  }
-  if (!data) {
-    return <div>loading...</div>;
-  }
+
   return (
-    <Section title={'Languages'} titleVariant="h3">
-      {languages ? (
-        <div className={classes.container}>
-          {languages.map((language) => (
-            <div key={language} className={classes.item}>
-              <Language language={language} variant="body2" color="textSecondary" />
-            </div>
-          ))}
-        </div>
-      ) : (
-        'Not found'
-      )}
-    </Section>
+    <Loading response={response}>
+      <Section title={'Languages'} titleVariant="h3">
+        {languages ? (
+          <div className={classes.container}>
+            {languages.map((language) => (
+              <div key={language} className={classes.item}>
+                <Language language={language} variant="body2" color="textSecondary" />
+              </div>
+            ))}
+          </div>
+        ) : (
+          'Not found'
+        )}
+      </Section>
+    </Loading>
   );
 }
 

@@ -12,6 +12,7 @@ const useStyles = makeStyles({
 
 function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
+
   return (
     <SvgIcon {...props} classes={classes} viewBox="0 0 113 66">
       <defs>

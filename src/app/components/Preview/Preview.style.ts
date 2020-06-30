@@ -9,8 +9,9 @@ export const useStyles = makeStyles((theme) => ({
 
   title: {
     lineHeight: 1.25,
+
     '&$medium': {
-      fontWeight: 500,
+      fontWeight: 400,
 
       fontSize: theme.spacing(1.5),
       [theme.breakpoints.up('tabletXS')]: {

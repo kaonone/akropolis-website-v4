@@ -26,7 +26,7 @@ export function Benefits(props: IProps) {
         {benefits.map(({ title, description }, index) => (
           <div key={index} className={classes.item}>
             <Card className={cn(classes.card)} variant="contained">
-              <Preview title={title} titleSize="large" description={description} />
+              <Preview title={title} description={description} />
             </Card>
           </div>
         ))}
@@ -38,10 +38,14 @@ export function Benefits(props: IProps) {
 const useStyles = makeStyles((theme) => ({
   card: {
     height: '100%',
-
     padding: theme.spacing(2, 2.5),
+
     [theme.breakpoints.up('tabletSM')]: {
       padding: theme.spacing(3.75, 5),
+    },
+
+    [theme.breakpoints.up('desktopMD')]: {
+      padding: theme.spacing(3.75, 2.50),
     },
   },
 

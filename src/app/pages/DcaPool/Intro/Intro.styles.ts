@@ -1,13 +1,13 @@
 import { makeStyles } from 'shared/styles';
 
 const useStyles = makeStyles((theme) => ({
-  content: {
+  buttons: {
     display: 'flex',
-    alignItems: 'center',
+  },
 
-    fontSize: theme.spacing(1.5),
-    [theme.breakpoints.up('tabletXS')]: {
-      fontSize: theme.spacing(2.5),
+  button: {
+    '& + &': {
+      marginLeft: 30,
     },
   },
 

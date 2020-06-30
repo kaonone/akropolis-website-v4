@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { LogoWithNameIcon } from 'shared/view/elements/Icons';
 import { IMenuItem } from 'shared/types/common';
@@ -11,7 +12,7 @@ import { useStyles } from './Header.style';
 
 interface Props {
   customNavItems?: IMenuItem[];
-  CustomLogo?: React.FC;
+  CustomLogo?: typeof SvgIcon;
 }
 
 export function Header({ customNavItems, CustomLogo }: Props) {
@@ -19,8 +20,8 @@ export function Header({ customNavItems, CustomLogo }: Props) {
 
   return (
     <header className={classes.root}>
-      <Link to="/" className={classes.logo}>
-        {CustomLogo ? <CustomLogo /> : <LogoWithNameIcon />}
+      <Link to="/" className={classes.logoLink}>
+        {CustomLogo ? <CustomLogo className={classes.logo} fontSize="inherit" /> : <LogoWithNameIcon fontSize="inherit" />}
       </Link>
       <NavInline
         items={customNavItems || menuItems}

@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
 
-  logo: {
+  logoLink: {
     display: 'flex',
     marginRight: 'auto',
 
@@ -14,11 +14,10 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('tabletXS')]: {
       fontSize: theme.spacing(5),
     },
+  },
 
-    '& svg': {
-      fontSize: 'inherit',
-      width: 'unset',
-    },
+  logo: {
+    width: 'unset',
   },
 
   navInline: {

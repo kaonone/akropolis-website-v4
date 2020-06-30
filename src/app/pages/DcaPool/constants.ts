@@ -17,12 +17,12 @@ const benefits: Benefit[] = [
       'Farm COMP, BAL, MTA and others cheaper while passively investing into BTC and ETH, all from one convenient interface',
   },
   {
-    title: 'Passive savings',
-    description: 'don’t wanna invest? Earn passively by pooling and lending via Staked and Curve',
+    title: 'Earn Rewards for Saving and Liquidity Provision',
+    description: 'Weekly AKRO governance token rewards for all users',
   },
   {
-    title: 'Welcome',
-    description: 'Crypto Billionaires',
+    title: 'Automated Low-Cost DCA Entry and Exit',
+    description: 'Remove emotion and friction for easy passive investing',
   },
 ];
 

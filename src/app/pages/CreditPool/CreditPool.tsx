@@ -7,6 +7,7 @@ import { Benefits } from 'app/components/Benefits/Benefits';
 import { makeStyles } from 'shared/styles';
 
 import { CreditPoolIntro } from './Intro/Intro';
+import { CreditPoolLogo } from './Icons';
 import { benefits } from './constants';
 
 export function CreditPool() {
@@ -14,7 +15,7 @@ export function CreditPool() {
   return (
     <Layout>
       <Layout.Header>
-        <Header customNavItems={[]} />
+        <Header CustomLogo={CreditPoolLogo} customNavItems={[]} />
       </Layout.Header>
       <Layout.Container>
         <CreditPoolIntro />

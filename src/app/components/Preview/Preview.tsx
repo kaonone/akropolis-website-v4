@@ -6,18 +6,18 @@ import { Typography } from 'shared/view/elements';
 
 interface IProps {
   title: string;
-  titleSize?: 'medium' | 'large';
+  titleTheme?: 'large' | 'medium';
   subtitle?: React.ReactNode;
   description: string;
 }
 
 export function Preview(props: IProps) {
-  const { title, titleSize = 'medium', description, subtitle } = props;
+  const { title, titleTheme = 'medium', description, subtitle } = props;
   const classes = useStyles();
 
   return (
     <article className={classes.root}>
-      <Typography variant="h3" className={cn(classes.title, classes[titleSize])}>
+      <Typography variant="h3" className={cn(classes.title, classes[titleTheme])}>
         {title}
       </Typography>
       {subtitle && (

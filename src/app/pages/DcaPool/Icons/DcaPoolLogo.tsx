@@ -38,4 +38,4 @@ function DcaPoolLogo(props: GetProps<typeof SvgIcon>) {
   );
 }
 
-export { DcaPoolLogo };
+export {  DcaPoolLogo };

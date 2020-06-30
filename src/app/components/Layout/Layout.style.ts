@@ -52,13 +52,14 @@ export const useStyles = makeStyles((theme) => ({
 
   footer: {
     marginTop: 'auto',
+    paddingBottom: 28,
 
-    paddingBottom: theme.spacing(4),
     [theme.breakpoints.up('tabletXS')]: {
-      paddingBottom: theme.spacing(2),
+      paddingBottom: 34,
     },
-    [theme.breakpoints.up('desktopXS')]: {
-      paddingBottom: theme.spacing(3),
+
+    [theme.breakpoints.up('desktopMD')]: {
+      paddingBottom: 25,
     },
   },
 

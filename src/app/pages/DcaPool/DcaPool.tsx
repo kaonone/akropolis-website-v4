@@ -7,7 +7,7 @@ import { Benefits } from 'app/components/Benefits/Benefits';
 
 import { DcaPoolIntro } from './Intro/Intro';
 import { DcaPoolLogo } from './Icons';
-import { benefits, menuItems } from './constants';
+import { benefits } from './constants';
 import { useStyles } from './DcaPool.styles';
 
 function DcaPool() {
@@ -16,7 +16,7 @@ function DcaPool() {
   return (
     <Layout>
       <Layout.Header>
-        <Header CustomLogo={DcaPoolLogo} customNavItems={menuItems} />
+        <Header CustomLogo={DcaPoolLogo} customNavItems={[]} />
       </Layout.Header>
       <Layout.Container className={classes.main}>
         <DcaPoolIntro />

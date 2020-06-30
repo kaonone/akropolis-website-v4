@@ -3,22 +3,22 @@ import * as React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { GetProps } from '_helpers';
-import { makeStyles, useTheme } from 'shared/styles';
+import { makeStyles } from 'shared/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: 'unset',
+    color: theme.palette.type === 'light' ? '#afb7c7' : '#292835',
   },
-});
+}));
 
-function Etherium(props: GetProps<typeof SvgIcon>) {
+function Ethereum(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <SvgIcon {...props} classes={classes} viewBox="0 0 160 40">
       <g fill="none">
-        <rect width="159.2" height="40" rx="6" fill={theme.palette.type === 'light' ? '#afb7c7' : '#292835'} />
+        <rect width="159.2" height="40" rx="6" fill="currentColor" />
         <g stroke="#2D2D2D" stroke-width=".3">
           <path fill="#FF826B" d="M65.6 6l-.2.7v18.2l.2.2 8.5-5z" />
           <path fill="#F3F047" d="M65.6 6L57 20l8.5 5z" />
@@ -36,4 +36,4 @@ function Etherium(props: GetProps<typeof SvgIcon>) {
   );
 }
 
-export { Etherium };
+export { Ethereum as Etherium };

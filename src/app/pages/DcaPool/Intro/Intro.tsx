@@ -22,9 +22,11 @@ function DcaPoolIntro() {
       <div className={classes.buttons}>
         <div className={classes.button}>
           <Button
+            disabled
             size="large"
             color="gradient"
-            component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+            variant="contained"
+            component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
             underline="none"
             href="#"
             target="_blank"
@@ -37,9 +39,10 @@ function DcaPoolIntro() {
           <Button
             size="large"
             color="gradient"
-            component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+            variant="outlined"
+            component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
             underline="none"
-            href="#"
+            href="https://docs.google.com/forms/d/1OcvOT-zSG2brjjoR1F_yZiswg8DkNOcRNumitqcoGS4"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -48,9 +51,11 @@ function DcaPoolIntro() {
         </div>
         <div className={classes.button}>
           <Button
+            disabled
             size="large"
             color="gradient"
-            component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+            variant="outlined"
+            component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
             underline="none"
             href="#"
             target="_blank"

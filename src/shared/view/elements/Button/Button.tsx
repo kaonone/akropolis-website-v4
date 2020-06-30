@@ -36,10 +36,13 @@ const Button: OverridableComponent<ButtonTypeMap> = function ButtonFunc<P = {}, 
     <MuiButton
       {...rest}
       classes={{
-        root: cn(classes.root, className, { [classes.gradient]: color === 'gradient' }),
+        root: cn(classes.root, className, { [classes.colorGradient]: color === 'gradient' }),
         disabled: classes.disabled,
         sizeLarge: classes.sizeLarge,
+        sizeSmall: classes.sizeSmall,
         focusVisible: classes.focusVisible,
+        outlined: classes.outlined,
+        contained: classes.contained,
         ...rest.classes,
       }}
       color={buttonColor}

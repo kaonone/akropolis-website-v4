@@ -25,8 +25,9 @@ export function CreditPoolIntro() {
           className={classes.button}
           fullWidth
           size="large"
+          variant="contained"
           color="gradient"
-          component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+          component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
           underline="none"
           href="#"
           target="_blank"
@@ -39,8 +40,9 @@ export function CreditPoolIntro() {
           className={classes.button}
           fullWidth
           size="large"
+          variant="contained"
           color="gradient"
-          component={Link as React.FunctionComponent<Omit<LinkProps, 'color'>>}
+          component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
           underline="none"
           href="#"
           target="_blank"

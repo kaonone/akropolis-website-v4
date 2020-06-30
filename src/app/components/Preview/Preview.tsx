@@ -6,7 +6,7 @@ import { Typography } from 'shared/view/elements';
 
 interface IProps {
   title: React.ReactNode;
-  titleSize?: 'large' | 'medium';
+  titleTheme?: 'large' | 'medium';
   subtitle?: React.ReactNode;
   description: string;
 }

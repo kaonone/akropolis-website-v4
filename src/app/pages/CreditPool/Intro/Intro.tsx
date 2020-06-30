@@ -29,7 +29,7 @@ export function CreditPoolIntro() {
           color="gradient"
           component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
           underline="none"
-          href="#"
+          href="https://sparta-rinkeby.akropolis.io"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -44,7 +44,7 @@ export function CreditPoolIntro() {
           color="gradient"
           component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
           underline="none"
-          href="#"
+          href="https://sparta.akropolis.io"
           target="_blank"
           rel="noopener noreferrer"
         >

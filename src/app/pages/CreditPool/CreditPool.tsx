@@ -8,7 +8,7 @@ import { makeStyles } from 'shared/styles';
 
 import { CreditPoolIntro } from './Intro/Intro';
 import { CreditPoolLogo } from './Icons';
-import { benefits } from './constants';
+import { benefits, footerNavItems } from './constants';
 
 export function CreditPool() {
   const classes = useStyles();
@@ -22,7 +22,7 @@ export function CreditPool() {
         <Benefits benefits={benefits} className={classes.section} />
       </Layout.Container>
       <Layout.Footer>
-        <Footer />
+        <Footer customNavItems={footerNavItems} />
       </Layout.Footer>
     </Layout>
   );

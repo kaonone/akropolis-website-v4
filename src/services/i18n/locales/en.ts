@@ -66,7 +66,7 @@ export default {
       chamaNetwork: {
         title: 'Akropolis Network',
         description:
-          'Akropolis tokenizes credit unions and allows user groups to get uncollateralized loans, provide capital to pools and earn interest.',
+          'Akropolis tokenizes credit unions and allows user groups to get uncollateralised loans, provide capital to pools and earn interest.',
       },
     },
     whatYouCanBuild: {

@@ -17,7 +17,7 @@ export const menuItems: IMenuItem[] = [
 
 export const benefits: Benefit[] = [
   {
-    title: 'Undercollateralized loans',
+    title: 'Undercollateralised loans',
     description: 'take up to 2x from your collateral',
   },
   {

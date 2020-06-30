@@ -5,12 +5,23 @@ import { PRIVACY_POLICY_URL, T_AND_C_URL } from 'assets';
 
 import { Messari, Etherium } from './Icons';
 import { useStyles } from './Footer.style';
+import { IMenuItem } from 'shared/types/common';
+import { Link, Typography } from 'shared/view/elements';
+
+const navItems: IMenuItem[] = [
+  {
+    path: PRIVACY_POLICY_URL,
+    title: tKeys.modules.navigation.privacyPolicy.getKey(),
+  },
+  {
+    path: T_AND_C_URL,
+    title: tKeys.modules.navigation.termsConditions.getKey(),
+  },
+];
 
 function Footer() {
   const classes = useStyles();
   const { t } = useTranslate();
-  const privacyPolicyText = t(tKeys.modules.navigation.privacyPolicy.getKey());
-  const tAndCText = t(tKeys.modules.navigation.termsConditions.getKey());
   const startYear = 2017;
   const yearNow = new Date().getFullYear();
 
@@ -18,31 +29,43 @@ function Footer() {
     <footer className={classes.root}>
       <section className={classes.copyright}>
         <nav className={classes.nav}>
-          <a className={classes.link} href={PRIVACY_POLICY_URL} target="_blank" title={privacyPolicyText}>
-            {privacyPolicyText}
-          </a>
-          <a className={classes.link} href={T_AND_C_URL} target="_blank" title={tAndCText}>
-            {tAndCText}
-          </a>
+          {navItems.map(({ path, title }, index) => (
+            <Link
+              key={index}
+              className={classes.link}
+              href={path}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={t(title)}
+              color="textPrimary"
+            >
+              {t(title)}
+            </Link>
+          ))}
         </nav>
-        <div className={classes.text}>
+        <Typography className={classes.text} color="textSecondary">
           {[
             'Akropolis Decentralised Ltd.',
             'Suite 23 Portland House, Glacis Road, Gibraltar, GX11 1AA',
             'COMPANY NUMBER: 116430',
             `${startYear}${yearNow > startYear ? '-' + yearNow : ''}, All right reserved`,
           ].join(' | ')}
-        </div>
+        </Typography>
       </section>
       <section className={classes.partners}>
-        <a className={classes.link} href="https://messari.io/asset/akropolis" target="_blank" rel="noopener noreferrer">
-          Messari
-          <Messari className={classes.messari} />
-        </a>
-        <a className={classes.link} href="https://ethereum.org" target="_blank" rel="noopener noreferrer">
-          Etherium
-          <Etherium className={classes.etherium} />
-        </a>
+        <Link
+          className={classes.partnerLink}
+          href="https://messari.io/asset/akropolis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span hidden>Messari</span>
+          <Messari className={classes.partnerIcon} />
+        </Link>
+        <Link className={classes.partnerLink} href="https://ethereum.org" target="_blank" rel="noopener noreferrer">
+          <span hidden>Etherium</span>
+          <Etherium className={classes.partnerIcon} />
+        </Link>
       </section>
     </footer>
   );

@@ -29,34 +29,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('desktopMD')]: {
       marginBottom: 12,
     },
-
-    '& $link': {
-      fontSize: 12,
-      lineHeight: 'normal',
-      color: theme.palette.text.primary,
-      textDecoration: 'none',
-
-      '& + $link': {
-        marginLeft: 53,
-
-        [theme.breakpoints.up('tabletXS')]: {
-          marginLeft: 20,
-        },
-
-        [theme.breakpoints.up('desktopMD')]: {
-          marginLeft: 50,
-        },
-      },
-    },
   },
 
   text: {
-    fontSize: 12,
-    lineHeight: 'normal',
-    opacity: 0.3,
+    fontSize: 10,
+    lineHeight: 1.6,
 
     [theme.breakpoints.up('tabletXS')]: {
-      lineHeight: '16px',
+      fontSize: 12,
+      lineHeight: 1.33,
     },
 
     [theme.breakpoints.up('desktopMD')]: {
@@ -70,53 +51,45 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('tabletXS')]: {
       marginLeft: 32,
     },
+  },
 
-    '& $link': {
-      fontSize: 0,
+  partnerLink: {
+    '& + $partnerLink': {
+      marginLeft: 43,
 
-      '& + $link': {
-        marginLeft: 43,
-
-        [theme.breakpoints.up('tabletXS')]: {
-          marginLeft: 50,
-        },
+      [theme.breakpoints.up('tabletXS')]: {
+        marginLeft: 50,
       },
     },
   },
 
-  messari: {
-    width: 101,
-    height: 34,
+  partnerIcon: {
+    fontSize: 34,
 
     [theme.breakpoints.up('tabletXS')]: {
-      width: 119,
-      height: 40,
-    },
-
-    '& rect': {
-      fill: theme.palette.type === 'light' ? '#afb7c7' : '#292835',
-    },
-
-    '& ellipse': {
-      fill: theme.palette.type === 'light' ? '#b3bcce' : '#191b1f',
+      fontSize: 40,
     },
   },
 
-  etherium: {
-    width: 136,
-    height: 34,
+  link: {
+    fontSize: 10,
 
     [theme.breakpoints.up('tabletXS')]: {
-      width: 160,
-      height: 40,
+      fontSize: 12,
     },
 
-    '& rect': {
-      fill: theme.palette.type === 'light' ? '#afb7c7' : '#292835',
+    '& + $link': {
+      marginLeft: 53,
+
+      [theme.breakpoints.up('tabletXS')]: {
+        marginLeft: 20,
+      },
+
+      [theme.breakpoints.up('desktopMD')]: {
+        marginLeft: 50,
+      },
     },
   },
-
-  link: {},
 }));
 
 export { useStyles };

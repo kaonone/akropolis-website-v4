@@ -1,13 +1,24 @@
+// tslint:disable: max-line-length
 import * as React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { GetProps } from '_helpers';
+import { makeStyles, useTheme } from 'shared/styles';
+
+const useStyles = makeStyles({
+  root: {
+    width: 'unset',
+  },
+});
 
 function Etherium(props: GetProps<typeof SvgIcon>) {
+  const classes = useStyles();
+  const theme = useTheme();
+
   return (
-    <SvgIcon {...props} viewBox="0 0 160 40">
+    <SvgIcon {...props} classes={classes} viewBox="0 0 160 40">
       <g fill="none">
-        <rect width="159.2" height="40" rx="6" />
+        <rect width="159.2" height="40" rx="6" fill={theme.palette.type === 'light' ? '#afb7c7' : '#292835'} />
         <g stroke="#2D2D2D" stroke-width=".3">
           <path fill="#FF826B" d="M65.6 6l-.2.7v18.2l.2.2 8.5-5z" />
           <path fill="#F3F047" d="M65.6 6L57 20l8.5 5z" />

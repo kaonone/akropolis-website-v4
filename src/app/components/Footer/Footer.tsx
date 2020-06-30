@@ -19,7 +19,11 @@ const navItems: IMenuItem[] = [
   },
 ];
 
-function Footer() {
+interface Props {
+  customNavItems?: IMenuItem[];
+}
+
+function Footer({ customNavItems }: Props) {
   const classes = useStyles();
   const { t } = useTranslate();
   const startYear = 2017;
@@ -29,7 +33,7 @@ function Footer() {
     <footer className={classes.root}>
       <section className={classes.copyright}>
         <nav className={classes.nav}>
-          {navItems.map(({ path, title }, index) => (
+          {(customNavItems || navItems).map(({ path, title }, index) => (
             <Link
               key={index}
               className={classes.link}

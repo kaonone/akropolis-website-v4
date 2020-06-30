@@ -1,18 +1,19 @@
 import React, { useMemo } from 'react';
 import useSWR from 'swr';
 import { Chart, Point } from 'app/components/Chart/Chart';
+import { Loading } from 'app/components/Loading/Loading';
 
 export function DevActivityChartSync() {
   const query = useMemo(() => getQuery(), []);
-  const { data, error } = useSWR<Point[]>(query, (body) =>
+  const response = useSWR<Point[]>(query, (body) =>
     fetch('https://api.santiment.net/graphql', {
       headers: {
         'content-type': 'application/json',
       },
       body,
       method: 'POST',
-    }).then(async (response) => {
-      const responseData: Response = await response.json();
+    }).then(async (resp) => {
+      const responseData: Response = await resp.json();
       return responseData.data.getMetric.timeseriesData
         .map(({ datetime, value }) => ({
           datetime: new Date(datetime).getTime(),
@@ -22,14 +23,7 @@ export function DevActivityChartSync() {
     }),
   );
 
-  if (error) {
-    return <div>failed to load {error}</div>;
-  }
-  if (!data) {
-    return <div>loading...</div>;
-  }
-
-  return <Chart points={data} />;
+  return <Loading response={response}>{response.data && <Chart points={response.data} />}</Loading>;
 }
 
 export interface Response {

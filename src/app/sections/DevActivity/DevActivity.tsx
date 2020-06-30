@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import { Section } from 'app/components/Section/Section';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
-import { Tab, TabContext, TabList, TabPanel, Grid, NoSsr } from 'shared/view/elements';
+import { NoSsr } from 'services/adaptability';
+import { Tab, TabContext, TabList, TabPanel, Grid } from 'shared/view/elements';
 import { makeStyles, getGrid } from 'shared/styles';
 
 import { DevActivityChartSync } from './DevActivityChart/DevActivityChart';
@@ -36,11 +37,15 @@ export function DevActivity(props: IProps) {
             TabIndicatorProps={{}}
             aria-label="simple tabs example"
           >
-            <Tab label={t(tKeys.overview.getKey())} value="overview" classes={{ root: classes.tabRoot }} />
+            <Tab
+              label={t(tKeys.overview.getKey())}
+              value="overview"
+              classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+            />
             <Tab
               label={t(tKeys.topRepos.getKey())}
               value="topRepos"
-              classes={{ root: classes.tabRoot }}
+              classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
               TouchRippleProps={{ className: classes.touchRipple }}
             />
           </TabList>
@@ -69,7 +74,7 @@ export function DevActivity(props: IProps) {
 }
 
 const tabsHeight = 36;
-const indicatorSpace = 2;
+const indicatorSpace = 3;
 const borderWidth = 1;
 
 const useStyles = makeStyles((theme) => ({
@@ -98,9 +103,15 @@ const useStyles = makeStyles((theme) => ({
 
   tabRoot: {
     minHeight: 'unset',
-    padding: theme.spacing(0.375, 1.5),
+    padding: theme.spacing(0.2, 1.5),
     textTransform: 'unset',
+
+    '&$tabSelected': {
+      color: theme.colors.white,
+    },
   },
+
+  tabSelected: {},
 
   indicator: {
     top: 0,

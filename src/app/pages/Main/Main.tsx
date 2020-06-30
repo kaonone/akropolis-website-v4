@@ -5,6 +5,7 @@ import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
 import { MainIntro } from 'app/sections/MainIntro/MainIntro';
 import { BuildWith } from 'app/sections/BuildWith/BuildWith';
+import { CurrentEvents } from 'app/sections/CurrentEvents/CurrentEvents';
 import { makeStyles } from 'shared/styles';
 import { Adaptive } from 'services/adaptability';
 import { Features } from 'app/sections/Features/Features';
@@ -38,6 +39,7 @@ export function Main() {
         <Features className={classes.section} />
         <OpenSource className={classes.section} />
         <DevActivity className={classes.section} />
+        <CurrentEvents className={classes.section} />
       </Layout.Container>
       <Layout.WrapTopWave type="bottom">
         <Layout.Footer>

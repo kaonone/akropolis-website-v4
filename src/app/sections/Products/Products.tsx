@@ -12,7 +12,7 @@ import routes from 'modules/routes';
 
 interface Product {
   title: string;
-  description: string;
+  description: React.ReactNode;
   label: string;
   icon: React.ReactElement;
   extraIcon?: React.ReactElement;
@@ -53,8 +53,24 @@ export function Products(props: IProps) {
 const useCases: Product[] = [
   {
     title: 'Build',
-    description:
-      'Start and scale your for-profit DAO here. Built with OpenZeppelin SDK using Facade pattern for rapid development and freedom to innovate. Monetise your assets and ideas.',
+    description: (
+      <span>
+        Start and scale your for-profit DAO here. Built with{' '}
+        <Link href="https://openzeppelin.com/sdk/" color="inherit" target="_blank" rel="noopener noreferrer">
+          OpenZeppelin SDK
+        </Link>{' '}
+        using{' '}
+        <Link
+          href="https://en.wikipedia.org/wiki/Facade_pattern"
+          color="inherit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facade pattern
+        </Link>{' '}
+        for rapid development and freedom to innovate. Monetise your assets and ideas.
+      </span>
+    ),
     label: 'For builders',
     action: (
       <Button

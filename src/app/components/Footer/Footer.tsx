@@ -64,6 +64,7 @@ function Footer() {
       <section className={classes.partners}>
         <Link
           className={classes.partnerLink}
+          underline="none"
           href="https://messari.io/asset/akropolis"
           target="_blank"
           rel="noopener noreferrer"
@@ -71,7 +72,13 @@ function Footer() {
           <span hidden>Messari</span>
           <Messari className={classes.partnerIcon} />
         </Link>
-        <Link className={classes.partnerLink} href="https://ethereum.org" target="_blank" rel="noopener noreferrer">
+        <Link
+          className={classes.partnerLink}
+          underline="none"
+          href="https://ethereum.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span hidden>Etherium</span>
           <Etherium className={classes.partnerIcon} />
         </Link>

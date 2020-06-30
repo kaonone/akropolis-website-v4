@@ -5,6 +5,7 @@ import { Button, Link, LinkProps } from 'shared/view/elements';
 
 import { DcaPoolIcon } from '../Icons';
 import { useStyles } from './Intro.styles';
+import { DCA_LINK } from '../constants';
 
 function DcaPoolIntro() {
   const classes = useStyles();
@@ -15,7 +16,11 @@ function DcaPoolIntro() {
       title={
         <div>
           Automate your DeFi life: <br />
-          Combine and compound DeFi yields and DCA your way into ETH & BTC
+          Combine and compound DeFi yields and{' '}
+          <Link href={DCA_LINK} color="inherit" target="_blank" rel="noopener noreferrer">
+            DCA
+          </Link>{' '}
+          your way into ETH & BTC
         </div>
       }
     >

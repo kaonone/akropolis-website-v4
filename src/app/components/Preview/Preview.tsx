@@ -8,7 +8,7 @@ interface IProps {
   title: React.ReactNode;
   titleSize?: 'medium' | 'large';
   subtitle?: React.ReactNode;
-  description: string;
+  description: React.ReactNode;
 }
 
 export function Preview(props: IProps) {

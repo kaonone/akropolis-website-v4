@@ -1,7 +1,7 @@
 import React from 'react';
 import { calculateStats, useRepos } from './github';
 import { makeStyles, getGrid } from 'shared/styles';
-import { Typography, Link, Grid } from 'shared/view/elements';
+import { Typography, Link, Grid, Dotdotdot } from 'shared/view/elements';
 import { Card } from 'app/components/Card';
 import { Language } from './Language';
 import { Loading } from 'app/components/Loading/Loading';
@@ -29,7 +29,14 @@ export function Repos() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {repo.name} →
+                      <Grid container spacing={1} wrap="nowrap">
+                        <Grid item>
+                          <Dotdotdot style={{ display: 'inline' }} clamp={1}>
+                            {repo.name}
+                          </Dotdotdot>
+                        </Grid>
+                        <Grid item>→</Grid>
+                      </Grid>
                     </Typography>
                     <Typography className={classes.description} color="textPrimary">
                       {repo.description}
@@ -70,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    display: 'block',
+    display: 'inline-block',
     fontSize: 12,
     fontWeight: 500,
     marginBottom: theme.spacing(1),

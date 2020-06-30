@@ -1,6 +1,10 @@
+import React from 'react';
 import { Benefit } from 'app/components/Benefits/Benefits';
 import { IMenuItem } from 'shared/types/common';
 import { tKeys } from 'services/i18n';
+import { Link } from 'shared/view/elements';
+
+export const DCA_LINK = 'https://www.investopedia.com/terms/d/dollarcostaveraging.asp';
 
 const menuItems: IMenuItem[] = [
   {
@@ -22,7 +26,15 @@ const benefits: Benefit[] = [
     description: 'Weekly AKRO governance token rewards for all users',
   },
   {
-    title: 'Automated Low-Cost DCA Entry and Exit',
+    title: (
+      <span>
+        Automated Low-Cost{' '}
+        <Link href={DCA_LINK} color="inherit" target="_blank" rel="noopener noreferrer">
+          DCA
+        </Link>{' '}
+        Entry and Exit
+      </span>
+    ),
     description: 'Remove emotion and friction for easy passive investing',
   },
 ];

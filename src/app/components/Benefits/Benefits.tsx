@@ -7,7 +7,7 @@ import { makeStyles, getGrid } from 'shared/styles';
 import { Preview } from 'app/components/Preview/Preview';
 
 export interface Benefit {
-  title: string;
+  title: React.ReactNode;
   description: string;
 }
 

@@ -1,13 +1,8 @@
-import { tKeys } from 'services/i18n';
-import { IMenuItem } from 'shared/types/common';
 import { Benefit } from 'app/components/Benefits/Benefits';
+import { IMenuItem } from 'shared/types/common';
+import { tKeys } from 'services/i18n';
 
-export const menuItems: IMenuItem[] = [
-  {
-    path: '#',
-    title: tKeys.modules.navigation.tutorials.getKey(),
-    isExternal: true,
-  },
+const menuItems: IMenuItem[] = [
   {
     path: 'https://wiki.akropolis.io',
     title: tKeys.modules.navigation.wiki.getKey(),
@@ -15,17 +10,21 @@ export const menuItems: IMenuItem[] = [
   },
 ];
 
-export const benefits: Benefit[] = [
+const benefits: Benefit[] = [
   {
-    title: 'Lower costs',
-    description: 'gas optimization & using pooled funds to get exposure to BTC&ETH',
+    title: 'Combine DeFi Yields with Capital Gains',
+    description:
+      // tslint:disable-next-line: max-line-length
+      'Farm COMP, BAL, MTA and others cheaper while passively investing into BTC and ETH, all from one convenient interface',
   },
   {
-    title: 'Passive savings',
-    description: 'don’t wanna invest? Earn passively by pooling and lending via Staked and Curve',
+    title: 'Earn Rewards for Saving and Liquidity Provision',
+    description: 'Weekly AKRO governance token rewards for all users',
   },
   {
-    title: 'Welcome',
-    description: 'Crypto Billionaires',
+    title: 'Automated Low-Cost DCA Entry and Exit',
+    description: 'Remove emotion and friction for easy passive investing',
   },
 ];
+
+export { menuItems, benefits };

@@ -14,6 +14,7 @@ const benefits: Benefit[] = [
   {
     title: 'Combine DeFi Yields with Capital Gains',
     description:
+      // tslint:disable-next-line: max-line-length
       'Farm COMP, BAL, MTA and others cheaper while passively investing into BTC and ETH, all from one convenient interface',
   },
   {

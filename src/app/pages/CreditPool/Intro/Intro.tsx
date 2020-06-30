@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Intro } from 'app/components/Intro/Intro';
-import { CreditPoolIcon } from './CreditPoolIcon';
 import { makeStyles } from 'shared/styles';
 import { Button, Link, LinkProps } from 'shared/view/elements';
+import { CreditPoolIcon } from '../Icons';
 
 export function CreditPoolIntro() {
   const classes = useStyles();

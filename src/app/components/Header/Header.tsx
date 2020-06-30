@@ -20,9 +20,9 @@ export function Header({ customNavItems, CustomLogo }: Props) {
 
   return (
     <header className={classes.root}>
-      <Link to="/" className={classes.logoLink}>
-        {CustomLogo ? <CustomLogo className={classes.logo} fontSize="inherit" /> : <LogoWithNameIcon fontSize="inherit" />}
-      </Link>
+      <div className={classes.logo}>
+        {CustomLogo ? <CustomLogo fontSize="inherit" /> : <LogoWithNameIcon fontSize="inherit" />}
+      </div>
       <NavInline
         items={customNavItems || menuItems}
         className={classes.navInline}

@@ -1,55 +1,119 @@
 import { makeStyles } from 'shared/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+
+    [theme.breakpoints.up('tabletXS')]: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
   },
 
   copyright: {
-    display: 'flex',
-    flexDirection: 'column',
-    fontSize: '12px',
-    lineHeight: 'normal',
+    marginBottom: 30,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      marginBottom: 0,
+    },
   },
 
   nav: {
-    marginBottom: '12px',
+    marginBottom: 30,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      marginBottom: 20,
+    },
+
+    [theme.breakpoints.up('desktopMD')]: {
+      marginBottom: 12,
+    },
 
     '& $link': {
-      color: '#000',
+      fontSize: 12,
+      lineHeight: 'normal',
+      color: theme.palette.text.primary,
       textDecoration: 'none',
 
       '& + $link': {
-        marginLeft: '50px',
+        marginLeft: 53,
+
+        [theme.breakpoints.up('tabletXS')]: {
+          marginLeft: 20,
+        },
+
+        [theme.breakpoints.up('desktopMD')]: {
+          marginLeft: 50,
+        },
       },
     },
   },
 
   text: {
+    fontSize: 12,
+    lineHeight: 'normal',
     opacity: 0.3,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      lineHeight: '16px',
+    },
+
+    [theme.breakpoints.up('desktopMD')]: {
+      lineHeight: 'normal',
+    },
   },
 
   partners: {
     display: 'flex',
 
+    [theme.breakpoints.up('tabletXS')]: {
+      marginLeft: 32,
+    },
+
     '& $link': {
       fontSize: 0,
 
-      '&:last-child': {
-        marginLeft: '50px',
-      }
+      '& + $link': {
+        marginLeft: 43,
+
+        [theme.breakpoints.up('tabletXS')]: {
+          marginLeft: 50,
+        },
+      },
     },
   },
 
   messari: {
-    width: '119px',
-    height: '40px'
+    width: 101,
+    height: 34,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      width: 119,
+      height: 40,
+    },
+
+    '& rect': {
+      fill: theme.palette.type === 'light' ? '#afb7c7' : '#292835',
+    },
+
+    '& ellipse': {
+      fill: theme.palette.type === 'light' ? '#b3bcce' : '#191b1f',
+    },
   },
 
   etherium: {
-    width: '160px',
-    height: '40px'
+    width: 136,
+    height: 34,
+
+    [theme.breakpoints.up('tabletXS')]: {
+      width: 160,
+      height: 40,
+    },
+
+    '& rect': {
+      fill: theme.palette.type === 'light' ? '#afb7c7' : '#292835',
+    },
   },
 
   link: {},

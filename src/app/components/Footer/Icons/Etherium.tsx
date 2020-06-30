@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { GetProps } from '_helpers';
 import SvgIcon from '@material-ui/core/SvgIcon';
+
+import { GetProps } from '_helpers';
 
 function Etherium(props: GetProps<typeof SvgIcon>) {
   return (
     <SvgIcon {...props} viewBox="0 0 160 40">
       <g fill="none">
-        <rect width="159.2" height="40" fill="#AFB7C7" rx="6" />
+        <rect width="159.2" height="40" rx="6" />
         <g stroke="#2D2D2D" stroke-width=".3">
           <path fill="#FF826B" d="M65.6 6l-.2.7v18.2l.2.2 8.5-5z" />
           <path fill="#F3F047" d="M65.6 6L57 20l8.5 5z" />

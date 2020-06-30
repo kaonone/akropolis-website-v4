@@ -9,29 +9,20 @@ import { useStyles } from './Footer.style';
 function Footer() {
   const classes = useStyles();
   const { t } = useTranslate();
-
+  const privacyPolicyText = t(tKeys.modules.navigation.privacyPolicy.getKey());
+  const tAndCText = t(tKeys.modules.navigation.termsConditions.getKey());
   const startYear = 2017;
   const yearNow = new Date().getFullYear();
 
   return (
     <footer className={classes.root}>
-      <div className={classes.copyright}>
+      <section className={classes.copyright}>
         <nav className={classes.nav}>
-          <a
-            className={classes.link}
-            href={PRIVACY_POLICY_URL}
-            target="_blank"
-            title={t(tKeys.modules.navigation.privacyPolicy.getKey())}
-          >
-            Privacy Policy
+          <a className={classes.link} href={PRIVACY_POLICY_URL} target="_blank" title={privacyPolicyText}>
+            {privacyPolicyText}
           </a>
-          <a
-            className={classes.link}
-            href={T_AND_C_URL}
-            target="_blank"
-            title={t(tKeys.modules.navigation.termsConditions.getKey())}
-          >
-            Terms & Conditions
+          <a className={classes.link} href={T_AND_C_URL} target="_blank" title={tAndCText}>
+            {tAndCText}
           </a>
         </nav>
         <div className={classes.text}>
@@ -42,8 +33,8 @@ function Footer() {
             `${startYear}${yearNow > startYear ? '-' + yearNow : ''}, All right reserved`,
           ].join(' | ')}
         </div>
-      </div>
-      <div className={classes.partners}>
+      </section>
+      <section className={classes.partners}>
         <a className={classes.link} href="https://messari.io/asset/akropolis" target="_blank" rel="noopener noreferrer">
           Messari
           <Messari className={classes.messari} />
@@ -52,7 +43,7 @@ function Footer() {
           Etherium
           <Etherium className={classes.etherium} />
         </a>
-      </div>
+      </section>
     </footer>
   );
 }

@@ -20,7 +20,7 @@ function DcaPoolIntro() {
       }
     >
       <div className={classes.buttons}>
-        <div className={classes.button}>
+        {/* <div className={classes.button}>
           <Button
             disabled
             size="large"
@@ -34,7 +34,7 @@ function DcaPoolIntro() {
           >
             View Prototype
           </Button>
-        </div>
+        </div> */}
         <div className={classes.button}>
           <Button
             size="large"
@@ -49,7 +49,7 @@ function DcaPoolIntro() {
             Join Waitlist
           </Button>
         </div>
-        <div className={classes.button}>
+        {/* <div className={classes.button}>
           <Button
             disabled
             size="large"
@@ -63,7 +63,7 @@ function DcaPoolIntro() {
           >
             Feature Request
           </Button>
-        </div>
+        </div> */}
       </div>
     </Intro>
   );

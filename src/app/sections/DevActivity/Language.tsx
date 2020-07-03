@@ -13,7 +13,7 @@ export function Language({
 
   const defaultColor = theme.palette.text.secondary;
   const colorByLanguage: Record<string, string> = {
-    JavaScript: theme.colors.heliotrope3,
+    JavaScript: theme.colors.heliotrope,
     TypeScript: theme.colors.pictonBlue,
     Rust: theme.colors.royalBlue2,
     Solidity: theme.colors.turquoise,

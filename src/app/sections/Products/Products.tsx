@@ -4,10 +4,10 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { Section } from 'app/components/Section/Section';
 import { Card } from 'app/components/Card';
-import { makeStyles, getGrid } from 'shared/styles';
+import { makeStyles, getGrid, PaletteType, useTheme } from 'shared/styles';
 import { Preview } from 'app/components/Preview/Preview';
-import { Link, Button, LinkProps } from 'shared/view/elements';
-import { Build, CreditPool, DcaPool, Colab } from './icons';
+import { Link, Button, LinkProps, CreditPoolLogo, DcaPoolLogo } from 'shared/view/elements';
+import { Build, CreditPool, DcaPool, Colab, AkroOSLogo } from './icons';
 import routes from 'modules/routes';
 
 interface Product {
@@ -15,6 +15,7 @@ interface Product {
   description: React.ReactNode;
   label: string;
   icon: React.ReactElement;
+  getLogo: (paletteType: PaletteType) => React.ReactElement;
   extraIcon?: React.ReactElement;
   action: React.ReactElement;
 }
@@ -26,11 +27,12 @@ interface IProps {
 export function Products(props: IProps) {
   const { className } = props;
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <Section className={className}>
       <div className={classes.container}>
-        {useCases.map(({ title, description, icon, extraIcon, action, label }, index) => (
+        {useCases.map(({ title, description, icon, getLogo, extraIcon, action, label }, index) => (
           <div key={index} className={classes.item}>
             <Card
               className={cn(classes.card)}
@@ -41,6 +43,7 @@ export function Products(props: IProps) {
             >
               <Preview title={title} titleSize="large" description={description} />
               {extraIcon && <div className={classes.extraIcon}>{extraIcon}</div>}
+              <div className={classes.logoIcon}>{getLogo(theme.palette.type)}</div>
             </Card>
           </div>
         ))}
@@ -87,6 +90,7 @@ const useCases: Product[] = [
       </Button>
     ),
     icon: <Build fontSize="inherit" />,
+    getLogo: (type) => <AkroOSLogo color={type === 'dark' ? 'inherit' : undefined} fontSize="inherit" />,
   },
   {
     title: 'Borrow or Lend',
@@ -105,6 +109,7 @@ const useCases: Product[] = [
       </Button>
     ),
     icon: <CreditPool fontSize="inherit" />,
+    getLogo: () => <CreditPoolLogo color="inherit" fontSize="inherit" />,
   },
   {
     title: 'Save & Earn',
@@ -123,6 +128,7 @@ const useCases: Product[] = [
       </Button>
     ),
     icon: <DcaPool fontSize="inherit" />,
+    getLogo: () => <DcaPoolLogo color="inherit" fontSize="inherit" />,
     extraIcon: (
       <Link
         underline="none"
@@ -152,7 +158,17 @@ const useStyles = makeStyles((theme) => ({
     top: 12,
     right: 16,
     fontSize: 70,
-    color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.heliotrope3,
+    display: 'flex',
+    color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.heliotrope,
+  },
+
+  logoIcon: {
+    position: 'absolute',
+    top: 26,
+    left: 16,
+    fontSize: 24,
+    display: 'flex',
+    color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.black,
   },
 
   icon: {
@@ -242,6 +258,15 @@ const useStyles = makeStyles((theme) => ({
         },
         '&:nth-child(3) $icon': {
           color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.blushPink,
+        },
+        '&:nth-child(1) $logoIcon': {
+          color: theme.colors.white,
+        },
+        '&:nth-child(2) $logoIcon': {
+          color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.royalBlue2,
+        },
+        '&:nth-child(3) $logoIcon': {
+          color: theme.palette.type === 'dark' ? theme.colors.white : theme.colors.heliotrope,
         },
       },
     },

@@ -47,7 +47,6 @@ const colors = {
   anakiwa: '#7cd7ff',
   melrose: '#a38cff',
   blushPink: '#ff79ff',
-  heliotrope3: '#d93cef',
   pictonBlue: '#4cadf2',
   turquoise: '#3cefaf',
 };

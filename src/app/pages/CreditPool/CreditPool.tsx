@@ -5,9 +5,9 @@ import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
 import { Benefits } from 'app/components/Benefits/Benefits';
 import { makeStyles } from 'shared/styles';
+import { CreditPoolLogo } from 'shared/view/elements';
 
 import { CreditPoolIntro } from './Intro/Intro';
-import { CreditPoolLogo } from './Icons';
 import { benefits, footerNavItems } from './constants';
 
 export function CreditPool() {

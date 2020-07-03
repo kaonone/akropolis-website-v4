@@ -25,7 +25,9 @@ function AkropolisSocialLinks(props: IProps & StylesProps) {
     <div className={cn(classes.root, { [classes[direction]]: true })}>
       <div className={classes.hidden}>
         <SvgIcon>
-          <MainSvgGradient />
+          <defs>
+            <MainSvgGradient />
+          </defs>
         </SvgIcon>
       </div>
       {links.map(([link, needToFill]) => (

@@ -4,9 +4,9 @@ import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
 import { Benefits } from 'app/components/Benefits/Benefits';
+import { DcaPoolLogo } from 'shared/view/elements';
 
 import { DcaPoolIntro } from './Intro/Intro';
-import { DcaPoolLogo } from './Icons';
 import { benefits } from './constants';
 import { useStyles } from './DcaPool.styles';
 

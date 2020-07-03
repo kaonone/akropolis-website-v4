@@ -13,6 +13,8 @@ export { default as TelegramIcon } from './TelegramIcon';
 export { default as RiotIcon } from './RiotIcon';
 export { default as DiscordIcon } from './DiscordIcon';
 export { default as getSocialIconByLink } from './getSocialIconByLink';
+export * from './DcaPoolLogo';
+export * from './CreditPoolLogo';
 export * from './Sun';
 export * from './Moon';
 export * from './MainSvgGradient';

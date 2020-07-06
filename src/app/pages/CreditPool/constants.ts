@@ -30,14 +30,14 @@ export const footerNavItems: IMenuItem[] = [
 export const benefits: Benefit[] = [
   {
     title: 'Undercollateralised loans',
-    description: 'take up to 2x from your collateral',
+    description: 'Take up to 2x from your collateral',
   },
   {
     title: 'Higher APR',
-    description: 'rebalancing between DeFi protocol with RAY (soonTM)',
+    description: 'Rebalancing between DeFi protocol with RAY (soonTM)',
   },
   {
     title: 'Passive savings',
-    description: 'earn rewards from pool activity and rising liquidity',
+    description: 'Earn rewards from pool activity and rising liquidity',
   },
 ];

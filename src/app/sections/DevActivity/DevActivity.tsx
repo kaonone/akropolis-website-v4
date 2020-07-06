@@ -41,6 +41,7 @@ export function DevActivity(props: IProps) {
               label={t(tKeys.overview.getKey())}
               value="overview"
               classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+              TouchRippleProps={{ className: classes.touchRipple }}
             />
             <Tab
               label={t(tKeys.topRepos.getKey())}

@@ -8,6 +8,7 @@ const styles = (theme: Theme) => ({
     height: '70px',
     borderRadius: '6px',
     backgroundColor: theme.palette.type === 'dark' ? '#3f3d4c' : '#eff1f5',
+    transition: theme.transitions.create('background-color'),
 
     '&:hover, &$focusVisible': {
       backgroundColor: theme.palette.type === 'dark' ? '#5C5973' : '#e7eefd',

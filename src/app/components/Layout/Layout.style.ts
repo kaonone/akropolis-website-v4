@@ -132,7 +132,8 @@ export const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     display: 'none',
     marginRight: theme.spacing(2),
-    top: '13%',
+    top: '50%',
+    transform: 'translateY(-50%)',
     right: 0,
 
     [theme.breakpoints.up('lg')]: {

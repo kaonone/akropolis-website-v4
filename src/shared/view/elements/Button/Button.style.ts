@@ -59,6 +59,8 @@ export const useStyles = makeStyles((theme) => ({
     },
 
     '&$colorGradient': {
+      boxShadow: 'none',
+
       '&$outlined': {
         borderWidth: 0,
         zIndex: 1,

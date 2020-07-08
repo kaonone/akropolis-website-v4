@@ -77,7 +77,7 @@ export const useStyles = makeStyles((theme) => ({
           right: 1,
           bottom: 1,
           left: 1,
-          backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+          backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
           transition: theme.transitions.create(['opacity', 'background-color']),
 
           borderRadius: theme.spacing(height / 2) - 1,

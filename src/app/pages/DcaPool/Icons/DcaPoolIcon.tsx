@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { GetProps } from '_helpers';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { makeStyles } from 'shared/styles';
+import { makeStyles, useTheme } from 'shared/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,17 +25,22 @@ const useStyles = makeStyles((theme) => ({
 
 function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
+  const theme = useTheme();
+
+  const gradientStops = React.useMemo(() => {
+    return (theme.gradients.dcaText.points.map(({ offset, color }, index) => (
+      <stop key={index} offset={offset} stopColor={color} />
+    )));
+  }, [theme]);
 
   return (
     <SvgIcon {...props} classes={classes} viewBox="0 0 113 66">
       <defs>
         <linearGradient id="DcaPoolIcon-gradient-a" x1="50%" x2="50%" y1="0%" y2="100%">
-          <stop offset="0%" />
-          <stop offset="100%" />
+          {gradientStops}
         </linearGradient>
         <linearGradient id="DcaPoolIcon-gradient-b" x1="0%" y1="50%" y2="50%">
-          <stop offset="0%" />
-          <stop offset="100%" />
+          {gradientStops}
         </linearGradient>
       </defs>
       <g fill="none" fill-rule="evenodd">

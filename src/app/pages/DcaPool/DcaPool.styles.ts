@@ -3,7 +3,7 @@ import { makeStyles } from 'shared/styles';
 const useStyles = makeStyles((theme) => ({
   '@global': {
     body: {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+      backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
     },
   },
 

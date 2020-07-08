@@ -47,8 +47,15 @@ const colors = {
   anakiwa: '#7cd7ff',
   melrose: '#a38cff',
   blushPink: '#ff79ff',
+  blushPink2: '#ffe3f6',
   pictonBlue: '#4cadf2',
   turquoise: '#3cefaf',
+  lilac: '#e0abff',
+  grape: '#8a43ba',
+  northWesternPurple: '#4d2c66',
+  darkPurple: '#2a134a',
+  lavender: '#edc4ed',
+  obsidian: '#0a0a0e',
 };
 
 function getGradients(type: 'dark' | 'light') {
@@ -60,6 +67,10 @@ function getGradients(type: 'dark' | 'light') {
       makeGradient(type === 'dark' ? [colors.bossanova, colors.valhalla] : [colors.snuff, colors.amour]),
     ] as const,
     button: makeGradient([colors.heliotrope, colors.royalBlue, colors.heliotrope2, colors.heliotrope]),
+    dca: makeGradient(type === 'dark'
+      ? [colors.northWesternPurple, colors.darkPurple]
+      : [colors.blushPink2, colors.lavender]),
+    dcaText: makeGradient([colors.lilac, colors.grape]),
   };
 }
 

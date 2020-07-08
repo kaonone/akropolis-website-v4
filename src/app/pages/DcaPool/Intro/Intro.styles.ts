@@ -1,6 +1,11 @@
 import { makeStyles } from 'shared/styles';
 
 const useStyles = makeStyles((theme) => ({
+  textLogo: {
+    fontSize: theme.spacing(2.6),
+    marginLeft: theme.spacing(2.5),
+  },
+
   buttons: {
     display: 'flex',
   },

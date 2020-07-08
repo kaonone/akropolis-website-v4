@@ -2,9 +2,8 @@ import React from 'react';
 
 import { Intro } from 'app/components/Intro/Intro';
 import { Button, Link, LinkProps } from 'shared/view/elements';
-import { DelphiTextLogo } from 'shared/view/elements/Icons';
 
-import { DcaPoolIcon } from '../Icons/DcaPoolIcon';
+import { DcaPoolIcon, DelphiTextLogo } from '../Icons';
 import { useStyles } from './Intro.styles';
 import { DCA_LINK } from '../constants';
 

@@ -18,4 +18,3 @@ export * from './CreditPoolLogo';
 export * from './Sun';
 export * from './Moon';
 export * from './MainSvgGradient';
-export * from '../../../../app/pages/DcaPool/Icons/DelphiTextLogo';

@@ -4,7 +4,6 @@ import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
 import { Benefits } from 'app/components/Benefits/Benefits';
-import { DcaPoolLogo } from 'shared/view/elements';
 
 import { DcaPoolIntro } from './Intro/Intro';
 import { benefits } from './constants';
@@ -16,7 +15,7 @@ function DcaPool() {
   return (
     <Layout>
       <Layout.Header>
-        <Header CustomLogo={DcaPoolLogo} customNavItems={[]} />
+        <Header customNavItems={[]} />
       </Layout.Header>
       <Layout.Container className={classes.main}>
         <DcaPoolIntro />

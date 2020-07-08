@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { LogoWithNameIcon } from 'shared/view/elements/Icons';
@@ -20,7 +21,14 @@ export function Header({ customNavItems, CustomLogo }: Props) {
   return (
     <header className={classes.root}>
       <div className={classes.logo}>
-        {CustomLogo ? <CustomLogo fontSize="inherit" /> : <LogoWithNameIcon fontSize="inherit" />}
+        {CustomLogo
+          ? <CustomLogo fontSize="inherit" />
+          : (
+            <Link to="/" className={classes.logo}>
+              <LogoWithNameIcon fontSize="inherit" />
+            </Link>
+          )
+        }
       </div>
       <NavInline
         items={customNavItems || menuItems}

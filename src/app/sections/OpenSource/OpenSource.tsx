@@ -37,7 +37,7 @@ export function OpenSource(props: IProps) {
             <Card className={cn(classes.card)} variant="contained" label={label} icons={icons}>
               <Preview
                 title={
-                  <Link href={link} target="_blank" rel="noopener noreferre" color="inherit">
+                  <Link href={link} target="_blank" rel="noopener noreferrer" color="inherit">
                     {title}
                   </Link>}
                 description={description}

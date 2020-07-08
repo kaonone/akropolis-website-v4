@@ -98,12 +98,15 @@ const useCases: Product[] = [
       'Access under-collateralised loans. Contribute liquidity actively or passively. Get rewarded for risk.',
     label: 'For DeFi curious',
     action: (
-      <Button<typeof RouterLink>
+      <Button
         fullWidth
-        component={RouterLink}
-        to={routes.sparta.getRedirectPath()}
+        component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
+        underline="none"
         color="gradient"
         variant="contained"
+        href="https://sparta-rinkeby.akropolis.io/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Borrow
       </Button>

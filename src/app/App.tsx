@@ -8,14 +8,12 @@ import { Partners, News } from 'modules/sections';
 import { lightTheme } from 'shared/styles/theme';
 
 import { Main } from './pages/Main/Main';
-import { CreditPool } from './pages/CreditPool/CreditPool';
 import { DcaPool } from './pages/DcaPool/DcaPool';
 
 export function App() {
   return (
     <Switch>
       <Route exact path="/" component={Main} />
-      <Route exact path={routes.sparta.getRoutePath()} component={CreditPool} />
       <Route exact path={routes.delphi.getRoutePath()} component={DcaPool} />
       <Route exact key="ForWikiPartners" path={routes.forWiki.partners.getRoutePath()}>
         <MuiThemeProvider theme={lightTheme}>

@@ -8,32 +8,34 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 'unset',
 
-    '& stop': {
-      '&:nth-child(1)': {
-        stopColor: theme.palette.type === 'dark' ? '#4D2C66' : '#FFE3F6',
-      },
-      '&:nth-child(2)': {
-        stopColor: theme.palette.type === 'dark' ? '#2A134A' : '#EDC4ED',
-      },
-    },
-
     '& path': {
       mixBlendMode: theme.palette.type === 'dark' ? 'screen' : 'unset',
     },
   },
 }));
 
+let hackForGradientUpdating = 1;
+
 function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
   const theme = useTheme();
 
-  const gradientStops = React.useMemo(() => theme.gradients.dcaText.points.map(
-    ({ offset, color }, index) => <stop key={index} offset={offset} stopColor={color} />,
-  ), [theme]);
+  const gradientStops = React.useMemo(
+    () =>
+      theme.gradients.dcaText.points.map(({ offset, color }, index) => (
+        <stop key={index} offset={offset} stopColor={color} />
+      )),
+    [theme],
+  );
+
+  React.useEffect(() => {
+    hackForGradientUpdating += 1;
+  }, [gradientStops]);
 
   return (
     <SvgIcon {...props} classes={classes} viewBox="0 0 113 66">
-      <defs>
+      {/* chome bug: it doesn't rerender gradient inside svg after theme change, but rerenders after defs remount */}
+      <defs key={hackForGradientUpdating}>
         <linearGradient id="DcaPoolIcon-gradient-a" x1="50%" x2="50%" y1="0%" y2="100%">
           {gradientStops}
         </linearGradient>
@@ -56,7 +58,6 @@ function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
         </g>
       </defs>
       <g fill="none" fill-rule="evenodd">
-        <use xlinkHref="#DcaPoolIcon-shape" />
         <use xlinkHref="#DcaPoolIcon-shape" />
       </g>
     </SvgIcon>

@@ -2,13 +2,14 @@ import * as React from 'react';
 import cn from 'classnames';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Section } from 'app/components/Section/Section';
+import routes from 'app/routes';
 import { Card } from 'app/components/Card';
-import { makeStyles, getGrid, PaletteType, useTheme } from 'shared/styles';
+import { Section } from 'app/components/Section/Section';
 import { Preview } from 'app/components/Preview/Preview';
+import { makeStyles, getGrid, PaletteType, useTheme } from 'shared/styles';
 import { Link, Button, LinkProps, CreditPoolLogo, DcaPoolLogo } from 'shared/view/elements';
+
 import { Build, CreditPool, DcaPool, Colab, AkroOSLogo } from './icons';
-import routes from 'modules/routes';
 
 interface Product {
   title: string;

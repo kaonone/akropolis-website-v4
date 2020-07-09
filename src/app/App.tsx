@@ -3,8 +3,9 @@ import { Switch, Route, Redirect } from 'react-router';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import routes from 'modules/routes';
-import { Partners, News } from 'modules/sections';
+import routes from 'app/routes';
+import Partners from 'app/sections/Partners/Partners';
+import News from 'app/sections/News/News';
 import { lightTheme } from 'shared/styles/theme';
 
 import { Main } from './pages/Main/Main';

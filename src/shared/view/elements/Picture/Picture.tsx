@@ -8,7 +8,7 @@ const styles = (_theme: Theme) => ({
   }),
 });
 
-export type StylesProps = WithStyles<typeof styles>;
+type StylesProps = WithStyles<typeof styles>;
 
 interface IProps {
   x1: string;

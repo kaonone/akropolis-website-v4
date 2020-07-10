@@ -12,7 +12,7 @@ const styles = {
   }),
 };
 
-export type StylesProps = WithStyles<typeof styles>;
+type StylesProps = WithStyles<typeof styles>;
 
 // tslint:disable:max-line-length
 function LogoWithNameIcon(props: GetProps<typeof SvgIcon> & StylesProps) {

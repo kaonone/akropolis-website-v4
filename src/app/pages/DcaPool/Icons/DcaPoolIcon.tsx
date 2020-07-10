@@ -22,7 +22,7 @@ function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
 
   const gradientStops = React.useMemo(
     () =>
-      theme.gradients.dcaText.points.map(({ offset, color }, index) => (
+      theme.gradients.dca.points.map(({ offset, color }, index) => (
         <stop key={index} offset={offset} stopColor={color} />
       )),
     [theme],
@@ -58,6 +58,7 @@ function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
         </g>
       </defs>
       <g fill="none" fill-rule="evenodd">
+        <use xlinkHref="#DcaPoolIcon-shape" />
         <use xlinkHref="#DcaPoolIcon-shape" />
       </g>
     </SvgIcon>

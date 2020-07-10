@@ -14,10 +14,11 @@ import InvestopediaIcon from './InvestopediaIcon';
 import NasdaqIcon from './NasdaqIcon';
 import RiotIcon from './RiotIcon';
 import DiscordIcon from './DiscordIcon';
+import DeFiPulseIcon from './DeFiPulseIcon';
 
 type LinkType =
   'linkedin' | 'github' | 'twitter' | 'telegram' | 'medium' | 'benzinga' | 'cnbc' | 'entrepreneur' | 'forbes'
-  | 'investopedia' | 'nasdaq' | 'riot' | 'discord';
+  | 'investopedia' | 'nasdaq' | 'riot' | 'discord' | 'defipulse';
 
 export default function getSocialIconByLink(href: string, FallbackIcon?: React.ComponentType<SvgIconProps>) {
   const linkType = getLinkType(href);
@@ -39,6 +40,7 @@ const IconByType: Record<LinkType, React.StatelessComponent<SvgIconProps>> = {
   nasdaq: NasdaqIcon,
   riot: RiotIcon,
   discord: DiscordIcon,
+  defipulse: DeFiPulseIcon,
 };
 
 const linkedinRegExp = /^.+?\blinkedin\.com\b.+$/;
@@ -54,6 +56,7 @@ const investopediaRegExp = /^.+?\binvestopedia\.com\b.+$/;
 const nasdaqRegExp = /^.+?\bnasdaq\.com\b.+$/;
 const riotRegExp = /^.+?\briot\.im\b.+$/;
 const discordRegExp = /^.+?\bdiscord\.gg\b.+$/;
+const defipulseRegExp = /^.+?\bdefipulse\.com\b.+$/;
 
 const typeByRegExp = new Map<RegExp, LinkType>([
   [linkedinRegExp, 'linkedin'],
@@ -69,12 +72,13 @@ const typeByRegExp = new Map<RegExp, LinkType>([
   [nasdaqRegExp, 'nasdaq'],
   [riotRegExp, 'riot'],
   [discordRegExp, 'discord'],
+  [defipulseRegExp, 'defipulse'],
 ]);
 
 function getLinkType(link: string): LinkType | 'unknown' {
   const regExps = [
     linkedinRegExp, githubRegExp, mediumRegExp, telegramRegExp, twitterRegExp, benzingaRegExp, cnbcRegExp,
-    entrepreneurRegExp, forbesRegExp, investopediaRegExp, nasdaqRegExp, riotRegExp, discordRegExp,
+    entrepreneurRegExp, forbesRegExp, investopediaRegExp, nasdaqRegExp, riotRegExp, discordRegExp, defipulseRegExp,
   ];
   const linkRegExp = regExps.find(item => item.test(link));
   return linkRegExp && typeByRegExp.get(linkRegExp) || 'unknown';

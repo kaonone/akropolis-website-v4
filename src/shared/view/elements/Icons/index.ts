@@ -12,6 +12,7 @@ export { default as LinkedinIcon } from './LinkedinIcon';
 export { default as TelegramIcon } from './TelegramIcon';
 export { default as RiotIcon } from './RiotIcon';
 export { default as DiscordIcon } from './DiscordIcon';
+export { default as DeFiPulseIcon } from './DeFiPulseIcon';
 export { default as getSocialIconByLink } from './getSocialIconByLink';
 export * from './DcaPoolLogo';
 export * from './CreditPoolLogo';

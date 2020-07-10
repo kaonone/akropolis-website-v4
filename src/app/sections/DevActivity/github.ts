@@ -101,22 +101,17 @@ interface InternalGithubRepo {
   default_branch: string;
 }
 
-export interface GithubRepo extends Omit<InternalGithubRepo, 'pushed_at' | 'updated_at' | 'created_at'> {
+interface GithubRepo extends Omit<InternalGithubRepo, 'pushed_at' | 'updated_at' | 'created_at'> {
   created_at: number;
   updated_at: number;
   pushed_at: number;
 }
 
-export interface GithubStatistics {
+interface GithubStatistics {
   totalStars: number;
   lastUpdated: number;
   languages: string[];
   lastRepos: GithubRepo[];
-}
-
-export interface GithubActivity {
-  all: number[];
-  owner: number[];
 }
 
 export function useRepos(orgName: string) {

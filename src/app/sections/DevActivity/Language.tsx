@@ -27,7 +27,7 @@ export function Language({
   );
 }
 
-export const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   point: {
     display: 'inline-block',
     width: '0.6em',

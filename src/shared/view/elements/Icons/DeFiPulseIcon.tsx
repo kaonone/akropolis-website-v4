@@ -3,7 +3,7 @@ import { GetProps } from '_helpers';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 // tslint:disable:max-line-length
-function GithubIcon(props: GetProps<typeof SvgIcon>) {
+function DeFiPulseIcon(props: GetProps<typeof SvgIcon>) {
   const { classes: _, ...rest } = props;
 
   return (
@@ -18,4 +18,4 @@ function GithubIcon(props: GetProps<typeof SvgIcon>) {
   );
 }
 
-export default GithubIcon;
+export default DeFiPulseIcon;

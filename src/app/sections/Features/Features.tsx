@@ -92,8 +92,8 @@ const features: IFeature[] = [
     status: 'roadmap',
   },
   {
-    title: 'USDT, USDC, RSV stablecoins support',
-    description: 'Asset universe: enable deposits of USDT, USDC, RSV',
+    title: 'USDT, USDC, TUSD stablecoins support',
+    description: 'Asset universe: enable deposits of USDT, USDC, TUSD',
     status: 'roadmap',
   },
 ];

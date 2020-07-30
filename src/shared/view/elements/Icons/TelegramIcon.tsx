@@ -15,7 +15,7 @@ function TelegramIcon(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
   return (
     <SvgIcon {...rest} viewBox="0 0 20 20">
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <circle cx="10" cy="10" r="10" fill="currentColor" />
         <path
           className={classes.background}

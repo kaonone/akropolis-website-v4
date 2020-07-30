@@ -22,13 +22,12 @@ function Chart(props: IProps) {
   const renderXTick = React.useCallback(
     (tickProps: any) => {
       const {
-        visibleTicksCount,
-        index,
+        x,
+        y,
         payload: { value },
-        ...rest
       } = tickProps;
       return (
-        <text {...rest} dy={8} className={classes.tick}>
+        <text x={x} y={y} dy={8} className={classes.tick}>
           {dayjs(value).format('DD MMM YY')}
         </text>
       );
@@ -39,14 +38,13 @@ function Chart(props: IProps) {
   const renderYTick = React.useCallback(
     (tickProps: any) => {
       const {
-        visibleTicksCount,
-        index,
+        x,
+        y,
         payload: { value },
-        ...rest
       } = tickProps;
       return (
         value > 0 && (
-          <text {...rest} dx={-2} dy={-4} className={classes.tick}>
+          <text x={x} y={y} dx={-2} dy={-4} className={classes.tick}>
             {value}
           </text>
         )
@@ -54,6 +52,8 @@ function Chart(props: IProps) {
     },
     [theme.palette.type],
   );
+
+  const renderEmptyTooltip = React.useCallback(() => null, []);
 
   return (
     <div className={classes.root}>
@@ -63,7 +63,7 @@ function Chart(props: IProps) {
             data={points}
             margin={{
               top: 15,
-              right: 0,
+              right: 5,
               left: 0,
               bottom: 0,
             }}
@@ -93,7 +93,7 @@ function Chart(props: IProps) {
               tickLine={false}
               axisLine={{ stroke: theme.palette.text.primary, strokeOpacity: 0.5 }}
             />
-            <Tooltip content={<noscript />} />
+            <Tooltip content={renderEmptyTooltip} />
             <Line dot={false} type="monotone" dataKey="value" stroke="url(#colorUv)" strokeWidth={2} fill="#8884d8" />
           </LineChart>
         </ResponsiveContainer>

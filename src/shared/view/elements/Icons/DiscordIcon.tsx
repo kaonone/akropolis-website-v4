@@ -15,7 +15,7 @@ function DiscordIcon(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
   return (
     <SvgIcon {...rest} viewBox="0 0 20 23" xmlSpace="preserve">
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path className={classes.background} d="M2 4h16v12H2z" />
         <path
           fill="currentColor"

@@ -52,10 +52,10 @@ export function DevActivity(props: IProps) {
           </TabList>
           <TabPanel value="overview" className={classes.tabPanel}>
             <Grid container spacing={3}>
-              <Grid item xs={12} lg={8} xl={9}>
+              <Grid item xs={12} lg={10}>
                 <DevActivityChartSync />
               </Grid>
-              <Grid container spacing={3} item xs={12} lg={4} xl={3}>
+              <Grid container spacing={3} item xs={12} lg={2}>
                 <Grid item xs={12} md={4} lg={12}>
                   <LastCommit />
                 </Grid>

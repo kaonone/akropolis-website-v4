@@ -51,11 +51,11 @@ export function DevActivity(props: IProps) {
             />
           </TabList>
           <TabPanel value="overview" className={classes.tabPanel}>
-            <Grid container spacing={3}>
+            <Grid container spacing={6} justify="space-between" className={classes.overview}>
               <Grid item xs={12} lg={10}>
                 <DevActivityChartSync />
               </Grid>
-              <Grid container spacing={3} item xs={12} lg={2}>
+              <Grid container spacing={3} item xs={12} lg={2} className={classes.stats}>
                 <Grid item xs={12} md={4} lg={12}>
                   <LastCommit />
                 </Grid>
@@ -120,6 +120,16 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: tabsHeight / 2 - indicatorSpace - borderWidth,
     zIndex: -1,
     background: 'linear-gradient(to left, #544cf2, #d93cef)',
+  },
+
+  overview: {
+    [theme.breakpoints.up('lg')]: {
+      flexWrap: 'nowrap',
+    },
+  },
+
+  stats: {
+    minWidth: 300,
   },
 
   ...getGrid(

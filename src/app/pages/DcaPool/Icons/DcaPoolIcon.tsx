@@ -57,7 +57,7 @@ function DcaPoolIcon(props: GetProps<typeof SvgIcon>) {
           />
         </g>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <use xlinkHref="#DcaPoolIcon-shape" />
         <use xlinkHref="#DcaPoolIcon-shape" />
       </g>

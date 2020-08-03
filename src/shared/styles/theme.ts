@@ -37,7 +37,6 @@ const colors = {
   blueZodiac: '#13254a',
   bunting: '#1d134a',
   bossanova: '#4d2c66',
-  valhalla: '#2a134a',
   zumthor2: '#e6eeff',
   linkWater: '#d6eaf3',
   whisper: '#e9e7f2',
@@ -56,6 +55,11 @@ const colors = {
   darkPurple: '#2a134a',
   lavender: '#edc4ed',
   obsidian: '#0a0a0e',
+  cinder: '#13131b',
+  valhalla: '#2a134a',
+  valhalla2: '#2b144b',
+  blueZodiac2: '#14264b',
+  ebonyClay: '#27273a',
 };
 
 function getGradients(type: 'dark' | 'light') {
@@ -119,7 +123,7 @@ export const darkPalette = {
     main: colors.monza,
   },
   background: {
-    default: colors.charade,
+    default: colors.cinder,
   },
   type: 'dark' as const,
 };

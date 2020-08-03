@@ -105,14 +105,14 @@ export const useStyles = makeStyles((theme) => ({
 
   waveStrut: {
     flexGrow: 1,
-    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
   },
 
   wave: {
     maxHeight: '100%',
     width: '100%',
     transition: theme.transitions.create('color'),
-    color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
     transformOrigin: 'right',
 
     '&$top': {

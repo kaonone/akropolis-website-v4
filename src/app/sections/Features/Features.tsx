@@ -164,10 +164,10 @@ const useStyles = makeStyles((theme) => ({
     },
 
     '&$inProgress': {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.titanWhite : theme.colors.scarpaFlow2,
+      backgroundColor: theme.palette.type === 'light' ? theme.colors.titanWhite : theme.colors.valhalla2,
     },
     '&$roadmap': {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.foam : theme.colors.comet,
+      backgroundColor: theme.palette.type === 'light' ? theme.colors.foam : theme.colors.blueZodiac2,
     },
   },
 

@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundClip: 'padding-box',
     },
     '&$contained': {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.zumthor : theme.colors.scarpaFlow,
+      backgroundColor: theme.palette.type === 'light' ? theme.colors.zumthor : theme.colors.ebonyClay,
     },
   },
 

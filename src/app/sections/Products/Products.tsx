@@ -105,7 +105,7 @@ const useCases: Product[] = [
         underline="none"
         color="gradient"
         variant="contained"
-        href="https://sparta-rinkeby.akropolis.io/"
+        href="https://sparta.akropolis.io/"
         target="_blank"
         rel="noopener noreferrer"
       >

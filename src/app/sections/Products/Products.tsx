@@ -129,7 +129,7 @@ const useCases: Product[] = [
         target="_blank"
         rel="noopener noreferrer"
       >
-        Borrow
+        Earn
       </Button>
     ),
     icon: <DcaPool fontSize="inherit" />,

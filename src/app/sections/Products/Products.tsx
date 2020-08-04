@@ -1,8 +1,6 @@
 import * as React from 'react';
 import cn from 'classnames';
-import { Link as RouterLink } from 'react-router-dom';
 
-import routes from 'app/routes';
 import { Card } from 'app/components/Card';
 import { Section } from 'app/components/Section/Section';
 import { Preview } from 'app/components/Preview/Preview';
@@ -121,14 +119,17 @@ const useCases: Product[] = [
       'Simple and easy. Connect your monthly check to compound DeFi yields, capital gains* and saver rewards, all in one account. Automated and non-custodial.',
     label: 'For normies',
     action: (
-      <Button<typeof RouterLink>
+      <Button
         fullWidth
-        component={RouterLink}
-        to={routes.delphi.getRedirectPath()}
+        component={Link as React.FunctionComponent<Omit<LinkProps, 'color' | 'variant'>>}
+        underline="none"
         color="gradient"
         variant="contained"
+        href="https://delphi-rinkeby.akropolis.io/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Start Earning
+        Borrow
       </Button>
     ),
     icon: <DcaPool fontSize="inherit" />,

@@ -2,7 +2,22 @@ import { IEvent } from 'shared/types/models';
 
 // tslint:disable
 const events: IEvent[] = [
-   {
+  {
+    eventName: 'Ethreal Sessions',
+    link: 'https://www.etherealsummit.com',
+    location: 'Online Conference', 
+    description: {
+      en: 'Ana will have a talk on Ethreal Sessions on "Yield Farming & Bootstrapping Liquidity" topic! Ethreal Summit bring community together to examine how technology impacts lives around the world – covering topics such as censorship, the future of finance and DeFi, digital art, and culture through a combination of presentations, panels and fireside chats.',
+      vi: 'Ana will have a talk on Ethreal Sessions on "Yield Farming & Bootstrapping Liquidity" topic! Ethreal Summit bring community together to examine how technology impacts lives around the world – covering topics such as censorship, the future of finance and DeFi, digital art, and culture through a combination of presentations, panels and fireside chats.',
+      zh: 'Ana will have a talk on Ethreal Sessions on "Yield Farming & Bootstrapping Liquidity" topic! Ethreal Summit bring community together to examine how technology impacts lives around the world – covering topics such as censorship, the future of finance and DeFi, digital art, and culture through a combination of presentations, panels and fireside chats.',
+      ko: 'Ana will have a talk on Ethreal Sessions on "Yield Farming & Bootstrapping Liquidity" topic! Ethreal Summit bring community together to examine how technology impacts lives around the world – covering topics such as censorship, the future of finance and DeFi, digital art, and culture through a combination of presentations, panels and fireside chats.',
+    },
+    startDate: '08.06.2020',
+    finishDate: '08.06.2020',
+    image1x: require('./imgs/ethrealsessions@660w.png'),
+    image2x: require('./imgs/ethrealsessions@1320w.png'),
+  },
+  {
     eventName: 'IDEO’s Product Validation Day',
     link: 'https://medium.com/ideo-colab/announcing-ideos-product-validation-day-for-defi-founders-79e5668f9e3c',
     location: 'Online Conference', 

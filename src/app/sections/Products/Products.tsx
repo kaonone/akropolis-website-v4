@@ -125,7 +125,7 @@ const useCases: Product[] = [
         underline="none"
         color="gradient"
         variant="contained"
-        href="https://delphi-rinkeby.akropolis.io/"
+        href="https://delphi.akropolis.io/"
         target="_blank"
         rel="noopener noreferrer"
       >

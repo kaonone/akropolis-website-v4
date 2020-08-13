@@ -21,7 +21,7 @@ function Messari(props: GetProps<typeof SvgIcon>) {
   const classes = useStyles();
 
   return (
-    <SvgIcon {...props} className={classes.root} viewBox="0 0 119 40">
+    <SvgIcon {...props} classes={{ root: classes.root }} viewBox="0 0 119 40">
       <defs />
       <g fill="none">
         <rect className={classes.rect} width="118.49" height="40" rx="6" fill="currentColor" />

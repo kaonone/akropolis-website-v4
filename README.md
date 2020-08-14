@@ -70,8 +70,8 @@ Item structure:
 - `description` - event description
 - `startDate` - start date of event
 - `finishDate` - finish date of event (optional)
-- `image1x` - default image (660x280)
-- `image2x` - image for retina display (1320x560)
+- `image1x` - default image (590x275)
+- `image2x` - image for retina display (1180 x 550)
 
 Images should be placed in the folder `data/events/imgs`.
 

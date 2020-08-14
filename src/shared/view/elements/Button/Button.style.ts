@@ -106,7 +106,7 @@ export const useStyles = makeStyles((theme) => ({
       },
 
       '&$contained': {
-        color: theme.extra.colors.white,
+        color: theme.colors.white,
         marginBottom: 'auto',
         alignSelf: 'center',
         background: theme.gradients.button.linear('to right'),

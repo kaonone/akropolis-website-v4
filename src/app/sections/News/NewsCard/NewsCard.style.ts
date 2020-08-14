@@ -36,7 +36,6 @@ const styles = (theme: Theme) => ({
   summary: rule({
     margin: 0,
     marginBottom: theme.spacing(0.5),
-    fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 12,
     lineHeight: 2.17,
     color: '#000',
@@ -76,7 +75,6 @@ const styles = (theme: Theme) => ({
   }),
 
   date: rule({
-    fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 10,
     paddingRight: theme.spacing(1.5),
     marginRight: 'auto',

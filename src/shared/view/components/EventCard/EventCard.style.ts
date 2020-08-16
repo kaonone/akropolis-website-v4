@@ -44,7 +44,6 @@ const styles = (theme: Theme) => ({
   title: rule({
     objectFit: 'contain',
     textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-    fontFamily: theme.extra.typography.primaryFont,
     fontSize: 20,
     fontWeight: 'bold',
     textTransform: 'uppercase',
@@ -59,7 +58,6 @@ const styles = (theme: Theme) => ({
     objectFit: 'contain',
     textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
     flexShrink: 0,
-    fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     lineHeight: 2,
     fontWeight: 'bold',
@@ -74,7 +72,6 @@ const styles = (theme: Theme) => ({
     objectFit: 'contain',
     textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
     flexShrink: 0,
-    fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     fontWeight: 'bold',
 

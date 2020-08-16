@@ -3,7 +3,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { PaletteType } from '@material-ui/core';
 import { Theme, MuiThemeProvider } from '@material-ui/core/styles';
 
-import { darkTheme, lightTheme } from 'shared/styles/theme';
+import { darkTheme, lightTheme } from 'shared/styles';
 import { ThemeContext } from './ThemeContext';
 
 const themeByType: Record<PaletteType, Theme> = {

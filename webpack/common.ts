@@ -257,6 +257,7 @@ export const commonConfig: webpack.Configuration = {
     plugins: [
       new TsConfigPathsPlugin(),
     ],
+    symlinks: false,
   },
   optimization: {
     runtimeChunk: 'single',

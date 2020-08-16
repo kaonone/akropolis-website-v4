@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@akropolis-web/styles@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@akropolis-web/styles/-/styles-0.8.0.tgz#5b21b77293563ec1753a0add9f111bd03750259b"
+  integrity sha512-pR9HMRtNsRv1HlBC11A9OM3wHatNAkjp/iKnc7ywdi1/oaxlWHG/NI9RZRIRyG62gDtHi5UmfhIpsFjopjML4g==
+
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -11060,6 +11065,11 @@ ts-node@^7.0.1:
     mkdirp "^0.5.1"
     source-map-support "^0.5.6"
     yn "^2.0.0"
+
+ts-toolbelt@^6.15.5:
+  version "6.15.5"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-6.15.5.tgz#cb3b43ed725cb63644782c64fbcad7d8f28c0a83"
+  integrity sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==
 
 tsconfig-paths-webpack-plugin@^3.2.0:
   version "3.2.0"

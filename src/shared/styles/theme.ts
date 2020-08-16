@@ -1,102 +1,20 @@
-import { Theme, createMuiTheme } from '@material-ui/core/styles';
-import { makeGradient } from './makeGradient';
+import { Theme } from '@material-ui/core/styles';
+import { getTheme as createTheme, makeGradient, colors } from '@akropolis-web/styles';
 
-// Find color name http://chir.ag/projects/name-that-color
-// https://github.com/insomnious0x01/ntc-js
-const colors = {
-  amethystSmoke: '#A397B4',
-  cornflowerBlue: '#6c81e4',
-  rhino: '#283e64',
-  purpleHeart: '#6931b6',
-  mediumPurple: '#8c4be6',
-  electricViolet: '#9013FE',
-  monza: '#d0021b',
-  silver: '#c9c9c9',
-  blackCurrant: '#2E2639',
-  white: '#fff',
-  black: '#000',
-  royalPurple: '#613AAF',
-  woodSmoke: '#181b1f',
-
-  charade: '#292835',
-  shark: '#191b1f',
-  athensGray: '#eff1f5',
-  royalBlue: '#544CF2',
-  royalBlue2: '#594cf2',
-  heliotrope: '#D93CEF',
-  heliotrope2: '#E965FF',
-  zumthor: '#eaf1ff',
-  scarpaFlow: '#555466',
-  scarpaFlow2: '#5a5466',
-  titanWhite: '#efedff',
-  foam: '#f0fafe',
-  comet: '#616884',
-  alto: '#D8D8D8',
-  jacarta: '#342c66',
-  jacarta2: '#422c66',
-  blueZodiac: '#13254a',
-  bunting: '#1d134a',
-  bossanova: '#4d2c66',
-  zumthor2: '#e6eeff',
-  linkWater: '#d6eaf3',
-  whisper: '#e9e7f2',
-  blueChalk: '#e7e3fe',
-  snuff: '#f0ddf1',
-  amour: '#f8e6f2',
-  anakiwa: '#7cd7ff',
-  melrose: '#a38cff',
-  blushPink: '#ff79ff',
-  blushPink2: '#ffe3f6',
-  pictonBlue: '#4cadf2',
-  turquoise: '#3cefaf',
-  lilac: '#e0abff',
-  grape: '#8a43ba',
-  northWesternPurple: '#4d2c66',
-  darkPurple: '#2a134a',
-  lavender: '#edc4ed',
-  obsidian: '#0a0a0e',
-  cinder: '#13131b',
-  valhalla: '#2a134a',
-  valhalla2: '#2b144b',
-  blueZodiac2: '#14264b',
-  ebonyClay: '#27273a',
-};
+import { colors as localColors } from './colors';
 
 function getGradients(type: 'dark' | 'light') {
   return {
-    main: makeGradient([colors.heliotrope, colors.royalBlue]),
-    products: [
-      makeGradient(type === 'dark' ? [colors.jacarta, colors.blueZodiac] : [colors.zumthor2, colors.linkWater]),
-      makeGradient(type === 'dark' ? [colors.jacarta2, colors.bunting] : [colors.whisper, colors.blueChalk]),
-      makeGradient(type === 'dark' ? [colors.bossanova, colors.valhalla] : [colors.snuff, colors.amour]),
-    ] as const,
-    button: makeGradient([colors.heliotrope, colors.royalBlue, colors.heliotrope2, colors.heliotrope]),
-    dca: makeGradient(type === 'dark'
-      ? [colors.northWesternPurple, colors.darkPurple]
-      : [colors.blushPink2, colors.lavender]),
-    dcaText: makeGradient([colors.lilac, colors.grape]),
+    dca: makeGradient(
+      type === 'dark'
+        ? [localColors.northWesternPurple, localColors.darkPurple]
+        : [localColors.blushPink2, localColors.lavender],
+    ),
+    dcaText: makeGradient([localColors.lilac, localColors.grape]),
   };
 }
 
 const lightPalette = {
-  primary: {
-    main: colors.purpleHeart,
-    light: colors.heliotrope,
-    dark: colors.mediumPurple,
-    contrastText: colors.white,
-  },
-  secondary: {
-    main: colors.electricViolet,
-    light: colors.electricViolet,
-    dark: colors.electricViolet,
-    contrastText: colors.electricViolet,
-  },
-  text: {
-    primary: colors.black,
-  },
-  error: {
-    main: colors.monza,
-  },
   background: {
     default: colors.white,
   },
@@ -104,89 +22,26 @@ const lightPalette = {
 };
 
 export const darkPalette = {
-  primary: {
-    main: colors.purpleHeart,
-    light: colors.heliotrope,
-    dark: colors.mediumPurple,
-    contrastText: colors.white,
-  },
-  secondary: {
-    main: colors.electricViolet,
-    light: colors.electricViolet,
-    dark: colors.electricViolet,
-    contrastText: colors.electricViolet,
-  },
-  text: {
-    primary: colors.white,
-  },
-  error: {
-    main: colors.monza,
-  },
   background: {
     default: colors.cinder,
   },
   type: 'dark' as const,
 };
 
-const unit = 8;
-
-const baseThemeStyles = {
-  palette: lightPalette,
-  colors,
-  gradients: getGradients('light'),
+const extraThemeStyles = {
   sizes: {
-    control: {
-      borderRadius: 4,
-    },
     maxContentWidth: 1400,
     maxSubtitleWidth: 1000,
   },
-  spacing: {
-    unit,
-    layoutContentSkew: {
-      xsHeight: unit * 3,
-      lgHeight: unit * 4,
-    },
-    headerHeight: {
-      xs: 80,
-      md: 96,
-      lg: 112,
-    },
-    horizontalPagePaddings: {
-      xs: {
-        small: unit,
-        medium: unit * 2,
-        large: unit * 3,
-      },
-      md: {
-        small: unit * 1.5,
-        medium: unit * 4,
-        large: unit * 10.5,
-      },
-      lg: {
-        small: unit * 1.5,
-        medium: unit * 8.5,
-        large: unit * 12,
-      },
-    },
-  },
-  typography: {
-    primaryFont: ['Helvetica Neue', 'Arial', 'sans-serif'].join(','),
-    secondaryFont: ['Helvetica Neue', 'Arial', 'sans-serif'].join(','), // TODO remove
-  },
-  zIndex: {
-    tooltip: 1500,
-  },
-  defaultTransitionDuration: '0.4s',
 };
 
 export const lightTheme = getTheme('light');
 export const darkTheme = getTheme('dark');
 
 function getTheme(type: 'light' | 'dark'): Theme {
-  return createMuiTheme({
-    extra: baseThemeStyles,
-    colors,
+  return createTheme(type, {
+    extra: extraThemeStyles,
+    colors: localColors,
     gradients: getGradients(type),
     palette: type === 'light' ? lightPalette : darkPalette,
     breakpoints: {
@@ -223,36 +78,14 @@ function getTheme(type: 'light' | 'dark'): Theme {
         mobileXS: 0,
       },
     },
-    typography: {
-      fontFamily: baseThemeStyles.typography.primaryFont,
-    },
-    shape: {
-      borderRadius: baseThemeStyles.sizes.control.borderRadius,
-    },
     overrides: {
-      MuiCssBaseline: {
-        '@global': {
-          html: {
-            fontSize: 16,
-            fontFamily: baseThemeStyles.typography.primaryFont,
-          },
-          body: {
-            transition: 'background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-          },
-          'html, body, #root': {
-            height: '100%',
-          },
-          '*': {
-            boxSizing: 'border-box',
-          },
-        },
-      },
+      // TODO: Remove after updating link styles in package
       MuiLink: {
         underlineHover: {
           borderWidth: '0 0 1px 0',
           borderStyle: 'solid',
-          borderColor:
-            type === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+          borderColor: type === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+          textDecoration: 'none',
 
           '&:hover': {
             textDecoration: 'none',
@@ -260,43 +93,20 @@ function getTheme(type: 'light' | 'dark'): Theme {
           },
         },
       },
-      MuiDrawer: {
-        paper: {
-          width: '26.875rem',
-          maxWidth: '100vw',
-          backgroundColor: colors.blackCurrant,
-        },
-      },
-      MuiSnackbarContent: {
-        root: {
-          backgroundColor: '#fff',
-        },
-        message: {
-          color: colors.rhino,
-        },
-      },
-      MuiFormControlLabel: {
-        root: {
-          marginRight: 0,
-        },
-      },
     },
   });
 }
 
-export { Theme };
-
-// tslint:disable: interface-name
-declare module '@material-ui/core/styles/createMuiTheme' {
-  interface Theme {
-    extra: typeof baseThemeStyles;
-    colors: typeof colors;
+declare module '@akropolis-web/styles/dist/theme' {
+  interface ThemeOverrides {
+    extra: typeof extraThemeStyles;
+    colors: typeof localColors;
     gradients: ReturnType<typeof getGradients>;
   }
 
-  interface ThemeOptions {
-    extra: typeof baseThemeStyles;
-    colors: typeof colors;
+  interface ThemeOptionsOverrides {
+    extra: typeof extraThemeStyles;
+    colors: typeof localColors;
     gradients: ReturnType<typeof getGradients>;
   }
 }

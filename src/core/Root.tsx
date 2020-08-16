@@ -5,7 +5,7 @@ import animateScroll from 'react-scroll/modules/mixins/animate-scroll';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { StylesProvider } from '@material-ui/core/styles';
 import 'normalize.css';
-import 'shared/styles/fonts/index.scss';
+import '@akropolis-web/styles/assets/fonts/HelveticaNeue/stylesheet.css';
 
 import { hot } from 'react-hot-loader/root';
 import { I18nProvider } from 'services/i18n';

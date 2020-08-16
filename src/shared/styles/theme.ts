@@ -6,9 +6,11 @@ import { colors as localColors } from './colors';
 function getGradients(type: 'dark' | 'light') {
   return {
     dca: makeGradient(
-      type === 'dark' ? [colors.northWesternPurple, colors.darkPurple] : [colors.blushPink2, colors.lavender],
+      type === 'dark'
+        ? [localColors.northWesternPurple, localColors.darkPurple]
+        : [localColors.blushPink2, localColors.lavender],
     ),
-    dcaText: makeGradient([colors.lilac, colors.grape]),
+    dcaText: makeGradient([localColors.lilac, localColors.grape]),
   };
 }
 
@@ -39,12 +41,8 @@ export const darkTheme = getTheme('dark');
 function getTheme(type: 'light' | 'dark'): Theme {
   return createTheme(type, {
     extra: extraThemeStyles,
-    /**
-     * TODO: Package theme options are not merged with ThemeOptionsOverrides properly
-     * Fix this TS issue in @akropolis-web/styles
-     */
-    colors: localColors as any,
-    gradients: getGradients(type) as any,
+    colors: localColors,
+    gradients: getGradients(type),
     palette: type === 'light' ? lightPalette : darkPalette,
     breakpoints: {
       keys: [
@@ -81,13 +79,6 @@ function getTheme(type: 'light' | 'dark'): Theme {
       },
     },
     overrides: {
-      MuiDrawer: {
-        paper: {
-          width: '26.875rem',
-          maxWidth: '100vw',
-        },
-      },
-
       // TODO: Remove after updating link styles in package
       MuiLink: {
         underlineHover: {

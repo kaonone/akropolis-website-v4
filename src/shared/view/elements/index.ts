@@ -8,7 +8,6 @@ export { default as SocialLink } from './SocialLink/SocialLink';
 
 export { default as IconButton } from '@material-ui/core/IconButton';
 export { default as MenuItem } from '@material-ui/core/MenuItem';
-export { default as Drawer } from '@material-ui/core/Drawer';
 export { default as Link, LinkProps } from '@material-ui/core/Link';
 export { default as Grid } from '@material-ui/core/Grid';
 export { default as ButtonBase } from '@material-ui/core/ButtonBase';

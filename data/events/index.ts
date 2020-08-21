@@ -14,8 +14,8 @@ const events: IEvent[] = [
     },
     startDate: '08.20.2020',
     finishDate: '08.20.2020',
-    image1x: require('./imgs/ethrealsummit@590w.jpg'),
-    image2x: require('./imgs/etherealsummit@1180w.jpg'),
+    image1x: require('./imgs/ethrealsummit@590w.png'),
+    image2x: require('./imgs/etherealsummit@1180w.png'),
   },
   {
     eventName: 'Ethreal Sessions 002',
@@ -29,8 +29,8 @@ const events: IEvent[] = [
     },
     startDate: '07.16.2020',
     finishDate: '07.16.2020',
-    image1x: require('./imgs/ethrealsummit@590w.jpg'),
-    image2x: require('./imgs/etherealsummit@1180w.jpg'),
+    image1x: require('./imgs/ethrealsummit@590w.png'),
+    image2x: require('./imgs/etherealsummit@1180w.png'),
   },
   {
     eventName: 'IDEO’s Product Validation Day',

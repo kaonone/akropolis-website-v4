@@ -14,8 +14,20 @@ export default function getEnvParams() {
   const withHot = isWatchMode && isDevelopment;
   const appVersion = appInfo.version;
 
+  const tokenSwapApiUrl = 'https://swap.akropolis.io/1.0';
+
   return {
-    isProduction, isDevelopment, isWatchMode, withAnalyze, withoutTypeChecking,
-    chunkName, chunkHash, withHot, appVersion, forGHPages, isStaging,
+    isProduction,
+    isDevelopment,
+    isWatchMode,
+    withAnalyze,
+    withoutTypeChecking,
+    chunkName,
+    chunkHash,
+    withHot,
+    appVersion,
+    forGHPages,
+    isStaging,
+    tokenSwapApiUrl,
   };
 }

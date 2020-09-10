@@ -114,7 +114,8 @@ export const useStyles = makeStyles((theme) => ({
         opacity: 0.99,
 
         '&$disabled': {
-          background: `rgba(0, 0, 0, 0.12)`,
+          background: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(255, 255, 255, 0.5)',
         },
 
         '&:before': {

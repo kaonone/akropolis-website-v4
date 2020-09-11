@@ -26,10 +26,12 @@ export function App() {
           <News withTitle={false} withPagination={false} />
         </MuiThemeProvider>
       </Route>
-      <MuiThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        <Route path={routes.tokenswap.getRoutePath()} component={TokenSwap} />
-      </MuiThemeProvider>
+      <Route path={routes.tokenswap.getRoutePath()}>
+        <MuiThemeProvider theme={darkTheme}>
+          <CssBaseline />
+          <TokenSwap />
+        </MuiThemeProvider>
+      </Route>
       <Redirect to="/" />
     </Switch>
   );

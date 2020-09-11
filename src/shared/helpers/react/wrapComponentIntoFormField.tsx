@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Field, FieldRenderProps, FieldProps as RFFieldProps } from 'react-final-form';
-import { Omit, MergeRight } from '_helpers';
+import { Field, FieldProps as RFFieldProps, FieldRenderProps } from 'react-final-form';
+import { Omit, MergeRight, ExcludeIndexSignature } from '_helpers';
 
-type BaseWrappedFieldProps = FieldRenderProps<any, HTMLElement> & {
+type BaseWrappedFieldProps = ExcludeIndexSignature<FieldRenderProps<any, HTMLElement>> & {
   value?: any;
   onChange?: any;
 };
@@ -25,7 +25,7 @@ export function wrapComponentIntoFormField<P extends BaseWrappedFieldProps>(
 ) {
   type OwnProps = Omit<P, keyof BaseWrappedFieldProps>;
   type FieldProps = Pick<
-    RFFieldProps<P['input']['value'], HTMLElement>,
+    RFFieldProps<P['input']['value'], P, HTMLElement>,
     RFFieldPropKey
   >;
   type ResultProps = MergeRight<OwnProps, FieldProps>;

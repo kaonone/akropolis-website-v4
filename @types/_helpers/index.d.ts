@@ -23,28 +23,42 @@ declare module '_helpers' {
    */
   export type Overwrite<T, U> = (U extends ConsistentWith<U, T> ? T : _Omit<T, keyof U>) & U;
 
-  export type GetProps<T extends React.ComponentType<any>> =
-    T extends React.StatelessComponent<infer SP> ? SP :
-    T extends React.ComponentClass<infer CP> ? CP : never;
+  export type GetProps<T extends React.ComponentType<any>> = T extends React.StatelessComponent<infer SP>
+    ? SP
+    : T extends React.ComponentClass<infer CP>
+    ? CP
+    : never;
 
   export type SubSet<T, R extends T> = R;
 
   export type MergeRight<L, R> = R & Pick<L, Exclude<keyof L, keyof R>>;
 
   type CheckExtends<T, R> = T extends R ? true : unknown;
-  export type CheckIdentity<T, R> = (
-    CheckExtends<T, R> | CheckExtends<R, T> | CheckExtends<keyof T, keyof R> | CheckExtends<keyof R, keyof T>
-  ) extends true ? T : unknown;
+  export type CheckIdentity<T, R> =
+    | CheckExtends<T, R>
+    | CheckExtends<R, T>
+    | CheckExtends<keyof T, keyof R>
+    | CheckExtends<keyof R, keyof T> extends true
+    ? T
+    : unknown;
 
   export type MarkAs<A, T> = {
     [key in keyof T]: A;
-  }
+  };
 
-  export type MarkAsPartial<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>> & {
-    [key in K]?: T[key];
-  }
+  export type MarkAsPartial<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>> &
+    {
+      [key in K]?: T[key];
+    };
 
   export type MarkNotIdentityProps<T, R> = {
     [K in keyof T & keyof R]: CheckIdentity<T[K], R[K]>;
-  }
+  };
+
+  type BaseKeys<T> = {
+    [K in keyof T]: string extends K ? never : number extends K ? never : K;
+  } extends { [_ in keyof T]: infer U }
+    ? U
+    : never;
+  export type ExcludeIndexSignature<T extends Record<any, any>> = Pick<T, BaseKeys<T>>;
 }

@@ -18,17 +18,19 @@ document.domain = document.domain.includes('akropolis.io') ? 'akropolis.io' : do
 render(<Root {...appData} />);
 
 /* Hot Module Replacement API */
-if ((module as any).hot && process.env.NODE_ENV !== 'production') {
-  (module as any).hot.accept(['./core/Root', './core/configureApp'], () => {
+if (module.hot && process.env.NODE_ENV !== 'production') {
+  module.hot.accept(['./core/Root', './core/configureApp'], () => {
     const nextConfigureApp: typeof configureApp = require('./core/configureApp').default;
-    const NextApp: typeof Root = require('./core/Root').App;
+    const NextApp: typeof Root = require('./core/Root').Root;
     const nextAppData = nextConfigureApp(appData);
     render(<NextApp {...nextAppData} jssDeps={appData.jssDeps} />);
   });
 }
 
 function render(component: React.ReactElement<any>) {
-  ReactDOM.hydrate(
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
+
+  renderMethod(
     component,
     document.getElementById('root'),
     () => {

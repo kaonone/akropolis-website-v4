@@ -1,3 +1,5 @@
+
+import { hot } from 'react-hot-loader/root';
 import React, { useEffect } from 'react';
 import { createBrowserHistory, Location } from 'history';
 import { Router } from 'react-router-dom';
@@ -7,12 +9,10 @@ import { StylesProvider } from '@material-ui/core/styles';
 import 'normalize.css';
 import '@akropolis-web/styles/assets/fonts/HelveticaNeue/stylesheet.css';
 
-import { hot } from 'react-hot-loader/root';
 import { I18nProvider } from 'services/i18n';
 import { ThemeProvider } from 'services/theme';
 import { AdaptabilityProvider } from 'services/adaptability';
 import { IAppData, IJssDependencies } from 'shared/types/app';
-
 import { App } from 'app/App';
 
 import { DepsContext } from './DepsReactContext';

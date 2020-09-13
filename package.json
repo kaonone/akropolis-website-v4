@@ -223,7 +223,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@akropolis-web/components": "^0.10.4",
+    "@akropolis-web/components": "^0.11.0",
     "@akropolis-web/styles": "^0.9.0",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",

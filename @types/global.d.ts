@@ -16,6 +16,19 @@ declare var __CLIENT__: boolean;
 declare var __LANG__: 'en' | 'he';
 declare var __HOST__: string;
 
+interface NodeModule {
+  exports: any;
+  require: NodeRequireFunction;
+  id: string;
+  filename: string;
+  loaded: boolean;
+  parent: NodeModule | null;
+  children: NodeModule[];
+  paths: string[];
+}
+
+declare var module: NodeModule;
+
 declare module "*.svg" {
   const content: string;
   export default content;

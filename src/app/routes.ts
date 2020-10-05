@@ -5,6 +5,11 @@ const rawTree = {
     partners: null,
     news: null,
   },
+  tokenswap: {
+    registration: null,
+    check: null,
+    kyc: null,
+  },
 };
 
 const routes = build(rawTree);

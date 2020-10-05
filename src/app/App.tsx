@@ -8,7 +8,7 @@ import Partners from 'app/sections/Partners/Partners';
 import News from 'app/sections/News/News';
 import { darkTheme } from 'shared/styles/theme';
 
-import { Main } from './pages/Main/Main';
+import { Main, TokenSwap } from './pages';
 
 export function App() {
   return (
@@ -24,6 +24,12 @@ export function App() {
         <MuiThemeProvider theme={darkTheme}>
           <CssBaseline />
           <News withTitle={false} withPagination={false} />
+        </MuiThemeProvider>
+      </Route>
+      <Route path={routes.tokenswap.getRoutePath()}>
+        <MuiThemeProvider theme={darkTheme}>
+          <CssBaseline />
+          <TokenSwap />
         </MuiThemeProvider>
       </Route>
       <Redirect to="/" />

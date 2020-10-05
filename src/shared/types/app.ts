@@ -1,5 +1,7 @@
 import { Jss } from 'jss';
 
+import Api from 'services/api/Api';
+
 export interface IAppData {
   jssDeps: IJssDependencies;
   deps: IDependencies;
@@ -9,5 +11,6 @@ export interface IJssDependencies {
   jss: Jss;
 }
 
-// tslint:disable-next-line: no-empty-interface
-export interface IDependencies {}
+export interface IDependencies {
+  api: Api;
+}

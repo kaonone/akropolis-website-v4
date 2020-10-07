@@ -80,7 +80,7 @@ const bannedCountries = {
 async function init(group: 'quest' | 'tokenswap', getAccessToken: () => Promise<string>) {
   const accessToken = await getAccessToken();
   const apiUrl = 'https://api.sumsub.com';
-  const flowName = group === 'tokenswap' ? 'akropolis' : 'akropolis.io';
+  const flowName = 'kyc-flow';
 
   const snsWebSdkInstance = window.snsWebSdk
     .Builder(apiUrl, flowName)

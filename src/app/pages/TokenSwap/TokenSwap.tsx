@@ -25,10 +25,6 @@ export function TokenSwap() {
     });
   }, []);
 
-  const handleRegisterUserSuccess = useCallback((address: string) => {
-    setUserAddress(address);
-  }, []);
-
   return (
     <Layout>
       <Layout.Header>
@@ -42,7 +38,7 @@ export function TokenSwap() {
               <Switch>
                 <Route exact path={routes.tokenswap.getRoutePath()} component={Preview} />
                 <Route exact path={routes.tokenswap.registration.getRoutePath()}>
-                  <RegisterUser onSuccess={handleRegisterUserSuccess} />
+                  <RegisterUser onSuccess={setUserAddress} />
                 </Route>
                 <Route exact path={routes.tokenswap.check.getRoutePath()} component={CheckUserAddress} />
                 {userAddress && (

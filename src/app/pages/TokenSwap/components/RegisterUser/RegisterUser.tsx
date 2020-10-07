@@ -20,7 +20,7 @@ const translations = {
 };
 
 interface IProps {
-  onSuccess?(): void;
+  onSuccess?(address: string): void;
 }
 
 export function RegisterUser(props: IProps) {
@@ -29,9 +29,10 @@ export function RegisterUser(props: IProps) {
   const { address, tokens, error, onSuccessChecking, onError, onRetry } = useMakeFieldsForCheckUser();
 
   const handleRegistration = React.useCallback((user: IUser) => {
-    onSuccess && onSuccess();
+    const { address: userAddress } = user;
+    onSuccess && onSuccess(userAddress);
     onSuccessChecking(user);
-  }, []);
+  }, [onSuccess, onSuccessChecking]);
 
   return (
     <div className={classes.root}>

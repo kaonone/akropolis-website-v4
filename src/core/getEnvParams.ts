@@ -15,6 +15,7 @@ export default function getEnvParams() {
   const appVersion = appInfo.version;
 
   const tokenSwapApiUrl = 'https://swap.akropolis.io/1.0';
+  const sumsubAccessTokenUrl = 'https://sumsub-swap.akropolis.io';
 
   return {
     isProduction,
@@ -29,5 +30,6 @@ export default function getEnvParams() {
     forGHPages,
     isStaging,
     tokenSwapApiUrl,
+    sumsubAccessTokenUrl,
   };
 }

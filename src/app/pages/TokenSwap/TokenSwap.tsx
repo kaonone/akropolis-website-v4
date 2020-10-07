@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Switch, Route, Redirect, useHistory } from 'react-router';
 
 import { useDeps } from 'core/DepsReactContext';
@@ -17,7 +17,7 @@ export function TokenSwap() {
   const history = useHistory();
   const deps = useDeps();
 
-  const [isRegistered, setIsRegistered] = React.useState(false);
+  const [userAddress, setUserAddress] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     return history.listen(location => {
@@ -38,12 +38,12 @@ export function TokenSwap() {
               <Switch>
                 <Route exact path={routes.tokenswap.getRoutePath()} component={Preview} />
                 <Route exact path={routes.tokenswap.registration.getRoutePath()}>
-                  <RegisterUser onSuccess={setIsRegistered.bind(null, true)} />
+                  <RegisterUser onSuccess={setUserAddress} />
                 </Route>
                 <Route exact path={routes.tokenswap.check.getRoutePath()} component={CheckUserAddress} />
-                {isRegistered && (
+                {userAddress && (
                   <Route exact path={routes.tokenswap.kyc.getRoutePath()}>
-                    <Kyc group="tokenswap" />
+                    <Kyc userAddress={userAddress} group="tokenswap" />
                   </Route>
                 )}
                 <Redirect to={routes.tokenswap.getRoutePath()} />

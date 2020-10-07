@@ -8,7 +8,7 @@ export const menuItems: IMenuItem[] = [
     isExternal: true,
   },
   {
-    path: 'https://www.notion.so/b390a85d87124796b0b008b20e6ab38e?v=387bc54a16e34bf2b8f7328b839eebc2',
+    path: 'https://www.notion.so/ebefe159cd2d4b7ea772064d32d1926e?v=d7080d7740174f28a7b72c39a6fb7fa3',
     title: tKeys.modules.navigation.roadmap.getKey(),
     isExternal: true,
   },

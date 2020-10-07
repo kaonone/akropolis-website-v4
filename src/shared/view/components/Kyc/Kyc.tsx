@@ -15,12 +15,6 @@ export function Kyc({ group, userAddress }: IProps) {
   const classes = useStyles();
   const deps = useDeps();
 
-  const api = React.useMemo(() => {
-    return {
-      sumsub: deps.api.sumsub,
-    }.sumsub;
-  }, ['sumsub']);
-
   const handleScriptInject: any = React.useCallback(
     (_newState: any, { scriptTags }: { scriptTags: any[] }) => {
       if (scriptTags) {
@@ -29,13 +23,13 @@ export function Kyc({ group, userAddress }: IProps) {
         scriptTag.addEventListener(
           'load',
           init.bind(null, group, async () => {
-            const accessToken = await api.getAccessToken(userAddress);
+            const accessToken = await deps.api.sumsub.getAccessToken(userAddress);
             return accessToken.token;
           }),
         );
       }
     },
-    [userAddress, api.getAccessToken],
+    [userAddress, deps.api.sumsub.getAccessToken],
   );
 
   const isServer = window.__PRERENDER_INJECTED__ && window.__PRERENDER_INJECTED__.isServer;

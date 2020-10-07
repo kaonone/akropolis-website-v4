@@ -17,3 +17,7 @@ export interface IServerUserError {
   code: ServerUserErrorCode;
   message: string;
 }
+
+export interface IServerSumsubAccessToken {
+  token: string;
+}

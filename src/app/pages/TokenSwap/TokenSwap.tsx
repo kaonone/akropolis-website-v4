@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Switch, Route, Redirect, useHistory } from 'react-router';
 
 import { useDeps } from 'core/DepsReactContext';

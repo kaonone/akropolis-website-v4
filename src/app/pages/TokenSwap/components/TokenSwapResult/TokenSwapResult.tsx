@@ -34,9 +34,7 @@ export function TokenSwapResult(props: IProps) {
   const messageByError: Record<UserError, () => React.ReactNode> = {
     notConfirmed: () => (
       <Typography variant="body1" className={classes.error}>
-        <span>
-          It seems like we have your ETH address in our database, but you didn’t confirm your residency and
-        </span>{' '}
+        <span>It seems like we have your ETH address in our database, but you didn’t confirm your residency and</span>{' '}
         <Link href={TOKEN_SWAP_T_AND_C_URL}>{'Terms & Conditions'}</Link>
         <span>, please do so </span>
         <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>here</RouterLink>{' '}
@@ -68,11 +66,7 @@ export function TokenSwapResult(props: IProps) {
             {`Your ETH address ${address} is registered in our database.`}
           </Typography>
           <Typography className={classes.tokensAmount} variant="body1">
-            <span>
-              You will receive {tokens} AKRO. Vesting schedule: 2-month lockup after Huobi Prime Offering, vesting
-              monthly over 12 months thereafter (you will receive 1/12 of tokenseach month starting from September 16).
-              {' '}
-            </span>
+            <span>You will receive {tokens} AKRO.</span>{' '}
             {withKYC && (
               <>
                 {resultsFor === 'registration' ? (
@@ -87,8 +81,7 @@ export function TokenSwapResult(props: IProps) {
                       confirmation from KYC provider - you don’t need to do anything else. If you still haven’t passed
                       KYC - please go through the{' '}
                     </span>
-                    <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>registration process</RouterLink>
-                    {' '}
+                    <RouterLink to={routes.tokenswap.registration.getRedirectPath()}>registration process</RouterLink>{' '}
                     <span>again.</span>
                   </>
                 )}

@@ -1,6 +1,6 @@
 import { makeStyles } from 'shared/styles';
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((_theme) => ({
   root: {},
   card: {
     backgroundColor: '#212131',

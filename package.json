@@ -26,7 +26,8 @@
     "build:gh-pages:staging": "better-npm-run build:gh-pages:staging",
     "analyze:dev": "better-npm-run analyze:dev",
     "analyze:prod": "better-npm-run analyze:prod",
-    "stylelint-autofix": "./node_modules/.bin/stylelint \"./src/**/*.scss\" --fix"
+    "stylelint-autofix": "./node_modules/.bin/stylelint \"./src/**/*.scss\" --fix",
+    "codegen": "rm -rf ./src/generated && typechain --target web3-rxjs --outDir src/generated/contracts **/abi/**/*.json;"
   },
   "betterScripts": {
     "server:dev": {
@@ -220,11 +221,15 @@
     "webpack-dev-server": "^3.1.14",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-isomorphic-dev-middleware": "^4.1.0",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "typechain": "^1.0.3",
+    "typechain-target-web3-rxjs": "^0.1.5",
+    "core-decorators": "^0.20.0",
+    "@types/web3": "1.0.20"
   },
   "dependencies": {
-    "@akropolis-web/components": "^0.11.0",
-    "@akropolis-web/styles": "^0.9.0",
+    "@akropolis-web/components": "^0.21.0",
+    "@akropolis-web/styles": "^0.13.1",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
@@ -305,6 +310,15 @@
     "ts-toolbelt": "^6.15.5",
     "typescript": "^3.5.3",
     "url-loader": "^1.1.2",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "rxjs": "^6.5.4",
+    "web3": "1.2.1",
+    "@web3-wallets-kit/bitski-connector": "^0.1.1",
+    "@web3-wallets-kit/connect-wallet-connector": "^0.1.1",
+    "@web3-wallets-kit/core": "^0.1.3",
+    "@web3-wallets-kit/fortmatic-connector": "^0.1.1",
+    "@web3-wallets-kit/inpage-connector": "^0.0.13",
+    "@web3-wallets-kit/portis-connector": "^0.2.1",
+    "@web3-wallets-kit/wallet-link-connector": "^0.0.3"
   }
 }

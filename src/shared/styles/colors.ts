@@ -20,4 +20,6 @@ export const colors = {
   titanWhite: '#efedff',
   turquoise: '#3cefaf',
   valhalla2: '#2b144b',
+  dark: '#0a0a0e',
+  lightDark: '#13131b',
 };

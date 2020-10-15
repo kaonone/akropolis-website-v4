@@ -1,5 +1,7 @@
 import * as appInfo from '../../package.json';
 
+export type Mode = 'sandbox' | 'rinkeby' | 'kovan' | 'mainnet' | 'pre-mainnet';
+
 export default function getEnvParams() {
   const isProduction = process.env.NODE_ENV === 'production';
   const isDevelopment = process.env.NODE_ENV === 'development';
@@ -8,6 +10,7 @@ export default function getEnvParams() {
   const withAnalyze = process.env.BUNDLE_ANALYZE_MODE === 'true';
   const withoutTypeChecking = process.env.WITHOUT_TYPES_CHECKING === 'true';
   const forGHPages = process.env.FOR_GH_PAGES === 'true';
+  const mode: Mode = (process.env.MODE as Mode | undefined) || 'rinkeby';
 
   const chunkName = isProduction ? 'id' : 'name';
   const chunkHash = isWatchMode && !isProduction ? 'hash' : 'chunkhash';
@@ -31,5 +34,6 @@ export default function getEnvParams() {
     isStaging,
     tokenSwapApiUrl,
     sumsubAccessTokenUrl,
+    mode,
   };
 }

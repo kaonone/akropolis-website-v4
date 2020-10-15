@@ -1,18 +1,7 @@
 import { Theme } from '@material-ui/core/styles';
-import { getTheme as createTheme, makeGradient, colors } from '@akropolis-web/styles';
+import { getTheme as createTheme, colors } from '@akropolis-web/styles';
 
 import { colors as localColors } from './colors';
-
-function getGradients(type: 'dark' | 'light') {
-  return {
-    dca: makeGradient(
-      type === 'dark'
-        ? [localColors.northWesternPurple, localColors.darkPurple]
-        : [localColors.blushPink2, localColors.lavender],
-    ),
-    dcaText: makeGradient([localColors.lilac, localColors.grape]),
-  };
-}
 
 const lightPalette = {
   background: {
@@ -42,7 +31,6 @@ function getTheme(type: 'light' | 'dark'): Theme {
   return createTheme(type, {
     extra: extraThemeStyles,
     colors: localColors,
-    gradients: getGradients(type),
     palette: type === 'light' ? lightPalette : darkPalette,
     breakpoints: {
       keys: [
@@ -58,6 +46,8 @@ function getTheme(type: 'light' | 'dark'): Theme {
         'desktopXS',
         'tabletSM',
         'tabletXS',
+        'mobileLG',
+        'mobileMD',
         'mobileSM',
         'mobileXS',
       ],
@@ -74,6 +64,8 @@ function getTheme(type: 'light' | 'dark'): Theme {
         desktopXS: 1280,
         tabletSM: 1024,
         tabletXS: 768,
+        mobileLG: 640,
+        mobileMD: 480,
         mobileSM: 414,
         mobileXS: 0,
       },
@@ -101,13 +93,11 @@ declare module '@akropolis-web/styles/dist/theme' {
   interface ThemeOverrides {
     extra: typeof extraThemeStyles;
     colors: typeof localColors;
-    gradients: ReturnType<typeof getGradients>;
   }
 
   interface ThemeOptionsOverrides {
     extra: typeof extraThemeStyles;
     colors: typeof localColors;
-    gradients: ReturnType<typeof getGradients>;
   }
 }
 
@@ -120,6 +110,8 @@ declare module '@material-ui/core/styles/createBreakpoints' {
     desktopXS: true;
     tabletSM: true;
     tabletXS: true;
+    mobileLG: true;
+    mobileMD: true;
     mobileSM: true;
     mobileXS: true;
   }

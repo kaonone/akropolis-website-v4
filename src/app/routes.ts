@@ -10,6 +10,9 @@ const rawTree = {
     check: null,
     kyc: null,
   },
+  vAkro: {
+    exchange: null,
+  },
 };
 
 const routes = build(rawTree);

@@ -10,6 +10,10 @@ export const useStyles = makeStyles((theme) => ({
     minHeight: '100%',
   },
 
+  dark: {
+    backgroundColor: theme.colors.dark,
+  },
+
   container: {
     paddingLeft: theme.spacing(2.5),
     paddingRight: theme.spacing(2.5),

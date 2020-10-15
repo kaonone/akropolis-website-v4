@@ -1,5 +1,33 @@
 // tslint:disable:max-line-length
 export default {
+  features: {
+    auth: {
+      applicationNetwork: 'This application works with the network "%{networkName}"',
+      modalTitle: {
+        connected: 'Disconnect or change wallet',
+        disconnected: 'Connect Wallet',
+        connectedTo: 'Connected to',
+        disconnect: 'Disconnect',
+      },
+      connect: 'Connect to wallet',
+    },
+    networkWarning: {
+      title: 'You are connected to the wrong network',
+      warning:
+        'You are connected to the wrong network. Please choose %{name} to proceed to %{type}',
+      disconnectButton: 'Disconnect',
+      networkName: {
+        1: 'Main Ethereum Network',
+        4: 'Rinkeby Network',
+        42: 'Kovan Network',
+      },
+      networkType: {
+        1: 'mainnet',
+        4: 'testnet',
+        42: 'testnet',
+      },
+    },
+  },
   modules: {
     navigation: {
       products: 'Product',

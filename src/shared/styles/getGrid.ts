@@ -29,26 +29,32 @@ export function getGrid(
       display: 'flex',
       flexWrap: 'wrap',
       ...configs.reduce<StyleRules>(
-        (acc, { breakpoint, hPadding, vPadding }) => ({
-          ...acc,
-          [theme.breakpoints.up(breakpoint)]: {
-            ...container[theme.breakpoints.up(breakpoint)],
-            width: `calc(100% + ${hPadding}px)`,
-            margin: `${-vPadding / 2}px ${-hPadding / 2}px`,
-          },
-        }),
+        (acc, { breakpoint, hPadding, vPadding }) => {
+          const breakpointProperties = item[theme.breakpoints.up(breakpoint)];
+          const objectForSpread = typeof breakpointProperties === 'object' ? breakpointProperties : {};
+          return {
+            ...acc,
+            [theme.breakpoints.up(breakpoint)]: {
+              ...objectForSpread,
+              width: `calc(100% + ${hPadding}px)`,
+              margin: `${-vPadding / 2}px ${-hPadding / 2}px`,
+            },
+          };
+        },
         container,
       ),
     },
     item: {
       ...configs.reduce<StyleRules>((acc, { breakpoint, count, hPadding, vPadding }) => {
-        const percent = Math.floor((100 * 1000000) / count) / 1000000;
+        const percent = `${Math.floor((100 * 1000000) / count) / 1000000}%`;
+        const breakpointProperties = item[theme.breakpoints.up(breakpoint)];
+        const objectForSpread = typeof breakpointProperties === 'object' ? breakpointProperties : {};
         return {
           ...acc,
           [theme.breakpoints.up(breakpoint)]: {
-            ...item[theme.breakpoints.up(breakpoint)],
-            maxWidth: `${percent}%`,
-            flexBasis: `${percent}%`,
+            ...objectForSpread,
+            maxWidth: percent,
+            flexBasis: percent,
             padding: `${vPadding / 2}px ${hPadding / 2}px`,
           },
         };

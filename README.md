@@ -2,20 +2,20 @@
 
 # Akropolis website v4
 
-## How do I work?
+## How does this work?
 
 ### Preparation
-- You need to globally install `Node.js` and `npm`
-- Run `npm install` for install dependencies
+- You need globally accessible `node` and `yarn`
+- Run `yarn install` to install dependencies
 
-### For start locally
-- Run `npm run dev`
+### To start locally
+- Run `yarn dev`
 - Go to [http://localhost:8080]()
 
-### For deploy changes to web (only for contributors)
-- Run `npm run deploy`
+### To deploy changes to the web (only for contributors)
+- Run `yarn deploy`
 
-## Where can i change or add the data?
+## Where can I change or add the data?
 
 ### Partners
 Edit the file `data/partners/index.ts`. It contains an array of partners data.
@@ -70,8 +70,8 @@ Item structure:
 - `description` - event description
 - `startDate` - start date of event
 - `finishDate` - finish date of event (optional)
-- `image1x` - default image (660x280)
-- `image2x` - image for retina display (1320x560)
+- `image1x` - default image (590x275)
+- `image2x` - image for retina display (1180 x 550)
 
 Images should be placed in the folder `data/events/imgs`.
 

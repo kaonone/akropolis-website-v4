@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme) => ({
   root: {},
   icon: {
     display: 'flex',
+    alignItems: 'center',
     fontSize: theme.spacing(8.25),
     marginBottom: theme.spacing(5),
   },

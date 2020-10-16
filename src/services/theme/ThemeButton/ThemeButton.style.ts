@@ -28,7 +28,7 @@ export const useStyles = makeStyles((theme) => ({
     bottom: 2,
     left: 2,
     borderRadius: theme.spacing(2),
-    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
     opacity: 1,
     transition: theme.transitions.create(['opacity', 'background-color']),
 

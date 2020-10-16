@@ -19,7 +19,7 @@ function Ethereum(props: GetProps<typeof SvgIcon>) {
     <SvgIcon {...props} classes={classes} viewBox="0 0 160 40">
       <g fill="none">
         <rect width="159.2" height="40" rx="6" fill="currentColor" />
-        <g stroke="#2D2D2D" stroke-width=".3">
+        <g stroke="#2D2D2D" strokeWidth=".3">
           <path fill="#FF826B" d="M65.6 6l-.2.7v18.2l.2.2 8.5-5z" />
           <path fill="#F3F047" d="M65.6 6L57 20l8.5 5z" />
           <path fill="#6A7DD1" d="M65.6 26.7h-.1V33.7l8.6-12z" />

@@ -8,15 +8,16 @@ import { TopWave, BottomWave } from './waves';
 
 interface IOwnProps {
   children: React.ReactNode;
+  isDark?: boolean;
 }
 
 type IProps = IOwnProps;
 
-function LayoutComponent({ children }: IProps) {
+function LayoutComponent({ children, isDark }: IProps) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={cn(classes.root, {[classes.dark]: isDark })}>
       {children}
       <div className={classes.socials}>
         <AkropolisSocialLinks direction="column" />

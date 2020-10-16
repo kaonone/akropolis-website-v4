@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import { tKeys, useTranslate } from 'services/i18n';
 import { PRIVACY_POLICY_URL, T_AND_C_URL } from 'assets';
 
@@ -48,17 +47,8 @@ function Footer({ customNavItems }: Props) {
           ))}
         </nav>
         <Typography className={classes.text} color="textSecondary">
-          <Link<typeof RouterLink>
-            component={RouterLink}
-            className={classes.link}
-            to="/"
-            title="Akropolis"
-            color="textPrimary"
-          >
-            Akropolis
-          </Link>
           {[
-            ' Decentralised Ltd.',
+            'Akropolis Decentralised Ltd.',
             'Suite 23 Portland House, Glacis Road, Gibraltar, GX11 1AA',
             'COMPANY NUMBER: 116430',
             `${startYear}${yearNow > startYear ? '-' + yearNow : ''}, All right reserved`,

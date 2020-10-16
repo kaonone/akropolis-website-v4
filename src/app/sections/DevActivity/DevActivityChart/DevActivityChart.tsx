@@ -26,7 +26,7 @@ export function DevActivityChartSync() {
   return <Loading response={response}>{response.data && <Chart points={response.data} />}</Loading>;
 }
 
-export interface Response {
+interface Response {
   data: {
     getMetric: {
       timeseriesData: Array<{

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import dayjs from 'dayjs';
 import { XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Line, LineChart } from 'recharts';
 
 import { useStyles } from './Chart.style';
@@ -21,14 +22,13 @@ function Chart(props: IProps) {
   const renderXTick = React.useCallback(
     (tickProps: any) => {
       const {
-        visibleTicksCount,
-        index,
+        x,
+        y,
         payload: { value },
-        ...rest
       } = tickProps;
       return (
-        <text {...rest} dy={16} fill={theme.palette.text.secondary}>
-          {new Date(value).toLocaleDateString()}
+        <text x={x} y={y} dy={8} className={classes.tick}>
+          {dayjs(value).format('DD MMM YY')}
         </text>
       );
     },
@@ -38,19 +38,22 @@ function Chart(props: IProps) {
   const renderYTick = React.useCallback(
     (tickProps: any) => {
       const {
-        visibleTicksCount,
-        index,
+        x,
+        y,
         payload: { value },
-        ...rest
       } = tickProps;
       return (
-        <text {...rest} dx={-4} fill={theme.palette.text.secondary}>
-          {value}
-        </text>
+        value > 0 && (
+          <text x={x} y={y} dx={-2} dy={-4} className={classes.tick}>
+            {value}
+          </text>
+        )
       );
     },
     [theme.palette.type],
   );
+
+  const renderEmptyTooltip = React.useCallback(() => null, []);
 
   return (
     <div className={classes.root}>
@@ -59,8 +62,8 @@ function Chart(props: IProps) {
           <LineChart
             data={points}
             margin={{
-              top: 10,
-              right: 30,
+              top: 15,
+              right: 5,
               left: 0,
               bottom: 0,
             }}
@@ -71,10 +74,26 @@ function Chart(props: IProps) {
                 <stop offset="100%" stopColor="#cf3ef0" />
               </linearGradient>
             </defs>
-            <CartesianGrid stroke={theme.palette.type === 'dark' ? '#666' : '#ccc'} vertical={false} />
-            <XAxis dataKey="datetime" tick={renderXTick} />
-            <YAxis tick={renderYTick} />
-            <Tooltip content={<noscript />} />
+            <CartesianGrid
+              stroke={theme.palette.text.primary}
+              strokeOpacity={0.1}
+              vertical={false}
+              x={20}
+            />
+            <XAxis
+              dataKey="datetime"
+              tick={renderXTick}
+              tickLine={false}
+              axisLine={{ stroke: theme.palette.text.primary, strokeOpacity: 0.5 }}
+              padding={{ left: 20, right: 0 }}
+            />
+            <YAxis
+              mirror
+              tick={renderYTick}
+              tickLine={false}
+              axisLine={{ stroke: theme.palette.text.primary, strokeOpacity: 0.5 }}
+            />
+            <Tooltip content={renderEmptyTooltip} />
             <Line dot={false} type="monotone" dataKey="value" stroke="url(#colorUv)" strokeWidth={2} fill="#8884d8" />
           </LineChart>
         </ResponsiveContainer>

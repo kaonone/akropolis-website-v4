@@ -20,6 +20,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   description: {
+    maxWidth: 820,
     lineHeight: 1.5,
     marginBottom: theme.spacing(5),
 

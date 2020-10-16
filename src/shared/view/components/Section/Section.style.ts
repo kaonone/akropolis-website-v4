@@ -11,12 +11,11 @@ const styles = (theme: Theme) => ({
   title: rule({
     maxWidth: theme.extra.sizes.maxContentWidth,
     margin: `0 auto ${theme.spacing(4.5)}px`,
-    fontFamily: theme.extra.typography.primaryFont,
     fontSize: 24,
     fontWeight: 'bold',
     lineHeight: 1.58,
     textAlign: 'center',
-    color: theme.extra.colors.rhino,
+    color: theme.colors.rhino,
     textTransform: 'uppercase',
 
     [theme.breakpoints.up('lg')]: {
@@ -29,12 +28,11 @@ const styles = (theme: Theme) => ({
   subtitle: rule({
     maxWidth: theme.extra.sizes.maxSubtitleWidth,
     margin: `0 auto ${theme.spacing(3.5)}px`,
-    fontFamily: theme.extra.typography.secondaryFont,
     fontSize: 14,
     lineHeight: 1.29,
     letterSpacing: 0.1,
     textAlign: 'center',
-    color: theme.extra.colors.rhino,
+    color: theme.colors.rhino,
 
     [theme.breakpoints.up('md')]: {
       fontSize: 18,

@@ -1,14 +1,9 @@
-import { withStyles, Theme, WithStyles } from 'shared/styles';
-import { rule } from 'shared/helpers/style';
+import { makeStyles } from 'shared/styles';
 
-const styles = (_theme: Theme) => ({
-  root: rule({
+export const useStyles = makeStyles({
+  root: {
     position: 'relative',
     minHeight: 50,
     width: '100%',
-  }),
+  },
 });
-
-export const provideStyles = withStyles(styles);
-
-export type StylesProps = WithStyles<typeof styles>;

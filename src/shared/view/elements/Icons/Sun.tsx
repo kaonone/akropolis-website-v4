@@ -9,7 +9,9 @@ export function Sun(props: GetProps<typeof SvgIcon>) {
   const theme = useTheme();
   return (
     <SvgIcon {...props} viewBox="0 0 24 24" preserveAspectRatio="none">
-      <MainSvgGradient />
+      <defs>
+        <MainSvgGradient />
+      </defs>
       <g fill="none" fillRule="evenodd">
         <path
           fill={theme.palette.type === 'light' ? `url(#${MainSvgGradient.ID})` : 'currentColor'}

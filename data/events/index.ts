@@ -3,6 +3,36 @@ import { IEvent } from 'shared/types/models';
 // tslint:disable
 const events: IEvent[] = [
   {
+    eventName: 'Ethreal Sessions 004',
+    link: 'https://www.etherealsummit.com/ethereal-sessions-004',
+    location: 'Online Conference',
+    description: {
+      en: 'With the growth of over $4 billion in assets in DeFi, governance has finally become a reality for new DAOs and communities overseeing the future of Ethereum\'s most respected protocols and applications.',
+      vi: 'With the growth of over $4 billion in assets in DeFi, governance has finally become a reality for new DAOs and communities overseeing the future of Ethereum\'s most respected protocols and applications.',
+      zh: 'With the growth of over $4 billion in assets in DeFi, governance has finally become a reality for new DAOs and communities overseeing the future of Ethereum\'s most respected protocols and applications.',
+      ko: 'With the growth of over $4 billion in assets in DeFi, governance has finally become a reality for new DAOs and communities overseeing the future of Ethereum\'s most respected protocols and applications.',
+    },
+    startDate: '08.20.2020',
+    finishDate: '08.20.2020',
+    image1x: require('./imgs/ethrealsummit@590w.png'),
+    image2x: require('./imgs/etherealsummit@1180w.png'),
+  },
+  {
+    eventName: 'Ethreal Sessions 002',
+    link: 'https://www.etherealsummit.com/ethereal-sessions-002',
+    location: 'Online Conference',
+    description: {
+      en: 'What is yield farming, aka liquidity mining? What are the pros and cons? How does one benefit from it? We’ll unlock these questions and much more live at Ethereal Sessions 002.',
+      vi: 'What is yield farming, aka liquidity mining? What are the pros and cons? How does one benefit from it? We’ll unlock these questions and much more live at Ethereal Sessions 002.',
+      zh: 'What is yield farming, aka liquidity mining? What are the pros and cons? How does one benefit from it? We’ll unlock these questions and much more live at Ethereal Sessions 002.',
+      ko: 'What is yield farming, aka liquidity mining? What are the pros and cons? How does one benefit from it? We’ll unlock these questions and much more live at Ethereal Sessions 002.',
+    },
+    startDate: '07.16.2020',
+    finishDate: '07.16.2020',
+    image1x: require('./imgs/ethrealsummit@590w.png'),
+    image2x: require('./imgs/etherealsummit@1180w.png'),
+  },
+  {
     eventName: 'IDEO’s Product Validation Day',
     link: 'https://medium.com/ideo-colab/announcing-ideos-product-validation-day-for-defi-founders-79e5668f9e3c',
     location: 'Online Conference',

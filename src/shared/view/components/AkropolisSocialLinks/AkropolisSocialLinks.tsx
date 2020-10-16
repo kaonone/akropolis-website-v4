@@ -17,6 +17,7 @@ const links: Array<[string, boolean]> = [
   ['https://t.me/akropolis_official', true],
   ['https://medium.com/akropolis', true],
   ['https://discord.gg/Y58CGUW', true],
+  ['https://defipulse.com/defi-list', true],
 ];
 
 function AkropolisSocialLinks(props: IProps & StylesProps) {
@@ -25,7 +26,9 @@ function AkropolisSocialLinks(props: IProps & StylesProps) {
     <div className={cn(classes.root, { [classes[direction]]: true })}>
       <div className={classes.hidden}>
         <SvgIcon>
-          <MainSvgGradient />
+          <defs>
+            <MainSvgGradient />
+          </defs>
         </SvgIcon>
       </div>
       {links.map(([link, needToFill]) => (

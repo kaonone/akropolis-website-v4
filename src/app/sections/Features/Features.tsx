@@ -92,8 +92,8 @@ const features: IFeature[] = [
     status: 'roadmap',
   },
   {
-    title: 'USDT, USDC, RSV stablecoins support',
-    description: 'Asset universe: enable deposits of USDT, USDC, RSV',
+    title: 'USDT, USDC, TUSD stablecoins support',
+    description: 'Asset universe: enable deposits of USDT, USDC, TUSD',
     status: 'roadmap',
   },
 ];
@@ -164,10 +164,10 @@ const useStyles = makeStyles((theme) => ({
     },
 
     '&$inProgress': {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.titanWhite : theme.colors.scarpaFlow2,
+      backgroundColor: theme.palette.type === 'light' ? theme.colors.titanWhite : theme.colors.valhalla2,
     },
     '&$roadmap': {
-      backgroundColor: theme.palette.type === 'light' ? theme.colors.foam : theme.colors.comet,
+      backgroundColor: theme.palette.type === 'light' ? theme.colors.foam : theme.colors.blueZodiac2,
     },
   },
 

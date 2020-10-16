@@ -81,7 +81,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   new PrerenderSPAPlugin({
     staticDir: path.join(__dirname, '..', 'build'),
     routes: [
-      '/', '/credit-pool', '/dca-pool',
+      '/',
       '/forWiki/partners', '/forWiki/news',
     ],
     postProcess(renderedRoute: any) {
@@ -257,6 +257,7 @@ export const commonConfig: webpack.Configuration = {
     plugins: [
       new TsConfigPathsPlugin(),
     ],
+    symlinks: false,
   },
   optimization: {
     runtimeChunk: 'single',
@@ -279,7 +280,7 @@ export const commonConfig: webpack.Configuration = {
     hot: withHot,
     contentBase: path.resolve('..', 'build'),
     host: '0.0.0.0',
-    port: 8080,
+    port: 8083,
     inline: true,
     lazy: false,
     historyApiFallback: true,

@@ -1,2 +1,3 @@
 export { default as withProps } from './withProps';
-export { isEqualComponents } from './isEqualComponents';
+export { wrapComponentIntoFormField } from './wrapComponentIntoFormField';
+export { useMakeFieldsForCheckUser } from './useMakeFieldsForCheckUser';

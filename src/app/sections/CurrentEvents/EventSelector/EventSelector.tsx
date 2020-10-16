@@ -29,7 +29,7 @@ function EventSelector(props: IProps & StylesProps) {
             </DateButton>
           </Grid>
           <Grid item xs>
-            <Typography className={classes.title} onClick={onSelect.bind(null, event)}>
+            <Typography className={classes.title} onClick={onSelect.bind(null, event)} component="div">
               <NoSsr>
                 <Dotdotdot clamp={2}>{event.eventName}</Dotdotdot>
               </NoSsr>

@@ -59,6 +59,8 @@ export const useStyles = makeStyles((theme) => ({
     },
 
     '&$colorGradient': {
+      boxShadow: 'none',
+
       '&$outlined': {
         borderWidth: 0,
         zIndex: 1,
@@ -75,7 +77,7 @@ export const useStyles = makeStyles((theme) => ({
           right: 1,
           bottom: 1,
           left: 1,
-          backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+          backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
           transition: theme.transitions.create(['opacity', 'background-color']),
 
           borderRadius: theme.spacing(height / 2) - 1,
@@ -104,7 +106,7 @@ export const useStyles = makeStyles((theme) => ({
       },
 
       '&$contained': {
-        color: theme.extra.colors.white,
+        color: theme.colors.white,
         marginBottom: 'auto',
         alignSelf: 'center',
         background: theme.gradients.button.linear('to right'),
@@ -112,7 +114,8 @@ export const useStyles = makeStyles((theme) => ({
         opacity: 0.99,
 
         '&$disabled': {
-          background: `rgba(0, 0, 0, 0.12)`,
+          background: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(255, 255, 255, 0.5)',
         },
 
         '&:before': {

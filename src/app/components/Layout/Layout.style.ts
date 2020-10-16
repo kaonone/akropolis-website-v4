@@ -10,6 +10,10 @@ export const useStyles = makeStyles((theme) => ({
     minHeight: '100%',
   },
 
+  dark: {
+    backgroundColor: theme.colors.dark,
+  },
+
   container: {
     paddingLeft: theme.spacing(2.5),
     paddingRight: theme.spacing(2.5),
@@ -105,14 +109,14 @@ export const useStyles = makeStyles((theme) => ({
 
   waveStrut: {
     flexGrow: 1,
-    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    backgroundColor: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
   },
 
   wave: {
     maxHeight: '100%',
     width: '100%',
     transition: theme.transitions.create('color'),
-    color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.shark,
+    color: theme.palette.type === 'light' ? theme.colors.athensGray : theme.colors.obsidian,
     transformOrigin: 'right',
 
     '&$top': {
@@ -132,7 +136,8 @@ export const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     display: 'none',
     marginRight: theme.spacing(2),
-    top: '13%',
+    top: '50%',
+    transform: 'translateY(-50%)',
     right: 0,
 
     [theme.breakpoints.up('lg')]: {

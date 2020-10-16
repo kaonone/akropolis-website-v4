@@ -786,7 +786,7 @@ export default [
   },
   {
     links: [
-      'https://www.linkedin.com/in/maría-paula-fernández-a96a8034/',
+      'https://www.linkedin.com/in/maría-paula-fernández-no-social-selling-please-a96a8034/',
     ],
     fullName: 'María Paula Fernández',
     position: {

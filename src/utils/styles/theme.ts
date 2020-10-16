@@ -79,14 +79,14 @@ function getTheme(type: 'light' | 'dark'): Theme {
 declare module '@akropolis-web/styles/dist/theme' {
   interface ThemeOverrides {
     sizes: typeof sizes;
-    colors: typeof localColors;
+    // colors: typeof localColors;
     gradients: ReturnType<typeof getGradients>;
     zIndex: typeof zIndex;
   }
 
   interface ThemeOptionsOverrides {
     sizes: typeof sizes;
-    colors: typeof localColors;
+    // colors: typeof localColors;
     gradients: ReturnType<typeof getGradients>;
     zIndex: typeof zIndex;
   }

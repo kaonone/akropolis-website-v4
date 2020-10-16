@@ -90,12 +90,14 @@ export function AuthButton({ children, size, withDisconnectLink }: Props) {
       {withDisconnectLink && (
         <Loading data={accountRD}>
           {account => account ? (
-            <div
-              className={classes.disconnectLink}
-              onClick={handleAuthButtonClick}
-            >
-              <Typography>Disconnect or change wallet</Typography>
-            </div>
+            <>
+              <br />
+              <Typography
+                className={classes.disconnectLink}
+                onClick={handleAuthButtonClick}
+              >Disconnect or change wallet
+              </Typography>
+            </>
           ) : null}
         </Loading>
       )}
@@ -152,6 +154,12 @@ const useStyles = makeStyles(
         width: '100%',
         borderBottom: '1px solid #ffffff',
         opacity: 0.2,
+      },
+      [theme.breakpoints.up('mobileXS')]: {
+        fontSize: '0.8rem',
+      },
+      [theme.breakpoints.up('mobileMD')]: {
+        fontSize: '1rem',
       },
     },
   }),

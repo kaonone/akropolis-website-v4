@@ -23,7 +23,7 @@ export function VestedAkroDetails({ address }: { address: string }) {
         const availableToRedeemTokens = balances[1].add(balances[2]);
         return balances ? (
           <Grid container direction="column" justify="space-between">
-            <Grid container justify="flex-start" wrap="nowrap">
+            <Grid container justify="flex-start">
               <Grid direction="column" className={classes.group}>
                 <Typography className={classes.groupTitle}>Available for Redeem</Typography>
                 <Typography className={classes.groupValue}>{formatValue(availableToRedeemTokens)}</Typography>

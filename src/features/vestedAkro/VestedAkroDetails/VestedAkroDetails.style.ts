@@ -7,17 +7,18 @@ export const useStyles = makeStyles(
         marginTop: '2rem',
       },
       group: {
-        marginRight: 50,
+        marginRight: '3.125rem',
+        marginBottom: '1.875rem',
       },
       groupTitle: {
-        marginBottom: 15,
+        marginBottom: '1rem',
       },
       groupValue: {
-        fontSize: 32,
+        fontSize: '2rem',
         lineHeight: 1.18,
       },
       groupToken: {
-        fontSize: 12,
+        fontSize: '0.8rem',
       },
       blurred: {
         opacity: 0.5,

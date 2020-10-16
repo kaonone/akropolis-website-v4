@@ -35,23 +35,27 @@ export function VestedAkroExchange() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '60px 50px',
+    padding: '1.875rem 1.56rem',
     backgroundColor: theme.colors.lightDark,
-    marginBottom: 54,
+    marginBottom: '3.375rem',
+
+    [theme.breakpoints.up('tabletXS')]: {
+      padding: '3.75rem 3.125rem',
+    },
   },
 
   title: {
     width: '100%',
     maxWidth: theme.extra.sizes.maxContentWidth,
     margin: `auto`,
-    paddingBottom: 30,
-    fontSize: 24,
+    paddingBottom: '1.875rem',
+    fontSize: '1.5rem',
     fontWeight: 'normal',
     letterSpacing: '-0.2px',
 
     [theme.breakpoints.up('lg')]: {
-      fontSize: 40,
-      lineHeight: '48px',
+      fontSize: '2.5rem',
+      lineHeight: '3rem',
       letterSpacing: '-0.5px',
     },
   },
@@ -62,6 +66,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: theme.extra.sizes.maxContentWidth,
     margin: `auto`,
-    paddingBottom: '100px',
+    paddingBottom: '3.125rem',
   },
 }));

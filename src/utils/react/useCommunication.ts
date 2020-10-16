@@ -33,7 +33,8 @@ export function useCommunication<
   E extends (...args: any[]) => Promise<any>,
   O extends IOptions<E> = {}
 >(effect: E, inputs: any[], options?: O): Communication<E, O> {
-  const { defaultResult, resetStateOnExecute } = options || {};
+  const { defaultResult, resetStateOnExecute } = options ||
+    { defaultResult: undefined, resetStateOnExecute: undefined };
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>('initial');
   const [result, setResult] = useState<InferResult<E> | undefined>(defaultResult);

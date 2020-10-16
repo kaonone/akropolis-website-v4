@@ -25,7 +25,7 @@ export function wrapComponentIntoFormField<P extends BaseWrappedFieldProps>(
 ) {
   type OwnProps = Omit<P, keyof BaseWrappedFieldProps>;
   type FieldProps = Pick<
-    RFFieldProps<P['input']['value'], HTMLElement>,
+    RFFieldProps<P['input']['value'], P, HTMLElement>,
     RFFieldPropKey
   >;
   type ResultProps = MergeRight<OwnProps, FieldProps>;

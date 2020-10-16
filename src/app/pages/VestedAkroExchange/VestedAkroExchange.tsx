@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { makeStyles } from 'shared/styles';
-import { Grid } from 'shared/view/elements';
+import { Grid, Typography } from 'shared/view/elements';
 import { Layout } from 'app/components/Layout/Layout';
 import { Header } from 'app/components/Header/Header';
 import { Footer } from 'app/components/Footer/Footer';
@@ -19,7 +19,7 @@ export function VestedAkroExchange() {
       <Layout.Container>
         <Grid container>
           <div className={classes.root}>
-            <p className={classes.title}>{'Unlock vAKRO'}</p>
+            <Typography className={classes.title}>{'Unlock vAKRO'}</Typography>
             <div className={classes.content}>
               <Preview />
             </div>
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     margin: `auto`,
     paddingBottom: '1.875rem',
     fontSize: '1.5rem',
-    fontWeight: 'normal',
+    fontWeight: 300,
     letterSpacing: '-0.2px',
 
     [theme.breakpoints.up('lg')]: {

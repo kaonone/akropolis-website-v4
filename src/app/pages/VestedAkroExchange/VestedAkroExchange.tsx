@@ -17,7 +17,7 @@ export function VestedAkroExchange() {
         <Header hideThemeButton />
       </Layout.Header>
       <Layout.Container>
-        <Grid container direction="column" alignItems="stretch">
+        <Grid container>
           <div className={classes.root}>
             <p className={classes.title}>{'Unlock vAKRO'}</p>
             <div className={classes.content}>
@@ -35,6 +35,7 @@ export function VestedAkroExchange() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: '100%',
     padding: '1.875rem 1.56rem',
     backgroundColor: theme.colors.lightDark,
     marginBottom: '3.375rem',

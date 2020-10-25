@@ -56,6 +56,7 @@ export const getCommonPlugins: (type: BuildType) => webpack.Plugin[] = (type) =>
   }),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV_MODE': JSON.stringify(process.env.NODE_ENV_MODE),
+    'process.env.MODE': JSON.stringify(process.env.MODE),
     '__HOST__': JSON.stringify('http://localhost:3000'),
     '__LANG__': JSON.stringify(process.env.LANG || 'en'),
     '__CLIENT__': true,

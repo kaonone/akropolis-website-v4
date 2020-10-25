@@ -45,3 +45,5 @@ static
 
 # MacOS deps
 .DS_Store
+
+src/generated

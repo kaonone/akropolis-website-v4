@@ -28,7 +28,7 @@ export function Fulcrum(props: Props) {
   return (
     <SvgIcon {...svgProps} classes={classes} viewBox="0 0 120 27" preserveAspectRatio="none">
       <defs>
-        <linearGradient id={gradientId} x1="93.034%" x2="13.465%" y1="93.5%" y2="13.931%">
+        <linearGradient key={gradientId} id={gradientId} x1="93.034%" x2="13.465%" y1="93.5%" y2="13.931%">
           <stop offset="15.938%" stopColor="#003CDA" />
           <stop offset="100%" stopColor="#33DFCC" />
         </linearGradient>

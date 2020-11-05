@@ -28,11 +28,18 @@ export function Aave(props: Props) {
   return (
     <SvgIcon {...svgProps} classes={classes} viewBox="0 0 89 20" preserveAspectRatio="none">
       <defs>
-        <linearGradient id={gradientId0} x1="30.315%" x2="73.766%" y1="96.414%" y2="26.414%">
+        <linearGradient
+          key={gradientId0}
+          id={gradientId0}
+          x1="30.315%"
+          x2="73.766%"
+          y1="96.414%"
+          y2="26.414%"
+        >
           <stop offset="0%" stopColor="#50B5AC" />
           <stop offset="100%" stopColor="#B22F92" />
         </linearGradient>
-        <linearGradient id={gradientId1} x1="8.586%" x2="100%" y1="53.563%" y2="48.189%">
+        <linearGradient key={gradientId1} id={gradientId1} x1="8.586%" x2="100%" y1="53.563%" y2="48.189%">
           <stop offset="0%" stopColor="#50B5AC" />
           <stop offset="100%" stopColor="#B22F92" />
         </linearGradient>

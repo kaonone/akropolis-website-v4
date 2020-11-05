@@ -6,6 +6,7 @@ import { Grid, Link } from 'shared/view/elements';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
 import { TheGraph, OpenZeppelin, Compound, Fulcrum, Aave, Dydx, MakerDao, Staked, Curve } from './logos';
 import { makeStyles, useTheme } from 'shared/styles';
+import { NoSsr } from 'services/adaptability';
 
 const tKeys = tKeysAll.new.buildWith;
 
@@ -38,53 +39,67 @@ export function BuildWith(props: IProps) {
         {includes.includes('build-with') && (
           <div className={classes.buildWith}>
             <Card label={t(tKeys.labels.buildWith.getKey())}>
-              <div className={classes.content}>
-                <Grid container spacing={2} alignItems="center" justify="space-around">
-                  <Grid item>{withLink('https://staked.us', <Staked className={classes.logo} />)}</Grid>
-                  <Grid item>{withLink('https://thegraph.com', <TheGraph className={classes.logo} />)}</Grid>
-                  <Grid item>
-                    {withLink(
-                      'https://openzeppelin.com',
-                      <OpenZeppelin className={classes.logo} themeColor={theme.palette.type} />,
-                    )}
+              <NoSsr>
+                <div className={classes.content}>
+                  <Grid container spacing={2} alignItems="center" justify="space-around">
+                    <Grid item>{withLink('https://staked.us', <Staked className={classes.logo} />)}</Grid>
+                    <Grid item>
+                      {withLink('https://thegraph.com', <TheGraph className={classes.logo} />)}
+                    </Grid>
+                    <Grid item>
+                      {withLink(
+                        'https://openzeppelin.com',
+                        <OpenZeppelin className={classes.logo} themeColor={theme.palette.type} />,
+                      )}
+                    </Grid>
                   </Grid>
-                </Grid>
-              </div>
+                </div>
+              </NoSsr>
             </Card>
           </div>
         )}
         {includes.includes('integrations') && (
           <div className={classes.integrations}>
             <Card label={t(tKeys.labels.integrations.getKey())}>
-              <div className={classes.content}>
-                <Grid container spacing={2} alignItems="center" justify="space-around">
-                  <Grid item>
-                    {withLink(
-                      'https://compound.finance',
-                      <Compound className={classes.logo} themeColor={theme.palette.type} />,
-                    )}
+              <NoSsr>
+                <div className={classes.content}>
+                  <Grid container spacing={2} alignItems="center" justify="space-around">
+                    <Grid item>
+                      {withLink(
+                        'https://compound.finance',
+                        <Compound className={classes.logo} themeColor={theme.palette.type} />,
+                      )}
+                    </Grid>
+                    <Grid item>
+                      {withLink(
+                        'https://fulcrum.trade',
+                        <Fulcrum className={classes.logo} themeColor={theme.palette.type} />,
+                      )}
+                    </Grid>
+                    <Grid item>
+                      {withLink(
+                        'https://aave.com',
+                        <Aave className={classes.logo} themeColor={theme.palette.type} />,
+                      )}
+                    </Grid>
+                    <Grid item>
+                      {withLink(
+                        'https://dydx.exchange',
+                        <Dydx className={classes.logo} themeColor={theme.palette.type} />,
+                      )}
+                    </Grid>
+                    <Grid item>
+                      {withLink('https://makerdao.com', <MakerDao className={classes.logo} />)}
+                    </Grid>
+                    <Grid item>
+                      {withLink(
+                        'https://curve.fi',
+                        <Curve className={classes.logo} themeColor={theme.palette.type} />,
+                      )}
+                    </Grid>
                   </Grid>
-                  <Grid item>
-                    {withLink(
-                      'https://fulcrum.trade',
-                      <Fulcrum className={classes.logo} themeColor={theme.palette.type} />,
-                    )}
-                  </Grid>
-                  <Grid item>
-                    {withLink('https://aave.com', <Aave className={classes.logo} themeColor={theme.palette.type} />)}
-                  </Grid>
-                  <Grid item>
-                    {withLink(
-                      'https://dydx.exchange',
-                      <Dydx className={classes.logo} themeColor={theme.palette.type} />,
-                    )}
-                  </Grid>
-                  <Grid item>{withLink('https://makerdao.com', <MakerDao className={classes.logo} />)}</Grid>
-                  <Grid item>
-                    {withLink('https://curve.fi', <Curve className={classes.logo} themeColor={theme.palette.type} />)}
-                  </Grid>
-                </Grid>
-              </div>
+                </div>
+              </NoSsr>
             </Card>
           </div>
         )}

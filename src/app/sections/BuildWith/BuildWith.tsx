@@ -5,7 +5,7 @@ import { Card } from 'app/components/Card';
 import { Grid, Link } from 'shared/view/elements';
 import { useTranslate, tKeys as tKeysAll } from 'services/i18n';
 import { TheGraph, OpenZeppelin, Compound, Fulcrum, Aave, Dydx, MakerDao, Staked, Curve } from './logos';
-import { makeStyles } from 'shared/styles';
+import { makeStyles, useTheme } from 'shared/styles';
 
 const tKeys = tKeysAll.new.buildWith;
 
@@ -20,6 +20,8 @@ export function BuildWith(props: IProps) {
   const { includes = [], className } = props;
   const { t } = useTranslate();
   const classes = useStyles();
+
+  const theme = useTheme();
 
   const withLink = React.useCallback(
     (href: string, children: React.ReactNode) => (
@@ -40,7 +42,12 @@ export function BuildWith(props: IProps) {
                 <Grid container spacing={2} alignItems="center" justify="space-around">
                   <Grid item>{withLink('https://staked.us', <Staked className={classes.logo} />)}</Grid>
                   <Grid item>{withLink('https://thegraph.com', <TheGraph className={classes.logo} />)}</Grid>
-                  <Grid item>{withLink('https://openzeppelin.com', <OpenZeppelin className={classes.logo} />)}</Grid>
+                  <Grid item>
+                    {withLink(
+                      'https://openzeppelin.com',
+                      <OpenZeppelin className={classes.logo} themeColor={theme.palette.type} />,
+                    )}
+                  </Grid>
                 </Grid>
               </div>
             </Card>
@@ -51,12 +58,31 @@ export function BuildWith(props: IProps) {
             <Card label={t(tKeys.labels.integrations.getKey())}>
               <div className={classes.content}>
                 <Grid container spacing={2} alignItems="center" justify="space-around">
-                  <Grid item>{withLink('https://compound.finance', <Compound className={classes.logo} />)}</Grid>
-                  <Grid item>{withLink('https://fulcrum.trade', <Fulcrum className={classes.logo} />)}</Grid>
-                  <Grid item>{withLink('https://aave.com', <Aave className={classes.logo} />)}</Grid>
-                  <Grid item>{withLink('https://dydx.exchange', <Dydx className={classes.logo} />)}</Grid>
+                  <Grid item>
+                    {withLink(
+                      'https://compound.finance',
+                      <Compound className={classes.logo} themeColor={theme.palette.type} />,
+                    )}
+                  </Grid>
+                  <Grid item>
+                    {withLink(
+                      'https://fulcrum.trade',
+                      <Fulcrum className={classes.logo} themeColor={theme.palette.type} />,
+                    )}
+                  </Grid>
+                  <Grid item>
+                    {withLink('https://aave.com', <Aave className={classes.logo} themeColor={theme.palette.type} />)}
+                  </Grid>
+                  <Grid item>
+                    {withLink(
+                      'https://dydx.exchange',
+                      <Dydx className={classes.logo} themeColor={theme.palette.type} />,
+                    )}
+                  </Grid>
                   <Grid item>{withLink('https://makerdao.com', <MakerDao className={classes.logo} />)}</Grid>
-                  <Grid item>{withLink('https://curve.fi', <Curve className={classes.logo} />)}</Grid>
+                  <Grid item>
+                    {withLink('https://curve.fi', <Curve className={classes.logo} themeColor={theme.palette.type} />)}
+                  </Grid>
                 </Grid>
               </div>
             </Card>
@@ -119,22 +145,22 @@ const useStyles = makeStyles((theme) => {
       minHeight: theme.spacing(9.5),
 
       padding: theme.spacing(3, 2.5),
-      [theme.breakpoints.up('tabletXS')]: {
-        padding: theme.spacing(3, 3),
-      },
       [theme.breakpoints.up('tabletSM')]: {
-        padding: theme.spacing(3, 1.5),
+        padding: theme.spacing(3, 1.25),
       },
       [theme.breakpoints.up('desktopXS')]: {
-        padding: theme.spacing(3, 3.5),
+        padding: theme.spacing(3, 2.5),
       },
     },
 
     logo: {
       display: 'block',
       fontSize: theme.spacing(2.5),
+      [theme.breakpoints.up('tabletSM')]: {
+        fontSize: theme.spacing(2.375),
+      },
       [theme.breakpoints.up('desktopXS')]: {
-        fontSize: theme.spacing(3),
+        fontSize: theme.spacing(2.75),
       },
       [theme.breakpoints.up('desktopSM')]: {
         fontSize: theme.spacing(3.25),

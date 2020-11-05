@@ -53,7 +53,9 @@ function Adaptive(props: IProps) {
   const matched = useMediaQuery(query || '');
   const isServer = window.__PRERENDER_INJECTED__ ? window.__PRERENDER_INJECTED__.isServer : false;
 
-  const wrappedChildren = <div className={cn(hydrated ? classes.root : undefined, className)}>{children}</div>;
+  const wrappedChildren = (
+    <div className={cn(hydrated ? classes.root : undefined, className)}>{children}</div>
+  );
 
   return isServer || !query || !hydrated || matched ? wrappedChildren : null;
 }
@@ -86,7 +88,7 @@ function between(start: Breakpoint | number, end: Breakpoint | number, theme: Th
   const startValue = typeof start === 'number' ? start : theme.breakpoints.values[start];
   const endValue = typeof end === 'number' ? end : theme.breakpoints.values[end];
 
-  return `@media (min-width:${startValue}px) and (max-width:${endValue}px)`;
+  return `@media (min-width:${startValue}px) and (max-width:${endValue - 5 / 100}px)`;
 }
 
 export { IProps };

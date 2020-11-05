@@ -145,22 +145,22 @@ const useStyles = makeStyles((theme) => {
       minHeight: theme.spacing(9.5),
 
       padding: theme.spacing(3, 2.5),
-      [theme.breakpoints.up('tabletXS')]: {
-        padding: theme.spacing(3, 3),
-      },
       [theme.breakpoints.up('tabletSM')]: {
-        padding: theme.spacing(3, 1.5),
+        padding: theme.spacing(3, 1.25),
       },
       [theme.breakpoints.up('desktopXS')]: {
-        padding: theme.spacing(3, 3.5),
+        padding: theme.spacing(3, 2.5),
       },
     },
 
     logo: {
       display: 'block',
       fontSize: theme.spacing(2.5),
+      [theme.breakpoints.up('tabletSM')]: {
+        fontSize: theme.spacing(2.375),
+      },
       [theme.breakpoints.up('desktopXS')]: {
-        fontSize: theme.spacing(3),
+        fontSize: theme.spacing(2.75),
       },
       [theme.breakpoints.up('desktopSM')]: {
         fontSize: theme.spacing(3.25),

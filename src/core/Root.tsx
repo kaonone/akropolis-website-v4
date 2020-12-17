@@ -1,4 +1,3 @@
-
 import { hot } from 'react-hot-loader/root';
 import React, { useEffect } from 'react';
 import { createBrowserHistory, Location } from 'history';
@@ -14,8 +13,6 @@ import { ThemeProvider } from 'services/theme';
 import { AdaptabilityProvider } from 'services/adaptability';
 import { IAppData, IJssDependencies } from 'shared/types/app';
 import { App } from 'app/App';
-
-import { DepsContext } from './DepsReactContext';
 
 const browserHistory = createBrowserHistory();
 
@@ -38,7 +35,7 @@ interface IAppProps {
   jssDeps: IJssDependencies;
 }
 
-function ClientRoot({ jssDeps, deps }: IAppData & IAppProps) {
+function ClientRoot({ jssDeps }: IAppData & IAppProps) {
   useEffect(() => {
     handleScrollToAnchor(browserHistory.location);
   }, []);
@@ -50,12 +47,10 @@ function ClientRoot({ jssDeps, deps }: IAppData & IAppProps) {
       <StylesProvider jss={jss}>
         <ThemeProvider>
           <AdaptabilityProvider>
-            <DepsContext.Provider value={deps}>
-              <I18nProvider>
-                <CssBaseline />
-                <App />
-              </I18nProvider>
-            </DepsContext.Provider>
+            <I18nProvider>
+              <CssBaseline />
+              <App />
+            </I18nProvider>
           </AdaptabilityProvider>
         </ThemeProvider>
       </StylesProvider>

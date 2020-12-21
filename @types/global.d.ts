@@ -8,7 +8,6 @@ interface Window {
   __data: any; // initial redux state, maybe undefined
   idensic: any;
   requestIdleCallback: any;
-  snsWebSdk: any;
 }
 
 declare var __DISABLE_SSR__: boolean;

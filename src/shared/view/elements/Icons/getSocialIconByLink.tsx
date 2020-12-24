@@ -15,14 +15,28 @@ import NasdaqIcon from './NasdaqIcon';
 import RiotIcon from './RiotIcon';
 import DiscordIcon from './DiscordIcon';
 import DeFiPulseIcon from './DeFiPulseIcon';
+import BinanceIcon from './BinanceIcon';
 
 type LinkType =
-  'linkedin' | 'github' | 'twitter' | 'telegram' | 'medium' | 'benzinga' | 'cnbc' | 'entrepreneur' | 'forbes'
-  | 'investopedia' | 'nasdaq' | 'riot' | 'discord' | 'defipulse';
+  | 'linkedin'
+  | 'github'
+  | 'twitter'
+  | 'telegram'
+  | 'medium'
+  | 'benzinga'
+  | 'cnbc'
+  | 'entrepreneur'
+  | 'forbes'
+  | 'investopedia'
+  | 'nasdaq'
+  | 'riot'
+  | 'discord'
+  | 'defipulse'
+  | 'binance';
 
 export default function getSocialIconByLink(href: string, FallbackIcon?: React.ComponentType<SvgIconProps>) {
   const linkType = getLinkType(href);
-  const Icon = linkType === 'unknown' ? (FallbackIcon || LaunchIcon) : IconByType[linkType];
+  const Icon = linkType === 'unknown' ? FallbackIcon || LaunchIcon : IconByType[linkType];
   return Icon;
 }
 
@@ -41,6 +55,7 @@ const IconByType: Record<LinkType, React.StatelessComponent<SvgIconProps>> = {
   riot: RiotIcon,
   discord: DiscordIcon,
   defipulse: DeFiPulseIcon,
+  binance: BinanceIcon,
 };
 
 const linkedinRegExp = /^.+?\blinkedin\.com\b.+$/;
@@ -57,6 +72,7 @@ const nasdaqRegExp = /^.+?\bnasdaq\.com\b.+$/;
 const riotRegExp = /^.+?\briot\.im\b.+$/;
 const discordRegExp = /^.+?\bdiscord\.gg\b.+$/;
 const defipulseRegExp = /^.+?\bdefipulse\.com\b.+$/;
+const binanceRegExp = /^.+?\bbinance\.com\b.+$/;
 
 const typeByRegExp = new Map<RegExp, LinkType>([
   [linkedinRegExp, 'linkedin'],
@@ -73,13 +89,27 @@ const typeByRegExp = new Map<RegExp, LinkType>([
   [riotRegExp, 'riot'],
   [discordRegExp, 'discord'],
   [defipulseRegExp, 'defipulse'],
+  [binanceRegExp, 'binance'],
 ]);
 
 function getLinkType(link: string): LinkType | 'unknown' {
   const regExps = [
-    linkedinRegExp, githubRegExp, mediumRegExp, telegramRegExp, twitterRegExp, benzingaRegExp, cnbcRegExp,
-    entrepreneurRegExp, forbesRegExp, investopediaRegExp, nasdaqRegExp, riotRegExp, discordRegExp, defipulseRegExp,
+    linkedinRegExp,
+    githubRegExp,
+    mediumRegExp,
+    telegramRegExp,
+    twitterRegExp,
+    benzingaRegExp,
+    cnbcRegExp,
+    entrepreneurRegExp,
+    forbesRegExp,
+    investopediaRegExp,
+    nasdaqRegExp,
+    riotRegExp,
+    discordRegExp,
+    defipulseRegExp,
+    binanceRegExp,
   ];
-  const linkRegExp = regExps.find(item => item.test(link));
-  return linkRegExp && typeByRegExp.get(linkRegExp) || 'unknown';
+  const linkRegExp = regExps.find((item) => item.test(link));
+  return (linkRegExp && typeByRegExp.get(linkRegExp)) || 'unknown';
 }

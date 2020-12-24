@@ -14,6 +14,7 @@ export { default as RiotIcon } from './RiotIcon';
 export { default as DiscordIcon } from './DiscordIcon';
 export { default as DeFiPulseIcon } from './DeFiPulseIcon';
 export { default as getSocialIconByLink } from './getSocialIconByLink';
+export { default as BinanceIcon } from './BinanceIcon';
 export * from './DcaPoolLogo';
 export * from './CreditPoolLogo';
 export * from './Sun';

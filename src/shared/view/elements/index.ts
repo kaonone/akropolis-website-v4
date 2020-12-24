@@ -6,7 +6,7 @@ export { default as Carousel } from './Carousel/Carousel';
 export { default as Picture } from './Picture/Picture';
 export { default as SocialLink } from './SocialLink/SocialLink';
 
-export { Link, LinkProps } from '@akropolis-web/components';
+export { Link, LinkProps, TabList } from '@akropolis-web/components';
 
 export { default as IconButton } from '@material-ui/core/IconButton';
 export { default as MenuItem } from '@material-ui/core/MenuItem';
@@ -21,7 +21,6 @@ export { default as DialogTitle } from '@material-ui/core/DialogTitle';
 export { default as DialogActions } from '@material-ui/core/DialogActions';
 
 export { default as TabContext } from '@material-ui/lab/TabContext';
-export { default as TabList } from '@material-ui/lab/TabList';
 export { default as TabPanel } from '@material-ui/lab/TabPanel';
 
 export { default as Dotdotdot } from 'react-dotdotdot';

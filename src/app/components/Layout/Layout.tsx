@@ -5,6 +5,7 @@ import { AkropolisSocialLinks } from 'shared/view/components';
 import { useStyles } from './Layout.style';
 import { attachStaticFields } from 'shared/helpers/object';
 import { TopWave, BottomWave } from './waves';
+import { AncestorBackgroundHackProvider, useTheme } from '@akropolis-web/styles';
 
 interface IOwnProps {
   children: React.ReactNode;
@@ -56,7 +57,12 @@ function Header({ children, className }: ContainerProps) {
 
 function Container({ children, className }: ContainerProps) {
   const classes = useStyles();
-  return <div className={cn(className, classes.container)}>{children}</div>;
+  const theme = useTheme();
+  return (
+    <AncestorBackgroundHackProvider backgroundColor={theme.palette.background.default}>
+      <div className={cn(className, classes.container)}>{children}</div>
+    </AncestorBackgroundHackProvider>
+  );
 }
 
 function Footer({ children, className }: ContainerProps) {

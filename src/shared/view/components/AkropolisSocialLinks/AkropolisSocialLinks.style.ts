@@ -2,9 +2,10 @@ import { withStyles, Theme, WithStyles } from 'shared/styles';
 import { rule } from 'shared/helpers/style';
 import { MainSvgGradient } from 'shared/view/elements/Icons';
 
-const styles = (_theme: Theme) => ({
+const styles = (theme: Theme) => ({
   root: rule({
     display: 'flex',
+    justifyContent: 'center',
 
     '&$row': {
       flexDirection: 'row',
@@ -17,6 +18,11 @@ const styles = (_theme: Theme) => ({
 
   link: rule({
     color: 'inherit',
+    fontSize: 20,
+
+    [theme.breakpoints.up(375)]: {
+      fontSize: 24,
+    },
   }),
 
   fillPath: rule({

@@ -129,15 +129,16 @@ export const useStyles = makeStyles((theme) => ({
   bottom: {},
 
   socials: {
-    position: 'fixed',
-    display: 'none',
-    marginRight: theme.spacing(2),
-    top: '50%',
-    transform: 'translateY(-50%)',
-    right: 0,
+    paddingBottom: 35,
 
-    [theme.breakpoints.up('lg')]: {
-      display: 'block',
+    [theme.breakpoints.up('tabletXS')]: {
+      position: 'fixed',
+      top: '29%',
+      right: -3,
+    },
+
+    [theme.breakpoints.up('tabletSM')]: {
+      right: 18,
     },
   },
 

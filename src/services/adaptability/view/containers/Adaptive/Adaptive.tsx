@@ -54,7 +54,7 @@ function Adaptive(props: IProps) {
   const isServer = window.__PRERENDER_INJECTED__ ? window.__PRERENDER_INJECTED__.isServer : false;
 
   const wrappedChildren = (
-    <div className={cn(hydrated ? classes.root : undefined, className)}>{children}</div>
+    <div className={cn(classes.root, className)}>{children}</div>
   );
 
   return isServer || !query || !hydrated || matched ? wrappedChildren : null;

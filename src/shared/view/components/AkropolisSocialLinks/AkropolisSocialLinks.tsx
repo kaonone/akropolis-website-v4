@@ -12,6 +12,7 @@ interface IProps {
 
 // [url, need_to_fill_svg-paths]
 const links: Array<[string, boolean]> = [
+  ['https://www.binance.com/en/trade/AKRO_USDT', true],
   ['https://github.com/akropolisio', true],
   ['https://twitter.com/akropolisio', true],
   ['https://t.me/akropolis_official', true],

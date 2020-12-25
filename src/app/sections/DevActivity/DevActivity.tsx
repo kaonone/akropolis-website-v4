@@ -23,8 +23,8 @@ export function DevActivity(props: IProps) {
   const [currentTab, setCurrentTab] = React.useState<'overview' | 'topRepos'>('overview');
   const { t } = useTranslate();
 
-  const handleTabChange = React.useCallback((_event: React.ChangeEvent<{}>, newValue: 'overview' | 'topRepos') => {
-    setCurrentTab(newValue);
+  const handleTabChange = React.useCallback((_event: React.ChangeEvent<{}>, newValue?: 'overview' | 'topRepos') => {
+    newValue && setCurrentTab(newValue);
   }, []);
 
   return (

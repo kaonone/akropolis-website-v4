@@ -21,6 +21,7 @@ export function Main() {
         <Layout.Header>
           <Header />
         </Layout.Header>
+        <Layout.Socials />
         <Layout.Container>
           <MainIntro />
           <Products className={classes.section} />

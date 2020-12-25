@@ -14,7 +14,7 @@ function BinanceIcon(props: GetProps<typeof SvgIcon>) {
   const { classes: _, ...rest } = props;
   const classes = useStyles();
   return (
-    <SvgIcon {...rest} viewBox="0 0 20 20">
+    <SvgIcon {...rest} viewBox="0 0 20 20.5">
       <g fill="none" fillRule="evenodd">
         <path fill="currentColor" d="M9.99 0a9.99 9.99 0 1 1 0 19.97A9.99 9.99 0 0 1 9.99 0z" />
         <path

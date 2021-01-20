@@ -74,7 +74,7 @@ const useCases: Product[] = [
   {
     title: 'Pensify',
     description: 'Pensify is a non-custodial and risk-minimised Pension Fund built on Ethereum blockchain',
-    label: 'Hack Money Hackaton Special Prize',
+    label: 'Hack Money Hackathon Special Prize',
     icons: [<Portis fontSize="inherit" />, <EthGlobal fontSize="inherit" />, <Ethereum fontSize="inherit" />],
     link: 'https://pensionfund.fi',
   },

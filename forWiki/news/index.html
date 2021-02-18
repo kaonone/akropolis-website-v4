@@ -1,0 +1,2875 @@
+<!DOCTYPE html><html lang="en"><head>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-141608436-2"></script>
+  <script>
+    if (window.location.hostname !== 'localhost') {
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141608436-2');
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akropolis</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="akropolis-website-v4"><link rel="icon" type="image/png" sizes="32x32" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/favicon-16x16.png"><link rel="shortcut icon" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/favicon.ico"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="akropolis-website-v4"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/icons-00ae42c1b0c5ac62e159bd9042323a6e/apple-touch-startup-image-1536x2008.png"><link href="/css/2.52b7ae119f5471f061f1.css" rel="stylesheet"><div id="server-side-styles"><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: 700;
+}
+body {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  background-color: #13131b;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #13131b;
+}
+html, body, #root {
+  height: 100%;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+#root {
+  z-index: 1;
+  position: relative;
+}
+#walletconnect-wrapper {
+  z-index: 1300;
+  position: relative;
+}
+</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: 700;
+}
+body {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  background-color: #13131b;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #13131b;
+}
+html, body, #root {
+  height: 100%;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+#root {
+  z-index: 1;
+  position: relative;
+}
+#walletconnect-wrapper {
+  z-index: 1300;
+  position: relative;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root-423 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: block;
+  font-size: 1.25rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary-424 {
+  color: #6931b6;
+}
+.MuiSvgIcon-colorSecondary-425 {
+  color: #9013FE;
+}
+.MuiSvgIcon-colorAction-426 {
+  color: #fff;
+}
+.MuiSvgIcon-colorError-427 {
+  color: #FE5A59;
+}
+.MuiSvgIcon-colorDisabled-428 {
+  color: rgba(255, 255, 255, 0.3);
+}
+.MuiSvgIcon-fontSizeInherit-429 {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall-430 {
+  font-size: 1rem;
+}
+.MuiSvgIcon-fontSizeLarge-431 {
+  font-size: 1.5rem;
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root-446 {
+  margin: 0;
+}
+.MuiTypography-body2-447 {
+  font-size: 0.875rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+}
+.MuiTypography-body1-448 {
+  font-size: 1rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.MuiTypography-caption-449 {
+  font-size: 0.75rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+}
+.MuiTypography-button-450 {
+  font-size: 0.875rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  text-transform: uppercase;
+}
+.MuiTypography-h1-451 {
+  font-size: 6rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+}
+.MuiTypography-h2-452 {
+  font-size: 3.75rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.MuiTypography-h3-453 {
+  font-size: 3rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+}
+.MuiTypography-h4-454 {
+  font-size: 2.125rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+}
+.MuiTypography-h5-455 {
+  font-size: 1.5rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+}
+.MuiTypography-h6-456 {
+  font-size: 16px;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.MuiTypography-subtitle1-457 {
+  font-size: 1rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+.MuiTypography-subtitle2-458 {
+  font-size: 0.875rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+}
+.MuiTypography-overline-459 {
+  font-size: 0.75rem;
+  font-family: Helvetica Neue,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly-460 {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft-461 {
+  text-align: left;
+}
+.MuiTypography-alignCenter-462 {
+  text-align: center;
+}
+.MuiTypography-alignRight-463 {
+  text-align: right;
+}
+.MuiTypography-alignJustify-464 {
+  text-align: justify;
+}
+.MuiTypography-noWrap-465 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom-466 {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph-467 {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit-468 {
+  color: inherit;
+}
+.MuiTypography-colorPrimary-469 {
+  color: #6931b6;
+}
+.MuiTypography-colorSecondary-470 {
+  color: #9013FE;
+}
+.MuiTypography-colorTextPrimary-471 {
+  color: #fff;
+}
+.MuiTypography-colorTextSecondary-472 {
+  color: rgba(255, 255, 255, 0.7);
+}
+.MuiTypography-colorError-473 {
+  color: #FE5A59;
+}
+.MuiTypography-displayInline-474 {
+  display: inline;
+}
+.MuiTypography-displayBlock-475 {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root-476 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple-477 {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible-478 {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter-483 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate-479 {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child-480 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving-481 {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit-484 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate-482 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate-485 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter-483 {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit-484 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate-485 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root-440 {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root-440::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root-440.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root-440 {
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root-432 {
+  flex: 0 0 auto;
+  color: #fff;
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root-432:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.MuiIconButton-root-432.Mui-disabled {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root-432:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart-433 {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall-438.MuiIconButton-edgeStart-433 {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd-434 {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall-438.MuiIconButton-edgeEnd-434 {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit-435 {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary-436 {
+  color: #6931b6;
+}
+.MuiIconButton-colorPrimary-436:hover {
+  background-color: rgba(105, 49, 182, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary-436:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary-437 {
+  color: #9013FE;
+}
+.MuiIconButton-colorSecondary-437:hover {
+  background-color: rgba(144, 19, 254, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary-437:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall-438 {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label-439 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiGrid">
+.MuiGrid-container-188 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item-189 {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth-190 {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column-191 {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse-192 {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse-193 {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap-194 {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse-195 {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center-196 {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start-197 {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end-198 {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline-199 {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center-200 {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start-201 {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end-202 {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between-203 {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around-204 {
+  align-content: space-around;
+}
+.MuiGrid-justify-xs-center-205 {
+  justify-content: center;
+}
+.MuiGrid-justify-xs-flex-end-206 {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-xs-space-between-207 {
+  justify-content: space-between;
+}
+.MuiGrid-justify-xs-space-around-208 {
+  justify-content: space-around;
+}
+.MuiGrid-justify-xs-space-evenly-209 {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1-210 {
+  width: calc(100% + 8px + 1px);
+  margin: -4px;
+}
+.MuiGrid-spacing-xs-1-210 > .MuiGrid-item-189 {
+  padding: 4px 5px;
+}
+.MuiGrid-spacing-xs-2-211 {
+  width: calc(100% + 16px + 1px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-2-211 > .MuiGrid-item-189 {
+  padding: 8px 9px;
+}
+.MuiGrid-spacing-xs-3-212 {
+  width: calc(100% + 24px + 1px);
+  margin: -12px;
+}
+.MuiGrid-spacing-xs-3-212 > .MuiGrid-item-189 {
+  padding: 12px 13px;
+}
+.MuiGrid-spacing-xs-4-213 {
+  width: calc(100% + 32px + 1px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-4-213 > .MuiGrid-item-189 {
+  padding: 16px 17px;
+}
+.MuiGrid-spacing-xs-5-214 {
+  width: calc(100% + 40px + 1px);
+  margin: -20px;
+}
+.MuiGrid-spacing-xs-5-214 > .MuiGrid-item-189 {
+  padding: 20px 21px;
+}
+.MuiGrid-spacing-xs-6-215 {
+  width: calc(100% + 48px + 1px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-6-215 > .MuiGrid-item-189 {
+  padding: 24px 25px;
+}
+.MuiGrid-spacing-xs-7-216 {
+  width: calc(100% + 56px + 1px);
+  margin: -28px;
+}
+.MuiGrid-spacing-xs-7-216 > .MuiGrid-item-189 {
+  padding: 28px 29px;
+}
+.MuiGrid-spacing-xs-8-217 {
+  width: calc(100% + 64px + 1px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-8-217 > .MuiGrid-item-189 {
+  padding: 32px 33px;
+}
+.MuiGrid-spacing-xs-9-218 {
+  width: calc(100% + 72px + 1px);
+  margin: -36px;
+}
+.MuiGrid-spacing-xs-9-218 > .MuiGrid-item-189 {
+  padding: 36px 37px;
+}
+.MuiGrid-spacing-xs-10-219 {
+  width: calc(100% + 80px + 1px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-10-219 > .MuiGrid-item-189 {
+  padding: 40px 41px;
+}
+.MuiGrid-grid-xs-auto-220 {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true-221 {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1-222 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2-223 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3-224 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4-225 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5-226 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6-227 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7-228 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8-229 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9-230 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10-231 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11-232 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12-233 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:375px) {
+  .MuiGrid-grid-sm-auto-234 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true-235 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1-236 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2-237 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3-238 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4-239 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5-240 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6-241 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7-242 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8-243 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9-244 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10-245 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11-246 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12-247 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:767px) {
+  .MuiGrid-grid-md-auto-248 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true-249 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1-250 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2-251 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3-252 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4-253 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5-254 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6-255 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7-256 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8-257 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9-258 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10-259 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11-260 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12-261 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1023px) {
+  .MuiGrid-grid-lg-auto-262 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true-263 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1-264 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2-265 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3-266 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4-267 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5-268 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6-269 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7-270 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8-271 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9-272 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10-273 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11-274 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12-275 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1919px) {
+  .MuiGrid-grid-xl-auto-276 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true-277 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1-278 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2-279 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3-280 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4-281 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5-282 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6-283 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7-284 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8-285 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9-286 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10-287 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11-288 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12-289 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:2560px) {
+  .MuiGrid-grid-desktopXL-auto-290 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-desktopXL-true-291 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-desktopXL-1-292 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-desktopXL-2-293 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-desktopXL-3-294 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-desktopXL-4-295 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-desktopXL-5-296 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-desktopXL-6-297 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-desktopXL-7-298 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-desktopXL-8-299 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-desktopXL-9-300 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-desktopXL-10-301 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-desktopXL-11-302 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-desktopXL-12-303 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-desktopLG-auto-304 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-desktopLG-true-305 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-desktopLG-1-306 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-desktopLG-2-307 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-desktopLG-3-308 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-desktopLG-4-309 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-desktopLG-5-310 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-desktopLG-6-311 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-desktopLG-7-312 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-desktopLG-8-313 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-desktopLG-9-314 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-desktopLG-10-315 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-desktopLG-11-316 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-desktopLG-12-317 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1440px) {
+  .MuiGrid-grid-desktopMD-auto-318 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-desktopMD-true-319 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-desktopMD-1-320 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-desktopMD-2-321 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-desktopMD-3-322 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-desktopMD-4-323 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-desktopMD-5-324 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-desktopMD-6-325 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-desktopMD-7-326 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-desktopMD-8-327 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-desktopMD-9-328 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-desktopMD-10-329 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-desktopMD-11-330 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-desktopMD-12-331 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1360px) {
+  .MuiGrid-grid-desktopSM-auto-332 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-desktopSM-true-333 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-desktopSM-1-334 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-desktopSM-2-335 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-desktopSM-3-336 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-desktopSM-4-337 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-desktopSM-5-338 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-desktopSM-6-339 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-desktopSM-7-340 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-desktopSM-8-341 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-desktopSM-9-342 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-desktopSM-10-343 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-desktopSM-11-344 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-desktopSM-12-345 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-desktopXS-auto-346 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-desktopXS-true-347 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-desktopXS-1-348 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-desktopXS-2-349 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-desktopXS-3-350 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-desktopXS-4-351 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-desktopXS-5-352 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-desktopXS-6-353 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-desktopXS-7-354 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-desktopXS-8-355 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-desktopXS-9-356 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-desktopXS-10-357 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-desktopXS-11-358 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-desktopXS-12-359 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1024px) {
+  .MuiGrid-grid-tabletSM-auto-360 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-tabletSM-true-361 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-tabletSM-1-362 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-tabletSM-2-363 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-tabletSM-3-364 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-tabletSM-4-365 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-tabletSM-5-366 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-tabletSM-6-367 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-tabletSM-7-368 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-tabletSM-8-369 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-tabletSM-9-370 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-tabletSM-10-371 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-tabletSM-11-372 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-tabletSM-12-373 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:768px) {
+  .MuiGrid-grid-tabletXS-auto-374 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-tabletXS-true-375 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-tabletXS-1-376 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-tabletXS-2-377 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-tabletXS-3-378 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-tabletXS-4-379 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-tabletXS-5-380 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-tabletXS-6-381 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-tabletXS-7-382 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-tabletXS-8-383 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-tabletXS-9-384 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-tabletXS-10-385 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-tabletXS-11-386 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-tabletXS-12-387 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:414px) {
+  .MuiGrid-grid-mobileSM-auto-388 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-mobileSM-true-389 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-mobileSM-1-390 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-mobileSM-2-391 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-mobileSM-3-392 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-mobileSM-4-393 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-mobileSM-5-394 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-mobileSM-6-395 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-mobileSM-7-396 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-mobileSM-8-397 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-mobileSM-9-398 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-mobileSM-10-399 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-mobileSM-11-400 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-mobileSM-12-401 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:0px) {
+  .MuiGrid-grid-mobileXS-auto-402 {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-mobileXS-true-403 {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-mobileXS-1-404 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-mobileXS-2-405 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-mobileXS-3-406 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-mobileXS-4-407 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-mobileXS-5-408 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-mobileXS-6-409 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-mobileXS-7-410 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-mobileXS-8-411 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-mobileXS-9-412 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-mobileXS-10-413 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-mobileXS-11-414 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-mobileXS-12-415 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiLink">
+.MuiLink-underlineNone-442 {
+  text-decoration: none;
+}
+.MuiLink-underlineHover-443 {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+.MuiLink-underlineHover-443:hover {
+  border-color: inherit;
+  text-decoration: none;
+}
+.MuiLink-underlineAlways-444 {
+  text-decoration: underline;
+}
+.MuiLink-button-445 {
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiLink-button-445::-moz-focus-inner {
+  border-style: none;
+}
+.MuiLink-button-445.Mui-focusVisible {
+  outline: auto;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss184 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.jss185 {
+  color: #283e64;
+  margin: 0 auto 36px;
+  font-size: 24px;
+  max-width: 1400px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.58;
+  text-transform: uppercase;
+}
+@media (min-width:1023px) {
+  .jss185 {
+    font-size: 44px;
+    line-height: 1.09;
+    margin-bottom: 56px;
+  }
+}
+.jss186 {
+  color: #283e64;
+  margin: 0 auto 28px;
+  font-size: 14px;
+  max-width: 1000px;
+  text-align: center;
+  line-height: 1.29;
+  letter-spacing: 0.1px;
+}
+@media (min-width:767px) {
+  .jss186 {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+@media (min-width:1023px) {
+  .jss186 {
+    margin-bottom: 40px;
+  }
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss1 {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-top: 48px;
+}
+.jss1:last-child {
+  padding-bottom: 48px;
+}
+@media (min-width:1023px) {
+  .jss1 {
+    padding-top: 64px;
+  }
+  .jss1:last-child {
+    padding-bottom: 64px;
+  }
+}
+.jss2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.jss3 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.jss4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.jss5 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.jss6 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.jss7 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.jss8 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.jss9 {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+.jss10 {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+.jss11 {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+.jss12 {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.jss13 {
+  padding-left: 88px;
+  padding-right: 88px;
+}
+.jss14 {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+@media (min-width:375px) {
+  .jss15 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:375px) {
+  .jss16 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:375px) {
+  .jss17 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:375px) {
+  .jss18 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:375px) {
+  .jss19 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:375px) {
+  .jss20 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:375px) {
+  .jss21 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:375px) {
+  .jss22 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:375px) {
+  .jss23 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:375px) {
+  .jss24 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:375px) {
+  .jss25 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:375px) {
+  .jss26 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:375px) {
+  .jss27 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:767px) {
+  .jss28 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:767px) {
+  .jss29 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:767px) {
+  .jss30 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:767px) {
+  .jss31 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:767px) {
+  .jss32 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:767px) {
+  .jss33 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:767px) {
+  .jss34 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:767px) {
+  .jss35 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:767px) {
+  .jss36 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:767px) {
+  .jss37 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:767px) {
+  .jss38 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:767px) {
+  .jss39 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:767px) {
+  .jss40 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1023px) {
+  .jss41 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1023px) {
+  .jss42 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1023px) {
+  .jss43 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1023px) {
+  .jss44 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1023px) {
+  .jss45 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1023px) {
+  .jss46 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1023px) {
+  .jss47 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1023px) {
+  .jss48 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1023px) {
+  .jss49 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1023px) {
+  .jss50 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1023px) {
+  .jss51 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1023px) {
+  .jss52 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1023px) {
+  .jss53 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1919px) {
+  .jss54 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1919px) {
+  .jss55 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1919px) {
+  .jss56 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1919px) {
+  .jss57 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1919px) {
+  .jss58 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1919px) {
+  .jss59 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1919px) {
+  .jss60 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1919px) {
+  .jss61 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1919px) {
+  .jss62 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1919px) {
+  .jss63 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1919px) {
+  .jss64 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1919px) {
+  .jss65 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1919px) {
+  .jss66 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:2560px) {
+  .jss67 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:2560px) {
+  .jss68 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:2560px) {
+  .jss69 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:2560px) {
+  .jss70 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:2560px) {
+  .jss71 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:2560px) {
+  .jss72 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:2560px) {
+  .jss73 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:2560px) {
+  .jss74 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:2560px) {
+  .jss75 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:2560px) {
+  .jss76 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:2560px) {
+  .jss77 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:2560px) {
+  .jss78 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:2560px) {
+  .jss79 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1920px) {
+  .jss80 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1920px) {
+  .jss81 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1920px) {
+  .jss82 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1920px) {
+  .jss83 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1920px) {
+  .jss84 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1920px) {
+  .jss85 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1920px) {
+  .jss86 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1920px) {
+  .jss87 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1920px) {
+  .jss88 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1920px) {
+  .jss89 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1920px) {
+  .jss90 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1920px) {
+  .jss91 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1920px) {
+  .jss92 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1440px) {
+  .jss93 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1440px) {
+  .jss94 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1440px) {
+  .jss95 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1440px) {
+  .jss96 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1440px) {
+  .jss97 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1440px) {
+  .jss98 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1440px) {
+  .jss99 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1440px) {
+  .jss100 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1440px) {
+  .jss101 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1440px) {
+  .jss102 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1440px) {
+  .jss103 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1440px) {
+  .jss104 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1440px) {
+  .jss105 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1360px) {
+  .jss106 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1360px) {
+  .jss107 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1360px) {
+  .jss108 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1360px) {
+  .jss109 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1360px) {
+  .jss110 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1360px) {
+  .jss111 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1360px) {
+  .jss112 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1360px) {
+  .jss113 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1360px) {
+  .jss114 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1360px) {
+  .jss115 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1360px) {
+  .jss116 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1360px) {
+  .jss117 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1360px) {
+  .jss118 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1280px) {
+  .jss119 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1280px) {
+  .jss120 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1280px) {
+  .jss121 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1280px) {
+  .jss122 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1280px) {
+  .jss123 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1280px) {
+  .jss124 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1280px) {
+  .jss125 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1280px) {
+  .jss126 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1280px) {
+  .jss127 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1280px) {
+  .jss128 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1280px) {
+  .jss129 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1280px) {
+  .jss130 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1280px) {
+  .jss131 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:1024px) {
+  .jss132 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:1024px) {
+  .jss133 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:1024px) {
+  .jss134 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:1024px) {
+  .jss135 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:1024px) {
+  .jss136 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1024px) {
+  .jss137 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:1024px) {
+  .jss138 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:1024px) {
+  .jss139 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:1024px) {
+  .jss140 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:1024px) {
+  .jss141 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:1024px) {
+  .jss142 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:1024px) {
+  .jss143 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:1024px) {
+  .jss144 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:768px) {
+  .jss145 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:768px) {
+  .jss146 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:768px) {
+  .jss147 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:768px) {
+  .jss148 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:768px) {
+  .jss149 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:768px) {
+  .jss150 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:768px) {
+  .jss151 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:768px) {
+  .jss152 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:768px) {
+  .jss153 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:768px) {
+  .jss154 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:768px) {
+  .jss155 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:768px) {
+  .jss156 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:768px) {
+  .jss157 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:414px) {
+  .jss158 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:414px) {
+  .jss159 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:414px) {
+  .jss160 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:414px) {
+  .jss161 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:414px) {
+  .jss162 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:414px) {
+  .jss163 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:414px) {
+  .jss164 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:414px) {
+  .jss165 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:414px) {
+  .jss166 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:414px) {
+  .jss167 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:414px) {
+  .jss168 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:414px) {
+  .jss169 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:414px) {
+  .jss170 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+@media (min-width:0px) {
+  .jss171 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:0px) {
+  .jss172 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width:0px) {
+  .jss173 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width:0px) {
+  .jss174 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width:0px) {
+  .jss175 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:0px) {
+  .jss176 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width:0px) {
+  .jss177 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width:0px) {
+  .jss178 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+@media (min-width:0px) {
+  .jss179 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (min-width:0px) {
+  .jss180 {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+@media (min-width:0px) {
+  .jss181 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width:0px) {
+  .jss182 {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+@media (min-width:0px) {
+  .jss183 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss416 {
+  display: flex;
+  padding: 12px 12px 4px;
+  position: relative;
+  flex-grow: 1;
+  box-shadow: 0 2px 8px 0 rgba(120, 120, 120, 0.2);
+  padding-left: 24px;
+  border-radius: 6px;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+@media (min-width:767px) {
+  .jss416 {
+    padding: 20px 20px 12px;
+    padding-left: 32px;
+  }
+}
+.jss416:before {
+  top: 0;
+  left: 0;
+  width: 5px;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom, #b46fd7, #0674c5);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.jss417 {
+  color: #000;
+  margin: 0;
+  font-size: 12px;
+  line-height: 2.17;
+  margin-bottom: 4px;
+}
+@media (min-width:767px) {
+  .jss417 {
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width:1023px) {
+  .jss417 {
+    font-size: 16px;
+    line-height: 1.63;
+  }
+}
+.jss418 {
+  color: #9b9b9b;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+}
+.jss419 {
+  width: unset;
+  font-size: 20px;
+  margin-right: 12px;
+}
+@media (min-width:767px) {
+  .jss419 {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+}
+@media (min-width:1023px) {
+  .jss419 {
+    margin-right: 28px;
+  }
+}
+.jss420 {
+  font-size: 10px;
+  margin-right: auto;
+  padding-right: 12px;
+}
+@media (min-width:767px) {
+  .jss420 {
+    font-size: 12px;
+  }
+}
+@media (min-width:1023px) {
+  .jss420 {
+    font-size: 14px;
+  }
+}
+.jss421 {
+  font-size: 20px;
+}
+@media (min-width:767px) {
+  .jss421 {
+    font-size: 24px;
+  }
+}
+.jss421.jss422 {
+  visibility: collapse;
+}
+</style></div></head>
+
+<body>
+  <div id="root"><div class="jss1 jss3 jss38 jss53"><section class="jss184"><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-spacing-xs-2-211"><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Catch @Ana_andrianova today at InterCon, a fully virtual conference.</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">13 March 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1238404928076419074" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis General Update: February 2020</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">2 March 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-general-update-february-2020-f436427bc730" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Dive in! How to test Akropolis Beta</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">2 March 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/dive-in-how-to-test-akropolis-beta-3b7eb637634c" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">We presented Polkahub, at the @polkadotnetwork meetup organized during @EthereumDenver</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">13 February 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1227642331991609345" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis Development Update: January 2020</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">6 February 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-development-update-january-2020-3800418fac83" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis open-source development — Staking Portal</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">29 January 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-open-source-development-staking-portal-d3d7b43d85ac" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis is in Top 15 DeFi projects by Average Development Activity in January</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">28 January 2020</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1222118244250738688" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis Development Update: December 2019</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">31 December 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-development-update-december-2019-7d3122bd53f" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">PolkaHub: Scalable Blockchain Infrastructure</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">24 December 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/polkahub-scalable-blockchain-infrastructure-5d5696fc0d60" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Web3Foundation: Wave Four Grant Recipients</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">24 December 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/web3foundation/status/1209167282678702081" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis reviewed in Coingecko Quarterly Report</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">8 November 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1181641641641332738" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis joins the Messari Disclosure Registry</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">26 September 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/joining-the-messari-disclosure-registry-what-it-means-for-akro-and-the-project-343409d17193" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis Development Update: August 2019</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">11 September 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-development-update-august-2019-2b54318566a1" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">A "DAO Renaissance" Begins</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z"></path></svg><div class="jss420">24 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.coindesk.com/in-berlin-a-dao-renaissance-begins" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">AKRO is now listed on Bittrex International</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">22 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1164620929294655489" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Increasing Transparency - Akropolis on Xangle</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">20 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/increasing-transparency-akropolis-on-xangle-c48e6097e7ba" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Quest 3.0 - creative wizards and the road ahead</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">19 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/quest-3-0-creative-wizards-and-the-road-ahead-2639a1a49edd" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Next Stop: Berlin! Meet the Akropolis team at the Berlin Blockchain Week</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">15 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/next-stop-berlin-meet-the-akropolis-team-at-the-berlin-blockchain-week-c16452f60aa3" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">AKRO token security Audit by CertiK</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">7 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akro-token-security-audit-by-certik-fd9d908cd98d" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Important Announcement: SCHEDULED token movement </p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">6 August 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/important-announcement-scheduled-token-movement-no-action-required-fcfbb8009157" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis Development Update</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">30 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-development-update-3de01dab80bd" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Themes, trends, highlights: the best of Akropolis Community Quest 3</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">29 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/themes-trends-highlights-the-best-of-akropolis-community-quest-3-1c3d22e8331" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Facts and Figures of our Huobi Prime Launch</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">28 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/facts-and-figures-of-our-huobi-prime-launch-1de98863b861" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">The importance of choosing the right oracles for Decentralized Finance: Chainlink and Akropolis</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">25 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/the-importance-of-choosing-the-right-oracles-for-decentralized-finance-chainlink-and-akropolis-9387b98d289" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">The AKRO tokenomics 101: Part II - the full scope of the AKRO token model</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">26 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/the-akro-tokenomics-101-part-ii-the-full-scope-of-the-akro-token-model-9f3e61871550" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">The AKRO tokenomics 101: Part I - validation rewards</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">23 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/the-akro-tokenomics-101-part-i-validation-rewards-4132a7fa58c9" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">BlockVC announces its support for project Akropolis</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">16 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/blockvc-announces-its-support-for-project-akropolis-long-term-commitment-towards-large-scale-8d36d11f8c23" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis (AKRO) to launch on Huobi Prime: the why, the how and the what</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">15 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-akro-to-launch-on-huobi-prime-the-why-the-how-and-the-what-da53925bd88b" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis + Dai: creating safeguards against inflation and economic crises through technology</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">11 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-dai-creating-safeguards-against-inflation-and-economic-crises-through-technology-cb69b92c362c" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Interoperable DeFi: Akropolis, ChainX and Polkadot broadening the spectrum of the new financial system</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">10 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/interoperable-defi-akropolis-chainx-and-polkadot-broadening-the-spectrum-of-the-new-financial-32683ff7b3f8" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Camilla Russo (TheDefiant) interview with Ana Andria</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">8 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1148300577601970176" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Token Metrics, Token Swap Announcement and Instructions</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">8 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/token-metrics-token-swap-announcement-and-instructions-5d659b64b617" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Building Akropolis on Polkadot? - Pt. I</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">4 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/building-akropolis-on-polkadot-pt-i-4147bf21b060" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis To Launch On Huobi Prime</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">2 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-to-launch-on-huobi-prime-b64b50283757" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis launches the first Testnet AFO Governance Module</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">1 July 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-launches-the-first-testnet-afo-governance-module-9fbde56ce33f" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis and ChainX announced partnership</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">20 June 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-and-chainx-partnership-21b21e97ca1d" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Quest - Registrations Are Open!</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">8 June 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-quest-registrations-are-open-ef41cb235ac" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Explaining Akropolis v0.2</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">6 June 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/explaining-akropolis-v0-2-ae0234754365" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Ana Andrianova will be speaking and judging at CryptoChicks Hackathon in Toronto</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">27 May 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1133112199235481601" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis Development update is here, check it out!</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">21 May 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/akropolis/akropolis-development-update-82aaee0f5ee2" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Ana Adrianova will be judging ETHGlobal hakathon in Cape Town</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">2 April 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/ana_andrianova/status/1113138840670175232" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis joins Full Node panel on DAO governance and product-market fit</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">12 March 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1105494593238380549" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis Cashflow Relay wins second place in the 0x + CoinList Hackathon</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 24 19" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M24,2.80002664 L23.0507812,2.80002664 C22.698375,2.80002664 22.2,3.30843206 22.2,3.63383777 L22.2,15.4300059 C22.2,15.7557866 22.698375,16.1999734 23.0507812,16.1999734 L24,16.1999734 L24,19 L15.4000312,19 L15.4000312,16.1999734 L17.2000312,16.1999734 L17.2000312,3.7999625 L17.1118125,3.7999625 L12.9084375,19 L9.6541875,19 L5.505,3.7999625 L5.4,3.7999625 L5.4,16.1999734 L7.2,16.1999734 L7.2,19 L0,19 L0,16.1999734 L0.92203125,16.1999734 C1.301625,16.1999734 1.8,15.7557866 1.8,15.4300059 L1.8,3.63374402 C1.8,3.30833831 1.301625,2.79993289 0.92203125,2.79993289 L0,2.79993289 L0,0 L9.0031875,0 L11.959125,10.9999507 L12.0406875,10.9999507 L15.0237187,0 L24,0 L24,2.80002664"></path></svg><div class="jss420">15 February 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://medium.com/coinlist/announcing-the-winners-of-the-0x-coinlist-hackathon-c4bc8ff4f79d" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Akropolis ships CashflowRelay, built with with 0x and MakerDao and integrates its new financial primitive, Commitments to Future Cashflow</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 30 24" aria-hidden="true"><path fill="#1da1f2" d="M30,2.84733693 C28.909393,3.31971713 27.7226607,3.64492359 26.4700647,3.80752683 C27.7547024,3.04317294 28.7301964,1.87112408 29.1870884,0.439147421 C27.9991693,1.13881608 26.6652821,1.64324217 25.2661247,1.91978636 C24.1583101,0.732307997 22.5491011,0 20.7595087,0 C17.3755414,0 14.6092684,2.71737303 14.6092684,6.05251966 C14.6092684,6.5409228 14.6911529,6.99668661 14.788465,7.43642748 C9.66415475,7.19192918 5.12431021,4.78373968 2.09814276,1.10617675 C1.57776064,2.01770437 1.25259598,3.04317294 1.25259598,4.14934969 C1.25259598,6.26437862 2.35863051,8.11947975 3.98504717,9.1936106 C2.97691806,9.17699421 2.03287249,8.90045003 1.20393995,8.44468622 C1.20393995,8.47732555 1.20393995,8.49394194 1.20393995,8.52598783 C1.20393995,9.30695811 1.35050139,10.0232432 1.62641666,10.7062954 C2.37524476,12.6106523 4.08354596,14.0420355 6.15024031,14.449137 C5.6120572,14.5957173 5.09167507,14.6764255 4.52263692,14.6764255 C4.13220198,14.6764255 3.74176704,14.6277632 3.36675963,14.5464616 C4.16483712,16.9546511 6.42556221,18.7118342 9.11113748,18.7771129 C6.99519373,20.4043321 4.36005459,21.364522 1.48044858,21.364522 C0.975493977,21.364522 0.504361241,21.3312893 0,21.282627 C2.73304456,22.9917413 5.97045036,24 9.43630214,24 C19.0512075,24 24.9896161,17.3451362 26.5341482,10.4297512 C26.8118436,9.1936106 26.9411974,7.97289946 26.9411974,6.76880471 C26.9411974,6.50828347 26.9411974,6.23233272 26.9411974,5.98783443 C28.1291165,5.12556253 29.1870884,4.05143168 30,2.84733693"></path></svg><div class="jss420">12 February 2019</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://twitter.com/akropolisio/status/1095342444252725248" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Former Lehman Brothers Investor Uses Blockchain Technology To Fix Broken Pension System</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 850 1008" aria-hidden="true" xml:space="preserve"><path fill="#5a5a5a" d="M842 0l-842 0 0 42 44 4c34,7 57,19 72,38 14,21 23,55 25,101 17,227 17,440 0,636 -4,46 -13,80 -25,101 -15,21 -38,33 -72,38l-44 6 0 42 543 0 0 -42 -57 -4c-34,-4 -57,-19 -71,-38 -15,-21 -24,-55 -26,-101 -6,-84 -10,-181 -10,-288l113 2c61,2 104,48 125,141l42 0 0 -343 -42 0c-21,90 -61,136 -125,139l-113 2c0,-190 4,-324 10,-407l167 0c117,0 197,76 244,228l50 -15 -8 -282z"></path></svg><div class="jss420">17 August 2018</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.forbes.com/sites/rachelwolfson/2018/08/17/former-lehman-brothers-investor-believes-blockchain-technology-can-fix-broken-pension-system" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">3 Mental Shifts You Need to Make to Build a Stable Financial Future in the Gig Economy</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 548 883" aria-hidden="true" xml:space="preserve"><polygon fill="#5a5a5a" points="9,804 85,792 85,87 0,76 4,0 538,0 524,214 418,210 412,76 247,76 247,394 319,394 335,321 409,323 409,542 335,542 318,467 246,467 246,803 412,803 427,657 539,660 548,883 6,883 "></polygon></svg><div class="jss420">31 July 2018</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.entrepreneur.com/article/317524" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Addressing the Looming Retirement Crisis With Blockchain Technology</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 1457 1268" aria-hidden="true" xml:space="preserve"><defs><linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="1082.22" y1="967.472" x2="1082.22" y2="-2.39674"><stop offset="0" style="stop-opacity: 1; stop-color: white;"></stop><stop offset="0" style="stop-opacity: 1; stop-color: rgb(190, 191, 191);"></stop><stop offset="0.0196078" style="stop-opacity: 1; stop-color: rgb(190, 191, 191);"></stop><stop offset="0.188235" style="stop-opacity: 1; stop-color: rgb(229, 229, 229);"></stop><stop offset="0.219608" style="stop-opacity: 1; stop-color: rgb(229, 229, 229);"></stop><stop offset="0.258824" style="stop-opacity: 1; stop-color: rgb(229, 229, 229);"></stop><stop offset="0.368627" style="stop-opacity: 1; stop-color: rgb(124, 124, 124);"></stop><stop offset="0.478431" style="stop-opacity: 1; stop-color: rgb(243, 243, 244);"></stop><stop offset="0.568627" style="stop-opacity: 1; stop-color: rgb(243, 243, 244);"></stop><stop offset="0.8" style="stop-opacity: 1; stop-color: rgb(243, 243, 244);"></stop><stop offset="0.901961" style="stop-opacity: 1; stop-color: gainsboro;"></stop><stop offset="0.909804" style="stop-opacity: 1; stop-color: gainsboro;"></stop><stop offset="1" style="stop-opacity: 1; stop-color: rgb(181, 181, 181);"></stop></linearGradient><linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="374.73" y1="303.547" x2="374.25" y2="1276.14"><stop offset="0" style="stop-opacity: 1; stop-color: white;"></stop><stop offset="0" style="stop-opacity: 1; stop-color: rgb(190, 191, 191);"></stop><stop offset="0.0196078" style="stop-opacity: 1; stop-color: rgb(190, 191, 191);"></stop><stop offset="0.0901961" style="stop-opacity: 1; stop-color: white;"></stop><stop offset="0.14902" style="stop-opacity: 1; stop-color: white;"></stop><stop offset="0.2" style="stop-opacity: 1; stop-color: white;"></stop><stop offset="0.301961" style="stop-opacity: 1; stop-color: rgb(124, 124, 124);"></stop><stop offset="0.4" style="stop-opacity: 1; stop-color: rgb(229, 229, 229);"></stop><stop offset="0.45098" style="stop-opacity: 1; stop-color: rgb(229, 229, 229);"></stop><stop offset="0.890196" style="stop-opacity: 1; stop-color: rgb(159, 159, 160);"></stop><stop offset="1" style="stop-opacity: 1; stop-color: rgb(159, 159, 160);"></stop></linearGradient><linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="868.247" y1="1020.14" x2="729.177" y2="635.914"><stop offset="0" style="stop-opacity: 1; stop-color: white;"></stop><stop offset="1" style="stop-opacity: 1; stop-color: rgb(24, 159, 197);"></stop></linearGradient></defs><path fill="url(#id0)" fill-rule="nonzero" d="M1457 0l-359 0 -330 914c-8,21 -30,38 -54,38l-6 0 363 0c25,0 47,-16 56,-39l330 -913z"></path><path fill="url(#id2)" fill-rule="nonzero" d="M745 316c-25,1 -48,17 -57,41l-117 324 83 230c9,25 32,41 57,41 26,1 49,-16 58,-41l118 -325 -85 -230c-8,-24 -31,-40 -57,-40z"></path><path fill="url(#id1)" fill-rule="nonzero" d="M0 1268l358 0 331 -914c9,-22 30,-36 54,-38l6 0 -364 0c-24,0 -46,16 -55,39l-330 913z"></path></svg><div class="jss420">17 July 2018</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.nasdaq.com/article/addressing-the-looming-retirement-crisis-with-blockchain-technology-cm992378" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Fintech Looks To Blockchain To Stem The Global Pension Meltdown</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 154783 115270" aria-hidden="true" xml:space="preserve"><path fill="#FA8418" d="M23643 2472l107497 0c11643,0 21171,9528 21171,21171l0 44060c0,11644 -9528,21171 -21171,21171l-76820 0 -26442 21245 0 -21245 -4235 0c-11643,0 -21168,-9527 -21168,-21171l0 -44060c0,-11643 9525,-21171 21168,-21171z"></path><path fill="black" fill-rule="nonzero" d="M23643 0l107497 0c6505,0 12416,2660 16702,6944 4281,4283 6941,10194 6941,16699l0 44060c0,6500 -2660,12409 -6941,16692l-11 11c-4283,4283 -10192,6941 -16691,6941l-75962 0 -29776 23923 0 -23923 -1759 0c-6505,0 -12416,-2658 -16699,-6941 -4284,-4294 -6944,-10203 -6944,-16703l0 -44060c0,-6505 2660,-12416 6944,-16699 4291,-4284 10200,-6944 16699,-6944zm107497 4948l-107497 0c-5141,0 -9819,2104 -13206,5489 -3385,3393 -5489,8068 -5489,13206l0 44060c0,5141 2104,9819 5489,13207 3393,3384 8068,5492 13206,5492l6707 0 0 18565 23107 -18565 77683 0c5141,0 9819,-2105 13206,-5490 3387,-3390 5489,-8068 5489,-13209l0 -44060c0,-5138 -2104,-9813 -5492,-13201 -3390,-3390 -8065,-5494 -13203,-5494z"></path><polygon fill="black" fill-rule="nonzero" points="47747,59129 47747,63276 12893,63276 12893,59129 37903,32850 14813,32850 14813,28632 47747,28632 47747,31513 21710,59129 "></polygon><path fill="black" fill-rule="nonzero" d="M59325 16406l0 5971 -6492 0 0 -5971 6492 0zm-313 12226l0 34644 -5945 0 0 -34644 5945 0z"></path><path fill="black" fill-rule="nonzero" d="M98824 63276l-6037 0 0 -22277c0,-3196 -839,-5456 -2500,-6758 -1663,-1299 -3676,-1955 -6050,-1955 -3270,0 -6010,1100 -8231,3303 -2222,2189 -3339,5095 -3339,8689l0 18998 -6371 0 0 -34644 5952 0 0 6396c3352,-4920 7698,-7379 13037,-7379 3088,0 5716,667 7881,2001 2164,1348 3646,2848 4457,4523 795,1661 1201,4683 1201,9051l0 20052z"></path><path fill="black" fill-rule="nonzero" d="M143104 23221l0 4286c-2981,0 -4999,283 -6023,855 -1024,575 -1715,1604 -2045,3104 2723,2565 4093,5354 4093,8387 0,3161 -1471,5879 -4425,8139 -2954,2271 -6933,3409 -11918,3409 -1108,0 -2072,-71 -2895,-212 -1544,-245 -2508,-376 -2897,-376 -749,0 -1658,305 -2723,915 -1067,596 -1598,1380 -1598,2331 0,1369 762,2260 2303,2671 1542,408 5174,667 10881,784 4842,117 8414,387 10720,809 2320,419 4265,1356 5866,2821 1598,1454 2390,3232 2390,5342 0,6617 -7117,9931 -21369,9931 -6759,0 -11687,-834 -14786,-2494 -3096,-1675 -4653,-3889 -4653,-6677 0,-3374 2162,-5691 6499,-6957 -2783,-1487 -4163,-3350 -4163,-5599 0,-2668 1958,-4719 5879,-6137 -3690,-2424 -5536,-5481 -5536,-9168 0,-3434 1571,-6244 4713,-8447 3126,-2189 6960,-3289 11472,-3289 3197,0 6094,493 8703,1476 419,-2260 1397,-3818 2924,-4673 1514,-869 3834,-1302 6946,-1302 316,0 864,25 1642,71zm-20117 24033c2797,0 5073,-703 6832,-2108 1773,-1418 2652,-3245 2652,-5481 0,-2295 -923,-4169 -2753,-5623 -1829,-1451 -4049,-2178 -6657,-2178 -2478,0 -4697,681 -6628,2050 -1933,1359 -2897,3303 -2897,5822 0,2235 863,4052 2608,5446 1730,1380 4006,2072 6843,2072zm-7937 14628c-3085,1100 -4626,2706 -4626,4789 0,1781 1266,3151 3804,4136 2535,973 5764,1463 9682,1463 3633,0 6960,-422 9988,-1264 3025,-833 4539,-2260 4539,-4264 0,-1078 -449,-1966 -1342,-2657 -893,-692 -2116,-1125 -3673,-1313 -1558,-174 -4267,-316 -8128,-408 -4624,-96 -8041,-248 -10244,-482z"></path></svg><div class="jss420">7 June 2018</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.benzinga.com/fintech/18/06/11846854/fintech-looks-to-blockchain-to-stem-the-global-pension-meltdown" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">11 CEOs and founders on whether cryptocurrencies will be mainstream in 2019</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 20 310 180" aria-hidden="true" xml:space="preserve"><path d="M 36.0529,72.8265 C 23.2696,84.3115 18.6756,110.4774 41.6456,125.8573 L 133.4259,188.7752 88.884,86.8082 C 79.5961,62.7397 54.1294,57.5464 36.0529,72.8265 Z" style="fill-rule: evenodd; fill: rgb(243, 112, 33);"></path><path d="M 115.0498,23.1913 C 100.1693,23.4909 77.6986,41.2677 87.6856,68.4322 L 133.7255,176.9905 149.9044,62.8395 C 153.5995,34.3767 132.1276,21.2938 115.0498,23.1913 Z" style="fill-rule: evenodd; fill: rgb(204, 0, 76);"></path><path d="M 157.095,58.4453 L 165.7836,58.4453 C 165.7836,58.4453 170.3776,58.4453 171.0767,60.6424 167.6811,63.4387 158.2934,63.7384 159.5917,78.7188 L 174.1727,176.9905 219.913,68.1326 C 229.2009,43.8643 209.6264,23.4909 192.2491,22.8917 191.3503,22.8917 190.5513,22.7918 189.7523,22.7918 174.0728,22.7918 156.1961,34.1769 157.095,58.4453 Z" style="fill-rule: evenodd; fill: rgb(100, 96, 170);"></path><path d="M 218.0155,87.8069 L 174.7719,188.4756 266.5521,125.1582 C 287.7245,110.1777 284.3289,86.209 272.4444,74.3245 267.5508,68.7318 258.3628,64.4374 248.7753,64.4374 237.2903,64.4374 225.1062,70.5295 218.0155,87.8069 Z" style="fill-rule: evenodd; fill: rgb(0, 137, 208);"></path><path d="M 256.2655,139.5394 L 170.1779,199.661 276.2395,199.661 C 298.011,199.661 311.9928,177.2902 305.8009,156.6171 301.6064,143.7339 289.2225,133.5472 274.9412,133.5472 268.949,133.5472 262.5573,135.3449 256.2655,139.5394 Z" style="fill-rule: evenodd; fill: rgb(13, 177, 75);"></path><path d="M 33.5562,199.661 L 138.1197,199.661 51.9322,139.5394 C 31.9583,126.7561 9.5875,134.2463 1.498,155.4187 -5.2931,179.7869 11.7846,199.661 33.5562,199.661 Z" style="fill-rule: evenodd; fill: rgb(252, 183, 17);"></path></svg><div class="jss420">31 May 2018</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.cnbc.com/2018/05/31/ceos-on-whether-cryptocurrencies-will-be-mainstream-in-2019.html" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div><div class="MuiGrid-root-187 MuiGrid-container-188 MuiGrid-item-189 MuiGrid-grid-xs-12-233"><article class="jss416"><p class="jss417">Can Blockchain Solve the Global Retirement Crisis?</p><footer class="jss418"><svg class="MuiSvgIcon-root-423 jss419" focusable="false" viewBox="0 0 4887 4933" aria-hidden="true" xml:space="preserve"><path fill="#E31E24" d="M2298 1731l431 273 -165 1557 2320 -1414c-154,-1226 -1197,-2147 -2433,-2147 -1353,0 -2451,1098 -2451,2451 0,214 28,427 83,633l2215 -1353zm71 2616l-431 -273 165 -1556 -1814 1107c423,804 1259,1308 2168,1308 1228,0 2267,-909 2430,-2125l-2518 1539zm562 -3186c0,-192 -155,-347 -346,-347 -192,0 -347,155 -347,347 0,191 155,346 347,346 191,0 346,-155 346,-346z"></path><path fill="black" d="M2238 1161c0,191 155,346 347,346 191,0 346,-155 346,-346 0,-192 -155,-347 -346,-347 -192,0 -347,155 -347,347z"></path></svg><div class="jss420">22 May 2018</div><a class="MuiTypography-root-446 MuiLink-root-441 MuiLink-underlineHover-443 MuiButtonBase-root-440 MuiIconButton-root-432 jss421 MuiTypography-colorPrimary-469" tabindex="0" role="button" aria-disabled="false" href="https://www.investopedia.com/personal-finance/can-blockchain-solve-global-retirement-crisis/" target="_target" rel="noopener noreferrer"><span class="MuiIconButton-label-439"><svg class="MuiSvgIcon-root-423 MuiSvgIcon-fontSizeInherit-429" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></span><span class="MuiTouchRipple-root-476"></span></a></footer></article></div></div></section></div></div>
+<script type="text/javascript" src="/js/runtime-a4fe092a0deae332adc7.bundle.js"></script><script type="text/javascript" src="/js/0-ad1d5b426b21aad69d46.bundle.js"></script><script type="text/javascript" src="/js/2-52b7ae119f5471f061f1.bundle.js"></script>
+
+</body></html>
